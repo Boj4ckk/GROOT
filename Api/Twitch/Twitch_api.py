@@ -3,7 +3,7 @@ import os
 import requests
 import subprocess
 import logging
-from datetime import datetime
+from datetime import datetime, timezone
 ">"
 class TwitchApi:
     """
@@ -105,7 +105,7 @@ class TwitchApi:
     
 
 
-    def getClips(self, userId, filters=None, date=[], games=[], min_duration=0, max_duration=60): 
+    def getClips(self, userId, filters=None,games=[], min_duration=0, max_duration=60, min_views=0): 
         """
         Fetch clips for a given Twitch user based on filters.
 
@@ -116,19 +116,25 @@ class TwitchApi:
 
         url = f"{self.BASE_URL}/clips"
         params = {"broadcaster_id": userId}
+    
                  
 
         if filters:
+            # If ended date not specified, set it to current date and time.
+            if(filters['started_at'] != None  and 'ended_at' not in filters):
+                filters['ended_at'] = datetime.now(timezone.utc).isoformat()
+                print(filters)
             params.update(filters)
 
 
         response = requests.get(url, headers=self.getHeaders(), params=params)
         if response.status_code == 200:
             clips_data =  response.json().get("data", [])
-          
+            # Filter clips based on games list provided in the argument
             if (len(games) > 0 ):
                 clips_data = [clip for clip in clips_data if clip["game_id"] in games ]
-            clips_data = [clip for clip in clips_data if min_duration <= clip['duration'] <= max_duration ]
+            # Filter clips based on duration and views
+            clips_data = [clip for clip in clips_data if min_duration <= clip['duration'] <= max_duration  and clip["view_count"] >= min_views]
            
                
                        
