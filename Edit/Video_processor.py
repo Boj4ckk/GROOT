@@ -106,15 +106,16 @@ class VideoProcessor:
 
         self.content_video = VideoFileClip(content_clip_path)
 
-    def process_video(self):
+    def process_video(self,target_width,target_height):
         """ Ajuster la webcam : même largeur que la vidéo de contenu, et 1/3 de sa hauteur """
 
 
 
         processed_video_path = f'Processed_clips/{self.clipId}_processed.mp4'
-        empty_clip = ColorClip(size=(1080,1920), color=(0,0,0),duration=self.content_video.duration)
+        empty_clip = ColorClip(size=(1080,1920), color=(0,0,0),duration=self.clipVideo.duration)
 
-
+        self.extract_web_cam()
+        self.crop_to_short_format(target_width,target_height)
         web_cam = self.web_cam_video.resize(width=1080)
         if web_cam.h > 640:
             web_cam = web_cam.crop(y1=0, y2=640)
