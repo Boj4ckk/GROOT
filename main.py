@@ -1,8 +1,8 @@
 # src/main.py
 import os
 import logging
-from Api.Twitch.Twitch_api import TwitchApi
-from Api.Tiktok.tiktok_api import TiktokApi
+from api.Twitch.Twitch_api import TwitchApi
+from api.Tiktok.tiktok_api import TiktokApi
 from Edit.Video_processor import VideoProcessor
 import json
 
@@ -35,14 +35,6 @@ TwitchApi.downloadClipWithAudio(t1,data)
 for files in os.listdir("C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\Clips"):
     v1 = VideoProcessor(f"Clips/{files}")
     v1.process_video(1080,1920)
-
-
-
-ti1 = TiktokApi()
-
-ti1.startDriver()
-ti1.login("yazkilito@gmail.com","Didoleboss12$")
-ti1.uploadVideo("Processed_clips\97dc3e85-7503-4d78-ba66-e5e87d3205bc_processed.mp4","test1")
 
 
 
