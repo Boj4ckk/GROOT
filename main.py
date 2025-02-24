@@ -1,8 +1,8 @@
 # src/main.py
 import os
 import logging
-from Api.Twitch.Twitch_api import TwitchApi
-from Api.Tiktok.tiktok_api import TiktokApi
+from api.Twitch.Twitch_api import TwitchApi
+from api.Tiktok.tiktok_api import TiktokApi
 from Edit.Video_processor import VideoProcessor
 import json
 
@@ -16,13 +16,13 @@ CLIENT_SECRET = "cnhhv1qwdxfjc8smmtjnbieg5c9p57"
 
 
 
-t1  =  TwitchApi(CLIENT_ID,CLIENT_SECRET)                 
-TwitchApi.getHeaders(t1)
+twitch_instance  =  TwitchApi(CLIENT_ID,CLIENT_SECRET)  
+TwitchApi.getHeaders(twitch_instance)
 
-idt = TwitchApi.getUserId(t1, "talmo")
+id_twitch_streamer = TwitchApi.getUserId(twitch_instance, "talmo")
 data = TwitchApi.getClips(
-    t1,
-    idt,
+    twitch_instance,
+    id_twitch_streamer,
     
     filters={"started_at": "2024-01-30T00:00:00Z", "ended_at": "2025-02-09T00:00:00Z", "first": 3},
     min_duration=20,
@@ -30,9 +30,9 @@ data = TwitchApi.getClips(
 )
 
 # Affichage propre des données sous forme JSON
-TwitchApi.downloadClipWithAudio(t1,data)
+TwitchApi.downloadClipWithAudio(twitch_instance,data)
 
-for files in os.listdir("C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\Clips"):
+for files in os.listdir("clips"):
     v1 = VideoProcessor(f"Clips/{files}")
     v1.process_video(1080,1920)
 
@@ -42,8 +42,12 @@ ti1 = TiktokApi()
 
 ti1.startDriver()
 ti1.login("yazkilito@gmail.com","Didoleboss12$")
-ti1.uploadVideo("Processed_clips\97dc3e85-7503-4d78-ba66-e5e87d3205bc_processed.mp4","test1")
-
+for file in os.listdir("Processed_clips/") :   
+    relative_path = "Processed_clips/"
+    path = os.path.abspath(relative_path) + "/" + file
+    print ("chemin complet : " + path)
+    ti1.uploadVideo(path, "test upload sur tiktok")
+ti1.closeDriver() 
 
 
 

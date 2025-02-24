@@ -1,6 +1,6 @@
 flask
 requests
-moviepy
+moviepy==1.0.3
 selenium
 webdriver-manager
 opencv-python

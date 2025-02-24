@@ -131,22 +131,3 @@ class VideoProcessor:
         os.remove(f'in_process_clips/{self.clipId}_cam.mp4')
         os.remove(f'in_process_clips/{self.clipId}_content.mp4')
     
-
-    
-
-
-   
-
-
-
-
-
-
-    
-    
-
-
-        
-
-            
-            

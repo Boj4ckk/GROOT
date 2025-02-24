@@ -9,6 +9,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import logging
 import time
 import pickle
+import config.config
 
 class TiktokApi:
     """
@@ -128,3 +129,7 @@ class TiktokApi:
         """
         if self.driver:
             self.driver.quit()
+
+    # def publication (self) : 
+    #     instance = TiktokApi() 
+    #     instance.startDriver() 
