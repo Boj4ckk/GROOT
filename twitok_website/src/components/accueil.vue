@@ -2,6 +2,12 @@
 import axios from 'axios';
 import { ref } from 'vue';
 import apiClient from '@/api';
+import router from '@/router';
+import { useTwitokStore } from '@/store/twitokStore'; //import. store 
+
+const twitokStore = useTwitokStore() 
+const authorizedConnection = twitokStore.authorizedConnection
+console.log("twitokStore : ", twitokStore)
 
 const username = ref("")
 const password = ref("")
@@ -13,9 +19,13 @@ const insert_user = async () => {
         const dataToSend = {username: username.value, password: password.value, tiktok_username: tiktok_username.value, tiktok_password: tiktok_password.value}
         const response = await axios.post('http://127.0.0.1:5000/newUser', dataToSend)
         console.log("envoie nouvel user : ", response.data)
+        twitokStore.autorized()
+        router.push('/connected')
     }
     catch (error) {
         console.error("erreur lors de la requete... ", error)
+        alert("Nom d'utilisateur deja utilisé")
+        // location.reload() 
     }
 }
 
@@ -31,6 +41,9 @@ const insert_user = async () => {
         <input type="password" v-model="tiktok_password" placeholder="tiktok password" class="input-field">
         <input type="submit" @click.prevent="insert_user()" class="submit-btn"> <!-- prevent c pour éviter que la page se recharge a chauqe fois qu'on soumet le form -->
     </form>
+
+    <router-link 
+    to="/">Already an account ?</router-link>
 
 </template>
 

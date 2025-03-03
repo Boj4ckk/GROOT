@@ -2,11 +2,13 @@ import mysql.connector
 from flask import Flask, g, request, jsonify # g = variable de contexte pr stocker données dans un contexte 
 import logging
 from flask_cors import CORS
+from flask_bcrypt import Bcrypt
 
 DATABASE = 'twitok_base'
 
 app = Flask(__name__) #création application flask 
 CORS(app) # pour autoriser les requetes post d'autres origines que le servuer 
+bcrypt = Bcrypt(app) # pour cryptage des mdp 
 
 @app.route('/')
 def home(): 
@@ -49,6 +51,29 @@ def user_already_exists (username) :
         return True
     return False
 
+@app.route("/login", methods=['POST'])
+def register() : 
+    data_received = request.json
+    username = data_received.get('username')
+    password = data_received.get('password')
+
+    db = get_db()
+    cursor = db.cursor() 
+
+    query = ('Select (username, password) from user where username=%s')
+    cursor.execute(query, username)
+    
+    user = cursor.fetchone()
+    if (user is None) : 
+        logging.error(f'user {username} doesn\'t exist')
+        return jsonify({"error" : "invalid username"}), 401
+    
+    hashed_password = user['password']
+    if (not bcrypt.check_password_hash(hashed_password, password)) : 
+        logging.error(f'user {password} isn\'t correct')
+        return jsonify({"error": "password isn't correct"}), 401
+
+
 @app.route("/newUser", methods=['POST'])
 def insert_user () : 
     data_received = request.json
@@ -56,6 +81,9 @@ def insert_user () :
     password = data_received.get('password')
     tiktok_username = data_received.get('tiktok_username')
     tiktok_password = data_received.get('tiktok_password')
+
+    hashed_password = bcrypt.generate_password_hash(password).decode('utf-8') # decode('utf-8') convertit les octets en str 
+    hashed_tiktok_password = bcrypt.generate_password_hash(tiktok_password).decode('utf-8')
 
     db = get_db() 
     cursor = db.cursor() 
@@ -65,11 +93,11 @@ def insert_user () :
     try :
         if (user_already_exists(username)) : 
             logging.error(f'user {username} already exists')
-            return jsonify({"error", f'user {username} already exists'}), 400
+            return jsonify({"error": f'user {username} already exists'}), 400
         if (username == "" or password == "") : 
             logging.error(f'username and password mustn\'t be empty')
             return jsonify({"error" : f'username and password mustn\'t be empty'})
-        cursor.execute(query, (username, password, tiktok_username, tiktok_password))
+        cursor.execute(query, (username, hashed_password, tiktok_username, hashed_tiktok_password))
         db.commit()
         logging.info(f'user {username} succsfully registered')
         return jsonify({"info" : f'user : username succesfuly registered'})
