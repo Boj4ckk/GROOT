@@ -16,13 +16,13 @@ CLIENT_SECRET = "cnhhv1qwdxfjc8smmtjnbieg5c9p57"
 
 
 
-t1  =  TwitchApi(CLIENT_ID,CLIENT_SECRET)                 
-TwitchApi.getHeaders(t1)
+twitch_instance  =  TwitchApi(CLIENT_ID,CLIENT_SECRET)  
+TwitchApi.getHeaders(twitch_instance)
 
-idt = TwitchApi.getUserId(t1, "talmo")
+id_twitch_streamer = TwitchApi.getUserId(twitch_instance, "talmo")
 data = TwitchApi.getClips(
-    t1,
-    idt,
+    twitch_instance,
+    id_twitch_streamer,
     
     filters={"started_at": "2024-01-30T00:00:00Z", "ended_at": "2025-02-09T00:00:00Z", "first": 3},
     min_duration=20,
@@ -30,9 +30,9 @@ data = TwitchApi.getClips(
 )
 
 # Affichage propre des données sous forme JSON
-TwitchApi.downloadClipWithAudio(t1,data)
+TwitchApi.downloadClipWithAudio(twitch_instance,data)
 
-for files in os.listdir("C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\Clips"):
+for files in os.listdir("clips"):
     v1 = VideoProcessor(f"Clips/{files}")
     v1.process_video(1080,1920)
 
