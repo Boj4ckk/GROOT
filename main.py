@@ -38,18 +38,6 @@ for files in os.listdir("clips"):
 
 
 
-ti1 = TiktokApi()
-
-ti1.startDriver()
-ti1.login("yazkilito@gmail.com","Didoleboss12$")
-for file in os.listdir("Processed_clips/") :   
-    relative_path = "Processed_clips/"
-    path = os.path.abspath(relative_path) + "/" + file
-    print ("chemin complet : " + path)
-    ti1.uploadVideo(path, "test upload sur tiktok")
-ti1.closeDriver() 
-
-
 
 
 
