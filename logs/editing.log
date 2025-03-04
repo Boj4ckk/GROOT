@@ -1,0 +1,57 @@
+2025-03-04 11:12:53,954 - INFO - Extracting web cam from clip..
+
+2025-03-04 11:12:54,987 - INFO - Auto face recon failed. Manually web cam extraction perform.
+2025-03-04 11:13:40,033 - INFO - Crop clip to short format..
+2025-03-04 11:14:38,439 - INFO - Writing new clip composite from web cam and content..
+2025-03-04 11:15:58,040 - WARNING - C:\Users\User\AppData\Local\Programs\Python\Python310\lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Edit/in_process_clips/a74faecf-2468-4e6b-96c6-bf9e5f416581_content.mp4, 4147200 bytes wanted but 0 bytes read,at frame 1776/1778, at time 59.20/59.25 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-04 11:15:58,049 - WARNING - C:\Users\User\AppData\Local\Programs\Python\Python310\lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Edit/in_process_clips/a74faecf-2468-4e6b-96c6-bf9e5f416581_cam.mp4, 325080 bytes wanted but 0 bytes read,at frame 1776/1778, at time 59.20/59.25 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-04 11:15:58,084 - WARNING - C:\Users\User\AppData\Local\Programs\Python\Python310\lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Edit/in_process_clips/a74faecf-2468-4e6b-96c6-bf9e5f416581_content.mp4, 4147200 bytes wanted but 0 bytes read,at frame 1777/1778, at time 59.23/59.25 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-04 11:15:58,092 - WARNING - C:\Users\User\AppData\Local\Programs\Python\Python310\lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Edit/in_process_clips/a74faecf-2468-4e6b-96c6-bf9e5f416581_cam.mp4, 325080 bytes wanted but 0 bytes read,at frame 1777/1778, at time 59.23/59.25 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-04 11:15:59,115 - INFO - Cleaning in_process _clips...
+
+2025-03-04 11:15:59,115 - INFO - Removing file : Edit\in_process_clips\a74faecf-2468-4e6b-96c6-bf9e5f416581audio_cam.mp3
+
+2025-03-04 11:15:59,120 - INFO - Removing file : Edit\in_process_clips\a74faecf-2468-4e6b-96c6-bf9e5f416581audio_content.mp3
+
+2025-03-04 11:15:59,124 - INFO - Removing file : Edit\in_process_clips\a74faecf-2468-4e6b-96c6-bf9e5f416581_cam.mp4
+
+2025-03-04 11:15:59,130 - INFO - Removing file : Edit\in_process_clips\a74faecf-2468-4e6b-96c6-bf9e5f416581_content.mp4
+
+2025-03-04 12:33:02,705 - INFO - Extracting web cam from clip..
+
+2025-03-04 12:33:03,847 - INFO - Auto face recon failed. Manually web cam extraction performed.
+2025-03-04 12:35:32,849 - INFO - Extracting webcam from clip..
+
+2025-03-04 12:35:34,043 - INFO - Auto face recon failed. Manually web cam extraction performed.
+2025-03-04 12:36:28,901 - INFO - Crop clip to short format..
+2025-03-04 12:37:28,231 - INFO - Writing new clip composite from webcam and content..
+2025-03-04 12:38:53,301 - WARNING - C:\Users\User\AppData\Local\Programs\Python\Python310\lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Edit/in_process_clips/26285e61-3fba-4eef-9e53-399b888326c3_content.mp4, 4147200 bytes wanted but 0 bytes read,at frame 1776/1778, at time 59.20/59.25 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-04 12:38:53,309 - WARNING - C:\Users\User\AppData\Local\Programs\Python\Python310\lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Edit/in_process_clips/26285e61-3fba-4eef-9e53-399b888326c3_cam.mp4, 323049 bytes wanted but 0 bytes read,at frame 1776/1778, at time 59.20/59.25 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-04 12:38:53,346 - WARNING - C:\Users\User\AppData\Local\Programs\Python\Python310\lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Edit/in_process_clips/26285e61-3fba-4eef-9e53-399b888326c3_content.mp4, 4147200 bytes wanted but 0 bytes read,at frame 1777/1778, at time 59.23/59.25 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-04 12:38:53,353 - WARNING - C:\Users\User\AppData\Local\Programs\Python\Python310\lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Edit/in_process_clips/26285e61-3fba-4eef-9e53-399b888326c3_cam.mp4, 323049 bytes wanted but 0 bytes read,at frame 1777/1778, at time 59.23/59.25 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-04 12:38:54,339 - INFO - Cleaning in_process_clips...
+
+2025-03-04 12:38:54,340 - INFO - Removing file : Edit\in_process_clips\26285e61-3fba-4eef-9e53-399b888326c3audio_cam.mp3
+
+2025-03-04 12:38:54,344 - INFO - Removing file : Edit\in_process_clips\26285e61-3fba-4eef-9e53-399b888326c3audio_content.mp3
+
+2025-03-04 12:38:54,348 - INFO - Removing file : Edit\in_process_clips\26285e61-3fba-4eef-9e53-399b888326c3_cam.mp4
+
+2025-03-04 12:38:54,353 - INFO - Removing file : Edit\in_process_clips\26285e61-3fba-4eef-9e53-399b888326c3_content.mp4
+
