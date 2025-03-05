@@ -1,14 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Connected from './components/connected.vue'
 import { useTwitokStore } from './store/twitokStore'
-import { ref } from 'vue'
 import Inscription from './components/inscription.vue'
 import Connection from './components/connection.vue'
+import Test_autre_connected from './components/test_autre_connected.vue'
 
 const routes = [
     { path:'/inscription', name:'Inscription', component: Inscription }, 
-    { path:'/connected', name:'Connected', component: Connected},   
     { path:'/connection', name:'Connection', component: Connection},
+    { path:'/connected', name:'Connected', component: Connected, meta: {requiresAuth: true} },   
+    { path:'/autreConnected', name:'AutreConnected', component: Test_autre_connected, meta: {requiresAuth: true} },   
 ]
 
 const router = createRouter({
@@ -16,20 +17,16 @@ const router = createRouter({
     routes, 
 })
 
-router.beforeEach((to, from, next) => {
-    const twitokStore = useTwitokStore() 
-
-    if (to.name == 'Connected' && twitokStore.authorizedConnection){
-        console.log("user deja connecté, autorisé a entrer")
+router.beforeEach((to, from, next)=> {
+    const twitokStore = useTwitokStore()
+    if (to.meta.requiresAuth && !twitokStore.authorizedConnection){
+        console.log(twitokStore.authorizedConnection, ': utilisateur non autorisé redirection dans connection')
+        return next('connection')
+    }
+    else {
+        console.log(twitokStore.authorizedConnection, ': utilisateur autorisé ')
         return next()
     }
-    // console.log("user autorisé à entrer : ", twitokStore.authorizedConnection)
-    else if (!twitokStore.authorizedConnection && (to.name !== 'Inscription' && to.name !== 'Connection' ) ){
-        return next ({name:'Connection'})
-    }
-    return next()
-    // return false //false c pour annuler la navigation en cours si l'user a modifie l'url via l'url ou le bouton de rtour
-    // return emplacement different (par exemple pour reidirger vers home )
 })
 
 export default router

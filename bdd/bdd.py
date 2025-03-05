@@ -108,12 +108,5 @@ def insert_user () :
         db.rollback() # pour éviter de push la requete vu qu'elle va flop 
         return jsonify({"error" : "query error"}), 500 # retourne erreur 500  
     
-# @app.route("/logout", methods=['POST'])
-# def logout () : 
-
-    
-    # TODO : fonction de logout 
-    #        optimiser la connexion a la bdd car la dès qu'on fait une requete on se reconnecte   
-
 if __name__ == '__main__' : 
     app.run(debug=True)
