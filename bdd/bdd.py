@@ -3,8 +3,18 @@ from flask import Flask, g, request, jsonify # g = variable de contexte pr stock
 import logging
 from flask_cors import CORS
 from flask_bcrypt import Bcrypt
+from mysql.connector import pooling # pour récupérer les anciennes connexions et pas se reco a chaque requete
 
 DATABASE = 'twitok_base'
+
+db_config = {
+    "user": "root", 
+    "password": "", 
+    "host": 'localhost', 
+    "database": "twitok_base"
+}
+
+connection_pool = pooling.MySQLConnectionPool(pool_name="mypool", pool_size=5, **db_config)
 
 app = Flask(__name__) #création application flask 
 CORS(app) # pour autoriser les requetes post d'autres origines que le servuer 
@@ -19,9 +29,10 @@ def get_db():
     if db is None:
         print("bdd non connectée, connexion...")
         try:
-            db = g._database = mysql.connector.connect(
-                host="localhost", user="root", password="", database=DATABASE
-            )
+            # db = g._database = mysql.connector.connect(
+            #     host="localhost", user="root", password="", database=DATABASE
+            # )
+            db = g._database = connection_pool.get_connection() # pour recup les anciennes co 
             print("bdd connectée")
         except mysql.connector.Error as err:
             print(f"Erreur de connexion MySQL : {err}")
