@@ -5,9 +5,15 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <!-- <accueil/>
-  <connected/>  -->
   <router-view/> 
 
-  ptn de pb la c que y reconnait pas le authorizedConnection du store donc il peut pas validere l'autorisation et on peut pas accéder à '/connected'
+
 </template>
+
+<!-- TODO : 
+    - fonction de logout 
+    - optimiser la connexion a la bdd car la dès qu'on fait une requete on se reconnecte
+    - régler le probleme du before each pour quand on tape connected dans l'url qui est deja connected et que ca nous redirige vers connection 
+      
+-->
+

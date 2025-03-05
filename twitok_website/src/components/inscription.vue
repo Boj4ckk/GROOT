@@ -5,8 +5,8 @@ import apiClient from '@/api';
 import router from '@/router';
 import { useTwitokStore } from '@/store/twitokStore'; //import. store 
 
-const twitokStore = useTwitokStore() 
-const authorizedConnection = twitokStore.authorizedConnection
+const twitokStore = useTwitokStore() // vient du store 
+// const authorizedConnection = twitokStore.authorizedConnection
 console.log("twitokStore : ", twitokStore)
 
 const username = ref("")
@@ -43,7 +43,7 @@ const insert_user = async () => {
     </form>
 
     <router-link 
-    to="/">Already an account ?</router-link>
+    to="/connection">Already an account ?</router-link>
 
 </template>
 

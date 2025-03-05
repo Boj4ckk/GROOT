@@ -60,19 +60,21 @@ def register() :
     db = get_db()
     cursor = db.cursor() 
 
-    query = ('Select (username, password) from user where username=%s')
-    cursor.execute(query, username)
+    query = ('Select username, password from user where username=(%s)')
+    cursor.execute(query, (username,))
     
     user = cursor.fetchone()
+    logging.info(f"user trouvé : {user}")
     if (user is None) : 
         logging.error(f'user {username} doesn\'t exist')
         return jsonify({"error" : "invalid username"}), 401
     
-    hashed_password = user['password']
+    hashed_password = user[1] #user[1] car ce que rend user = cursror.fetchone() renvoie un tuple donc c des indices sous forme de nombre 
+    logging.info(f"hashed password : {hashed_password}")
     if (not bcrypt.check_password_hash(hashed_password, password)) : 
         logging.error(f'user {password} isn\'t correct')
         return jsonify({"error": "password isn't correct"}), 401
-
+    return jsonify({"info" : f'user : username succesfuly registered'})
 
 @app.route("/newUser", methods=['POST'])
 def insert_user () : 
@@ -105,6 +107,13 @@ def insert_user () :
         logging.error(f'Erreur de requete : {e}')
         db.rollback() # pour éviter de push la requete vu qu'elle va flop 
         return jsonify({"error" : "query error"}), 500 # retourne erreur 500  
+    
+# @app.route("/logout", methods=['POST'])
+# def logout () : 
+
+    
+    # TODO : fonction de logout 
+    #        optimiser la connexion a la bdd car la dès qu'on fait une requete on se reconnecte   
 
 if __name__ == '__main__' : 
     app.run(debug=True)

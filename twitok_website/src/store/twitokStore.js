@@ -3,18 +3,26 @@ import { ref, computed } from 'vue'
 
 export const useTwitokStore = defineStore('useTwitokStore', () => {
     // STATE pour déclarer des variables réactives dans le store
-    const authorizedConnection = ref(false) 
+    const state = ref({
+        authorizedConnection: false,
+    });
 
-    // GETTER permet de récupérer des valeurs du state, et éventuellement faire des calculs a partir de ces iunfos 
+    // GETTER permet de récupérer des valeurs du state, et éventuellement faire des calculs à partir de ces infos
+    const authorizedConnection = computed(() => state.value.authorizedConnection);
 
-    // ACTION permet d'éxecuter des fonctions asynchrones ou logiques complexes qui modifient le state cette fois 
+    // ACTION permet d'éxecuter des fonctions asynchrones ou logiques complexes qui modifient le state cette fois
     const autorized = () => {
-        authorizedConnection.value = true
+        state.value.authorizedConnection = true
     }
 
-    // epxoser les prop et méthodes 
+    const unauthorized = () => {
+        state.value.authorizedConnection = false
+    }
+
+    // Exposer les props et méthodes
     return {
-        authorizedConnection, 
+        authorizedConnection,
         autorized,
+        unauthorized,
     }
 })
