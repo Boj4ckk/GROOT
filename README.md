@@ -1,0 +1,1 @@
+Fonctionnalité <u> d'insertion d'utilisateur</u>  ok mais plusieurs détails à checker encore (hashage mots de passe, champs du formulaire, messages d'erreur à travers vue (pour l'instant message d'erreur si utilisateur deja rentré dans la bdd UNIQUEMENT dans le terminal du serveur flask mais l'utilisateur qui veut s'inscrire n'est pas prévenu) ...)
