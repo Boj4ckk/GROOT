@@ -8,10 +8,11 @@ from mysql.connector import pooling # pour récupérer les anciennes connexions 
 DATABASE = 'twitok_base'
 
 db_config = {
-    "user": "root", 
-    "password": "", 
-    "host": 'localhost', 
-    "database": "twitok_base"
+    "user": "yazhug", 
+    "password": "azureadmin@25", 
+    "host": 'twitok-serveur.mysql.database.azure.com', 
+    "database": "twitok-database",
+    "ssl_ca": "GROOT\\CA\\BaltimoreCyberTrustRoot.crt.pem", # certificat pour azure 
 }
 
 connection_pool = pooling.MySQLConnectionPool(pool_name="mypool", pool_size=5, **db_config)

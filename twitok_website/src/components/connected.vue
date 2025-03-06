@@ -11,10 +11,14 @@ const logout = () => {
     router.push('/connection')
 } 
 
+// const getCurrentUser = async () => {
+//     response = await axios.get('http://127.0.0.1:5000/get')
+// }
+
 </script>
 
 <template>
-    yo t'es connecté
+    yo t'es connecté 
 
     <form>
         <input type="submit" @click.prevent="logout()" value="logout">

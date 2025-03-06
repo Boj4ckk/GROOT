@@ -8,3 +8,5 @@ pillow
 streamlink
 werkzeug
 numpy
+mysql-connector-python==9.2.0
+# avoir python 3.13.2

@@ -4,12 +4,14 @@ import { useTwitokStore } from './store/twitokStore'
 import Inscription from './components/inscription.vue'
 import Connection from './components/connection.vue'
 import Test_autre_connected from './components/test_autre_connected.vue'
+import Showuser from './components/showuser.vue'
 
 const routes = [
     { path:'/inscription', name:'Inscription', component: Inscription }, 
     { path:'/connection', name:'Connection', component: Connection},
     { path:'/connected', name:'Connected', component: Connected, meta: {requiresAuth: true} },   
     { path:'/autreConnected', name:'AutreConnected', component: Test_autre_connected, meta: {requiresAuth: true} },   
+    { path:'/showuser', name:'Showuser', component: Showuser },   
 ]
 
 const router = createRouter({
