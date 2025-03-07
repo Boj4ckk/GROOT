@@ -22,11 +22,15 @@ const router = createRouter({
 router.beforeEach((to, from, next)=> {
     const twitokStore = useTwitokStore()
     if (to.meta.requiresAuth && !twitokStore.authorizedConnection){
-        console.log(twitokStore.authorizedConnection, ': utilisateur non autorisé redirection dans connection')
+        console.log(twitokStore.authorizedConnection, ': utilisateur non autorisé : redirection dans /connection')
         return next('connection')
     }
+    else if (!twitokStore.authorizedConnection){
+        console.log(twitokStore.authorizedConnection, ': utilisateur déconnecté')
+        return next() 
+    }
     else {
-        console.log(twitokStore.authorizedConnection, ': utilisateur autorisé ')
+        console.log(twitokStore.authorizedConnection, ': utilisateur connecté')
         return next()
     }
 })

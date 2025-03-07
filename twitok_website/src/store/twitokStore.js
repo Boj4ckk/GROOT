@@ -4,7 +4,7 @@ import { ref, computed } from 'vue'
 export const useTwitokStore = defineStore('useTwitokStore', () => {
     // STATE pour déclarer des variables réactives dans le store
     const state = ref({
-        authorizedConnection: localStorage.getItem('authorizedConnection'),
+        authorizedConnection: localStorage.getItem('authorizedConnection') ?? false, // si rien alors false par défaut. 
         actualUser: sessionStorage.getItem('actualUser')
     });
 
@@ -15,7 +15,7 @@ export const useTwitokStore = defineStore('useTwitokStore', () => {
     // ACTION permet d'éxecuter des fonctions asynchrones ou logiques complexes qui modifient le state cette fois
     const autorized = () => {
         state.value.authorizedConnection = true
-        localStorage.setItem('authorizedConnection', 'true') // localstorage = sauvgaerager meme avec refresh (dans navigateur) p(peut que enregistrer string jcrois) 
+        localStorage.setItem('authorizedConnection', true) // localstorage = sauvgaerager meme avec refresh (dans navigateur) p(peut que enregistrer string jcrois) 
     }
 
     const unauthorized = () => {

@@ -91,13 +91,19 @@ def register() :
 @app.route("/newUser", methods=['POST'])
 def insert_user () : 
     data_received = request.json
+    # tiktok_password = None # pour gérer si l'user veut pas mettre ses credentials tiktok dès l'inscription 
+
     username = data_received.get('username')
     password = data_received.get('password')
     tiktok_username = data_received.get('tiktok_username')
     tiktok_password = data_received.get('tiktok_password')
 
     hashed_password = bcrypt.generate_password_hash(password).decode('utf-8') # decode('utf-8') convertit les octets en str 
-    hashed_tiktok_password = bcrypt.generate_password_hash(tiktok_password).decode('utf-8')
+    print ("\n TIKTOK PASSWORD : >", tiktok_password, "<\n")
+    if (tiktok_password) :
+        hashed_tiktok_password = bcrypt.generate_password_hash(tiktok_password).decode('utf-8')
+    else : 
+        hashed_tiktok_password = None
 
     db = get_db() 
     cursor = db.cursor() 
