@@ -1,19 +1,21 @@
 import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
-import Connected from './components/connected.vue'
 import { useTwitokStore } from './store/twitokStore'
-import Inscription from './components/inscription.vue'
-import Connection from './components/connection.vue'
 import Test_autre_connected from './components/test_autre_connected.vue'
 import Showuser from './components/showuser.vue'
 import Home from './components/home.vue'
+import Login from './components/login.vue'
+import Studio from './components/studio.vue'
+import Register from './components/register.vue'
+import Help from './components/help.vue'
 
 const routes = [
-    { path:'/inscription', name:'Inscription', component: Inscription, meta: {logoutWhenAccess: true} }, 
-    { path:'/connection', name:'Connection', component: Connection, meta: {logoutWhenAccess: true}},
-    { path:'/connected', name:'Connected', component: Connected, meta: {requiresAuth: true} },   
+    { path:'/', name:'Home', component: Home }, 
+    { path:'/register', name:'Register', component: Register, meta: {logoutWhenAccess: true} }, 
+    { path:'/login', name:'Login', component: Login, meta: {logoutWhenAccess: true}},
+    { path:'/studio', name:'Studio', component: Studio, meta: {requiresAuth: true} },   
+    { path:'/help', name:'Help', component: Help },   
     { path:'/autreConnected', name:'AutreConnected', component: Test_autre_connected, meta: {requiresAuth: true} },   
     { path:'/showuser', name:'Showuser', component: Showuser },   
-    { path:'/', name:'Home', component: Home }, 
 ]
 
 const router = createRouter({
@@ -35,12 +37,12 @@ router.beforeEach((to, from, next)=> {
         }
         else {
             // return next(from.fullPath) // pour annuler la redirection 
-            return next('/connected') // ici normalement je voulais rediriger vers la page de ou on venait mais impossible car from.path = "/" jsp prq
+            return next('/studio') // ici normalement je voulais rediriger vers la page de ou on venait mais impossible car from.path = "/" jsp prq
         }
     }
     if (to.meta.requiresAuth && !twitokStore.authorizedConnection){
         console.log(twitokStore.authorizedConnection, ': utilisateur non autorisé : redirection dans /connection')
-        return next('connection')
+        return next('/login')
     }
     else if (!twitokStore.authorizedConnection){
         console.log(twitokStore.authorizedConnection, ': utilisateur déconnecté')

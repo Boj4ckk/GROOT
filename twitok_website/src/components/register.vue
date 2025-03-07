@@ -20,7 +20,7 @@ const insert_user = async () => {
         const response = await axios.post('http://127.0.0.1:5000/newUser', dataToSend)
         console.log("envoie nouvel user : ", response.data)
         twitokStore.autorized()
-        router.push('/connected')
+        router.push('/studio')
     }
     catch (error) {
         console.error("erreur lors de la requete... ", error)

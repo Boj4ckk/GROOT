@@ -3,5 +3,6 @@ import router from '@/router';
 </script>
 
 <template>
-    yo 
+    <br><br>
+    Home ! 
 </template>

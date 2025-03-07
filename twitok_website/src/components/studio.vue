@@ -8,7 +8,7 @@ import { useTwitokStore } from '@/store/twitokStore';
 const twitokstore = useTwitokStore()
 const logout = () => {
     twitokstore.unauthorized()
-    router.push('/connection')
+    router.push('/login')
 } 
 
 // const getCurrentUser = async () => {
@@ -18,6 +18,7 @@ const logout = () => {
 </script>
 
 <template>
+    <br>
     yo t'es connecté 
 
     <form>

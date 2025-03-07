@@ -15,7 +15,7 @@ const connect = async () => {
         const response = await axios.post('http://127.0.0.1:5000/login', dataToSend)
         console.log("tentative de connexion de l'user : ", response.data)
         twitokStore.autorized()
-        router.push('/connected')
+        router.push('/studio')
     }
     catch (error) {
         console.error("erreur lors de la requete... ", error)
@@ -35,6 +35,6 @@ const connect = async () => {
     </form>
 
     <router-link 
-    to="/inscription">Not yet an account ?</router-link>
+    to="/register">Not yet an account ?</router-link>
 
 </template>
