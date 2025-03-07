@@ -1,7 +1,7 @@
 <script setup>
-
+import router from '@/router';
 </script>
 
 <template>
-    hi bro 
+    yo 
 </template>

@@ -7,6 +7,12 @@ import { RouterView } from 'vue-router';
 <template>
   <router-view/> 
 
+  <router-link to="/"> Logo </router-link>
+  <router-link to="/studio"> Studio </router-link>
+  <router-link to="/help"> Help </router-link>
+  <router-link to="/inscription"> Log in </router-link>
+  <router-link to="/register"> Register </router-link>
+
 
 </template>
 

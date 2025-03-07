@@ -47,7 +47,8 @@ const insert_user = async () => {
 
 </template>
 
-<style scoped>
+
+<!-- <style scoped>
 .form-container {
     display: flex;
     flex-direction: column;
@@ -116,4 +117,4 @@ const insert_user = async () => {
         padding: 10px 20px;
     }
 }
-</style>
+</style> -->

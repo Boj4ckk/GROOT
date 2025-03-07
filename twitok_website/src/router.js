@@ -23,8 +23,6 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next)=> {
-    console.log("from page : ", from)
-
     const twitokStore = useTwitokStore()
     console.log("from page : ", from.fullPath)
 
