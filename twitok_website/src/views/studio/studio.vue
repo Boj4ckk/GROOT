@@ -2,29 +2,16 @@
 import axios from 'axios';
 import { ref } from 'vue';
 import apiClient from '@/api';
+import { useRouter } from 'vue-router';
 import router from '@/router';
 import { useTwitokStore } from '@/store/twitokStore';
-
-const twitokstore = useTwitokStore()
-const logout = () => {
-    twitokstore.unauthorized()
-    router.push('/login')
-} 
-
-// const getCurrentUser = async () => {
-//     response = await axios.get('http://127.0.0.1:5000/get')
-// }
+import State_bar from '@/components/state_bar.vue';
 
 </script>
 
 <template>
-    <br>
-    yo t'es connecté 
-
-    <form>
-        <input type="submit" @click.prevent="logout()" value="logout">
-    </form>
-    <br><br><br>
+    <State_bar/> 
+    
     <div> <!-- body -->
         <div> <!-- formulaire -->
             <form action="">

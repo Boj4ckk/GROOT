@@ -37,8 +37,8 @@ router.beforeEach((to, from, next)=> {
             return next()
         }
         else {
-            // return next(from.fullPath) // pour annuler la redirection 
-            return next('studio') // ici normalement je voulais rediriger vers la page de ou on venait mais impossible car from.path = "/" jsp prq
+            return next(from.fullPath) // pour annuler la redirection 
+            // return next('studio') // ici normalement je voulais rediriger vers la page de ou on venait mais impossible car from.path = "/" jsp prq
         }
     }
     if (to.meta.requiresAuth && !twitokStore.authorizedConnection){
