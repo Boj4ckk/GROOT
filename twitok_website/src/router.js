@@ -42,7 +42,7 @@ router.beforeEach((to, from, next)=> {
     }
     if (to.meta.requiresAuth && !twitokStore.authorizedConnection){
         console.log(twitokStore.authorizedConnection, ': utilisateur non autorisé : redirection dans /connection')
-        return next('/login')
+        return next('login')
     }
     else if (!twitokStore.authorizedConnection){
         console.log(twitokStore.authorizedConnection, ': utilisateur déconnecté')

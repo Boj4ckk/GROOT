@@ -20,7 +20,7 @@ const insert_user = async () => {
         const response = await axios.post('http://127.0.0.1:5000/newUser', dataToSend)
         console.log("envoie nouvel user : ", response.data)
         twitokStore.autorized()
-        router.push('/studio')
+        router.push('studio')
     }
     catch (error) {
         console.error("erreur lors de la requete... ", error)
@@ -42,7 +42,7 @@ const insert_user = async () => {
         <input type="submit" @click.prevent="insert_user()" class="submit-btn"> <!-- prevent c pour éviter que la page se recharge a chauqe fois qu'on soumet le form -->
     </form>
 
-    <router-link to="/connection">Already an account ?</router-link>
+    <router-link to="connection">Already an account ?</router-link>
 
 
 </template>

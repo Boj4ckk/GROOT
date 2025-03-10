@@ -33,7 +33,13 @@ const logout = () => {
                 <label for="game"> Streamer's name </label>
                 <input type="text" name="game">
                 <label for="duration"> Duration </label>
-                <input type="range">
+                <input type="range" min="0" max="90" step="10" list="tickmarks">
+                <datalist id="tickmarks">
+                    <option value="0"></option>
+                    <option value="30"></option>
+                    <option value="60"></option>
+                    <option value="90"></option> <!-- je crois avec du css on peut afficher les valeurs genre 60 90 et tt -->
+                </datalist>
             </form>
         </div>
     </div>
