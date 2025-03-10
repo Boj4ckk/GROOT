@@ -55,3 +55,75 @@
 
 2025-03-04 12:38:54,353 - INFO - Removing file : Edit\in_process_clips\26285e61-3fba-4eef-9e53-399b888326c3_content.mp4
 
+2025-03-10 21:00:07,570 - INFO - Successfully authenticated with Twitch API.
+2025-03-10 21:00:14,546 - ERROR - Failed to download clip MoldyHelplessStarlingKevinTurtle-gP9BGb4OP5_5DgPb (Command '['streamlink', 'https://clips.twitch.tv/MoldyHelplessStarlingKevinTurtle-gP9BGb4OP5_5DgPb', 'best', '-o', 'clips/Talmo_BONNE ANNEUILLE 2025.mp4']' returned non-zero exit status 1.)
+2025-03-10 21:00:15,675 - INFO - Extracting webcam from clip..
+
+2025-03-10 21:01:38,385 - INFO - Successfully authenticated with Twitch API.
+2025-03-10 21:01:41,577 - ERROR - Failed to download clip MoldyHelplessStarlingKevinTurtle-gP9BGb4OP5_5DgPb (Command '['streamlink', 'https://clips.twitch.tv/MoldyHelplessStarlingKevinTurtle-gP9BGb4OP5_5DgPb', 'best', '-o', 'clips/Talmo_BONNE ANNEUILLE 2025.mp4']' returned non-zero exit status 1.)
+2025-03-10 21:01:42,714 - INFO - Extracting webcam from clip..
+
+2025-03-10 21:02:00,963 - INFO - Successfully authenticated with Twitch API.
+2025-03-10 21:02:05,192 - ERROR - Failed to download clip MoldyHelplessStarlingKevinTurtle-gP9BGb4OP5_5DgPb (Command '['streamlink', 'https://clips.twitch.tv/MoldyHelplessStarlingKevinTurtle-gP9BGb4OP5_5DgPb', 'best', '-o', 'clips/Talmo_BONNE ANNEUILLE 2025.mp4']' returned non-zero exit status 1.)
+2025-03-10 21:02:06,404 - INFO - Extracting webcam from clip..
+
+2025-03-10 21:03:56,866 - INFO - Successfully authenticated with Twitch API.
+2025-03-10 21:04:00,492 - ERROR - Failed to download clip MoldyHelplessStarlingKevinTurtle-gP9BGb4OP5_5DgPb (Command '['streamlink', 'https://clips.twitch.tv/MoldyHelplessStarlingKevinTurtle-gP9BGb4OP5_5DgPb', 'best', '-o', 'clips/Talmo_BONNE ANNEUILLE 2025.mp4']' returned non-zero exit status 1.)
+2025-03-10 21:04:01,550 - INFO - Removing file : .\9445f6c9-f53d-42df-9d1e-de8113961ed2_camTEMP_MPY_wvf_snd.mp3
+
+2025-03-10 21:04:01,550 - INFO - Extracting webcam from clip..
+
+2025-03-10 22:23:22,997 - INFO - Successfully authenticated with Twitch API.
+2025-03-10 22:23:27,916 - ERROR - Failed to download clip MoldyHelplessStarlingKevinTurtle-gP9BGb4OP5_5DgPb (Command '['streamlink', 'https://clips.twitch.tv/MoldyHelplessStarlingKevinTurtle-gP9BGb4OP5_5DgPb', 'best', '-o', 'clips/Talmo_BONNE ANNEUILLE 2025.mp4']' returned non-zero exit status 1.)
+2025-03-10 22:23:28,907 - INFO - Removing file : .\503f0715-8a8c-4489-8f2b-f78c24a00824_camTEMP_MPY_wvf_snd.mp3
+
+2025-03-10 22:23:28,908 - INFO - Extracting webcam from clip..
+
+2025-03-10 22:28:04,873 - INFO - Successfully authenticated with Twitch API.
+2025-03-10 22:28:15,534 - ERROR - Failed to download clip MoldyHelplessStarlingKevinTurtle-gP9BGb4OP5_5DgPb (Command '['streamlink', 'https://clips.twitch.tv/MoldyHelplessStarlingKevinTurtle-gP9BGb4OP5_5DgPb', 'best', '-o', 'clips/Talmo_BONNE ANNEUILLE 2025.mp4']' returned non-zero exit status 1.)
+2025-03-10 22:28:16,500 - INFO - Removing file : .\7dba95cf-b85d-4bc9-abfd-3802fdb87a60_camTEMP_MPY_wvf_snd.mp3
+
+2025-03-10 22:28:16,501 - INFO - Extracting webcam from clip..
+
+2025-03-10 22:28:38,864 - WARNING - C:\Users\hugo2\AppData\Local\Programs\Python\Python311\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Clips/Talmo_BONNE ANNEUILLE 2025.mp4, 6220800 bytes wanted but 0 bytes read,at frame 2438/2439, at time 40.63/40.64 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-10 22:28:39,932 - INFO - Crop clip to short format..
+2025-03-10 22:29:39,544 - INFO - Writing new clip composite from webcam and content..
+2025-03-10 22:30:18,615 - INFO - Successfully authenticated with Twitch API.
+2025-03-10 22:30:21,718 - ERROR - Failed to download clip MoldyHelplessStarlingKevinTurtle-gP9BGb4OP5_5DgPb (Command '['streamlink', 'https://clips.twitch.tv/MoldyHelplessStarlingKevinTurtle-gP9BGb4OP5_5DgPb', 'best', '-o', 'clips/Talmo_BONNE ANNEUILLE 2025.mp4']' returned non-zero exit status 1.)
+2025-03-10 22:30:22,793 - INFO - Removing file : .\9bbaf77a-9af8-4dfe-92b8-9cc389c023d7_processedTEMP_MPY_wvf_snd.mp3
+
+2025-03-10 22:30:22,793 - INFO - Extracting webcam from clip..
+
+2025-03-10 22:30:47,657 - WARNING - C:\Users\hugo2\AppData\Local\Programs\Python\Python311\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Clips/Talmo_BONNE ANNEUILLE 2025.mp4, 6220800 bytes wanted but 0 bytes read,at frame 2438/2439, at time 40.63/40.64 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-10 22:30:49,077 - INFO - Crop clip to short format..
+2025-03-10 22:31:53,631 - INFO - Writing new clip composite from webcam and content..
+2025-03-10 22:33:29,530 - WARNING - C:\Users\hugo2\AppData\Local\Programs\Python\Python311\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/c85e1731-6ce7-4e08-ab8e-f2a782174397_content.mp4, 4147200 bytes wanted but 0 bytes read,at frame 1220/1221, at time 40.67/40.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-10 22:33:29,544 - WARNING - C:\Users\hugo2\AppData\Local\Programs\Python\Python311\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/c85e1731-6ce7-4e08-ab8e-f2a782174397_cam.mp4, 336924 bytes wanted but 0 bytes read,at frame 1220/1221, at time 40.67/40.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-10 22:33:31,185 - INFO - Cleaning in_process_clips...
+
+2025-03-10 22:33:31,186 - INFO - Removing file : GROOT\Edit\in_process_clips\9bbaf77a-9af8-4dfe-92b8-9cc389c023d7audio_cam.mp3
+
+2025-03-10 22:33:31,187 - INFO - Removing file : GROOT\Edit\in_process_clips\9bbaf77a-9af8-4dfe-92b8-9cc389c023d7audio_content.mp3
+
+2025-03-10 22:33:31,188 - INFO - Removing file : GROOT\Edit\in_process_clips\9bbaf77a-9af8-4dfe-92b8-9cc389c023d7_cam.mp4
+
+2025-03-10 22:33:31,189 - INFO - Removing file : GROOT\Edit\in_process_clips\9bbaf77a-9af8-4dfe-92b8-9cc389c023d7_content.mp4
+
+2025-03-10 22:33:31,193 - INFO - Removing file : GROOT\Edit\in_process_clips\c85e1731-6ce7-4e08-ab8e-f2a782174397audio_cam.mp3
+
+2025-03-10 22:33:31,193 - INFO - Removing file : GROOT\Edit\in_process_clips\c85e1731-6ce7-4e08-ab8e-f2a782174397audio_content.mp3
+
+2025-03-10 22:33:31,195 - INFO - Removing file : GROOT\Edit\in_process_clips\c85e1731-6ce7-4e08-ab8e-f2a782174397_cam.mp4
+
+2025-03-10 22:33:31,195 - INFO - Removing file : GROOT\Edit\in_process_clips\c85e1731-6ce7-4e08-ab8e-f2a782174397_content.mp4
+
+2025-03-10 22:41:32,624 - INFO - Successfully authenticated with Twitch API.
+2025-03-10 22:41:38,226 - INFO - Clip successfully downloaded: clips/Talmo_BONNE ANNEUILLE 2025.mp4

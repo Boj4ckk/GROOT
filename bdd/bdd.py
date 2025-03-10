@@ -5,6 +5,8 @@ from flask_cors import CORS
 from flask_bcrypt import Bcrypt
 from mysql.connector import pooling # pour récupérer les anciennes connexions et pas se reco a chaque requete
 
+# partie requetes db 
+
 DATABASE = 'twitok_base'
 
 db_config = {
@@ -126,6 +128,51 @@ def login() :
         logging.error(f'user {password} isn\'t correct')
         return jsonify({"error": "password isn't correct"}), 401
     return jsonify({"info" : f'user : username succesfuly registered'})
+
+
+
+# partie requetes api twitch
+
+import os
+import logging
+from api.Twitch.Twitch_api import TwitchApi
+from api.Tiktok.tiktok_api import TiktokApi
+from Edit.Video_processor import VideoProcessor
+
+CLIENT_ID = "k49vl0y998fywdwlvzu48b1u4kth5f"
+CLIENT_SECRET = "cnhhv1qwdxfjc8smmtjnbieg5c9p57"
+
+@app.route('/recup_clips')
+def recup_clips() : 
+    data_received = request.json 
+    streamer_name = data_received.get('streamer_name')
+    game = data_received.get('game')
+    min_views = data_received.get('min_views')
+    max_views = data_received.get('max_views')
+    min_duration = 0
+    max_duration = data_received.get('max_duration')
+    min_date_release = data_received.get('min_date_release')
+    max_date_release = data_received.get('max_date_release')
+    number_of_clips = data_received.get('number_of_clips')
+
+    twitch_instance  =  TwitchApi(CLIENT_ID,CLIENT_SECRET)  
+    TwitchApi.getHeaders(twitch_instance)
+
+    id_twitch_streamer = TwitchApi.getUserId(twitch_instance, streamer_name)
+    data = TwitchApi.getClips(
+        twitch_instance,
+        id_twitch_streamer,
+        
+        filters={"started_at": min_date_release, "ended_at": max_date_release, "first": number_of_clips},
+        min_duration=20,
+        max_duration=60
+    )
+
+    # Affichage propre des données sous forme JSON
+    TwitchApi.downloadClipWithAudio(twitch_instance,data)
     
+
+    # pas fini les histoires des filtres (pas sur que tous les filtres soient prenables en compte) => à checker avec yazid
+
 if __name__ == '__main__' : 
     app.run(debug=True)

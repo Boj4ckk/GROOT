@@ -35,8 +35,13 @@ import State_bar from '@/components/state_bar.vue';
                     <label for="views_max">Max</label>
                     <input type="number" id="views_max" name="views_max" min="0">
                 </div>
-                <label for="release">Date of release</label>
-                <input type="date" id="release" name="release">
+                <label for="min_date_release">Min date of release</label>
+                <input type="date" id="min_date_release" name="min_date_release">
+                <label for="max_date_release">Max date of release</label>
+                <input type="date" id="max_date_release" name="max_date_release">
+                <label for="number_clips">Nb of clips (max 10)</label>
+                <input type="number" min="0" max="10" id="max_date_release" name="max_date_release">
+                
                 
                 <input type="submit" value="Find">
             </form>

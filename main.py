@@ -32,18 +32,6 @@ data = TwitchApi.getClips(
 # Affichage propre des données sous forme JSON
 TwitchApi.downloadClipWithAudio(twitch_instance,data)
 
-for files in os.listdir("clips"):
-    v1 = VideoProcessor(f"Clips/{files}")
-    v1.process_video(1080,1920)
-
-
-
-
-
-
-
-
-
-
-
-
+# for files in os.listdir("clips"):
+#     v1 = VideoProcessor(f"Clips/{files}")
+#     v1.process_video(1080,1920)
