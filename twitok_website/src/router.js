@@ -4,7 +4,7 @@ import Test_autre_connected from './components/test_autre_connected.vue'
 import Showuser from './components/showuser.vue'
 import Home from './components/home.vue'
 import Login from './components/login.vue'
-import Studio from './components/studio.vue'
+import Studio from './components/studio/studio.vue'
 import Register from './components/register.vue'
 import Help from './components/help.vue'
 
@@ -12,7 +12,7 @@ const routes = [
     { path:'/', name:'Home', component: Home }, 
     { path:'/register', name:'Register', component: Register, meta: {logoutWhenAccess: true} }, 
     { path:'/login', name:'Login', component: Login, meta: {logoutWhenAccess: true}},
-    { path:'/studio', name:'Studio', component: Studio, meta: {requiresAuth: true} },   
+    { path:'/studio/', name:'Studio', component: Studio, meta: {requiresAuth: true} },   
     { path:'/help', name:'Help', component: Help },   
     { path:'/autreConnected', name:'AutreConnected', component: Test_autre_connected, meta: {requiresAuth: true} },   
     { path:'/showuser', name:'Showuser', component: Showuser },   
@@ -37,7 +37,7 @@ router.beforeEach((to, from, next)=> {
         }
         else {
             // return next(from.fullPath) // pour annuler la redirection 
-            return next('/studio') // ici normalement je voulais rediriger vers la page de ou on venait mais impossible car from.path = "/" jsp prq
+            return next('studio') // ici normalement je voulais rediriger vers la page de ou on venait mais impossible car from.path = "/" jsp prq
         }
     }
     if (to.meta.requiresAuth && !twitokStore.authorizedConnection){

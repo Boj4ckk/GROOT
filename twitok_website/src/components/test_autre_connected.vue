@@ -8,7 +8,7 @@ import { useTwitokStore } from '@/store/twitokStore';
 const twitokstore = useTwitokStore()
 const logout = () => {
     twitokstore.unauthorized()
-    router.push('/connection')
+    router.push('login')
 } 
 
 </script>
