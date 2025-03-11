@@ -1,16 +1,13 @@
 <script setup>
-// import accueil from './components/accueil.vue';
-// import Connected from './components/connected.vue';
 import { RouterView } from 'vue-router';
+import navbar from './components/navbar.vue';
 </script>
 
 <template>
-  <router-link to="/"> Logo </router-link>
-  <router-link to="/studio"> Studio </router-link>
-  <router-link to="/help"> Help </router-link>
-  <router-link to="/login"> Log in </router-link>
-  <router-link to="/register"> Register </router-link>
 
+  <navbar/> 
   <router-view/> 
+
+  <br><br><br><br><br>
 
 </template>
