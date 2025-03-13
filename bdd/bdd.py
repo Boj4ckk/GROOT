@@ -191,20 +191,33 @@ def recup_infos_clips() :
             logging.error(f"Erreur lors de la récupération des clips: {e}")
             return jsonify({"error": "Erreur interne du serveur", "details": str(e)}), 500        
         
-@app.route("/send_clips", methods=["GET"])
-def send_clips () : 
-    if request.method == 'OPTIONS' : #requete options au back end avant POST quand on fait une requete post 
-        return '', 200
-    try :
-        clipsUrl_to_send = []
-        for file in os.listdir('clips'): 
-            file_path = os.path.join("clips", file)
-            clipsUrl_to_send.append(file_path)
-            print("\n\n liste des url a envoyer : ", clipsUrl_to_send)
-        return jsonify({"clips": clipsUrl_to_send})
-    except Exception as e : 
-        logging.error(f"Erreur lors de l'envoie des clips: {e}")
-        return jsonify({"error": "Erreur interne du serveur", "details": str(e)}), 500
+# @app.route("/send_clips", methods=["GET"])
+# def send_clips () : 
+#     if request.method == 'OPTIONS' : #requete options au back end avant POST quand on fait une requete post 
+#         return '', 200
+#     try :
+#         clipsUrl_to_send = []
+#         for file in os.listdir('clips'): 
+#             file_path = os.path.join("clips", file)
+#             absolute_file_path = os.path.abspath(file_path)
+#             clipsUrl_to_send.append(absolute_file_path)
+#             print("\n\n liste des url a envoyer : ", clipsUrl_to_send)
+#         return jsonify({"clips": clipsUrl_to_send})
+#     except Exception as e : 
+#         logging.error(f"Erreur lors de l'envoie des clips: {e}")
+#         return jsonify({"error": "Erreur interne du serveur", "details": str(e)}), 500
+
+# peut pas charger les fichiers en local via le navigateur donc faut faire avec le serveur 
+
+
+# OBJECTIF : envoyer les videos sur une route du serveur flask et le récupérer directement via l'url de flask. 
+# @app.route("/send_clips", methods=["GET"])
+# def send_clips () : 
+#     if request.method == 'OPTIONS' : #requete options au back end avant POST quand on fait une requete post 
+#         return '', 200
+#     try :
+#         for file in os.listdir('clips') : 
+
         
 
 if __name__ == '__main__' : 

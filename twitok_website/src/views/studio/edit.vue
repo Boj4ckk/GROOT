@@ -5,9 +5,17 @@ import router from '@/router';
 
 const TwitokStore = useTwitokStore() 
 
-const clips = TwitokStore.clipsReturned
+const json_clips = TwitokStore.clipsReturned
 
-const index_of_clips = [] 
+const clips = json_clips["clips"]
+
+// const final_urls = []
+
+// for (let clip in clips) {
+//     const temp_clip = "../" + clips[clip]
+//     final_urls.push(temp_clip)
+//     console.log(temp_clip)
+// }
 
 
 console.log (clips) 
@@ -18,7 +26,7 @@ console.log (clips)
     <br>
     voici les clips dipos pour toi : 
     <ul>
-        <li v-for="clip in clips"> {{ clip }} </li>
+        <li v-for="clip in clips" :key="clip"> <video :src="clip" controls></video> </li>
     </ul>
 
 </template>
