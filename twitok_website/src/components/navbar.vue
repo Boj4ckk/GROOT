@@ -10,7 +10,7 @@ const router = useRouter()
 
 const twitokstore = useTwitokStore()
 const logout = () => {
-    router.push("login")
+    router.push("/login")
 }
 
 const connected = computed(() => twitokstore.authorizedConnection)

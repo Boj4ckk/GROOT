@@ -203,7 +203,6 @@ class VideoProcessor:
         # Set the position for the content video
         content = self.content_video.set_position(("center", 1920 - 1280))
         final_clip = CompositeVideoClip([empty_clip, content, web_cam])  # Combine all clips into a final clip
-
         logging.info("Writing new clip composite from webcam and content..")
         # Write the final composite video to file
         final_clip.write_videofile(processed_video_path, codec="libx264", fps=30)

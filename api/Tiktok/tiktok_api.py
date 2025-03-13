@@ -9,7 +9,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import logging
 import time
 import pickle
-import config.config
+# import config.config
 
 class TiktokApi:
     """

@@ -21,6 +21,10 @@ connection_pool = pooling.MySQLConnectionPool(pool_name="mypool", pool_size=5, *
 
 app = Flask(__name__) #création application flask 
 CORS(app) # pour autoriser les requetes post d'autres origines que le servuer 
+# CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
+
+
+
 bcrypt = Bcrypt(app) # pour cryptage des mdp 
 
 @app.route('/')
@@ -135,44 +139,73 @@ def login() :
 
 import os
 import logging
-from api.Twitch.Twitch_api import TwitchApi
-from api.Tiktok.tiktok_api import TiktokApi
-from Edit.Video_processor import VideoProcessor
+# from api.Twitch.Twitch_api import TwitchApi
+from GROOT.api.Twitch.Twitch_api import TwitchApi
+from GROOT.api.Tiktok.tiktok_api import TiktokApi
+import numpy
+# from api.Tiktok.tiktok_api import TiktokApi 
+# from Edit.Video_processor import VideoProcessor
 
-CLIENT_ID = "k49vl0y998fywdwlvzu48b1u4kth5f"
+CORS(app, resources={r"/recup_infos_clips": {"origins": "http://localhost:5173"}, 
+                     r"/send_clips": {"origins": "http://localhost:5173"}})
+
+# CORS(app)
+
+# CORS(app, supports_credentials=True)
+
+CLIENT_ID = "k49vl0y998fywdwlvzu48b1u4kth5f"    
 CLIENT_SECRET = "cnhhv1qwdxfjc8smmtjnbieg5c9p57"
 
-@app.route('/recup_clips')
-def recup_clips() : 
-    data_received = request.json 
-    streamer_name = data_received.get('streamer_name')
-    game = data_received.get('game')
-    min_views = data_received.get('min_views')
-    max_views = data_received.get('max_views')
-    min_duration = 0
-    max_duration = data_received.get('max_duration')
-    min_date_release = data_received.get('min_date_release')
-    max_date_release = data_received.get('max_date_release')
-    number_of_clips = data_received.get('number_of_clips')
+@app.route('/recup_infos_clips', methods=["POST", "OPTIONS"])
+def recup_infos_clips() : 
+    if request.method == "OPTIONS":
+        # Répondre aux requêtes OPTIONS (CORS preflight)
+        return jsonify({"message": "CORS preflight request received"}), 200  # Réponse OK pour OPTIONS
+    elif request.method == "POST":
+        try :
+            data_received = request.json 
+            streamer_name = data_received.get('streamer_name')
+            game = data_received.get('game')
+            min_views = data_received.get('min_views')
+            min_duration = 0
+            max_duration = data_received.get('max_duration')
+            min_date_release = data_received.get('min_date_release') + "T00:00:00Z"
+            max_date_release = data_received.get('max_date_release') + "T00:00:00Z"
+            number_of_clips = data_received.get('number_of_clips') + 1
 
-    twitch_instance  =  TwitchApi(CLIENT_ID,CLIENT_SECRET)  
-    TwitchApi.getHeaders(twitch_instance)
+            twitch_instance  =  TwitchApi(CLIENT_ID,CLIENT_SECRET)  
+            TwitchApi.getHeaders(twitch_instance)
 
-    id_twitch_streamer = TwitchApi.getUserId(twitch_instance, streamer_name)
-    data = TwitchApi.getClips(
-        twitch_instance,
-        id_twitch_streamer,
+            id_twitch_streamer = TwitchApi.getUserId(twitch_instance, streamer_name)
+            data = TwitchApi.getClips(
+                twitch_instance,
+                id_twitch_streamer,
+                filters={"started_at": min_date_release, "ended_at": max_date_release, "first": number_of_clips},
+                min_duration=min_duration,
+                max_duration=max_duration,
+                min_views=min_views,
+            )
+            TwitchApi.downloadClipWithAudio(twitch_instance,data)
+            return jsonify({"message": "Clips récupérés avec succès", "data": data}), 200
+        except Exception as e :
+            logging.error(f"Erreur lors de la récupération des clips: {e}")
+            return jsonify({"error": "Erreur interne du serveur", "details": str(e)}), 500        
         
-        filters={"started_at": min_date_release, "ended_at": max_date_release, "first": number_of_clips},
-        min_duration=20,
-        max_duration=60
-    )
-
-    # Affichage propre des données sous forme JSON
-    TwitchApi.downloadClipWithAudio(twitch_instance,data)
-    
-
-    # pas fini les histoires des filtres (pas sur que tous les filtres soient prenables en compte) => à checker avec yazid
+@app.route("/send_clips", methods=["GET"])
+def send_clips () : 
+    if request.method == 'OPTIONS' : #requete options au back end avant POST quand on fait une requete post 
+        return '', 200
+    try :
+        clipsUrl_to_send = []
+        for file in os.listdir('clips'): 
+            file_path = os.path.join("clips", file)
+            clipsUrl_to_send.append(file_path)
+            print("\n\n liste des url a envoyer : ", clipsUrl_to_send)
+        return jsonify({"clips": clipsUrl_to_send})
+    except Exception as e : 
+        logging.error(f"Erreur lors de l'envoie des clips: {e}")
+        return jsonify({"error": "Erreur interne du serveur", "details": str(e)}), 500
+        
 
 if __name__ == '__main__' : 
     app.run(debug=True)
