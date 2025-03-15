@@ -55,3 +55,180 @@
 
 2025-03-04 12:38:54,353 - INFO - Removing file : Edit\in_process_clips\26285e61-3fba-4eef-9e53-399b888326c3_content.mp4
 
+2025-03-12 23:12:42,738 - INFO - Successfully authenticated with Twitch API.
+2025-03-13 17:15:04,810 - INFO - Successfully authenticated with Twitch API.
+2025-03-13 17:15:18,326 - INFO - Successfully authenticated with Twitch API.
+2025-03-13 17:15:29,863 - INFO - Clip successfully downloaded: clips/Talmo_BONNE ANNEUILLE 2025.mp4
+2025-03-13 17:15:31,000 - INFO - Crop to wanted format
+2025-03-13 17:31:46,654 - INFO - Successfully authenticated with Twitch API.
+2025-03-13 17:31:52,877 - INFO - Clip successfully downloaded: clips/Talmo_BONNE ANNEUILLE 2025.mp4
+2025-03-13 17:31:53,856 - INFO - Crop to wanted format
+2025-03-13 17:33:24,113 - INFO - Successfully authenticated with Twitch API.
+2025-03-13 17:33:30,905 - INFO - Clip successfully downloaded: clips/Talmo_BONNE ANNEUILLE 2025.mp4
+2025-03-13 17:33:31,876 - INFO - Crop to wanted format
+2025-03-13 17:34:25,767 - WARNING - C:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Clips/Talmo_BONNE ANNEUILLE 2025.mp4, 6220800 bytes wanted but 0 bytes read,at frame 2438/2439, at time 40.63/40.64 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-13 17:37:02,451 - INFO - Successfully authenticated with Twitch API.
+2025-03-13 17:37:04,924 - INFO - Successfully authenticated with Twitch API.
+2025-03-13 17:37:11,783 - INFO - Clip successfully downloaded: clips/Talmo_BONNE ANNEUILLE 2025.mp4
+2025-03-13 17:37:12,756 - INFO - Crop to wanted format
+2025-03-13 17:38:01,488 - WARNING - C:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Clips/Talmo_BONNE ANNEUILLE 2025.mp4, 6220800 bytes wanted but 0 bytes read,at frame 2438/2439, at time 40.63/40.64 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-13 17:38:44,341 - INFO - Successfully authenticated with Twitch API.
+2025-03-13 17:38:51,002 - INFO - Clip successfully downloaded: clips/Talmo_BONNE ANNEUILLE 2025.mp4
+2025-03-13 17:38:51,980 - INFO - Crop to wanted format
+2025-03-13 17:39:39,082 - WARNING - C:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Clips/Talmo_BONNE ANNEUILLE 2025.mp4, 6220800 bytes wanted but 0 bytes read,at frame 2438/2439, at time 40.63/40.64 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-13 17:39:41,237 - INFO - Writing new clip composite from webcam and content..
+2025-03-13 17:40:53,842 - WARNING - C:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Edit/in_process_clips/a5f67ba8-ae66-4406-92ba-a2f2e6b3fc78_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 1220/1221, at time 40.67/40.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-13 17:40:54,459 - INFO - Cleaning in_process_clips...
+
+2025-03-13 17:40:54,460 - INFO - Removing file : Edit\in_process_clips\16f7c275-868c-48d8-971b-09e3871e62a7_content.mp4
+
+2025-03-13 17:40:54,466 - INFO - Removing file : Edit\in_process_clips\16f7c275-868c-48d8-971b-09e3871e62a7_content_audio.mp3
+
+2025-03-13 17:40:54,467 - INFO - Removing file : Edit\in_process_clips\a5f67ba8-ae66-4406-92ba-a2f2e6b3fc78_content.mp4
+
+2025-03-13 17:40:54,471 - INFO - Removing file : Edit\in_process_clips\a5f67ba8-ae66-4406-92ba-a2f2e6b3fc78_content_audio.mp3
+
+2025-03-13 17:40:54,471 - INFO - Removing file : Edit\in_process_clips\c582f26a-87d6-407f-8043-777d6f737a04_content.mp4
+
+2025-03-13 17:40:54,473 - INFO - Removing file : Edit\in_process_clips\c582f26a-87d6-407f-8043-777d6f737a04_content_audio.mp3
+
+2025-03-13 17:43:56,628 - INFO - Successfully authenticated with Twitch API.
+2025-03-13 17:44:03,709 - INFO - Clip successfully downloaded: clips/Talmo_BONNE ANNEUILLE 2025.mp4
+2025-03-13 17:44:54,061 - INFO - Successfully authenticated with Twitch API.
+2025-03-13 17:45:46,828 - INFO - Successfully authenticated with Twitch API.
+2025-03-13 17:45:50,187 - INFO - Successfully authenticated with Twitch API.
+2025-03-13 17:46:30,516 - INFO - Successfully authenticated with Twitch API.
+2025-03-13 17:46:46,587 - INFO - Successfully authenticated with Twitch API.
+2025-03-13 17:46:51,045 - INFO - Clip successfully downloaded: clips/Talmo_BONNE ANNEUILLE 2025.mp4
+2025-03-13 17:46:52,053 - INFO - Extracting webcam from clip..
+
+2025-03-13 17:47:11,568 - WARNING - C:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Clips/Talmo_BONNE ANNEUILLE 2025.mp4, 6220800 bytes wanted but 0 bytes read,at frame 2438/2439, at time 40.63/40.64 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-13 17:47:12,501 - INFO - Crop to wanted format
+2025-03-13 17:48:03,896 - INFO - Writing new clip composite from webcam and content..
+2025-03-13 17:49:30,274 - WARNING - C:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Edit/in_process_clips/cbdae928-8b1b-43d4-80a8-57a7fdaf171b_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 1220/1221, at time 40.67/40.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-13 17:49:30,284 - WARNING - C:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file Edit/in_process_clips/cbdae928-8b1b-43d4-80a8-57a7fdaf171b_cam.mp4, 336924 bytes wanted but 0 bytes read,at frame 1220/1221, at time 40.67/40.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-13 23:06:55,684 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-13 23:06:55,684 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-13 23:06:55,684 - INFO -  * Restarting with stat
+2025-03-13 23:06:57,162 - WARNING -  * Debugger is active!
+2025-03-13 23:06:57,166 - INFO -  * Debugger PIN: 801-395-871
+2025-03-13 23:08:17,898 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-13 23:08:17,898 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-13 23:08:17,898 - INFO -  * Restarting with stat
+2025-03-13 23:08:19,506 - WARNING -  * Debugger is active!
+2025-03-13 23:08:19,510 - INFO -  * Debugger PIN: 801-395-871
+2025-03-13 23:08:22,900 - INFO - 127.0.0.1 - - [13/Mar/2025 23:08:22] "OPTIONS /login HTTP/1.1" 200 -
+2025-03-13 23:08:22,937 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-03-13 23:08:22,937 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
+2025-03-13 23:08:23,172 - ERROR - user hugp isn't correct
+2025-03-13 23:08:23,173 - INFO - 127.0.0.1 - - [13/Mar/2025 23:08:23] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2025-03-13 23:08:51,381 - INFO - 127.0.0.1 - - [13/Mar/2025 23:08:51] "OPTIONS /login HTTP/1.1" 200 -
+2025-03-13 23:08:51,420 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-03-13 23:08:51,420 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
+2025-03-13 23:08:51,656 - ERROR - user hugop isn't correct
+2025-03-13 23:08:51,656 - INFO - 127.0.0.1 - - [13/Mar/2025 23:08:51] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2025-03-13 23:08:55,323 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-03-13 23:08:55,323 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
+2025-03-13 23:08:55,554 - INFO - 127.0.0.1 - - [13/Mar/2025 23:08:55] "POST /login HTTP/1.1" 200 -
+2025-03-13 23:09:53,638 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\bdd\\bdd.py', reloading
+2025-03-13 23:09:53,681 - INFO -  * Restarting with stat
+2025-03-13 23:09:55,179 - WARNING -  * Debugger is active!
+2025-03-13 23:09:55,179 - INFO -  * Debugger PIN: 801-395-871
+2025-03-13 23:10:04,669 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\bdd\\bdd.py', reloading
+2025-03-13 23:10:04,729 - INFO -  * Restarting with stat
+2025-03-13 23:10:06,476 - WARNING -  * Debugger is active!
+2025-03-13 23:10:06,480 - INFO -  * Debugger PIN: 801-395-871
+2025-03-13 23:11:30,332 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\bdd\\bdd.py', reloading
+2025-03-13 23:11:30,389 - INFO -  * Restarting with stat
+2025-03-13 23:11:32,050 - WARNING -  * Debugger is active!
+2025-03-13 23:11:32,055 - INFO -  * Debugger PIN: 801-395-871
+2025-03-13 23:12:09,335 - INFO - 127.0.0.1 - - [13/Mar/2025 23:12:09] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-13 23:12:09,339 - INFO - 127.0.0.1 - - [13/Mar/2025 23:12:09] "POST /process_clip HTTP/1.1" 200 -
+2025-03-13 23:12:10,196 - INFO - 127.0.0.1 - - [13/Mar/2025 23:12:10] "POST /process_clip HTTP/1.1" 200 -
+2025-03-13 23:13:13,868 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\bdd\\bdd.py', reloading
+2025-03-13 23:13:13,935 - INFO -  * Restarting with stat
+2025-03-13 23:13:15,510 - WARNING -  * Debugger is active!
+2025-03-13 23:13:15,514 - INFO -  * Debugger PIN: 801-395-871
+2025-03-13 23:13:29,243 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\Edit\\Video_processor.py', reloading
+2025-03-13 23:13:29,309 - INFO -  * Restarting with stat
+2025-03-13 23:13:30,875 - WARNING -  * Debugger is active!
+2025-03-13 23:13:30,882 - INFO -  * Debugger PIN: 801-395-871
+2025-03-13 23:13:36,210 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\bdd\\bdd.py', reloading
+2025-03-13 23:13:36,278 - INFO -  * Restarting with stat
+2025-03-13 23:13:37,769 - WARNING -  * Debugger is active!
+2025-03-13 23:13:37,769 - INFO -  * Debugger PIN: 801-395-871
+2025-03-13 23:15:05,698 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\Edit\\Video_processor.py', reloading
+2025-03-13 23:15:05,764 - INFO -  * Restarting with stat
+2025-03-13 23:15:07,366 - WARNING -  * Debugger is active!
+2025-03-13 23:15:07,366 - INFO -  * Debugger PIN: 801-395-871
+2025-03-13 23:16:12,338 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\Edit\\Video_processor.py', reloading
+2025-03-13 23:16:12,409 - INFO -  * Restarting with stat
+2025-03-13 23:16:13,971 - WARNING -  * Debugger is active!
+2025-03-13 23:16:13,975 - INFO -  * Debugger PIN: 801-395-871
+2025-03-13 23:16:22,425 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\bdd\\bdd.py', reloading
+2025-03-13 23:16:22,494 - INFO -  * Restarting with stat
+2025-03-13 23:16:23,986 - WARNING -  * Debugger is active!
+2025-03-13 23:16:23,990 - INFO -  * Debugger PIN: 801-395-871
+2025-03-13 23:16:26,175 - INFO - 127.0.0.1 - - [13/Mar/2025 23:16:26] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-13 23:16:26,225 - INFO - 127.0.0.1 - - [13/Mar/2025 23:16:26] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
+2025-03-13 23:18:14,034 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\bdd\\bdd.py', reloading
+2025-03-13 23:18:14,097 - INFO -  * Restarting with stat
+2025-03-13 23:18:15,577 - WARNING -  * Debugger is active!
+2025-03-13 23:18:15,581 - INFO -  * Debugger PIN: 801-395-871
+2025-03-13 23:19:16,605 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\bdd\\bdd.py', reloading
+2025-03-13 23:19:16,671 - INFO -  * Restarting with stat
+2025-03-13 23:19:19,376 - WARNING -  * Debugger is active!
+2025-03-13 23:19:19,376 - INFO -  * Debugger PIN: 801-395-871
+2025-03-13 23:19:20,708 - INFO - 127.0.0.1 - - [13/Mar/2025 23:19:20] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-13 23:19:20,759 - INFO - 127.0.0.1 - - [13/Mar/2025 23:19:20] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
+2025-03-13 23:19:26,830 - INFO - 127.0.0.1 - - [13/Mar/2025 23:19:26] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-13 23:19:26,870 - INFO - 127.0.0.1 - - [13/Mar/2025 23:19:26] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
+2025-03-13 23:19:28,953 - INFO - 127.0.0.1 - - [13/Mar/2025 23:19:28] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
+2025-03-13 23:19:47,790 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\bdd\\bdd.py', reloading
+2025-03-13 23:19:47,858 - INFO -  * Restarting with stat
+2025-03-13 23:19:49,641 - WARNING -  * Debugger is active!
+2025-03-13 23:19:49,668 - INFO -  * Debugger PIN: 801-395-871
+2025-03-13 23:19:49,868 - INFO - 127.0.0.1 - - [13/Mar/2025 23:19:49] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-13 23:19:49,882 - INFO - 127.0.0.1 - - [13/Mar/2025 23:19:49] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
+2025-03-13 23:19:50,348 - INFO - 127.0.0.1 - - [13/Mar/2025 23:19:50] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
+2025-03-13 23:19:50,488 - INFO - 127.0.0.1 - - [13/Mar/2025 23:19:50] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
+2025-03-13 23:19:50,736 - INFO - 127.0.0.1 - - [13/Mar/2025 23:19:50] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
+2025-03-13 23:19:50,910 - INFO - 127.0.0.1 - - [13/Mar/2025 23:19:50] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
+2025-03-13 23:19:51,035 - INFO - 127.0.0.1 - - [13/Mar/2025 23:19:51] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
+2025-03-13 23:19:51,160 - INFO - 127.0.0.1 - - [13/Mar/2025 23:19:51] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
+2025-03-13 23:19:54,080 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\bdd\\bdd.py', reloading
+2025-03-13 23:19:54,130 - INFO -  * Restarting with stat
+2025-03-13 23:19:55,793 - WARNING -  * Debugger is active!
+2025-03-13 23:19:55,796 - INFO -  * Debugger PIN: 801-395-871
+2025-03-13 23:20:32,556 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\bdd\\bdd.py', reloading
+2025-03-13 23:20:32,627 - INFO -  * Restarting with stat
+2025-03-15 20:01:35,974 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-15 20:01:35,975 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-15 20:01:35,983 - INFO -  * Restarting with stat
+2025-03-15 20:01:37,442 - WARNING -  * Debugger is active!
+2025-03-15 20:01:37,448 - INFO -  * Debugger PIN: 801-395-871
+2025-03-15 20:07:13,265 - INFO - 127.0.0.1 - - [15/Mar/2025 20:07:13] "OPTIONS /login HTTP/1.1" 200 -
+2025-03-15 20:07:13,303 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-03-15 20:07:13,303 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
+2025-03-15 20:07:13,539 - INFO - 127.0.0.1 - - [15/Mar/2025 20:07:13] "POST /login HTTP/1.1" 200 -
+2025-03-15 20:07:40,379 - INFO - 127.0.0.1 - - [15/Mar/2025 20:07:40] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-15 20:07:40,457 - INFO - 127.0.0.1 - - [15/Mar/2025 20:07:40] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
+2025-03-15 20:12:03,905 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\Edit\\Video_processor.py', reloading
+2025-03-15 20:12:04,223 - INFO -  * Restarting with stat
