@@ -113,6 +113,11 @@ class TwitchApi:
         :param filters: Dictionary of filters (e.g., started_at, game_id).
         :return: List of clips metadata dictionaries.
         """
+        logging.info("\n\nCleaning in_process_clips...\n\n")
+        for file in os.listdir("clips"):
+            file_path = os.path.join("clips", file)
+            logging.info(f"\n\nRemoving file : {file_path}\n")
+            os.remove(file_path)
 
         url = f"{self.BASE_URL}/clips"
         params = {"broadcaster_id": userId}
