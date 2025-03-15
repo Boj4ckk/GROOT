@@ -134,16 +134,16 @@
 2025-03-13 23:08:19,506 - WARNING -  * Debugger is active!
 2025-03-13 23:08:19,510 - INFO -  * Debugger PIN: 801-395-871
 2025-03-13 23:08:22,900 - INFO - 127.0.0.1 - - [13/Mar/2025 23:08:22] "OPTIONS /login HTTP/1.1" 200 -
-2025-03-13 23:08:22,937 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-03-13 23:08:22,937 - INFO - user trouvï¿½ : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
 2025-03-13 23:08:22,937 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
 2025-03-13 23:08:23,172 - ERROR - user hugp isn't correct
 2025-03-13 23:08:23,173 - INFO - 127.0.0.1 - - [13/Mar/2025 23:08:23] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
 2025-03-13 23:08:51,381 - INFO - 127.0.0.1 - - [13/Mar/2025 23:08:51] "OPTIONS /login HTTP/1.1" 200 -
-2025-03-13 23:08:51,420 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-03-13 23:08:51,420 - INFO - user trouvï¿½ : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
 2025-03-13 23:08:51,420 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
 2025-03-13 23:08:51,656 - ERROR - user hugop isn't correct
 2025-03-13 23:08:51,656 - INFO - 127.0.0.1 - - [13/Mar/2025 23:08:51] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
-2025-03-13 23:08:55,323 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-03-13 23:08:55,323 - INFO - user trouvï¿½ : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
 2025-03-13 23:08:55,323 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
 2025-03-13 23:08:55,554 - INFO - 127.0.0.1 - - [13/Mar/2025 23:08:55] "POST /login HTTP/1.1" 200 -
 2025-03-13 23:09:53,638 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\bdd\\bdd.py', reloading
@@ -225,10 +225,13 @@
 2025-03-15 20:01:37,442 - WARNING -  * Debugger is active!
 2025-03-15 20:01:37,448 - INFO -  * Debugger PIN: 801-395-871
 2025-03-15 20:07:13,265 - INFO - 127.0.0.1 - - [15/Mar/2025 20:07:13] "OPTIONS /login HTTP/1.1" 200 -
-2025-03-15 20:07:13,303 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-03-15 20:07:13,303 - INFO - user trouvï¿½ : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
 2025-03-15 20:07:13,303 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
 2025-03-15 20:07:13,539 - INFO - 127.0.0.1 - - [15/Mar/2025 20:07:13] "POST /login HTTP/1.1" 200 -
 2025-03-15 20:07:40,379 - INFO - 127.0.0.1 - - [15/Mar/2025 20:07:40] "OPTIONS /process_clip HTTP/1.1" 200 -
 2025-03-15 20:07:40,457 - INFO - 127.0.0.1 - - [15/Mar/2025 20:07:40] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
 2025-03-15 20:12:03,905 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\Edit\\Video_processor.py', reloading
 2025-03-15 20:12:04,223 - INFO -  * Restarting with stat
+2025-03-15 21:04:10,850 - INFO - 127.0.0.1 - - [15/Mar/2025 21:04:10] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-15 21:04:10,919 - INFO - 127.0.0.1 - - [15/Mar/2025 21:04:10] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
+2025-03-15 21:04:11,617 - INFO - 127.0.0.1 - - [15/Mar/2025 21:04:11] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
