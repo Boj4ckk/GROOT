@@ -62,12 +62,12 @@ const getClips = async() => {
                 <input type="text" id="game" name="game" list="game-list" v-model="game">
                 <datalist id="game-list"></datalist>
                 <label for="duration">Duration <span>in sec</span></label>
-                <input type="range" id="duration" name="duration" min="0" max="90" step="10" list="tickmarks" v-model="max_duration">
+                <input type="range" id="duration" name="duration" min="20" max="90" step="10" list="tickmarks" v-model="max_duration">
                 <datalist id="tickmarks">
-                    <option value="0"></option>
-                    <option value="30"></option>
-                    <option value="60"></option>
-                    <option value="90"></option>
+                    <option value="35"></option>
+                    <option value="50"></option>
+                    <option value="65"></option>
+                    <option value="90"></option>        
                 </datalist>
                 <label for="views">Views</label>
                 <div>

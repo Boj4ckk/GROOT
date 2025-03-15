@@ -31,6 +31,15 @@ const getClips = async () => {
 
 getClips() 
 
+const goToVideoId = async(videoId) => {
+    console.log("redirection vers videoId : ", videoId)
+    await router.push({
+        name:'videoEdit', 
+        params:{videoId:videoId},
+    })
+    location.reload()
+}
+
 </script>
 
 <template>
@@ -38,7 +47,10 @@ getClips()
     <br>
     voici les clips dipos pour toi : 
     <ul>
-        <li v-for="clip in clips" :key="clip"> <video :src="clip" controls></video> </li>
+        <li v-for="clip in clips" :key="clip">
+            <button @click="goToVideoId(clip)">
+                <video :src="clip" controls></video>
+            </button>
+        </li>
     </ul>
-
 </template>

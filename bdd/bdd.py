@@ -168,7 +168,7 @@ def recup_infos_clips() :
             game = data_received.get('game')
             min_views = data_received.get('min_views')
             min_duration = 0
-            max_duration = data_received.get('max_duration')
+            max_duration = int(data_received.get('max_duration'))
             min_date_release = data_received.get('min_date_release') + "T00:00:00Z"
             max_date_release = data_received.get('max_date_release') + "T00:00:00Z"
             number_of_clips = data_received.get('number_of_clips') + 1

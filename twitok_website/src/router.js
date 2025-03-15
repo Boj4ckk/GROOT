@@ -9,6 +9,7 @@ import edit from './views/studio/edit.vue'
 import test_autre_connected from './views/test_autre_connected.vue'
 import help from './views/help.vue'
 import Showuser from './components/showuser.vue'
+import videoEdit from './views/studio/videoEdit.vue'
 
 const routes = [
     { path:'/', name:'Home', component: home }, 
@@ -19,6 +20,8 @@ const routes = [
     { path:'/autreConnected', name:'AutreConnected', component: test_autre_connected, meta: {requiresAuth: true} },   
     { path:'/help', name:'Help', component: help },   
     { path:'/showuser', name:'Showuser', component: Showuser },   
+
+    { path:'/videoEdit/:videoId', name:'videoEdit', component: videoEdit, meta: {requiresAuth:true}}, 
 ]
 
 const router = createRouter({
