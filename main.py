@@ -1,7 +1,7 @@
 # src/main.py
 import os
 import logging
-from api.Twitch.Twitch_api import TwitchApi
+from api.Twitch.twitch_api import TwitchApi
 from api.Tiktok.tiktok_api import TiktokApi
 from Edit.Video_processor import VideoProcessor
 import json
@@ -33,7 +33,7 @@ data = TwitchApi.getClips(
 TwitchApi.downloadClipWithAudio(twitch_instance,data)
 
 for files in os.listdir("clips"):
-    v1 = VideoProcessor(f"Clips/{files}")
+    v1 = VideoProcessor(f"Clips/{files}",True,"landscape")
     v1.process_video(1080,1920)
 
 
