@@ -2,23 +2,35 @@
 
 import { useTwitokStore } from '@/store/twitokStore';
 import router from '@/router';
+import axios from 'axios';
+import { ref } from 'vue';
 
 const TwitokStore = useTwitokStore() 
 
-const json_clips = TwitokStore.clipsReturned
+const objet_clipsUrls = TwitokStore.clipsUrls_Returned
+console.log("voici les urls des clips : ", objet_clipsUrls)
+const clipsUrls = objet_clipsUrls["clipsUrls"]
+console.log(clipsUrls)
 
-const clips = json_clips["clips"]
+const clips = ref([])
 
-// const final_urls = []
+const getClips = async () => {
+    try {
+        for (let url of clipsUrls) {
+            // const url = objet_url[0]
+            console.log("envoi de la requete pour aller chercher la vidéo, nom vidéo : ", url)
+            clips.value.push(`http://127.0.0.1:5000/clips/${url}`)
+            console.log("etat du dossier de vidéos : ", clips)
+        }
+    }
+    catch (error) {
+        console.error("erreur lorsqu'on a été cherché la vidéo finale", error)
+    }
+    return clips
+}
 
-// for (let clip in clips) {
-//     const temp_clip = "../" + clips[clip]
-//     final_urls.push(temp_clip)
-//     console.log(temp_clip)
-// }
+getClips() 
 
-
-console.log (clips) 
 </script>
 
 <template>

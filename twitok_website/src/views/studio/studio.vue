@@ -29,10 +29,10 @@ const getClips = async() => {
         console.log("Tentative d'envoie des informations sur les clips a récupérer...")
         console.log("voici le streamer qu'on tente de recup les clips", dataToSend.streamer_name)
         try {
-            const clips_returned = await axios.get("http://127.0.0.1:5000/send_clips")
-            console.log("voici ce que nous a retourné l'api : ", clips_returned.data)
-            twitokStore.setClipsReturned(clips_returned.data)
-            console.log("clipsReterned du STORE : ", twitokStore.clipsReturned)
+            const clipsUrls_returned = await axios.get("http://127.0.0.1:5000/send_clipsUrls")
+            console.log("voici ce que nous a retourné l'api : ", clipsUrls_returned.data)
+            twitokStore.setclipsUrls_Returned(clipsUrls_returned.data)
+            console.log("clipsReterned du STORE : ", twitokStore.clipsUrls_Returned)
         }
         catch(err){
             console.error('Impossible de récupérer les clips de neuilles', err)

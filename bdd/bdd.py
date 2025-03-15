@@ -209,16 +209,31 @@ def recup_infos_clips() :
 
 # peut pas charger les fichiers en local via le navigateur donc faut faire avec le serveur 
 
+from flask import send_from_directory
 
 # OBJECTIF : envoyer les videos sur une route du serveur flask et le récupérer directement via l'url de flask. 
-# @app.route("/send_clips", methods=["GET"])
-# def send_clips () : 
-#     if request.method == 'OPTIONS' : #requete options au back end avant POST quand on fait une requete post 
-#         return '', 200
-#     try :
-#         for file in os.listdir('clips') : 
+@app.route("/send_clipsUrls", methods=["GET"])
+def send_clipsUrls () : 
+    if request.method == 'OPTIONS' : #requete options au back end avant POST quand on fait une requete post 
+        return '', 200
+    try :
+        liste_urls = [] 
+        for file in os.listdir('clips') :   
+            liste_urls.append(file)
+        return jsonify ({"clipsUrls": liste_urls})
+    except Exception as e : 
+        logging.error(f"Erreur lors de l'envoie de l'url des clips : {e}")
+        return ({"error": "Erreur lors de l'envoi de l'url des clips"}), 500
 
-        
+import urllib
+
+@app.route("/clips/<file>")
+def send_clip (file):
+    dossier = "../../clips/"
+    # dossier = "clips"
+    # file = urllib.parse.unquote(file)
+    return send_from_directory(dossier, file)
+
 
 if __name__ == '__main__' : 
     app.run(debug=True)
