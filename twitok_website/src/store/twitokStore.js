@@ -11,12 +11,15 @@ export const useTwitokStore = defineStore('useTwitokStore', () => {
 
     const state = ref({
         authorizedConnection: sessionStorage.getItem('authorizedConnection') === 'true', // permet d'avoir un vrai booléen car sessionStorage stocke uniquement des str et non des bool meme si on met = true ca va stocker 'true' odnc la condition serait toujours validé car 'true' ou 'false' et dans tous les cas non vides donc true
-        actualUser: sessionStorage.getItem('actualUser')
-    });    
+        actualUser: sessionStorage.getItem('actualUser'),
+        clipsUrls_Returned: JSON.parse(localStorage.getItem('clipsUrls_Returned')) || [] 
+    });
+
 
     // GETTER permet de récupérer des valeurs du state, et éventuellement faire des calculs à partir de ces infos
     const authorizedConnection = computed(() => state.value.authorizedConnection);
     const actualUser = computed(() => state.value.actualUser);
+    const clipsUrls_Returned = computed(()=> state.value.clipsUrls_Returned); 
 
     // ACTION permet d'éxecuter des fonctions asynchrones ou logiques complexes qui modifient le state cette fois
     const autorized = () => {
@@ -34,6 +37,11 @@ export const useTwitokStore = defineStore('useTwitokStore', () => {
         console.log("déconexion de l'utilisateur... ")
     } 
 
+    const setclipsUrls_Returned = (clips) => {
+        state.value.clipsUrls_Returned = clips
+        localStorage.setItem('clipsUrls_Returned', JSON.stringify(clips))
+    }
+
     // const setActualUser = (user) => {
     //     state.value.actualUser = 
     // }
@@ -42,8 +50,10 @@ export const useTwitokStore = defineStore('useTwitokStore', () => {
     return {
         authorizedConnection,
         actualUser,
+        clipsUrls_Returned,
         autorized,
         unauthorized,
         logout,
+        setclipsUrls_Returned,
     }
 })

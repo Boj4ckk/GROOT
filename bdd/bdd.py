@@ -11,6 +11,8 @@ from flask_cors import cross_origin
 from flask_bcrypt import Bcrypt
 from mysql.connector import pooling # pour récupérer les anciennes connexions et pas se reco a chaque requete
 
+# partie requetes db 
+
 
 
 from Edit.Video_processor import VideoProcessor
@@ -28,6 +30,10 @@ connection_pool = pooling.MySQLConnectionPool(pool_name="mypool", pool_size=5, *
 
 app = Flask(__name__) #création application flask 
 CORS(app) # pour autoriser les requetes post d'autres origines que le servuer 
+# CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
+
+
+
 bcrypt = Bcrypt(app) # pour cryptage des mdp 
 
 @app.route('/')
@@ -122,7 +128,7 @@ def login() :
 
     query = ('Select username, password from user where username=(%s)')
     cursor.execute(query, (username,))
-    
+
     user = cursor.fetchone()
     logging.info(f"user trouvé : {user}")
     if (user is None) : 
@@ -138,22 +144,104 @@ def login() :
 
 
 
-@app.route("/process_clip", methods=["POST"])
-@cross_origin()  # Explicitly allow CORS for this route
-def process_data():
+# partie requetes api twitch
 
-    data = request.json
-    web_cam_state = data.get("webcam_detection")
-    clip_format = data.get("clip_format")
-    clip_path = data.get("clip_path")
+import os
+import logging
+# from api.Twitch.Twitch_api import TwitchApi
+from GROOT.api.Twitch.Twitch_api import TwitchApi
+from GROOT.api.Tiktok.tiktok_api import TiktokApi
+import numpy
+# from api.Tiktok.tiktok_api import TiktokApi 
+# from Edit.Video_processor import VideoProcessor
 
-    video_processor_instance = VideoProcessor(clip_path, web_cam_state, clip_format)
-    video_processor_instance.process_video()
+CORS(app, resources={r"/recup_infos_clips": {"origins": "http://localhost:5173"}, 
+                     r"/send_clips": {"origins": "http://localhost:5173"}})
 
-    return jsonify({"processed_clip_url" : video_processor_instance.edited_clip_path })
+# CORS(app)
 
+# CORS(app, supports_credentials=True)
 
+CLIENT_ID = "k49vl0y998fywdwlvzu48b1u4kth5f"    
+CLIENT_SECRET = "cnhhv1qwdxfjc8smmtjnbieg5c9p57"
 
+@app.route('/recup_infos_clips', methods=["POST", "OPTIONS"])
+def recup_infos_clips() : 
+    if request.method == "OPTIONS":
+        # Répondre aux requêtes OPTIONS (CORS preflight)
+        return jsonify({"message": "CORS preflight request received"}), 200  # Réponse OK pour OPTIONS
+    elif request.method == "POST":
+        try :
+            data_received = request.json 
+            streamer_name = data_received.get('streamer_name')
+            game = data_received.get('game')
+            min_views = data_received.get('min_views')
+            min_duration = 0
+            max_duration = int(data_received.get('max_duration'))
+            min_date_release = data_received.get('min_date_release') + "T00:00:00Z"
+            max_date_release = data_received.get('max_date_release') + "T00:00:00Z"
+            number_of_clips = data_received.get('number_of_clips') + 1
+
+            twitch_instance  =  TwitchApi(CLIENT_ID,CLIENT_SECRET)  
+            TwitchApi.getHeaders(twitch_instance)
+
+            id_twitch_streamer = TwitchApi.getUserId(twitch_instance, streamer_name)
+            data = TwitchApi.getClips(
+                twitch_instance,
+                id_twitch_streamer,
+                filters={"started_at": min_date_release, "ended_at": max_date_release, "first": number_of_clips},
+                min_duration=min_duration,
+                max_duration=max_duration,
+                min_views=min_views,
+            )
+            TwitchApi.downloadClipWithAudio(twitch_instance,data)
+            return jsonify({"message": "Clips récupérés avec succès", "data": data}), 200
+        except Exception as e :
+            logging.error(f"Erreur lors de la récupération des clips: {e}")
+            return jsonify({"error": "Erreur interne du serveur", "details": str(e)}), 500        
+        
+# @app.route("/send_clips", methods=["GET"])
+# def send_clips () : 
+#     if request.method == 'OPTIONS' : #requete options au back end avant POST quand on fait une requete post 
+#         return '', 200
+#     try :
+#         clipsUrl_to_send = []
+#         for file in os.listdir('clips'): 
+#             file_path = os.path.join("clips", file)
+#             absolute_file_path = os.path.abspath(file_path)
+#             clipsUrl_to_send.append(absolute_file_path)
+#             print("\n\n liste des url a envoyer : ", clipsUrl_to_send)
+#         return jsonify({"clips": clipsUrl_to_send})
+#     except Exception as e : 
+#         logging.error(f"Erreur lors de l'envoie des clips: {e}")
+#         return jsonify({"error": "Erreur interne du serveur", "details": str(e)}), 500
+
+# peut pas charger les fichiers en local via le navigateur donc faut faire avec le serveur 
+
+from flask import send_from_directory
+
+# OBJECTIF : envoyer les videos sur une route du serveur flask et le récupérer directement via l'url de flask. 
+@app.route("/send_clipsUrls", methods=["GET"])
+def send_clipsUrls () : 
+    if request.method == 'OPTIONS' : #requete options au back end avant POST quand on fait une requete post 
+        return '', 200
+    try :
+        liste_urls = [] 
+        for file in os.listdir('clips') :   
+            liste_urls.append(file)
+        return jsonify ({"clipsUrls": liste_urls})
+    except Exception as e : 
+        logging.error(f"Erreur lors de l'envoie de l'url des clips : {e}")
+        return ({"error": "Erreur lors de l'envoi de l'url des clips"}), 500
+
+import urllib
+
+@app.route("/clips/<file>")
+def send_clip (file):
+    dossier = "../../clips/"
+    # dossier = "clips"
+    # file = urllib.parse.unquote(file)
+    return send_from_directory(dossier, file)
 
 
 if __name__ == '__main__' : 

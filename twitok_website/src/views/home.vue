@@ -30,11 +30,11 @@
             </div>
             <div> <!-- videos -->
                 <div> <!-- original highlight -->
-                    <video src="" controls></video> <!-- controls c pour pouvoir mettre pause et tt -->
+                    <video src="../media\twitch_format.mp4" controls></video> <!-- controls c pour pouvoir mettre pause et tt -->
                     <p> Original highlight</p>
                 </div>
                 <div> <!-- Final video -->
-                    <video src="" controls></video>
+                    <video src="../media\tiktok_format.mp4" controls></video>
                     <p> Final video </p>
                 </div>
             </div>
@@ -55,3 +55,13 @@
     </div> <!-- page/> -->
 
 </template>
+
+<style>
+
+video {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+</style>

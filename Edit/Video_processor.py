@@ -113,8 +113,8 @@ class VideoProcessor:
         web_cam_clip = self.clipVideo.crop(x1=web_cam_coordinate[2], y1=web_cam_coordinate[0], 
                                            x2=web_cam_coordinate[3], y2=web_cam_coordinate[1])
 
-        web_cam_clip_path = f'Edit/in_process_clips/{self.clipId}_cam.mp4'  # Path for saving the webcam clip
-        web_cam_audio_clip_path = f'Edit/in_process_clips/{self.clipId}audio_cam.mp3'  # Path for saving the webcam audio
+        web_cam_clip_path = f'GROOT/Edit/in_process_clips/{self.clipId}_cam.mp4'  # Path for saving the webcam clip
+        web_cam_audio_clip_path = f'GROOT/Edit/in_process_clips/{self.clipId}audio_cam.mp3'  # Path for saving the webcam audio
 
         # Write the cropped webcam video and audio to file
         web_cam_clip.write_videofile(web_cam_clip_path, codec="libx264", fps=30)
