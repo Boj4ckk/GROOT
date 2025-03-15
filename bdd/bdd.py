@@ -1,10 +1,19 @@
+
+import os, sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+
 import mysql.connector 
 from flask import Flask, g, request, jsonify # g = variable de contexte pr stocker données dans un contexte 
 import logging
 from flask_cors import CORS
+from flask_cors import cross_origin
 from flask_bcrypt import Bcrypt
 from mysql.connector import pooling # pour récupérer les anciennes connexions et pas se reco a chaque requete
 
+
+
+from Edit.Video_processor import VideoProcessor
 DATABASE = 'twitok_base'
 
 db_config = {
@@ -126,6 +135,26 @@ def login() :
         logging.error(f'user {password} isn\'t correct')
         return jsonify({"error": "password isn't correct"}), 401
     return jsonify({"info" : f'user : username succesfuly registered'})
-    
+
+
+
+@app.route("/process_clip", methods=["POST"])
+@cross_origin()  # Explicitly allow CORS for this route
+def process_data():
+
+    data = request.json
+    web_cam_state = data.get("webcam_detection")
+    clip_format = data.get("clip_format")
+    clip_path = data.get("clip_path")
+
+    video_processor_instance = VideoProcessor(clip_path, web_cam_state, clip_format)
+    video_processor_instance.process_video()
+
+    return jsonify({"processed_clip_url" : video_processor_instance.edited_clip_path })
+
+
+
+
+
 if __name__ == '__main__' : 
     app.run(debug=True)
