@@ -4,7 +4,7 @@ import logging
 from flask_cors import CORS
 from flask_bcrypt import Bcrypt
 from mysql.connector import pooling# pour récupérer les anciennes connexions et pas se reco a chaque requete
-from GROOT.Edit.Video_processor import VideoProcessor 
+from ..Edit.Video_processor import VideoProcessor
 
 # partie requetes db 
 

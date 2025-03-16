@@ -10,6 +10,7 @@ import test_autre_connected from './views/test_autre_connected.vue'
 import help from './views/help.vue'
 import Showuser from './components/showuser.vue'
 import videoEdit from './views/studio/videoEdit.vue'
+import Tiktok_posting from './views/tiktok_posting.vue'
 
 const routes = [
     { path:'/', name:'Home', component: home }, 
@@ -19,7 +20,8 @@ const routes = [
     { path:'/studio/edit', name:'Edit', component: edit, meta: {requiresAuth: true} },  
     { path:'/autreConnected', name:'AutreConnected', component: test_autre_connected, meta: {requiresAuth: true} },   
     { path:'/help', name:'Help', component: help },   
-    { path:'/showuser', name:'Showuser', component: Showuser },   
+    { path:'/showuser', name:'Showuser', component: Showuser },  
+    { path:'/post', name:'post', component: Tiktok_posting },   
 
     { path:'/videoEdit/:videoId', name:'videoEdit', component: videoEdit, meta: {requiresAuth:true}}, 
 ]
