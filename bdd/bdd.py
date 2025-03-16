@@ -244,5 +244,19 @@ def send_clip (file):
     return send_from_directory(dossier, file)
 
 
+@app.route("/process_clip", methods=["POST"])
+@cross_origin()  # Explicitly allow CORS for this route
+def process_data():
+
+    data = request.json
+    web_cam_state = data.get("webcam_detection")
+    clip_format = data.get("clip_format")
+    clip_path = data.get("clip_path")
+
+    video_processor_instance = VideoProcessor(clip_path, web_cam_state, clip_format)
+    video_processor_instance.process_video()
+
+    return jsonify({"processed_clip_url" : video_processor_instance.edited_clip_path })
+
 if __name__ == '__main__' : 
     app.run(debug=True)
