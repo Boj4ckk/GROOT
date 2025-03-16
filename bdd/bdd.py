@@ -234,7 +234,7 @@ def send_clipsUrls () :
         logging.error(f"Erreur lors de l'envoie de l'url des clips : {e}")
         return ({"error": "Erreur lors de l'envoi de l'url des clips"}), 500
 
-import urllib
+
 
 @app.route("/clips/<file>")
 def send_clip (file):
