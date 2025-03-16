@@ -13,8 +13,7 @@ import re
 
 
 
-# Setting up logging for tracking the processing steps
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s", filename='logs\editing.log')
+
 """
     VideoProcessor class for processing video clips.
 """
