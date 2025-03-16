@@ -127,3 +127,81 @@
 
 2025-03-10 22:41:32,624 - INFO - Successfully authenticated with Twitch API.
 2025-03-10 22:41:38,226 - INFO - Clip successfully downloaded: clips/Talmo_BONNE ANNEUILLE 2025.mp4
+2025-03-16 14:35:31,581 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-16 14:35:31,582 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-16 14:35:31,584 - INFO -  * Restarting with stat
+2025-03-16 14:35:34,194 - WARNING -  * Debugger is active!
+2025-03-16 14:35:34,202 - INFO -  * Debugger PIN: 426-512-210
+2025-03-16 14:35:51,124 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-16 14:35:51,124 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-16 14:35:51,126 - INFO -  * Restarting with stat
+2025-03-16 14:35:53,693 - WARNING -  * Debugger is active!
+2025-03-16 14:35:53,697 - INFO -  * Debugger PIN: 426-512-210
+2025-03-16 14:36:17,372 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:17] "OPTIONS /login HTTP/1.1" 200 -
+2025-03-16 14:36:17,416 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-03-16 14:36:17,416 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
+2025-03-16 14:36:17,989 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:17] "POST /login HTTP/1.1" 200 -
+2025-03-16 14:36:21,281 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:21] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-16 14:36:22,208 - INFO - Successfully authenticated with Twitch API.
+2025-03-16 14:36:22,404 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-16 14:36:22,405 - INFO - 
+
+Removing file : clips\Kamet0_LA LITIÈRE AHAHAH.mp4
+
+2025-03-16 14:36:22,408 - INFO - 
+
+Removing file : clips\Kamet0_NISQY TROLL....mp4
+
+2025-03-16 14:36:25,607 - INFO - Clip successfully downloaded: clips/Talmo_Ton GP l'IA.mp4
+2025-03-16 14:36:31,361 - INFO - Clip successfully downloaded: clips/Talmo_BLBLBLBLBLBLBL.mp4
+2025-03-16 14:36:31,364 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:31] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-16 14:36:31,374 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:31] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-16 14:36:31,570 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:31] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:36:31,572 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:31] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:36:31,575 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:31] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:36:31,600 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:31] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:36:31,613 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:31] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:36:31,618 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:31] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:36:31,735 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:31] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:36:31,757 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:31] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:36:31,765 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:31] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:36:31,784 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:31] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:36:31,806 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:31] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:36:31,816 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:31] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:37:20,019 - INFO - 127.0.0.1 - - [16/Mar/2025 14:37:20] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-16 14:37:20,892 - INFO - Successfully authenticated with Twitch API.
+2025-03-16 14:37:21,083 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-16 14:37:21,085 - INFO - 
+
+Removing file : clips\Talmo_BLBLBLBLBLBLBL.mp4
+
+2025-03-16 14:37:21,089 - INFO - 
+
+Removing file : clips\Talmo_Ton GP l'IA.mp4
+
+2025-03-16 14:37:24,317 - INFO - Clip successfully downloaded: clips/Talmo_Ton GP l'IA.mp4
+2025-03-16 14:37:27,341 - INFO - Clip successfully downloaded: clips/Talmo_BLBLBLBLBLBLBL.mp4
+2025-03-16 14:37:30,517 - INFO - Clip successfully downloaded: clips/Talmo_wshhhhhhhhhhh.mp4
+2025-03-16 14:37:30,518 - INFO - 127.0.0.1 - - [16/Mar/2025 14:37:30] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-16 14:37:30,530 - INFO - 127.0.0.1 - - [16/Mar/2025 14:37:30] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-16 14:37:30,618 - INFO - 127.0.0.1 - - [16/Mar/2025 14:37:30] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:37:30,620 - INFO - 127.0.0.1 - - [16/Mar/2025 14:37:30] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:37:30,642 - INFO - 127.0.0.1 - - [16/Mar/2025 14:37:30] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:37:30,651 - INFO - 127.0.0.1 - - [16/Mar/2025 14:37:30] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:37:30,680 - INFO - 127.0.0.1 - - [16/Mar/2025 14:37:30] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:37:30,689 - INFO - 127.0.0.1 - - [16/Mar/2025 14:37:30] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:37:36,045 - INFO - 127.0.0.1 - - [16/Mar/2025 14:37:36] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-16 14:37:50,147 - INFO - 127.0.0.1 - - [16/Mar/2025 14:37:50] "OPTIONS /login HTTP/1.1" 200 -
+2025-03-16 14:37:50,200 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-03-16 14:37:50,200 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
+2025-03-16 14:37:51,052 - INFO - 127.0.0.1 - - [16/Mar/2025 14:37:51] "POST /login HTTP/1.1" 200 -

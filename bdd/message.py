@@ -1,13 +1,23 @@
+
+import os, sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import mysql.connector 
 from flask import Flask, g, request, jsonify # g = variable de contexte pr stocker données dans un contexte 
 import logging
 from flask_cors import CORS
+from flask_cors import cross_origin
 from flask_bcrypt import Bcrypt
-from mysql.connector import pooling# pour récupérer les anciennes connexions et pas se reco a chaque requete
-from GROOT.Edit.Video_processor import VideoProcessor 
+from mysql.connector import pooling # pour récupérer les anciennes connexions et pas se reco a chaque requete
+
+from flask import send_from_directory
+from Edit.Video_processor import VideoProcessor
+from api.Twitch.twitch_api import TwitchApi
+
+
+
+
 
 # partie requetes db 
-
 DATABASE = 'twitok_base'
 
 db_config = {
@@ -120,7 +130,7 @@ def login() :
 
     query = ('Select username, password from user where username=(%s)')
     cursor.execute(query, (username,))
-    
+
     user = cursor.fetchone()
     logging.info(f"user trouvé : {user}")
     if (user is None) : 
@@ -137,23 +147,8 @@ def login() :
 
 
 # partie requetes api twitch
-
-import os
-import logging
-# from api.Twitch.Twitch_api import TwitchApi
-from GROOT.api.Twitch.Twitch_api import TwitchApi
-from GROOT.api.Tiktok.tiktok_api import TiktokApi
-import numpy
-# from api.Tiktok.tiktok_api import TiktokApi 
-# from Edit.Video_processor import VideoProcessor
-
 CORS(app, resources={r"/recup_infos_clips": {"origins": "http://localhost:5173"}, 
                      r"/send_clips": {"origins": "http://localhost:5173"}})
-
-# CORS(app)
-
-# CORS(app, supports_credentials=True)
-
 CLIENT_ID = "k49vl0y998fywdwlvzu48b1u4kth5f"    
 CLIENT_SECRET = "cnhhv1qwdxfjc8smmtjnbieg5c9p57"
 
@@ -187,7 +182,7 @@ def recup_infos_clips() :
                 min_views=min_views,
             )
             TwitchApi.downloadClipWithAudio(twitch_instance,data)
-            return jsonify({"message": "Clips récupérés avec succès", "data": data}), 200
+            return jsonify({"message": "Clips récupérés avec succès", "data": twitch_instance.retrived_clips_list}), 200
         except Exception as e :
             logging.error(f"Erreur lors de la récupération des clips: {e}")
             return jsonify({"error": "Erreur interne du serveur", "details": str(e)}), 500        
@@ -210,7 +205,7 @@ def recup_infos_clips() :
 
 # peut pas charger les fichiers en local via le navigateur donc faut faire avec le serveur 
 
-from flask import send_from_directory
+
 
 # OBJECTIF : envoyer les videos sur une route du serveur flask et le récupérer directement via l'url de flask. 
 @app.route("/send_clipsUrls", methods=["GET"])
@@ -226,7 +221,7 @@ def send_clipsUrls () :
         logging.error(f"Erreur lors de l'envoie de l'url des clips : {e}")
         return ({"error": "Erreur lors de l'envoi de l'url des clips"}), 500
 
-import urllib
+
 
 @app.route("/clips/<file>")
 def send_clip (file):
@@ -236,7 +231,7 @@ def send_clip (file):
     return send_from_directory(dossier, file)
 
 @app.route("/process_clip", methods=["POST"])
-# @cross_origin()  # Explicitly allow CORS for this route
+@cross_origin()  # Explicitly allow CORS for this route
 def process_data():
 
     data = request.json
