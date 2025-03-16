@@ -149,8 +149,8 @@ def login() :
 import os
 import logging
 # from api.Twitch.Twitch_api import TwitchApi
-from GROOT.api.Twitch.Twitch_api import TwitchApi
-from GROOT.api.Tiktok.tiktok_api import TiktokApi
+from api.Twitch.Twitch_api import TwitchApi
+from api.Tiktok.tiktok_api import TiktokApi
 import numpy
 # from api.Tiktok.tiktok_api import TiktokApi 
 # from Edit.Video_processor import VideoProcessor
