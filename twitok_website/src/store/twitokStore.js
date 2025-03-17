@@ -44,8 +44,8 @@ export const useTwitokStore = defineStore('useTwitokStore', () => {
         localStorage.setItem('clipsUrls_Returned', JSON.stringify(clips))
     }
     const setEditedClipUrl = (clips) => {
-        state.value.editedClipsUrl = clips
-        localStorage.setItem('edited_clip_url', JSON.stringify(clips))
+        state.value.editedClipsUrl.push(clips)
+        localStorage.setItem('editedClipsUrl', JSON.stringify(state.value.editedClipsUrl))
     }
 
     // const setActualUser = (user) => {
