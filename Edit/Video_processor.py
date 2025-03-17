@@ -41,7 +41,6 @@ class VideoProcessor:
         self.clip_width , self.clip_height = self.clipVideo.size
         self.web_cam_video = None 
         self.content_video = None
-
         self.edited_clip_path = None
   
     """
@@ -211,7 +210,8 @@ class VideoProcessor:
         self.removing_audio_files
         self.cleaning_in_process_folder
         # Path for saving the processed video
-        processed_video_path = f'GROOT/Edit/processed_clips/{self.clipId}_processed.mp4'
+        
+        processed_video_path = f'GROOT/twitok_website/src/media/processed_clips/{self.clipId}_processed.mp4'
 
         
 
