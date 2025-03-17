@@ -17,8 +17,7 @@ const clipsUrls = objet_clipsUrls["clipsUrls"]
 
 
 //prepare to save edited clips into store.
-const objet_editedClip = TwitokStore.editedClipsUrl
-const editedClipUrls = objet_editedClip["editedClipUrls"]
+
 
 
 
@@ -79,13 +78,9 @@ const handleVideoClip = (video,index) => {
 };
 // Handle submit clip after chosing preferences for editing.
 const handleClipSubmit = () => {
-    edited_clip.value.push(clips.value[selectedClipIndex]) // add to edited_clip ref the clip (je dois changer avec la reponse flask du videoProcessor.)
     clips.value.splice(selectedClipIndex.value,1)//remove the sumbited clip from the non-editing clips liste (right side of the page carousel)
     set_preview_video(clips.value[0])//automaticaly set a new clips for the selected clips.
-    if(clips.value.length == 0){
-        router.push('/studio') // if all the avalaible clips have been submtied, redirect to 'Studio' (faut changer par la page post sur tiktok quand on l'aura)
-
-    }
+    
 }
 
 
@@ -109,7 +104,12 @@ const handleform = async () => {
         });
         //retrive edited clips urls.
         const data = await response.json();
-        console.log("data", data)
+        TwitokStore.setEditedClipUrl(data)
+        if(clips.value.length == 0){
+            router.push('/tiktokPost') // if all the avalaible clips have been submtied, redirect to 'Studio' (faut changer par la page post sur tiktok quand on l'aura)
+
+        }
+        console.log("pute salope grosse pute",TwitokStore.editedClipsUrl)
 
         
 
