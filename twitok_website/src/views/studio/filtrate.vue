@@ -7,22 +7,42 @@ import axios from 'axios';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
-const TwitokStore = useTwitokStore() 
-const router = useRouter()
-const objet_clipsUrls = TwitokStore.clipsUrls_Returned
-console.log("voici les urls des clips : ", objet_clipsUrls)
-const clipsUrls = objet_clipsUrls["clipsUrls"]
-console.log(clipsUrls)
+const TwitokStore = useTwitokStore() // import store
+const router = useRouter() // import router to redirect into tiktok page after editing
 
+
+// retrieve clips url fetched in studio page
+const objet_clipsUrls = TwitokStore.clipsUrls_Returned  
+const clipsUrls = objet_clipsUrls["clipsUrls"] 
+
+
+//prepare to save edited clips into store.
 const objet_editedClip = TwitokStore.editedClipsUrl
 const editedClipUrls = objet_editedClip["editedClipUrls"]
 
+
+
+//clips var which will dynamicly store clips to edit.
 const clips = ref([])
 
+//Dynamicly store the clicked index of the clip (current clip to edit)
 const selectedClipIndex = ref(null);
 
+//Dynamicly store edited clips.
 const edited_clip = ref([])
 
+//Dynamcly store the current video (video displayed in the leftside of the webpage)
+const preview_video = ref(clips.value[0]);
+
+//Editing choices
+const webcam_detection = ref(false);//Dynamicly store the editing choice for the webcam detection.
+const clip_format = ref("portrait")//Dynamcly store the clip_format for editing.
+
+
+
+
+
+// function to retrieve clips for their stored urls.
 const getClips = async () => {
     try {
         for (let url of clipsUrls) {
@@ -37,48 +57,41 @@ const getClips = async () => {
     }
     return clips
 }
-
 getClips() 
 
 
 
-
-const preview_video = ref(clips.value[0]);
-const webcam_detection = ref(false);
-const clip_format = ref("portrait")
-
-
-function set_preview_video(video) {
+// Getter/ Setter - for current video to edit(displayed in the left side of the web page)
+function set_preview_video(video) { //SETTER
     preview_video.value = video;
 }
 
-function get_preview_video(){
+function get_preview_video(){ //GETTER
     return preview_video.value;
 }
 
+
+//Handle the click on one displayed clip the select it and his index.
 const handleVideoClip = (video,index) => {
     set_preview_video(video);
     selectedClipIndex.value = index
    
 };
-
+// Handle submit clip after chosing preferences for editing.
 const handleClipSubmit = () => {
-    edited_clip.value.push(clips.value[selectedClipIndex])
-    clips.value.splice(selectedClipIndex.value,1)
-    set_preview_video(clips.value[0])
+    edited_clip.value.push(clips.value[selectedClipIndex]) // add to edited_clip ref the clip (je dois changer avec la reponse flask du videoProcessor.)
+    clips.value.splice(selectedClipIndex.value,1)//remove the sumbited clip from the non-editing clips liste (right side of the page carousel)
+    set_preview_video(clips.value[0])//automaticaly set a new clips for the selected clips.
     if(clips.value.length == 0){
-        router.push('/studio')
+        router.push('/studio') // if all the avalaible clips have been submtied, redirect to 'Studio' (faut changer par la page post sur tiktok quand on l'aura)
 
     }
-    
-    
-   
-
-
-    
 }
 
+
+// handle sumbit form
 const handleform = async () => {
+    // prepare payload (clip to edit and preferences to pass to videoProcessor to edit)
     const payload = {
         webcam_detection : webcam_detection.value,
         clip_format : clip_format.value,
@@ -88,13 +101,13 @@ const handleform = async () => {
     
     try{
         
-        handleClipSubmit()
+        handleClipSubmit() // call the handlesubmit to update the dynamic state of refs.
         const response = await fetch("http://127.0.0.1:5000/process_clip",{
             method: "POST",
             headers :{"Content-Type": "application/json"},
             body: JSON.stringify(payload)
         });
-
+        //retrive edited clips urls.
         const data = await response.json();
         console.log("data", data)
 
