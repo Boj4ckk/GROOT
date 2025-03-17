@@ -11,6 +11,7 @@ class TwitchApi:
     """
 
     BASE_URL = "https://api.twitch.tv/helix"
+    logging.basicConfig(filename="GROOT\logs\editing.log",  level=logging.DEBUG,format="%(asctime)s - %(levelname)s - %(message)s",  datefmt="%Y-%m-%d %H:%M:%S")
 
     def __init__(self, clientId, clientSecret):
         """
@@ -141,32 +142,30 @@ class TwitchApi:
             return clips_data
         logging.error(f"Failed to fetch clips for user {userId}: {response.text}")
         return []
-
-
     def downloadClipWithAudio(self, clips , savePath="clips"):
-        """
-        Download a Twitch clip with audio using Streamlink.
+            """
+            Download a Twitch clip with audio using Streamlink.
 
-        :param clip: Dictionary containing clip metadata.
-        :param savePath: Directory to save the downloaded clip.
-        """
-       
-        os.makedirs(savePath, exist_ok=True)
-        for clip in clips:
-            videoUrl = clip["url"]
-            fileName = f"{savePath}/{clip['broadcaster_name']}_{clip['title']}.mp4"
+            :param clip: Dictionary containing clip metadata.
+            :param savePath: Directory to save the downloaded clip.
+            """
+        
+            os.makedirs(savePath, exist_ok=True)
+            for clip in clips:
+                videoUrl = clip["url"]
+                fileName = f"{savePath}/{clip['broadcaster_name']}_{clip['title']}.mp4"
 
-            # Use streamlink to download the clip with audio
-            command = [
-                "streamlink",
-                videoUrl,
-                "best",
-                "-o",
-                fileName
-            ]
-          
-            try:
-                subprocess.run(command, check=True)
-                logging.info(f"Clip successfully downloaded: {fileName}")
-            except subprocess.CalledProcessError as error:
-                logging.error(f"Failed to download clip {clip['id']} ({error})")
+                # Use streamlink to download the clip with audio
+                command = [
+                    "streamlink",
+                    videoUrl,
+                    "best",
+                    "-o",
+                    fileName
+                ]
+            
+                try:
+                    subprocess.run(command, check=True)
+                    logging.info(f"Clip successfully downloaded: {fileName}")
+                except subprocess.CalledProcessError as error:
+                    logging.error(f"Failed to download clip {clip['id']} ({error})")

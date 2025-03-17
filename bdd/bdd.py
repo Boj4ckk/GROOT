@@ -1,13 +1,22 @@
+
+import os, sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+
 import mysql.connector 
 from flask import Flask, g, request, jsonify # g = variable de contexte pr stocker données dans un contexte 
 import logging
 from flask_cors import CORS
+from flask_cors import cross_origin
 from flask_bcrypt import Bcrypt
 from mysql.connector import pooling# pour récupérer les anciennes connexions et pas se reco a chaque requete
 from GROOT.Edit.Video_processor import VideoProcessor 
 
 # partie requetes db 
 
+
+
+from Edit.Video_processor import VideoProcessor
 DATABASE = 'twitok_base'
 
 db_config = {
@@ -120,7 +129,7 @@ def login() :
 
     query = ('Select username, password from user where username=(%s)')
     cursor.execute(query, (username,))
-    
+
     user = cursor.fetchone()
     logging.info(f"user trouvé : {user}")
     if (user is None) : 
@@ -141,8 +150,8 @@ def login() :
 import os
 import logging
 # from api.Twitch.Twitch_api import TwitchApi
-from GROOT.api.Twitch.Twitch_api import TwitchApi
-from GROOT.api.Tiktok.tiktok_api import TiktokApi
+from api.Twitch.Twitch_api import TwitchApi
+from api.Tiktok.tiktok_api import TiktokApi
 import numpy
 # from api.Tiktok.tiktok_api import TiktokApi 
 # from Edit.Video_processor import VideoProcessor
@@ -226,7 +235,7 @@ def send_clipsUrls () :
         logging.error(f"Erreur lors de l'envoie de l'url des clips : {e}")
         return ({"error": "Erreur lors de l'envoi de l'url des clips"}), 500
 
-import urllib
+
 
 @app.route("/clips/<file>")
 def send_clip (file):
@@ -249,6 +258,20 @@ def process_data():
 
     return jsonify({"processed_clip_url" : video_processor_instance.edited_clip_path })
 
+
+@app.route("/process_clip", methods=["POST"])
+@cross_origin()  # Explicitly allow CORS for this route
+def process_data():
+
+    data = request.json
+    web_cam_state = data.get("webcam_detection")
+    clip_format = data.get("clip_format")
+    clip_path = data.get("clip_path")
+
+    video_processor_instance = VideoProcessor(clip_path, web_cam_state, clip_format)
+    video_processor_instance.process_video()
+
+    return jsonify({"processed_clip_url" : video_processor_instance.edited_clip_path })
 
 if __name__ == '__main__' : 
     app.run(debug=True)

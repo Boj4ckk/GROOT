@@ -140,7 +140,7 @@
 2025-03-16 14:35:53,693 - WARNING -  * Debugger is active!
 2025-03-16 14:35:53,697 - INFO -  * Debugger PIN: 426-512-210
 2025-03-16 14:36:17,372 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:17] "OPTIONS /login HTTP/1.1" 200 -
-2025-03-16 14:36:17,416 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-03-16 14:36:17,416 - INFO - user trouvï¿½ : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
 2025-03-16 14:36:17,416 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
 2025-03-16 14:36:17,989 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:17] "POST /login HTTP/1.1" 200 -
 2025-03-16 14:36:21,281 - INFO - 127.0.0.1 - - [16/Mar/2025 14:36:21] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
@@ -152,7 +152,7 @@ Cleaning in_process_clips...
 
 2025-03-16 14:36:22,405 - INFO - 
 
-Removing file : clips\Kamet0_LA LITIÈRE AHAHAH.mp4
+Removing file : clips\Kamet0_LA LITIï¿½RE AHAHAH.mp4
 
 2025-03-16 14:36:22,408 - INFO - 
 
@@ -202,6 +202,6 @@ Removing file : clips\Talmo_Ton GP l'IA.mp4
 2025-03-16 14:37:30,689 - INFO - 127.0.0.1 - - [16/Mar/2025 14:37:30] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
 2025-03-16 14:37:36,045 - INFO - 127.0.0.1 - - [16/Mar/2025 14:37:36] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
 2025-03-16 14:37:50,147 - INFO - 127.0.0.1 - - [16/Mar/2025 14:37:50] "OPTIONS /login HTTP/1.1" 200 -
-2025-03-16 14:37:50,200 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-03-16 14:37:50,200 - INFO - user trouvï¿½ : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
 2025-03-16 14:37:50,200 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
 2025-03-16 14:37:51,052 - INFO - 127.0.0.1 - - [16/Mar/2025 14:37:51] "POST /login HTTP/1.1" 200 -
