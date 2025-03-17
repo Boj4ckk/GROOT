@@ -1,6 +1,6 @@
 <script setup>
 import { useRoute } from 'vue-router';
-import edit from './edit.vue';
+
 
 const route = useRoute()
 const videoId = route.params.videoId
