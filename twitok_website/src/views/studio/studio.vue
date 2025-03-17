@@ -6,7 +6,7 @@ import { useRouter } from 'vue-router';
 import router from '@/router';
 import { useTwitokStore } from '@/store/twitokStore';
 import State_bar from '@/components/state_bar.vue';
-import edit from './edit.vue';
+
 
 const twitokStore = useTwitokStore()
 
@@ -38,7 +38,7 @@ const getClips = async() => {
             console.error('Impossible de récupérer les clips de neuilles', err)
             router.push('studio')
         }
-        router.push('/studio/edit')
+        router.push('/studio/filtrate')
     }
     catch (error) {
         console.error('erreur lors de la récupération des clips...', error)
