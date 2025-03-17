@@ -18,7 +18,6 @@ const routes = [
     { path:'/login', name:'Login', component: login, meta: {logoutWhenAccess: true}},
     { path:'/studio/', name:'Studio', component: studio, meta: {requiresAuth: true} }, 
     {path: '/studio/filtrate', name:'Filtrate', component:filtrate,meta:{requiresAuth: true}},
-    { path:'/studio/edit', name:'Edit', component: edit, meta: {requiresAuth: true} },
     { path:'/autreConnected', name:'AutreConnected', component: test_autre_connected, meta: {requiresAuth: true} },   
     { path:'/help', name:'Help', component: help },   
     { path:'/showuser', name:'Showuser', component: Showuser },   
