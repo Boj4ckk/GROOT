@@ -6,7 +6,7 @@ import { useRouter } from 'vue-router';
 import router from '@/router';
 import { useTwitokStore } from '@/store/twitokStore';
 import State_bar from '@/components/state_bar.vue';
-import edit from './edit.vue';
+
 
 const twitokStore = useTwitokStore()
 
