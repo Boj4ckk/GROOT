@@ -136,8 +136,8 @@ class VideoProcessor:
         - Si self.clip_format == "landscape" → garde la vidéo en format paysage
         """
 
-        content_clip_path = f"Edit/in_process_clips/{self.clipId}_content.mp4"
-        content_audio_clip_path = f"Edit/in_process_clips/{self.clipId}_content_audio.mp3"
+        content_clip_path = f"GROOT/Edit/in_process_clips/{self.clipId}_content.mp4"
+        content_audio_clip_path = f"GROOT/Edit/in_process_clips/{self.clipId}_content_audio.mp3"
 
         if self.clip_format == "portrait":
             # Recadrer en format portrait (9:16)
@@ -188,8 +188,8 @@ class VideoProcessor:
     def cleaning_in_process_folder():
          # Cleaning up temporary files
         logging.info("Cleaning in_process_clips...\n")
-        for file in os.listdir("Edit\\in_process_clips"):
-            file_path = os.path.join("Edit\\in_process_clips", file)
+        for file in os.listdir("GROOT\\Edit\\in_process_clips"):
+            file_path = os.path.join("GROOT\\Edit\\in_process_clips", file)
             logging.info(f"Removing file : {file_path}\n")
             os.remove(file_path)
     
@@ -211,7 +211,7 @@ class VideoProcessor:
         self.removing_audio_files
         self.cleaning_in_process_folder
         # Path for saving the processed video
-        processed_video_path = f'Edit/processed_clips/{self.clipId}_processed.mp4'
+        processed_video_path = f'GROOT/Edit/processed_clips/{self.clipId}_processed.mp4'
 
         
 
