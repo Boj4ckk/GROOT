@@ -62,5 +62,6 @@ export const useTwitokStore = defineStore('useTwitokStore', () => {
         unauthorized,
         logout,
         setclipsUrls_Returned,
+        setEditedClipUrl
     }
 })
