@@ -38,7 +38,7 @@ const getClips = async() => {
             console.error('Impossible de récupérer les clips de neuilles', err)
             router.push('studio')
         }
-        router.push('/studio/edit')
+        router.push('/studio/filtrate')
     }
     catch (error) {
         console.error('erreur lors de la récupération des clips...', error)
