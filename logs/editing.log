@@ -1361,3 +1361,561 @@ Cleaning in_process_clips...
 2025-03-17 07:59:20 - INFO -  * Restarting with stat
 2025-03-17 07:59:23 - WARNING -  * Debugger is active!
 2025-03-17 07:59:23 - INFO -  * Debugger PIN: 742-364-708
+2025-03-17 19:41:05 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-17 19:41:05 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-17 19:41:05 - INFO -  * Restarting with stat
+2025-03-17 19:41:07 - WARNING -  * Debugger is active!
+2025-03-17 19:41:07 - INFO -  * Debugger PIN: 118-867-816
+2025-03-17 19:41:16 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:16] "OPTIONS /login HTTP/1.1" 200 -
+2025-03-17 19:41:16 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-03-17 19:41:16 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
+2025-03-17 19:41:16 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:16] "POST /login HTTP/1.1" 200 -
+2025-03-17 19:41:29 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:29] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-17 19:41:29 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-17 19:41:30 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-17 19:41:30 - INFO - Successfully authenticated with Twitch API.
+2025-03-17 19:41:30 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-17 19:41:30 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-17 19:41:30 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-17 19:41:30 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-17 19:41:31 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=4 HTTP/1.1" 200 847
+2025-03-17 19:41:35 - INFO - Clip successfully downloaded: clips/Talmo_Ton GP l'IA.mp4
+2025-03-17 19:41:37 - INFO - Clip successfully downloaded: clips/Talmo_BLBLBLBLBLBLBL.mp4
+2025-03-17 19:41:41 - INFO - Clip successfully downloaded: clips/Talmo_wshhhhhhhhhhh.mp4
+2025-03-17 19:41:41 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:41] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-17 19:41:41 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:41] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-17 19:41:41 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:41] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:41:41 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:41] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:41:41 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:41] "GET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1" 200 -
+2025-03-17 19:41:41 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:41] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:41:41 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:41] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:41:41 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:41] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:41:41 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:41] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:41:41 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:41] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:41:41 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:41] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:41:41 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:41] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:41:41 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:41] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:41:41 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:41] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:41:41 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:41] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:41:41 - INFO - 127.0.0.1 - - [17/Mar/2025 19:41:41] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:58:15 - INFO - 127.0.0.1 - - [17/Mar/2025 19:58:15] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:58:15 - INFO - 127.0.0.1 - - [17/Mar/2025 19:58:15] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:58:15 - INFO - 127.0.0.1 - - [17/Mar/2025 19:58:15] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:58:15 - INFO - 127.0.0.1 - - [17/Mar/2025 19:58:15] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:58:15 - INFO - 127.0.0.1 - - [17/Mar/2025 19:58:15] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:58:15 - INFO - 127.0.0.1 - - [17/Mar/2025 19:58:15] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:58:15 - INFO - 127.0.0.1 - - [17/Mar/2025 19:58:15] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 19:58:15 - INFO - 127.0.0.1 - - [17/Mar/2025 19:58:15] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:03:23 - INFO -  * Detected change in 'C:\\Users\\yazki\\OneDrive\\Bureau\\projet\\GROOT\\Edit\\Video_processor.py', reloading
+2025-03-17 20:03:23 - INFO -  * Restarting with stat
+2025-03-17 20:03:30 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-17 20:03:30 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-17 20:03:30 - INFO -  * Restarting with stat
+2025-03-17 20:03:32 - WARNING -  * Debugger is active!
+2025-03-17 20:03:32 - INFO -  * Debugger PIN: 118-867-816
+2025-03-17 20:03:35 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:35] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:03:35 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:35] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:03:35 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:35] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:03:35 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:35] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:03:35 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:35] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:03:35 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:35] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:03:35 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:35] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:03:35 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:35] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:03:36 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:36] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:03:36 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:36] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:03:39 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:39] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-17 20:03:39 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:39] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:03:39 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:39] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:03:40 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:40] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:03:40 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:40] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:03:40 - INFO - Crop to wanted format
+2025-03-17 20:03:57 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:57] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:03:58 - INFO - Writing new clip composite from webcam and content..
+2025-03-17 20:03:59 - INFO - 127.0.0.1 - - [17/Mar/2025 20:03:59] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
+2025-03-17 20:04:38 - INFO -  * Detected change in 'C:\\Users\\yazki\\OneDrive\\Bureau\\projet\\GROOT\\Edit\\Video_processor.py', reloading
+2025-03-17 20:04:38 - INFO -  * Restarting with stat
+2025-03-17 20:04:47 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-17 20:04:47 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-17 20:04:47 - INFO -  * Restarting with stat
+2025-03-17 20:04:49 - WARNING -  * Debugger is active!
+2025-03-17 20:04:49 - INFO -  * Debugger PIN: 118-867-816
+2025-03-17 20:04:57 - INFO - 127.0.0.1 - - [17/Mar/2025 20:04:57] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:04:57 - INFO - 127.0.0.1 - - [17/Mar/2025 20:04:57] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:04:58 - INFO - 127.0.0.1 - - [17/Mar/2025 20:04:58] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:05:00 - INFO - 127.0.0.1 - - [17/Mar/2025 20:05:00] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-17 20:05:00 - INFO - 127.0.0.1 - - [17/Mar/2025 20:05:00] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:05:00 - INFO - 127.0.0.1 - - [17/Mar/2025 20:05:00] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:05:00 - INFO - 127.0.0.1 - - [17/Mar/2025 20:05:00] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:05:00 - INFO - 127.0.0.1 - - [17/Mar/2025 20:05:00] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:05:00 - INFO - Extracting webcam from clip..
+
+2025-03-17 20:05:00 - INFO - 127.0.0.1 - - [17/Mar/2025 20:05:00] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:05:01 - INFO - 127.0.0.1 - - [17/Mar/2025 20:05:01] "[35m[1mPOST /process_clip HTTP/1.1[0m" 500 -
+2025-03-17 20:15:35 - INFO -  * Detected change in 'C:\\Users\\yazki\\OneDrive\\Bureau\\projet\\GROOT\\Edit\\Video_processor.py', reloading
+2025-03-17 20:15:35 - INFO -  * Restarting with stat
+2025-03-17 20:15:37 - WARNING -  * Debugger is active!
+2025-03-17 20:15:37 - INFO -  * Debugger PIN: 118-867-816
+2025-03-17 20:15:58 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-17 20:15:58 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-17 20:15:58 - INFO -  * Restarting with stat
+2025-03-17 20:15:59 - WARNING -  * Debugger is active!
+2025-03-17 20:15:59 - INFO -  * Debugger PIN: 118-867-816
+2025-03-17 20:18:19 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:19] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:19 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:19] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:19 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:19] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:20 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:20] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:20 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:20] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:20 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:20] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:20 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:20] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:21 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:21] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-17 20:18:21 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:21] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:21 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:21] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:21 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:21] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:21 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:21] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:21 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:21] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:21 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:21] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:21 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:21] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:21 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:21] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:21 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:21] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:22 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:22] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:22 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:22] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:22 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:22] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:22 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:22] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:22 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:22] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:22 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:22] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:22 - INFO - Extracting webcam from clip..
+
+2025-03-17 20:18:22 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:22] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:22 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:22] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:22 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:22] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:26 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:26] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:26 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:26] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:26 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:26] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:27 - INFO - Crop to wanted format
+2025-03-17 20:18:27 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:27] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:27 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:27] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:27 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:27] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:27 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:27] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:27 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:27] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:27 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:27] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:40 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:40] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:40 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:40] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:40 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:40] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:18:41 - INFO - Writing new clip composite from webcam and content..
+2025-03-17 20:18:58 - WARNING - c:\Users\yazki\OneDrive\Bureau\projet\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/63901099-94a9-4760-b3de-f54ffcca8efa_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-17 20:18:58 - WARNING - c:\Users\yazki\OneDrive\Bureau\projet\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/63901099-94a9-4760-b3de-f54ffcca8efa_cam.mp4, 314712 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-17 20:18:59 - INFO - 127.0.0.1 - - [17/Mar/2025 20:18:59] "POST /process_clip HTTP/1.1" 200 -
+2025-03-17 20:27:14 - INFO - 127.0.0.1 - - [17/Mar/2025 20:27:14] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:27:14 - INFO - 127.0.0.1 - - [17/Mar/2025 20:27:14] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:27:14 - INFO - 127.0.0.1 - - [17/Mar/2025 20:27:14] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:27:14 - INFO - 127.0.0.1 - - [17/Mar/2025 20:27:14] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:27:14 - INFO - 127.0.0.1 - - [17/Mar/2025 20:27:14] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:27:14 - INFO - 127.0.0.1 - - [17/Mar/2025 20:27:14] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:27:14 - INFO - 127.0.0.1 - - [17/Mar/2025 20:27:14] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:27:14 - INFO - 127.0.0.1 - - [17/Mar/2025 20:27:14] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:27:14 - INFO - 127.0.0.1 - - [17/Mar/2025 20:27:14] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:27:14 - INFO - 127.0.0.1 - - [17/Mar/2025 20:27:14] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:36:51 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-17 20:36:51 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-17 20:36:51 - INFO -  * Restarting with stat
+2025-03-17 20:36:53 - WARNING -  * Debugger is active!
+2025-03-17 20:36:53 - INFO -  * Debugger PIN: 118-867-816
+2025-03-17 20:37:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:48] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:37:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:48] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:37:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:48] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:37:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:48] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:37:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:37:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:37:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:48] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:37:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:37:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:48] "[35m[1mGET /clips/Talmo_wshhhhhhhhhhh.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:37:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:37:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:48] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:37:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:48] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:37:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:48] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:37:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:48] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:37:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:48] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:37:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:48] "[35m[1mGET /clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:37:55 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:55] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-17 20:37:55 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-17 20:37:56 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-17 20:37:56 - INFO - Successfully authenticated with Twitch API.
+2025-03-17 20:37:56 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-17 20:37:56 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-17 20:37:56 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-17 20:37:56 - INFO - 
+
+Removing file : clips\Talmo_BLBLBLBLBLBLBL.mp4
+
+2025-03-17 20:37:56 - INFO - 
+
+Removing file : clips\Talmo_Ton GP l'IA.mp4
+
+2025-03-17 20:37:56 - INFO - 
+
+Removing file : clips\Talmo_wshhhhhhhhhhh.mp4
+
+2025-03-17 20:37:56 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-17 20:37:56 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 601
+2025-03-17 20:37:58 - INFO - Clip successfully downloaded: clips/Talmo_Ton GP l'IA.mp4
+2025-03-17 20:37:58 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:58] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-17 20:37:58 - INFO - 127.0.0.1 - - [17/Mar/2025 20:37:58] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-17 20:38:01 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:01] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-17 20:38:01 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:01] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:01 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:01] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:01 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:01] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:02 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:02] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:02 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:02] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:02 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:02] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:02 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:02] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:02 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:02] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:02 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:02] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:02 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:02] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:02 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:02] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:02 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:02] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:03 - INFO - Extracting webcam from clip..
+
+2025-03-17 20:38:03 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:03] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:03 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:03] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:03 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:03] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:07 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:07] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:07 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:07] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:07 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:07] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:08 - INFO - Crop to wanted format
+2025-03-17 20:38:08 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:08] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:08 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:08] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:08 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:08] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:09 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:09] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:09 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:09] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:09 - INFO - 127.0.0.1 - - [17/Mar/2025 20:38:09] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:38:19 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-17 20:38:19 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-17 20:38:19 - INFO -  * Restarting with stat
+2025-03-17 20:38:21 - WARNING -  * Debugger is active!
+2025-03-17 20:38:21 - INFO -  * Debugger PIN: 118-867-816
+2025-03-17 20:39:43 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:43] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-17 20:39:43 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-17 20:39:43 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-17 20:39:43 - INFO - Successfully authenticated with Twitch API.
+2025-03-17 20:39:43 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-17 20:39:44 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-17 20:39:44 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-17 20:39:44 - INFO - 
+
+Removing file : clips\Talmo_Ton GP l'IA.mp4
+
+2025-03-17 20:39:44 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-17 20:39:44 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 601
+2025-03-17 20:39:46 - INFO - Clip successfully downloaded: clips/Talmo_Ton GP l'IA.mp4
+2025-03-17 20:39:46 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:46] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-17 20:39:46 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:46] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-17 20:39:46 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:46] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:39:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:48] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-17 20:39:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:39:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:39:48 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:39:49 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:49] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:39:49 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:49] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:39:49 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:49] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:39:49 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:49] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:39:49 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:49] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:39:49 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:49] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:39:49 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:49] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:39:49 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:49] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:39:49 - INFO - 127.0.0.1 - - [17/Mar/2025 20:39:49] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:39:49 - INFO - Crop to wanted format
+2025-03-17 20:40:03 - INFO - 127.0.0.1 - - [17/Mar/2025 20:40:03] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:40:03 - INFO - 127.0.0.1 - - [17/Mar/2025 20:40:03] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:40:03 - INFO - 127.0.0.1 - - [17/Mar/2025 20:40:03] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:40:03 - INFO - Writing new clip composite from webcam and content..
+2025-03-17 20:40:18 - WARNING - c:\Users\yazki\OneDrive\Bureau\projet\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/2dfaf9b5-18a2-4fe1-b104-694edcc709be_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-17 20:40:19 - INFO - 127.0.0.1 - - [17/Mar/2025 20:40:19] "POST /process_clip HTTP/1.1" 200 -
+2025-03-17 20:43:01 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:01] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:01 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:01] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:01 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:01] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:01 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:01] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:07 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:07] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-17 20:43:07 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:07] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:07 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:07] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:07 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:07] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:07 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:07] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:07 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:07] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:07 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:07] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:08 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:08] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:08 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:08] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:08 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:08] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:08 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:08] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:08 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:08] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:08 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:08] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:08 - INFO - Crop to wanted format
+2025-03-17 20:43:20 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:20] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:20 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:20] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:20 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:20] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:43:20 - INFO - Writing new clip composite from webcam and content..
+2025-03-17 20:43:33 - WARNING - c:\Users\yazki\OneDrive\Bureau\projet\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/82c00866-c5c9-4185-883c-b4e53b84475c_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-17 20:43:34 - INFO - 127.0.0.1 - - [17/Mar/2025 20:43:34] "POST /process_clip HTTP/1.1" 200 -
+2025-03-17 20:56:11 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:11] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:11 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:11] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:11 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:11] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:11 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:11] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:15 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:15] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-17 20:56:15 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:15] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:15 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:15] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:15 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:15] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:15 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:15] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:15 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:15] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:15 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:15] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:16 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:16] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:16 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:16] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:16 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:16] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:16 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:16] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:16 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:16] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:16 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:16] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:16 - INFO - Crop to wanted format
+2025-03-17 20:56:32 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:32] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:32 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:32] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:32 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:32] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:56:32 - INFO - Writing new clip composite from webcam and content..
+2025-03-17 20:56:48 - WARNING - c:\Users\yazki\OneDrive\Bureau\projet\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/54b3e210-1ef8-4133-bff0-db0e182d0101_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-17 20:56:50 - INFO - 127.0.0.1 - - [17/Mar/2025 20:56:50] "POST /process_clip HTTP/1.1" 200 -
+2025-03-17 20:58:30 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:30] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:30 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:30] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:30 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:30] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:30 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:30] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:36 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:36] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-17 20:58:36 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:36] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:36 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:36] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:36 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:36] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:36 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:36] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:36 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:36] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:36 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:36] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:36 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:36] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:36 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:36] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:36 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:36] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:37 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:37] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:37 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:37] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:37 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:37] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:37 - INFO - Crop to wanted format
+2025-03-17 20:58:53 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:53] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:53 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:53] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:53 - INFO - 127.0.0.1 - - [17/Mar/2025 20:58:53] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:58:54 - INFO - Writing new clip composite from webcam and content..
+2025-03-17 20:59:12 - WARNING - c:\Users\yazki\OneDrive\Bureau\projet\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/21d85461-4ad1-4796-8a12-7d3a88437d06_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-17 20:59:13 - INFO - 127.0.0.1 - - [17/Mar/2025 20:59:13] "POST /process_clip HTTP/1.1" 200 -
+2025-03-17 20:59:54 - INFO - 127.0.0.1 - - [17/Mar/2025 20:59:54] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:59:54 - INFO - 127.0.0.1 - - [17/Mar/2025 20:59:54] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:59:57 - INFO - 127.0.0.1 - - [17/Mar/2025 20:59:57] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-17 20:59:57 - INFO - 127.0.0.1 - - [17/Mar/2025 20:59:57] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:59:57 - INFO - 127.0.0.1 - - [17/Mar/2025 20:59:57] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:59:57 - INFO - 127.0.0.1 - - [17/Mar/2025 20:59:57] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:59:57 - INFO - 127.0.0.1 - - [17/Mar/2025 20:59:57] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:59:57 - INFO - 127.0.0.1 - - [17/Mar/2025 20:59:57] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:59:57 - INFO - 127.0.0.1 - - [17/Mar/2025 20:59:57] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:59:58 - INFO - 127.0.0.1 - - [17/Mar/2025 20:59:58] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:59:58 - INFO - 127.0.0.1 - - [17/Mar/2025 20:59:58] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:59:58 - INFO - 127.0.0.1 - - [17/Mar/2025 20:59:58] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:59:58 - INFO - 127.0.0.1 - - [17/Mar/2025 20:59:58] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:59:58 - INFO - 127.0.0.1 - - [17/Mar/2025 20:59:58] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:59:58 - INFO - 127.0.0.1 - - [17/Mar/2025 20:59:58] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 20:59:58 - INFO - Crop to wanted format
+2025-03-17 21:00:12 - INFO - 127.0.0.1 - - [17/Mar/2025 21:00:12] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:00:12 - INFO - 127.0.0.1 - - [17/Mar/2025 21:00:12] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:00:12 - INFO - 127.0.0.1 - - [17/Mar/2025 21:00:12] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:00:13 - INFO - Writing new clip composite from webcam and content..
+2025-03-17 21:00:30 - WARNING - c:\Users\yazki\OneDrive\Bureau\projet\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/51da61c6-e0c6-4150-804b-621aa69ee17c_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-17 21:00:31 - INFO - 127.0.0.1 - - [17/Mar/2025 21:00:31] "POST /process_clip HTTP/1.1" 200 -
+2025-03-17 21:04:31 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:31] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:31 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:31] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:31 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:31] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:33 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:33] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-17 21:04:33 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:33] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:33 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:33] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:33 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:33] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:33 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:33] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:33 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:33] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:33 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:33] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:34 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:34] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:34 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:34] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:34 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:34] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:34 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:34] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:34 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:34] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:34 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:34] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:34 - INFO - Extracting webcam from clip..
+
+2025-03-17 21:04:34 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:34] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:34 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:34] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:34 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:34] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:40 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:40] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:40 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:40] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:40 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:40] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:41 - INFO - Crop to wanted format
+2025-03-17 21:04:41 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:41] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:41 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:41] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:41 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:41] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:41 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:41] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:41 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:41] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:41 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:41] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:56 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:56] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:56 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:56] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:56 - INFO - 127.0.0.1 - - [17/Mar/2025 21:04:56] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:04:57 - INFO - Writing new clip composite from webcam and content..
+2025-03-17 21:05:15 - WARNING - c:\Users\yazki\OneDrive\Bureau\projet\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/107637bf-a3fc-49a4-b1fb-8a17a5da9e9a_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-17 21:05:15 - WARNING - c:\Users\yazki\OneDrive\Bureau\projet\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/107637bf-a3fc-49a4-b1fb-8a17a5da9e9a_cam.mp4, 314712 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-17 21:05:16 - INFO - 127.0.0.1 - - [17/Mar/2025 21:05:16] "POST /process_clip HTTP/1.1" 200 -
+2025-03-17 21:07:10 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:10] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:10 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:10] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:10 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:10] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:10 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:10] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:13 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:13] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-17 21:07:13 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:13] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:13 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:13] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:13 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:13] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:13 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:13] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:13 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:13] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:13 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:13] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:13 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:13] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:13 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:13] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:13 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:13] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:14 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:14] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:14 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:14] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:14 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:14] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:14 - INFO - Extracting webcam from clip..
+
+2025-03-17 21:07:14 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:14] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:14 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:14] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:14 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:14] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:17 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:17] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:17 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:17] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:17 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:17] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:18 - INFO - Crop to wanted format
+2025-03-17 21:07:18 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:18 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:18 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:18 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:18 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:18 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:33 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:33] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:33 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:33] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:33 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:33] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:07:34 - INFO - Writing new clip composite from webcam and content..
+2025-03-17 21:07:49 - WARNING - c:\Users\yazki\OneDrive\Bureau\projet\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/40cd4904-14b1-44a1-87c2-14012d7fc561_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-17 21:07:49 - WARNING - c:\Users\yazki\OneDrive\Bureau\projet\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/40cd4904-14b1-44a1-87c2-14012d7fc561_cam.mp4, 314712 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-17 21:07:50 - INFO - 127.0.0.1 - - [17/Mar/2025 21:07:50] "POST /process_clip HTTP/1.1" 200 -
+2025-03-17 21:08:39 - INFO - 127.0.0.1 - - [17/Mar/2025 21:08:39] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:08:39 - INFO - 127.0.0.1 - - [17/Mar/2025 21:08:39] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:08:39 - INFO - 127.0.0.1 - - [17/Mar/2025 21:08:39] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:08:39 - INFO - 127.0.0.1 - - [17/Mar/2025 21:08:39] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:25 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:25] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:25 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:25] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:28 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:28] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-17 21:09:28 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:28] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:28 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:28] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:28 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:28] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:28 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:28] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:28 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:28] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:29 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:29] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:29 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:29] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:29 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:29] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:29 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:29] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:30 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:30] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:30 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:30] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:30 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:30] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:30 - INFO - Crop to wanted format
+2025-03-17 21:09:45 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:45] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:45 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:45] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:45 - INFO - 127.0.0.1 - - [17/Mar/2025 21:09:45] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:09:46 - INFO - Writing new clip composite from webcam and content..
+2025-03-17 21:10:02 - WARNING - c:\Users\yazki\OneDrive\Bureau\projet\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/43d479f9-cfd7-4014-80aa-c1c0530d063e_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-17 21:10:03 - INFO - 127.0.0.1 - - [17/Mar/2025 21:10:03] "POST /process_clip HTTP/1.1" 200 -
+2025-03-17 21:11:14 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:14] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:14 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:14] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:14 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:14] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:18 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:18] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-17 21:11:18 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:18 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:18 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:18 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:18 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:18 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:19 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:19] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:19 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:19] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:19 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:19] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:19 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:19] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:19 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:19] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:19 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:19] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:19 - INFO - Extracting webcam from clip..
+
+2025-03-17 21:11:19 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:19] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:19 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:19] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:19 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:19] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:23 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:23] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:23 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:23] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:23 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:23] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:23 - INFO - Crop to wanted format
+2025-03-17 21:11:23 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:23] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:23 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:23] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:23 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:23] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:24 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:24] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:24 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:24] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:24 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:24] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:39 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:39] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:39 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:39] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:39 - INFO - 127.0.0.1 - - [17/Mar/2025 21:11:39] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-17 21:11:40 - INFO - Writing new clip composite from webcam and content..
+2025-03-17 21:11:58 - WARNING - c:\Users\yazki\OneDrive\Bureau\projet\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/97223036-54c3-46c9-a9c4-fad4c44779a2_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-17 21:11:58 - WARNING - c:\Users\yazki\OneDrive\Bureau\projet\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/97223036-54c3-46c9-a9c4-fad4c44779a2_cam.mp4, 314712 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-17 21:12:00 - INFO - 127.0.0.1 - - [17/Mar/2025 21:12:00] "POST /process_clip HTTP/1.1" 200 -
+2025-03-17 21:13:04 - INFO -  * Detected change in 'C:\\Users\\yazki\\OneDrive\\Bureau\\projet\\GROOT\\Edit\\Video_processor.py', reloading
+2025-03-17 21:13:04 - INFO -  * Restarting with stat
+2025-03-17 21:13:06 - WARNING -  * Debugger is active!
+2025-03-17 21:13:06 - INFO -  * Debugger PIN: 118-867-816
+2025-03-17 21:13:08 - INFO -  * Detected change in 'C:\\Users\\yazki\\OneDrive\\Bureau\\projet\\GROOT\\Edit\\Video_processor.py', reloading
+2025-03-17 21:13:08 - INFO -  * Restarting with stat
+2025-03-17 21:13:10 - WARNING -  * Debugger is active!
+2025-03-17 21:13:10 - INFO -  * Debugger PIN: 118-867-816
