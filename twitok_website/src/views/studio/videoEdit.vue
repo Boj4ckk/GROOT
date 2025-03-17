@@ -10,7 +10,7 @@ const videoId = route.params.videoId
 <template>
     <edit/> 
     yo t'es dans le video edit de {{ videoId }}
-    <video :src="videoId" controls> </video>
+    <video :src="videoId"> </video>
     
 </template>
 
