@@ -1,20 +1,49 @@
 <script setup>
+
+
+import { useTwitokStore } from '@/store/twitokStore';
+
+import axios from 'axios';
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
-const video_path_list = [
-    "\\test_clip\\20250304_InnocentSillyDiamondRickroll-dzkdq1YJbq_a9FjU_source.mp4",
-    "\\test_clip\\20250306_ArtsyFlaccidJellyfishPMSTwin-W-Wo2UKWga0ue4JJ_source.mp4",
-    "\\test_clip\\20250307_RoundBreakableOwlLitFam-BBcfT87VFwV298kj_source.mp4",
-    "\\test_clip\\20250308_HandsomeBrightSardineOMGScoots-GD4vbQ32Fl4GyGdK_source.mp4"
-];
+const TwitokStore = useTwitokStore() 
+const router = useRouter()
+const objet_clipsUrls = TwitokStore.clipsUrls_Returned
+console.log("voici les urls des clips : ", objet_clipsUrls)
+const clipsUrls = objet_clipsUrls["clipsUrls"]
+console.log(clipsUrls)
 
-const videos = ref(video_path_list);
-const preview_video = ref(video_path_list[0]);
+const objet_editedClip = TwitokStore.editedClipsUrl
+const editedClipUrls = objet_editedClip["editedClipUrls"]
+
+const clips = ref([])
+
+const selectedClipIndex = ref(null);
+
+const edited_clip = ref([])
+
+const getClips = async () => {
+    try {
+        for (let url of clipsUrls) {
+        
+            console.log("envoi de la requete pour aller chercher la vidéo, nom vidéo : ", url)
+            clips.value.push(`http://127.0.0.1:5000/clips/${url}`)
+            console.log("etat du dossier de vidéos : ", clips)
+        }
+    }
+    catch (error) {
+        console.error("erreur lorsqu'on a été cherché la vidéo finale", error)
+    }
+    return clips
+}
+
+getClips() 
 
 
 
 
-
+const preview_video = ref(clips.value[0]);
 const webcam_detection = ref(false);
 const clip_format = ref("portrait")
 
@@ -27,10 +56,27 @@ function get_preview_video(){
     return preview_video.value;
 }
 
-const handleVideoClip = (video) => {
+const handleVideoClip = (video,index) => {
     set_preview_video(video);
+    selectedClipIndex.value = index
    
 };
+
+const handleClipSubmit = () => {
+    edited_clip.value.push(clips.value[selectedClipIndex])
+    clips.value.splice(selectedClipIndex.value,1)
+    set_preview_video(clips.value[0])
+    if(clips.value.length == 0){
+        router.push('/studio')
+
+    }
+    
+    
+   
+
+
+    
+}
 
 const handleform = async () => {
     const payload = {
@@ -38,7 +84,11 @@ const handleform = async () => {
         clip_format : clip_format.value,
         clip_path : get_preview_video()
     };
+   
+    
     try{
+        
+        handleClipSubmit()
         const response = await fetch("http://127.0.0.1:5000/process_clip",{
             method: "POST",
             headers :{"Content-Type": "application/json"},
@@ -46,7 +96,11 @@ const handleform = async () => {
         });
 
         const data = await response.json();
-        console.log(data)
+        console.log("data", data)
+
+        
+
+        
     }
     catch(error) {
         console.log("erreur",  error)
@@ -66,7 +120,7 @@ const handleform = async () => {
     <div class="filtrate-container">
 
         <div class="video-container">
-            <video v-for="(video, index) in videos" :key="index" :src="video"  class="video"  @click="handleVideoClip(video)"></video>
+            <video v-for="(clip, index) in clips" :key="index" :src="clip"  class="video"  @click="handleVideoClip(clip,index)"></video>
         </div>
 
         <div class="preview-container">
@@ -163,10 +217,7 @@ const handleform = async () => {
     
 
     }
-    .video_format_container{
-        
-       
-    }
+  
     .video_format_check_container{
         display: flex;
         justify-content: row;
