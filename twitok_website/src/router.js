@@ -22,7 +22,7 @@ const routes = [
     { path:'/autreConnected', name:'AutreConnected', component: test_autre_connected, meta: {requiresAuth: true} },   
     { path:'/help', name:'Help', component: help },   
     { path:'/showuser', name:'Showuser', component: Showuser },  
-    { path:'/tiktokPost', name:'TiktokPost', component: tiktokPost },   
+    { path:'/tiktokPost', name:'TiktokPost', component: tiktokPost, meta:{requiresAuth: true} },   
     { path:'/videoEdit/:videoId', name:'videoEdit', component: videoEdit, meta: {requiresAuth:true}}, 
 ]
 

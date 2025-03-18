@@ -212,8 +212,8 @@ class VideoProcessor:
         self.cleaning_in_process_folder
         # Path for saving the processed video
         
-        processed_video_path = f'GROOT/twitok_website/src/media/processed_clips/{self.clipId}_processed.mp4'
-        processed_video_path_to_send = f'../../media/processed_clips/{self.clipId}_processed.mp4'
+        processed_video_path = f'GROOT/twitok_website/public/media/processed_clips/{self.clipId}_processed.mp4'
+        processed_video_path_to_send = f'/media/processed_clips/{self.clipId}_processed.mp4'
         
 
         webcam = None

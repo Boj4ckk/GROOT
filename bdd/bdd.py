@@ -273,5 +273,31 @@ def process_data():
 
     return jsonify({"processed_clip_url" : video_processor_instance.edited_clip_path_to_vue })
 
+from config import config
+
+@app.route("/publication", methods=["POST"])
+def publication () : 
+    data = request.json
+    vue_video_path = data.get('vue_chemin_video')
+    description = data.get("description")
+
+    full_relative_video_path = "GROOT/twitok_website/public"+vue_video_path
+    print ("\n\n full relative path : ", full_relative_video_path, "\n\n")
+
+    full_absolute_video_path = os.path.abspath(full_relative_video_path)
+    print ("\n\n full absolute path : ", full_absolute_video_path, "\n\n")
+
+
+    tiktok_instance = TiktokApi()
+    tiktok_instance.startDriver()
+    tiktok_account_for_example = config.TIKTOK_USERNAME
+    tiktok_password_for_example = config.TIKTOK_PASSWORD
+    tiktok_instance.login(tiktok_account_for_example, tiktok_password_for_example)
+    tiktok_instance.uploadVideo(full_absolute_video_path, description)
+    tiktok_instance.closeDriver() 
+
+    return jsonify({"message":"clips publié avec succès ! Vous pouvez aller voir le clip sur https://www.tiktok.com/@twitok_bot_2/"})
+
+
 if __name__ == '__main__' : 
     app.run(debug=True)

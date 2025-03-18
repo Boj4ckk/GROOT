@@ -14,12 +14,7 @@ const router = useRouter() // import router to redirect into tiktok page after e
 // retrieve clips url fetched in studio page
 const objet_clipsUrls = TwitokStore.clipsUrls_Returned  
 const clipsUrls = objet_clipsUrls["clipsUrls"] 
-
-
-//prepare to save edited clips into store.
-
-
-
+console.log("clipsUrls : ", clipsUrls)
 
 //clips var which will dynamicly store clips to edit.
 const clips = ref([])
@@ -31,15 +26,10 @@ const selectedClipIndex = ref(null);
 const edited_clip = ref([])
 
 //Dynamcly store the current video (video displayed in the leftside of the webpage)
-const preview_video = ref(clips.value[0]);
 
 //Editing choices
 const webcam_detection = ref(false);//Dynamicly store the editing choice for the webcam detection.
 const clip_format = ref("portrait")//Dynamcly store the clip_format for editing.
-
-
-
-
 
 // function to retrieve clips for their stored urls.
 const getClips = async () => {
@@ -58,7 +48,8 @@ const getClips = async () => {
 }
 getClips() 
 
-
+console.log("clips : ", clips.value)
+const preview_video = ref(clips.value[0]);
 
 // Getter/ Setter - for current video to edit(displayed in the left side of the web page)
 function set_preview_video(video) { //SETTER
@@ -69,7 +60,6 @@ function get_preview_video(){ //GETTER
     return preview_video.value;
 }
 
-
 //Handle the click on one displayed clip the select it and his index.
 const handleVideoClip = (video,index) => {
     set_preview_video(video);
@@ -79,10 +69,8 @@ const handleVideoClip = (video,index) => {
 // Handle submit clip after chosing preferences for editing.
 const handleClipSubmit = () => {
     clips.value.splice(selectedClipIndex.value,1)//remove the sumbited clip from the non-editing clips liste (right side of the page carousel)
-    set_preview_video(clips.value[0])//automaticaly set a new clips for the selected clips.
-    
+    set_preview_video(clips.value[0])//automaticaly set a new clips for the selected clips.    
 }
-
 
 // handle sumbit form
 const handleform = async () => {
@@ -93,7 +81,6 @@ const handleform = async () => {
         clip_path : get_preview_video()
     }; 
     try{
-        
         handleClipSubmit() // call the handlesubmit to update the dynamic state of refs.
         const response = await fetch("http://127.0.0.1:5000/process_clip",{
             method: "POST",
@@ -105,24 +92,13 @@ const handleform = async () => {
         TwitokStore.setEditedClipUrl(data)
         if(clips.value.length == 0){
             router.push('/tiktokPost') // if all the avalaible clips have been submtied, redirect to 'Studio' (faut changer par la page post sur tiktok quand on l'aura)
-
         }
-        console.log("pute salope grosse pute",TwitokStore.editedClipsUrl)
-
-        
-
-        
+        console.log("twitokStore.editedClipsUrl : ",TwitokStore.editedClipsUrl)
     }
     catch(error) {
         console.log("erreur",  error)
-    }
-
- 
-
-    
+    }    
 }
-
-
 
 </script>
 
@@ -135,7 +111,7 @@ const handleform = async () => {
         </div>
 
         <div class="preview-container">
-            <video :src="get_preview_video()"  controls class="preview_video"></video>
+            <video :src="preview_video"  controls class="preview_video"></video>
 
             <div class="edit_params_container">
                 <div class="form-check form-switch">

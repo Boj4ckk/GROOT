@@ -98,7 +98,7 @@ class TiktokApi:
         # """
         self.driver.get("https://www.tiktok.com/upload")
         self.dezoom()
-        WebDriverWait(self.driver, 15).until(
+        WebDriverWait(self.driver, 35).until(
             EC.presence_of_element_located((By.XPATH, "//input[@type='file']"))
         ).send_keys(videoPath)
 
