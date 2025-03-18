@@ -91,9 +91,7 @@ const handleform = async () => {
         webcam_detection : webcam_detection.value,
         clip_format : clip_format.value,
         clip_path : get_preview_video()
-    };
-   
-    
+    }; 
     try{
         
         handleClipSubmit() // call the handlesubmit to update the dynamic state of refs.

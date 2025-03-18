@@ -271,7 +271,7 @@ def process_data():
     video_processor_instance = VideoProcessor(clip_path, web_cam_state, clip_format)
     video_processor_instance.process_video()
 
-    return jsonify({"processed_clip_url" : video_processor_instance.edited_clip_path })
+    return jsonify({"processed_clip_url" : video_processor_instance.edited_clip_path_to_vue })
 
 if __name__ == '__main__' : 
     app.run(debug=True)

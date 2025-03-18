@@ -213,7 +213,7 @@ class VideoProcessor:
         # Path for saving the processed video
         
         processed_video_path = f'GROOT/twitok_website/src/media/processed_clips/{self.clipId}_processed.mp4'
-
+        processed_video_path_to_send = f'../../media/processed_clips/{self.clipId}_processed.mp4'
         
 
         webcam = None
@@ -247,7 +247,7 @@ class VideoProcessor:
         # Write the final composite video to file
         final_clip.write_videofile(processed_video_path, codec="libx264", fps=30)
 
-        self.edited_clip_path = processed_video_path
+        self.edited_clip_path_to_vue = processed_video_path_to_send
         self.cleaning_in_process_folder
 
        

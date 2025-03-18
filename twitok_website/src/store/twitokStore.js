@@ -13,7 +13,7 @@ export const useTwitokStore = defineStore('useTwitokStore', () => {
         authorizedConnection: sessionStorage.getItem('authorizedConnection') === 'true', // permet d'avoir un vrai booléen car sessionStorage stocke uniquement des str et non des bool meme si on met = true ca va stocker 'true' odnc la condition serait toujours validé car 'true' ou 'false' et dans tous les cas non vides donc true
         actualUser: sessionStorage.getItem('actualUser'),
         clipsUrls_Returned: JSON.parse(localStorage.getItem('clipsUrls_Returned')) || [],
-        editedClipsUrl: JSON.parse(localStorage.getItem('editedClipsUrl')) || [],
+        editedClipsUrl: JSON.parse(sessionStorage.getItem('editedClipsUrl')) || [],
     });
 
 
@@ -45,7 +45,7 @@ export const useTwitokStore = defineStore('useTwitokStore', () => {
     }
     const setEditedClipUrl = (clips) => {
         state.value.editedClipsUrl.push(clips)
-        localStorage.setItem('editedClipsUrl', JSON.stringify(state.value.editedClipsUrl))
+        sessionStorage.setItem('editedClipsUrl', JSON.stringify(state.value.editedClipsUrl))
     }
 
     // const setActualUser = (user) => {
