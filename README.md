@@ -87,7 +87,7 @@
 
 
 ### BONUS : Lien du figma pour visualiser le design futur de l'application.
-    `https://www.figma.com/design/b9Hm6yQ9WsMw77VkCh9F25/Untitled?node-id=0-1&p=f&t=6dAuwtAn41czKliy-0`
+##### https://www.figma.com/design/b9Hm6yQ9WsMw77VkCh9F25/Untitled?node-id=0-1&p=f&t=6dAuwtAn41czKliy-0
 
 
 
