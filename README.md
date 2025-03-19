@@ -54,32 +54,32 @@
 ### Etapes pour lancer notre application 
 
 #### Prérequis d'installation : 
-    - Installer Node.js
-    - Installer python version 3.11.9
+##### Installer Node.js
+##### Installer python version 3.11.9
 
--> télécharger notre fichier zip 
--> Allez dans le dossier ou vous allez faire vos test, pour notre part on se place dans `Sdn` dans notre explorateur de fichiers. Puis : 
-    -> Créer un dossier du nom de votre choix, on a choisi pour la démonstration `test_twitok`. 
-    -> Entrez dans `test_twitok` et placez-y votre fichier zip. 
-    -> Faites un clic droit sur votre fichier zip et sélectionnez "Extraire ici". Il est important de bien "extraire ici" et non pas "Extraire Tout". 
-    => <i> Résumé : Répertoire courant `..../sdn/test_twitok` et il doit y avoir le fichier zip, ainsi que le dossier qui contient notre projet (celui-ci doit s'appeler "GROOT-main"). </i> 
-    -> Créez un dossier appelé 'clips' dans le dossier courant. (dossier courant = `..../sdn/test_twitok`)
-    -> Renommez le dossier 'GROOT-main' en 'GROOT' (Désolé pour ces deux dernières étapes peu communes)
-    -> ouvrez un terminal et naviguez vers `twitok_website`. Dans notre cas voici notre terminal : `PS C:\Users\Sdn\test_twitok> cd GROOT` puis `PS C:\Users\Sdn\test_twitok\GROOT> cd twitok_website`.
-    -> Vous voici maintenant dans le répertoire `twitok_besite` qui contient toute la partie VueJs. tapez la commande `npm install`. 
-    -> tapez la commande `npm run dev`
-    => Le serveur doit être operationnel.
+##### télécharger notre fichier zip 
+##### Allez dans le dossier ou vous allez faire vos test, pour notre part on se place dans `Sdn` dans notre explorateur de fichiers. Puis : 
+   ##### -> Créer un dossier du nom de votre choix, on a choisi pour la démonstration `test_twitok`. 
+   ##### -> Entrez dans `test_twitok` et placez-y votre fichier zip. 
+   ##### -> Faites un clic droit sur votre fichier zip et sélectionnez "Extraire ici". Il est important de bien "extraire ici" et non pas "Extraire Tout". 
+   ##### <i> Résumé : Répertoire courant `..../sdn/test_twitok` et il doit y avoir le fichier zip, ainsi que le dossier qui contient notre projet (celui-ci doit s'appeler "GROOT-main"). </i> 
+   ##### -> Créez un dossier appelé 'clips' dans le dossier courant. (dossier courant = `..../sdn/test_twitok`)
+   ##### -> Renommez le dossier 'GROOT-main' en 'GROOT' (Désolé pour ces deux dernières étapes peu communes)
+   ##### -> ouvrez un terminal et naviguez vers `twitok_website`. Dans notre cas voici notre terminal : `PS C:\Users\Sdn\test_twitok> cd GROOT` puis `PS C:\Users\Sdn\test_twitok\GROOT> cd twitok_website`.
+   ##### -> Vous voici maintenant dans le répertoire `twitok_besite` qui contient toute la partie VueJs. tapez la commande `npm install`. 
+   ##### -> tapez la commande `npm run dev`
+   ##### Le serveur doit être operationnel.
     //
-    -> Ouvrez en paralèle un autre terminal. 
-    -> Vous avez normalement en pré-requis installé la version 3.11.9 de Python. Lancez la commande suivante dans votre terminal : `PS C:\Users\Sdn\test_twitok>py -3.11 -m venv Twitok_venv` 
-    -> Ensuite tapez la commande suivante dans ce même terminal : `PS C:\Users\Sdn\test_twitok>.\Twitok_venv\Scripts\activate`
-    -> Vous devriez etre comme ceci : `(Twitok_venv) PS C:\Users\Sdn\test_twitok>` 
-    -> Vous pouvez taper cette commande pour etre sur que votre environnement virtuel est bien configuré avec la bonne version de python : `(Twitok_venv) PS C:\Users\Sdn\test_twitok>python --version` (la version doit donc etre la 3.11.9)
-    -> Entrez maintenant la commande suivante : `(Twitok_venv) PS C:\Users\Sdn\test_twitok\GROOT>pip install -r requirements.txt`
-    -> Enfin, entrez la commande suivante : `(Twitok_venv) PS C:\Users\Sdn\test_twitok> watchmedo auto-restart --patterns="*.py" --recursive -- python -m GROOT.bdd.bdd`
-    => Le serveur Flask doit être opérationnel. 
+   ##### -> Ouvrez en paralèle un autre terminal. 
+   ##### -> Vous avez normalement en pré-requis installé la version 3.11.9 de Python. Lancez la commande suivante dans votre terminal : `PS C:\Users\Sdn\test_twitok>py -3.11 -m venv Twitok_venv` 
+   ##### -> Ensuite tapez la commande suivante dans ce même terminal : `PS C:\Users\Sdn\test_twitok>.\Twitok_venv\Scripts\activate`
+   ##### -> Vous devriez etre comme ceci : `(Twitok_venv) PS C:\Users\Sdn\test_twitok>` 
+   ##### -> Vous pouvez taper cette commande pour etre sur que votre environnement virtuel est bien configuré avec la bonne version de python : `(Twitok_venv) PS C:\Users\Sdn\test_twitok>python --version` (la version doit donc etre la 3.11.9)
+   ##### -> Entrez maintenant la commande suivante : `(Twitok_venv) PS C:\Users\Sdn\test_twitok\GROOT>pip install -r requirements.txt`
+   ##### -> Enfin, entrez la commande suivante : `(Twitok_venv) PS C:\Users\Sdn\test_twitok> watchmedo auto-restart --patterns="*.py" --recursive -- python -m GROOT.bdd.bdd`
+   ##### Le serveur Flask doit être opérationnel. 
     
-    Il ne vous reste plus qu'à aller sur votre navigateur et taper http://localhost:5173 
+   ##### Il ne vous reste plus qu'à aller sur votre navigateur et taper http://localhost:5173 
 
 
 
