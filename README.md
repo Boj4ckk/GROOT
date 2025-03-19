@@ -18,7 +18,7 @@
 ##### Web Scraping : Technique d'extraction de données depuis un site web en automatisant la navigation et les interactions avec le site à l'aide d'un programme.
 
 
-##### 1 . Service de récupération de clips Twitch : Ce service permet de récupérer des clips en fonction de divers critères personnalisables tels que le nom du streamer, le jeu vidéo, la durée du clip, le nombre de vues et la date de sortie du clip. Cette étape est réalisée à l'aide de l'API de Twitch, qui permet, grâce à des requêtes spécifiques, de récupérer les clips correspondants aux critères définis.
+##### 1 . Service de récupération de clips Twitch : Ce service permet de récupérer des clips en fonction de divers critères personnalisables tels que le nom du streamer, le jeu vidéo, la durée du clip, le nombre de vues et la date de sortie du clip. Cette étape est réalisée à l'aide de l'API de Twitch, qui permet, grâce à des requêtes spécifiques, de récupérer les clips correspondants aux critères définis.[NE PAS UTILISER LE CHAMP GAME CAR BACKEND PAS ENCORE OPTIMAL]
 
 ##### 2. Montage vidéo pour le format court (TikTok) : Cette fonctionnalité se divise en deux parties principales. La première consiste à extraire la webcam du streamer et le contenu vidéo, autrement appelé gameplay. La deuxième partie consiste à utiliser ces deux éléments extraits pour créer la vidéo finale au format souhaité, 9:16, adapté à TikTok.
 
@@ -66,7 +66,7 @@
    ##### -> Créez un dossier appelé 'clips' dans le dossier courant. (dossier courant = `..../sdn/test_twitok`)
    ##### -> Renommez le dossier 'GROOT-main' en 'GROOT' (Désolé pour ces deux dernières étapes peu communes)
    ##### -> ouvrez un terminal et naviguez vers `twitok_website`. Dans notre cas voici notre terminal : `PS C:\Users\Sdn\test_twitok> cd GROOT` puis `PS C:\Users\Sdn\test_twitok\GROOT> cd twitok_website`.
-   ##### -> Vous voici maintenant dans le répertoire `twitok_besite` qui contient toute la partie VueJs. tapez la commande `npm install`. 
+   ##### -> Vous voici maintenant dans le répertoire `twitok_website` qui contient toute la partie VueJs. tapez la commande `npm install`. 
    ##### -> tapez la commande `npm run dev`
    ##### Le serveur doit être operationnel.
     //
