@@ -24,8 +24,10 @@ const chargement = ref(false)
 const getClips = async() => {
     chargement.value = true
     try {
+        number_of_clips.value +=1
         const dataToSend = {streamer_name:streamer_name.value, game: game.value, min_views:min_views.value, max_views:max_views.value, min_views:min_views.value, max_duration:max_duration.value, min_date_release:min_date_release.value, max_date_release:max_date_release.value, number_of_clips:number_of_clips.value}
         console.log('Tentative de récupératon des clips [avant requete]')
+        
 
         const response = await axios.post("http://127.0.0.1:5000/recup_infos_clips", dataToSend)
         console.log("Tentative d'envoie des informations sur les clips a récupérer...")
@@ -93,7 +95,7 @@ const getClips = async() => {
                 <label for="max_date_release">Max date of release</label>
                 <input type="date" id="max_date_release" name="max_date_release" v-model="max_date_release">
                 <label for="number_clips">Nb of clips (max 10)</label>
-                <input type="number" min="1" max="10" id="max_date_release" name="max_date_release" v-model="number_of_clips">
+                <input type="number" min="1" max="10" id="number_of_clips" name="number_of_clips" v-model="number_of_clips" value="1">
                 
                 
                 <input type="submit" value="Find" @click.prevent="getClips()">

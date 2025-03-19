@@ -4114,3 +4114,1133 @@ Cleaning in_process_clips...
 
 2025-03-19 12:57:06 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
 2025-03-19 12:57:06 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 400 113
+2025-03-19 12:57:06 - ERROR - Failed to fetch clips for user None: {"error":"Bad Request","status":400,"message":"The id or game_id or broadcaster_id query parameter is required."}
+2025-03-19 12:57:06 - INFO - 127.0.0.1 - - [19/Mar/2025 12:57:06] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 12:57:06 - INFO - 127.0.0.1 - - [19/Mar/2025 12:57:06] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 12:57:20 - INFO - 127.0.0.1 - - [19/Mar/2025 12:57:20] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 12:57:20 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 12:57:21 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 12:57:21 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 12:57:21 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 12:57:21 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talao HTTP/1.1" 200 323
+2025-03-19 12:57:21 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 12:57:21 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 12:57:21 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=694614125&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 27
+2025-03-19 12:57:21 - INFO - 127.0.0.1 - - [19/Mar/2025 12:57:21] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 12:57:21 - INFO - 127.0.0.1 - - [19/Mar/2025 12:57:21] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 12:57:36 - INFO - 127.0.0.1 - - [19/Mar/2025 12:57:36] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 12:57:36 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 12:57:37 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 12:57:37 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 12:57:37 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 12:57:38 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmoas HTTP/1.1" 200 11
+2025-03-19 12:57:38 - ERROR - Failed to fetch user ID for talmoas: {"data":[]}
+2025-03-19 12:57:38 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 12:57:38 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 12:57:38 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 400 113
+2025-03-19 12:57:38 - ERROR - Failed to fetch clips for user None: {"error":"Bad Request","status":400,"message":"The id or game_id or broadcaster_id query parameter is required."}
+2025-03-19 12:57:38 - INFO - 127.0.0.1 - - [19/Mar/2025 12:57:38] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 12:57:38 - INFO - 127.0.0.1 - - [19/Mar/2025 12:57:38] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 12:58:33 - INFO - 127.0.0.1 - - [19/Mar/2025 12:58:33] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 12:58:33 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 12:58:34 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 12:58:34 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 12:58:34 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 12:58:34 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmozq HTTP/1.1" 200 11
+2025-03-19 12:58:34 - ERROR - Failed to fetch user ID for talmozq: {"data":[]}
+2025-03-19 12:58:34 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 12:58:34 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 12:58:35 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 400 113
+2025-03-19 12:58:35 - ERROR - Failed to fetch clips for user None: {"error":"Bad Request","status":400,"message":"The id or game_id or broadcaster_id query parameter is required."}
+2025-03-19 12:58:35 - INFO - 127.0.0.1 - - [19/Mar/2025 12:58:35] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 12:58:35 - INFO - 127.0.0.1 - - [19/Mar/2025 12:58:35] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 12:59:09 - INFO - 127.0.0.1 - - [19/Mar/2025 12:59:09] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 12:59:09 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 12:59:10 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 12:59:10 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 12:59:10 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 12:59:10 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmosqd HTTP/1.1" 200 11
+2025-03-19 12:59:10 - ERROR - Failed to fetch user ID for talmosqd: {"data":[]}
+2025-03-19 12:59:10 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 12:59:10 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 12:59:10 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 400 113
+2025-03-19 12:59:10 - ERROR - Failed to fetch clips for user None: {"error":"Bad Request","status":400,"message":"The id or game_id or broadcaster_id query parameter is required."}
+2025-03-19 12:59:10 - INFO - 127.0.0.1 - - [19/Mar/2025 12:59:10] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 12:59:10 - INFO - 127.0.0.1 - - [19/Mar/2025 12:59:10] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 12:59:35 - INFO - 127.0.0.1 - - [19/Mar/2025 12:59:35] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 12:59:35 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 12:59:36 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 12:59:36 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 12:59:36 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 12:59:37 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmoasz HTTP/1.1" 200 11
+2025-03-19 12:59:37 - ERROR - Failed to fetch user ID for talmoasz: {"data":[]}
+2025-03-19 12:59:37 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 12:59:37 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 12:59:37 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 400 113
+2025-03-19 12:59:37 - ERROR - Failed to fetch clips for user None: {"error":"Bad Request","status":400,"message":"The id or game_id or broadcaster_id query parameter is required."}
+2025-03-19 12:59:37 - INFO - 127.0.0.1 - - [19/Mar/2025 12:59:37] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 12:59:37 - INFO - 127.0.0.1 - - [19/Mar/2025 12:59:37] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:02:14 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:14] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:02:14 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:02:15 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:02:15 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:02:15 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:02:15 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:02:15 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:02:15 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:02:16 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 601
+2025-03-19 13:02:18 - INFO - Clip successfully downloaded: clips/Talmo_Ton GP l'IA.mp4
+2025-03-19 13:02:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:18] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:02:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:18] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:02:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:18] "GET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1" 200 -
+2025-03-19 13:02:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:28] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-19 13:02:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:28] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:28] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:28] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:28] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:28] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:28] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:29 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:29] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:29 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:29] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:29 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:29] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:29 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:29] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:29 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:29] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:29 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:29] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:29 - INFO - Extracting webcam from clip..
+
+2025-03-19 13:02:29 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:29] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:29 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:29] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:29 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:29] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:34] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:34] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:34] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:35 - INFO - Crop to wanted format
+2025-03-19 13:02:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:35] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:35] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:35] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:35] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:35] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:35] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:53 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:53] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:53 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:53] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:53 - INFO - 127.0.0.1 - - [19/Mar/2025 13:02:53] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:02:54 - INFO - Writing new clip composite from webcam and content..
+2025-03-19 13:03:17 - WARNING - C:\Users\hugo2\OneDrive - Institut Catholique de Lille\Documents\cours\fges\sdn\s6\vuejs\PROJET\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/264cd48d-48fc-4b3d-947d-00a23d95eee0_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-19 13:03:17 - WARNING - C:\Users\hugo2\OneDrive - Institut Catholique de Lille\Documents\cours\fges\sdn\s6\vuejs\PROJET\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/264cd48d-48fc-4b3d-947d-00a23d95eee0_cam.mp4, 314712 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-19 13:03:19 - INFO - 127.0.0.1 - - [19/Mar/2025 13:03:19] "POST /process_clip HTTP/1.1" 200 -
+2025-03-19 13:03:36 - INFO - 127.0.0.1 - - [19/Mar/2025 13:03:36] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:03:36 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:03:37 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:03:37 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:03:37 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:03:37 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=Kamet0 HTTP/1.1" 200 566
+2025-03-19 13:03:37 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:03:37 - INFO - 
+
+Removing file : clips\Talmo_Ton GP l'IA.mp4
+
+2025-03-19 13:03:37 - ERROR - Erreur lors de la récupération des clips: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: "clips\\Talmo_Ton GP l'IA.mp4"
+2025-03-19 13:03:37 - INFO - 127.0.0.1 - - [19/Mar/2025 13:03:37] "[35m[1mPOST /recup_infos_clips HTTP/1.1[0m" 500 -
+2025-03-19 13:03:58 - INFO - 127.0.0.1 - - [19/Mar/2025 13:03:58] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:03:59 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:04:00 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:04:00 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:04:00 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:04:00 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=Kamet0 HTTP/1.1" 200 566
+2025-03-19 13:04:00 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:04:00 - INFO - 
+
+Removing file : clips\Talmo_Ton GP l'IA.mp4
+
+2025-03-19 13:04:00 - ERROR - Erreur lors de la récupération des clips: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: "clips\\Talmo_Ton GP l'IA.mp4"
+2025-03-19 13:04:00 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:00] "[35m[1mPOST /recup_infos_clips HTTP/1.1[0m" 500 -
+2025-03-19 13:04:24 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-19 13:04:24 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 13:04:24 - INFO -  * Restarting with stat
+2025-03-19 13:04:27 - WARNING -  * Debugger is active!
+2025-03-19 13:04:27 - INFO -  * Debugger PIN: 688-840-099
+2025-03-19 13:04:27 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:27] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:04:28 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:04:29 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:04:29 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:04:29 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:04:29 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=Kamet0 HTTP/1.1" 200 566
+2025-03-19 13:04:29 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:04:29 - INFO - 
+
+Removing file : clips\Talmo_Ton GP l'IA.mp4
+
+2025-03-19 13:04:29 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:04:29 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=27115917&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 634
+2025-03-19 13:04:32 - INFO - Clip successfully downloaded: clips/Kamet0_LA LITIÈRE AHAHAH.mp4
+2025-03-19 13:04:32 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:32] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:04:32 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:32] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:04:32 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:32] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:32 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:32] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:32 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:32] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:32 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:32] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:32 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:32] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:32 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:32] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:41] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-19 13:04:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:41] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:41] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:41] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:41] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:41] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:41] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:41] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:41] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:41] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:41] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:41] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:41] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:41 - INFO - Extracting webcam from clip..
+
+2025-03-19 13:04:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:41] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:41] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:04:41] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:04:43 - INFO - Auto face recognition failed. Manually web cam extraction performed.
+2025-03-19 13:05:03 - INFO - 127.0.0.1 - - [19/Mar/2025 13:05:03] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:05:03 - INFO - 127.0.0.1 - - [19/Mar/2025 13:05:03] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:05:03 - INFO - 127.0.0.1 - - [19/Mar/2025 13:05:03] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:05:04 - INFO - Crop to wanted format
+2025-03-19 13:05:04 - INFO - 127.0.0.1 - - [19/Mar/2025 13:05:04] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:05:04 - INFO - 127.0.0.1 - - [19/Mar/2025 13:05:04] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:05:04 - INFO - 127.0.0.1 - - [19/Mar/2025 13:05:04] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:05:04 - INFO - 127.0.0.1 - - [19/Mar/2025 13:05:04] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:05:04 - INFO - 127.0.0.1 - - [19/Mar/2025 13:05:04] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:05:04 - INFO - 127.0.0.1 - - [19/Mar/2025 13:05:04] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:05:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:05:18] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:05:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:05:18] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:05:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:05:18] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:05:19 - INFO - Writing new clip composite from webcam and content..
+2025-03-19 13:05:55 - WARNING - C:\Users\hugo2\OneDrive - Institut Catholique de Lille\Documents\cours\fges\sdn\s6\vuejs\PROJET\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/e7864039-b7f1-4208-a72c-cfbb4ae5735d_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 394/395, at time 13.13/13.14 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-19 13:05:55 - WARNING - C:\Users\hugo2\OneDrive - Institut Catholique de Lille\Documents\cours\fges\sdn\s6\vuejs\PROJET\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/e7864039-b7f1-4208-a72c-cfbb4ae5735d_cam.mp4, 402948 bytes wanted but 0 bytes read,at frame 394/395, at time 13.13/13.14 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-19 13:05:56 - INFO - 127.0.0.1 - - [19/Mar/2025 13:05:56] "POST /process_clip HTTP/1.1" 200 -
+2025-03-19 13:06:45 - INFO - 127.0.0.1 - - [19/Mar/2025 13:06:45] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:06:45 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:06:46 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:06:46 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:06:46 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:06:46 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=Squeezie HTTP/1.1" 200 494
+2025-03-19 13:06:46 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:06:46 - INFO - 
+
+Removing file : clips\Kamet0_LA LITIÈRE AHAHAH.mp4
+
+2025-03-19 13:06:46 - ERROR - Erreur lors de la récupération des clips: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'clips\\Kamet0_LA LITIÈRE AHAHAH.mp4'
+2025-03-19 13:06:46 - INFO - 127.0.0.1 - - [19/Mar/2025 13:06:46] "[35m[1mPOST /recup_infos_clips HTTP/1.1[0m" 500 -
+2025-03-19 13:17:50 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-19 13:17:50 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 13:17:50 - INFO -  * Restarting with stat
+2025-03-19 13:17:53 - WARNING -  * Debugger is active!
+2025-03-19 13:17:53 - INFO -  * Debugger PIN: 426-512-210
+2025-03-19 13:18:00 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:00] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:18:00 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:18:01 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:18:01 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:18:01 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:18:01 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:18:01 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:18:01 - INFO - 
+
+Removing file : clips\Kamet0_LA LITIÈRE AHAHAH.mp4
+
+2025-03-19 13:18:01 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:18:01 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 601
+2025-03-19 13:18:05 - INFO - Clip successfully downloaded: clips/Talmo_Ton GP l'IA.mp4
+2025-03-19 13:18:05 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:05] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:18:05 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:05] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:18:05 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:05] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:05 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:05] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:05 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:05] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:05 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:05] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:05 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:05] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:05 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:05] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:05 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-19 13:18:05 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 13:18:05 - INFO -  * Restarting with stat
+2025-03-19 13:18:08 - WARNING -  * Debugger is active!
+2025-03-19 13:18:08 - INFO -  * Debugger PIN: 426-512-210
+2025-03-19 13:18:21 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:21] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:18:21 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:18:23 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:18:23 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:18:23 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:18:23 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=Kamet0 HTTP/1.1" 200 566
+2025-03-19 13:18:23 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:18:23 - INFO - 
+
+Removing file : clips\Talmo_Ton GP l'IA.mp4
+
+2025-03-19 13:18:23 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:18:23 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=27115917&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 634
+2025-03-19 13:18:26 - INFO - Clip successfully downloaded: clips/Kamet0_LA LITIÈRE AHAHAH.mp4
+2025-03-19 13:18:26 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:26] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:18:26 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:26] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:18:26 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:26] "GET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1" 200 -
+2025-03-19 13:18:26 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:26] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:26 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:26] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:26 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:26] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:26 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:26] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:26 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:26] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:34] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-19 13:18:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:34] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:34] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:34] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:34] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:34] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:34] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:34] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:34] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:34] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:34] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:34] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:34] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:34 - INFO - Crop to wanted format
+2025-03-19 13:18:48 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:48] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:48 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:48] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:48 - INFO - 127.0.0.1 - - [19/Mar/2025 13:18:48] "[35m[1mGET /clips/Kamet0_LA%20LITIÈRE%20AHAHAH.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:18:49 - INFO - Writing new clip composite from webcam and content..
+2025-03-19 13:19:20 - WARNING - C:\Users\hugo2\AppData\Local\Programs\Python\Python311\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/08a9e855-7bf2-4087-b078-23b9bcfaf1a2_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 394/395, at time 13.13/13.14 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-19 13:19:20 - INFO - 127.0.0.1 - - [19/Mar/2025 13:19:20] "POST /process_clip HTTP/1.1" 200 -
+2025-03-19 13:19:50 - INFO - 127.0.0.1 - - [19/Mar/2025 13:19:50] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:19:50 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:19:51 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:19:51 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:19:51 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:19:52 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=Squeezie HTTP/1.1" 200 494
+2025-03-19 13:19:52 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:19:52 - INFO - 
+
+Removing file : clips\Kamet0_LA LITIÈRE AHAHAH.mp4
+
+2025-03-19 13:19:52 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:19:52 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=52130765&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 599
+2025-03-19 13:19:54 - INFO - Clip successfully downloaded: clips/Squeezie_worlds.mp4
+2025-03-19 13:19:58 - INFO - Clip successfully downloaded: clips/Squeezie_MAIS WHAT.mp4
+2025-03-19 13:19:58 - INFO - 127.0.0.1 - - [19/Mar/2025 13:19:58] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:19:58 - INFO - 127.0.0.1 - - [19/Mar/2025 13:19:58] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:19:58 - INFO - 127.0.0.1 - - [19/Mar/2025 13:19:58] "[35m[1mGET /clips/Squeezie_MAIS%20WHAT.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:19:58 - INFO - 127.0.0.1 - - [19/Mar/2025 13:19:58] "[35m[1mGET /clips/Squeezie_worlds.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:19:58 - INFO - 127.0.0.1 - - [19/Mar/2025 13:19:58] "[35m[1mGET /clips/Squeezie_MAIS%20WHAT.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:19:58 - INFO - 127.0.0.1 - - [19/Mar/2025 13:19:58] "[35m[1mGET /clips/Squeezie_MAIS%20WHAT.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:19:58 - INFO - 127.0.0.1 - - [19/Mar/2025 13:19:58] "[35m[1mGET /clips/Squeezie_MAIS%20WHAT.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:19:58 - INFO - 127.0.0.1 - - [19/Mar/2025 13:19:58] "[35m[1mGET /clips/Squeezie_MAIS%20WHAT.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:19:58 - INFO - 127.0.0.1 - - [19/Mar/2025 13:19:58] "[35m[1mGET /clips/Squeezie_MAIS%20WHAT.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:20:14 - INFO - 127.0.0.1 - - [19/Mar/2025 13:20:14] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:20:14 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:20:15 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:20:15 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:20:15 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:20:15 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=Squeezie HTTP/1.1" 200 494
+2025-03-19 13:20:15 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:20:15 - INFO - 
+
+Removing file : clips\Squeezie_MAIS WHAT.mp4
+
+2025-03-19 13:20:15 - INFO - 
+
+Removing file : clips\Squeezie_worlds.mp4
+
+2025-03-19 13:20:15 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:20:15 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=52130765&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 599
+2025-03-19 13:20:18 - INFO - Clip successfully downloaded: clips/Squeezie_worlds.mp4
+2025-03-19 13:20:20 - INFO - Clip successfully downloaded: clips/Squeezie_MAIS WHAT.mp4
+2025-03-19 13:20:20 - INFO - 127.0.0.1 - - [19/Mar/2025 13:20:20] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:20:20 - INFO - 127.0.0.1 - - [19/Mar/2025 13:20:20] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:20:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:20:35] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-19 13:20:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:20:35] "GET /clips/Squeezie_MAIS%20WHAT.mp4 HTTP/1.1" 200 -
+2025-03-19 13:20:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:20:35] "[35m[1mGET /clips/Squeezie_worlds.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:20:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:20:35] "[35m[1mGET /clips/Squeezie_worlds.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:20:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:20:35] "[35m[1mGET /clips/Squeezie_MAIS%20WHAT.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:20:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:20:35] "[35m[1mGET /clips/Squeezie_worlds.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:20:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:20:35] "[35m[1mGET /clips/Squeezie_worlds.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:20:35 - INFO - Extracting webcam from clip..
+
+2025-03-19 13:20:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:20:35] "[35m[1mGET /clips/Squeezie_worlds.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:20:49 - INFO - 127.0.0.1 - - [19/Mar/2025 13:20:49] "[35m[1mGET /clips/Squeezie_worlds.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:20:50 - INFO - Crop to wanted format
+2025-03-19 13:20:50 - INFO - 127.0.0.1 - - [19/Mar/2025 13:20:50] "[35m[1mGET /clips/Squeezie_worlds.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:20:50 - INFO - 127.0.0.1 - - [19/Mar/2025 13:20:50] "[35m[1mGET /clips/Squeezie_worlds.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:21:14 - INFO - 127.0.0.1 - - [19/Mar/2025 13:21:14] "[35m[1mGET /clips/Squeezie_worlds.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:21:16 - INFO - Writing new clip composite from webcam and content..
+2025-03-19 13:21:54 - WARNING - C:\Users\hugo2\AppData\Local\Programs\Python\Python311\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/54c774b3-af61-4cb3-9e8a-847208731fe8_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 341/342, at time 11.37/11.37 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-19 13:21:54 - WARNING - C:\Users\hugo2\AppData\Local\Programs\Python\Python311\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/54c774b3-af61-4cb3-9e8a-847208731fe8_cam.mp4, 1344564 bytes wanted but 0 bytes read,at frame 341/342, at time 11.37/11.37 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-19 13:21:55 - INFO - 127.0.0.1 - - [19/Mar/2025 13:21:55] "POST /process_clip HTTP/1.1" 200 -
+2025-03-19 13:22:36 - INFO - 127.0.0.1 - - [19/Mar/2025 13:22:36] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:22:36 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:22:37 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:22:37 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:22:37 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:22:38 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=Lebouseuh HTTP/1.1" 200 475
+2025-03-19 13:22:38 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:22:38 - INFO - 
+
+Removing file : clips\Squeezie_MAIS WHAT.mp4
+
+2025-03-19 13:22:38 - INFO - 
+
+Removing file : clips\Squeezie_worlds.mp4
+
+2025-03-19 13:22:38 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:22:38 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=96562014&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 575
+2025-03-19 13:22:41 - INFO - Clip successfully downloaded: clips/LeBouseuh_apl.mp4
+2025-03-19 13:22:44 - INFO - Clip successfully downloaded: clips/LeBouseuh_caisse.mp4
+2025-03-19 13:22:44 - INFO - 127.0.0.1 - - [19/Mar/2025 13:22:44] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:22:44 - INFO - 127.0.0.1 - - [19/Mar/2025 13:22:44] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:22:44 - INFO - 127.0.0.1 - - [19/Mar/2025 13:22:44] "[35m[1mGET /clips/LeBouseuh_caisse.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:22:44 - INFO - 127.0.0.1 - - [19/Mar/2025 13:22:44] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:22:44 - INFO - 127.0.0.1 - - [19/Mar/2025 13:22:44] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:22:44 - INFO - 127.0.0.1 - - [19/Mar/2025 13:22:44] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:22:44 - INFO - 127.0.0.1 - - [19/Mar/2025 13:22:44] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:22:44 - INFO - 127.0.0.1 - - [19/Mar/2025 13:22:44] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:22:44 - INFO - 127.0.0.1 - - [19/Mar/2025 13:22:44] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:24:05 - INFO - 127.0.0.1 - - [19/Mar/2025 13:24:05] "[35m[1mGET /clips/LeBouseuh_caisse.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:24:05 - INFO - 127.0.0.1 - - [19/Mar/2025 13:24:05] "[35m[1mGET /clips/LeBouseuh_caisse.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:24:05 - INFO - 127.0.0.1 - - [19/Mar/2025 13:24:05] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:24:05 - INFO - 127.0.0.1 - - [19/Mar/2025 13:24:05] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:24:05 - INFO - 127.0.0.1 - - [19/Mar/2025 13:24:05] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:24:26 - INFO - 127.0.0.1 - - [19/Mar/2025 13:24:26] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:24:26 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:24:27 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:24:27 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:24:27 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:24:28 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=Lebouseuh HTTP/1.1" 200 475
+2025-03-19 13:24:28 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:24:28 - INFO - 
+
+Removing file : clips\LeBouseuh_apl.mp4
+
+2025-03-19 13:24:28 - INFO - 
+
+Removing file : clips\LeBouseuh_caisse.mp4
+
+2025-03-19 13:24:28 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:24:28 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=96562014&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 575
+2025-03-19 13:24:30 - INFO - Clip successfully downloaded: clips/LeBouseuh_apl.mp4
+2025-03-19 13:24:33 - INFO - Clip successfully downloaded: clips/LeBouseuh_caisse.mp4
+2025-03-19 13:24:33 - INFO - 127.0.0.1 - - [19/Mar/2025 13:24:33] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:24:33 - INFO - 127.0.0.1 - - [19/Mar/2025 13:24:33] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:24:33 - INFO - 127.0.0.1 - - [19/Mar/2025 13:24:33] "[35m[1mGET /clips/LeBouseuh_caisse.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:24:33 - INFO - 127.0.0.1 - - [19/Mar/2025 13:24:33] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:24:33 - INFO - 127.0.0.1 - - [19/Mar/2025 13:24:33] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:24:33 - INFO - 127.0.0.1 - - [19/Mar/2025 13:24:33] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:24:33 - INFO - 127.0.0.1 - - [19/Mar/2025 13:24:33] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:24:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:24:34] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:24:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:24:34] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:27:08 - INFO -  * Detected change in 'C:\\Users\\hugo2\\OneDrive - Institut Catholique de Lille\\Documents\\cours\\fges\\sdn\\s6\\vuejs\\PROJET\\GROOT\\bdd\\bdd.py', reloading
+2025-03-19 13:27:08 - INFO -  * Detected change in 'C:\\Users\\hugo2\\OneDrive - Institut Catholique de Lille\\Documents\\cours\\fges\\sdn\\s6\\vuejs\\PROJET\\GROOT\\bdd\\bdd.py', reloading
+2025-03-19 13:27:11 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-19 13:27:11 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 13:27:11 - INFO -  * Restarting with stat
+2025-03-19 13:27:14 - WARNING -  * Debugger is active!
+2025-03-19 13:27:14 - INFO -  * Debugger PIN: 426-512-210
+2025-03-19 13:27:23 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-19 13:27:23 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 13:27:23 - INFO -  * Restarting with stat
+2025-03-19 13:27:26 - WARNING -  * Debugger is active!
+2025-03-19 13:27:26 - INFO -  * Debugger PIN: 426-512-210
+2025-03-19 13:27:26 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:26] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:27:26 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:27:27 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:27:27 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:27:27 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:27:27 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=Lebouseuh HTTP/1.1" 200 475
+2025-03-19 13:27:27 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:27:27 - INFO - 
+
+Removing file : clips\LeBouseuh_apl.mp4
+
+2025-03-19 13:27:27 - INFO - 
+
+Removing file : clips\LeBouseuh_caisse.mp4
+
+2025-03-19 13:27:27 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:27:28 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=96562014&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=1 HTTP/1.1" 200 752
+2025-03-19 13:27:30 - INFO - Clip successfully downloaded: clips/LeBouseuh_apl.mp4
+2025-03-19 13:27:30 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:30] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:27:30 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:30] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:27:30 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:30] "GET /clips/LeBouseuh_apl.mp4 HTTP/1.1" 200 -
+2025-03-19 13:27:30 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:30] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:27:30 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:30] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:27:30 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:30] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:27:30 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:30] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:27:30 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:30] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:27:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:41] "OPTIONS /login HTTP/1.1" 200 -
+2025-03-19 13:27:41 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-03-19 13:27:41 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
+2025-03-19 13:27:42 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:42] "POST /login HTTP/1.1" 200 -
+2025-03-19 13:27:44 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:44] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:27:44 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:27:45 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:27:45 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:27:45 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:27:45 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:27:45 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:27:45 - INFO - 
+
+Removing file : clips\LeBouseuh_apl.mp4
+
+2025-03-19 13:27:45 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:27:46 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=1 HTTP/1.1" 200 759
+2025-03-19 13:27:46 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:46] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:27:46 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:46] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:27:51 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:51] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:27:51 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:27:52 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:27:52 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:27:52 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:27:52 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:27:52 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:27:52 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:27:52 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 601
+2025-03-19 13:27:55 - INFO - Clip successfully downloaded: clips/Talmo_Ton GP l'IA.mp4
+2025-03-19 13:27:55 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:55] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:27:55 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:55] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:27:55 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:55] "GET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1" 200 -
+2025-03-19 13:27:55 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:55] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:27:55 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:55] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:27:55 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:55] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:27:55 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:55] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:27:55 - INFO - 127.0.0.1 - - [19/Mar/2025 13:27:55] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:29:47 - INFO - 127.0.0.1 - - [19/Mar/2025 13:29:47] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-19 13:29:47 - INFO - 127.0.0.1 - - [19/Mar/2025 13:29:47] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:29:47 - INFO - 127.0.0.1 - - [19/Mar/2025 13:29:47] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:29:47 - INFO - 127.0.0.1 - - [19/Mar/2025 13:29:47] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:29:47 - INFO - 127.0.0.1 - - [19/Mar/2025 13:29:47] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:29:47 - INFO - 127.0.0.1 - - [19/Mar/2025 13:29:47] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:29:47 - INFO - 127.0.0.1 - - [19/Mar/2025 13:29:47] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:29:48 - INFO - 127.0.0.1 - - [19/Mar/2025 13:29:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:29:48 - INFO - 127.0.0.1 - - [19/Mar/2025 13:29:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:29:48 - INFO - 127.0.0.1 - - [19/Mar/2025 13:29:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:29:48 - INFO - 127.0.0.1 - - [19/Mar/2025 13:29:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:29:48 - INFO - 127.0.0.1 - - [19/Mar/2025 13:29:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:29:48 - INFO - 127.0.0.1 - - [19/Mar/2025 13:29:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:29:48 - INFO - Crop to wanted format
+2025-03-19 13:30:10 - INFO - 127.0.0.1 - - [19/Mar/2025 13:30:10] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:30:10 - INFO - 127.0.0.1 - - [19/Mar/2025 13:30:10] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:30:10 - INFO - 127.0.0.1 - - [19/Mar/2025 13:30:10] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:30:11 - INFO - Writing new clip composite from webcam and content..
+2025-03-19 13:30:31 - WARNING - C:\Users\hugo2\AppData\Local\Programs\Python\Python311\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/526f328f-3fa7-4954-a329-45ac932d8450_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-19 13:30:33 - INFO - 127.0.0.1 - - [19/Mar/2025 13:30:33] "POST /process_clip HTTP/1.1" 200 -
+2025-03-19 13:32:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:32:28] "OPTIONS /login HTTP/1.1" 200 -
+2025-03-19 13:32:28 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-03-19 13:32:28 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
+2025-03-19 13:32:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:32:28] "POST /login HTTP/1.1" 200 -
+2025-03-19 13:32:33 - INFO - 127.0.0.1 - - [19/Mar/2025 13:32:33] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:32:33 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:32:34 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:32:34 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:32:34 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:32:34 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:32:34 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:32:34 - INFO - 
+
+Removing file : clips\Talmo_Ton GP l'IA.mp4
+
+2025-03-19 13:32:34 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:32:34 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=1 HTTP/1.1" 200 759
+2025-03-19 13:32:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:32:34] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:32:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:32:34] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:33:11 - INFO -  * Detected change in 'C:\\Users\\hugo2\\OneDrive - Institut Catholique de Lille\\Documents\\cours\\fges\\sdn\\s6\\vuejs\\PROJET\\GROOT\\bdd\\bdd.py', reloading
+2025-03-19 13:33:11 - INFO -  * Detected change in 'C:\\Users\\hugo2\\OneDrive - Institut Catholique de Lille\\Documents\\cours\\fges\\sdn\\s6\\vuejs\\PROJET\\GROOT\\bdd\\bdd.py', reloading
+2025-03-19 13:33:14 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-19 13:33:14 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 13:33:14 - INFO -  * Restarting with stat
+2025-03-19 13:33:17 - WARNING -  * Debugger is active!
+2025-03-19 13:33:17 - INFO -  * Debugger PIN: 426-512-210
+2025-03-19 13:33:24 - INFO - 127.0.0.1 - - [19/Mar/2025 13:33:24] "OPTIONS /login HTTP/1.1" 200 -
+2025-03-19 13:33:24 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-03-19 13:33:24 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
+2025-03-19 13:33:24 - INFO - 127.0.0.1 - - [19/Mar/2025 13:33:24] "POST /login HTTP/1.1" 200 -
+2025-03-19 13:33:29 - INFO - 127.0.0.1 - - [19/Mar/2025 13:33:29] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:33:29 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:33:30 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:33:30 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:33:30 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:33:31 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:33:31 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:33:31 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:33:31 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=1 HTTP/1.1" 200 759
+2025-03-19 13:33:31 - INFO - 127.0.0.1 - - [19/Mar/2025 13:33:31] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:33:31 - INFO - 127.0.0.1 - - [19/Mar/2025 13:33:31] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:33:36 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-19 13:33:36 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 13:33:36 - INFO -  * Restarting with stat
+2025-03-19 13:33:38 - WARNING -  * Debugger is active!
+2025-03-19 13:33:38 - INFO -  * Debugger PIN: 426-512-210
+2025-03-19 13:33:59 - INFO - 127.0.0.1 - - [19/Mar/2025 13:33:59] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:33:59 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:34:00 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:34:00 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:34:00 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:34:00 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:34:00 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:34:00 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:34:01 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 601
+2025-03-19 13:34:03 - INFO - Clip successfully downloaded: clips/Talmo_Ton GP l'IA.mp4
+2025-03-19 13:34:03 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:03] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:34:03 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:03] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:34:03 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:03] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:03 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:03] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:03 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:03] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:03 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:03] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:03 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:03] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:03 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:03] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:12 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:12] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-19 13:34:12 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:12] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:12 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:12] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:12 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:12] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:13 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:13] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:13 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:13] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:13 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:13] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:13 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:13] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:13 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:13] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:13 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:13] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:14 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:14] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:14 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:14] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:14 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:14] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:14 - INFO - Crop to wanted format
+2025-03-19 13:34:37 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:37] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:37 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:37] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:37 - INFO - 127.0.0.1 - - [19/Mar/2025 13:34:37] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:34:38 - INFO - Writing new clip composite from webcam and content..
+2025-03-19 13:34:59 - WARNING - C:\Users\hugo2\AppData\Local\Programs\Python\Python311\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/c476e283-27a0-416e-8c87-e290d5107d4a_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-19 13:35:02 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:02] "POST /process_clip HTTP/1.1" 200 -
+2025-03-19 13:35:12 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:12] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:35:12 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:35:14 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:35:14 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:35:14 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:35:14 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=Lebouseuh HTTP/1.1" 200 475
+2025-03-19 13:35:14 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:35:14 - INFO - 
+
+Removing file : clips\Talmo_Ton GP l'IA.mp4
+
+2025-03-19 13:35:14 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:35:14 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=96562014&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=1 HTTP/1.1" 200 752
+2025-03-19 13:35:17 - INFO - Clip successfully downloaded: clips/LeBouseuh_apl.mp4
+2025-03-19 13:35:17 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:17] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:35:17 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:17] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:35:17 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:17] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:17 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:17] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:17 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:17] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:17 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:17] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:17 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:17] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:17 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:17] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:34] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-19 13:35:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:34] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:34] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:34 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:34] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:35] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:35] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:35] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:35] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:35] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:35] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:35] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:35] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:35 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:35] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:35 - INFO - Crop to wanted format
+2025-03-19 13:35:47 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:47] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:47 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:47] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:47 - INFO - 127.0.0.1 - - [19/Mar/2025 13:35:47] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:35:48 - INFO - Writing new clip composite from webcam and content..
+2025-03-19 13:36:05 - WARNING - C:\Users\hugo2\AppData\Local\Programs\Python\Python311\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/ee251439-1313-466b-ba12-210c88f9c2a2_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 197/198, at time 6.57/6.57 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-19 13:36:06 - INFO - 127.0.0.1 - - [19/Mar/2025 13:36:06] "POST /process_clip HTTP/1.1" 200 -
+2025-03-19 13:40:26 - INFO - 127.0.0.1 - - [19/Mar/2025 13:40:26] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:40:26 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:40:27 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:40:27 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:40:27 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:40:28 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:40:28 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:40:28 - INFO - 
+
+Removing file : clips\LeBouseuh_apl.mp4
+
+2025-03-19 13:40:28 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:40:28 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=1 HTTP/1.1" 200 759
+2025-03-19 13:40:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:40:28] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:40:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:40:28] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:41:27 - INFO - 127.0.0.1 - - [19/Mar/2025 13:41:27] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:41:27 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:41:28 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:41:28 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:41:28 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:41:29 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:41:29 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:41:29 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:41:29 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=1 HTTP/1.1" 200 759
+2025-03-19 13:41:29 - INFO - 127.0.0.1 - - [19/Mar/2025 13:41:29] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:41:29 - INFO - 127.0.0.1 - - [19/Mar/2025 13:41:29] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:41:37 - INFO - 127.0.0.1 - - [19/Mar/2025 13:41:37] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:41:37 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:41:38 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:41:38 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:41:38 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:41:38 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:41:38 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:41:38 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:41:39 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 601
+2025-03-19 13:41:41 - INFO - Clip successfully downloaded: clips/Talmo_Ton GP l'IA.mp4
+2025-03-19 13:41:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:41:41] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:41:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:41:41] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:41:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:41:41] "GET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1" 200 -
+2025-03-19 13:41:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:41:41] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:41:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:41:41] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:41:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:41:41] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:41:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:41:41] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:41:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:41:41] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:42:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:42:28] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:42:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:42:28] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:42:36 - INFO - 127.0.0.1 - - [19/Mar/2025 13:42:36] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:42:36 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:42:37 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:42:37 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:42:37 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:42:37 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:42:37 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:42:37 - INFO - 
+
+Removing file : clips\Talmo_Ton GP l'IA.mp4
+
+2025-03-19 13:42:37 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:42:38 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z HTTP/1.1" 200 None
+2025-03-19 13:42:40 - INFO - Clip successfully downloaded: clips/Talmo_Ton GP l'IA.mp4
+2025-03-19 13:42:43 - INFO - Clip successfully downloaded: clips/Talmo_BLBLBLBLBLBLBL.mp4
+2025-03-19 13:42:46 - INFO - Clip successfully downloaded: clips/Talmo_wshhhhhhhhhhh.mp4
+2025-03-19 13:42:49 - INFO - Clip successfully downloaded: clips/Talmo_dans le crâne à ta mère .mp4
+2025-03-19 13:42:53 - INFO - Clip successfully downloaded: clips/Talmo_le nouveau kirby.mp4
+2025-03-19 13:42:57 - INFO - Clip successfully downloaded: clips/Talmo_aaa.mp4
+2025-03-19 13:43:01 - INFO - Clip successfully downloaded: clips/Talmo_JE MONTE UNREAL EN RANKED SOLO ! - @Talmo.mp4
+2025-03-19 13:43:04 - INFO - Clip successfully downloaded: clips/Talmo_MAELYS NEUILLE.mp4
+2025-03-19 13:43:08 - INFO - Clip successfully downloaded: clips/Talmo_marwane prime.mp4
+2025-03-19 13:43:12 - INFO - Clip successfully downloaded: clips/Talmo_yessss yesssssss putain.mp4
+2025-03-19 13:44:08 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-19 13:44:08 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 13:44:08 - INFO -  * Restarting with stat
+2025-03-19 13:44:15 - WARNING -  * Debugger is active!
+2025-03-19 13:44:15 - INFO -  * Debugger PIN: 426-512-210
+2025-03-19 13:44:16 - INFO - 127.0.0.1 - - [19/Mar/2025 13:44:16] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:44:16 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:44:17 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:44:17 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:44:17 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:44:18 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:44:18 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:44:18 - INFO - 
+
+Removing file : clips\Talmo_aaa.mp4
+
+2025-03-19 13:44:18 - INFO - 
+
+Removing file : clips\Talmo_BLBLBLBLBLBLBL.mp4
+
+2025-03-19 13:44:18 - INFO - 
+
+Removing file : clips\Talmo_dans le crâne à ta mère .mp4
+
+2025-03-19 13:44:18 - INFO - 
+
+Removing file : clips\Talmo_ddd.mp4
+
+2025-03-19 13:44:18 - INFO - 
+
+Removing file : clips\Talmo_JE MONTE UNREAL EN RANKED SOLO ! - @Talmo.mp4
+
+2025-03-19 13:44:18 - INFO - 
+
+Removing file : clips\Talmo_le nouveau kirby.mp4
+
+2025-03-19 13:44:18 - INFO - 
+
+Removing file : clips\Talmo_MAELYS NEUILLE.mp4
+
+2025-03-19 13:44:18 - INFO - 
+
+Removing file : clips\Talmo_marwane prime.mp4
+
+2025-03-19 13:44:18 - INFO - 
+
+Removing file : clips\Talmo_Ton GP l'IA.mp4
+
+2025-03-19 13:44:18 - INFO - 
+
+Removing file : clips\Talmo_wshhhhhhhhhhh.mp4
+
+2025-03-19 13:44:18 - INFO - 
+
+Removing file : clips\Talmo_yessss yesssssss putain.mp4
+
+2025-03-19 13:44:18 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:44:19 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z HTTP/1.1" 200 None
+2025-03-19 13:44:21 - INFO - Clip successfully downloaded: clips/Talmo_Ton GP l'IA.mp4
+2025-03-19 13:44:24 - INFO - Clip successfully downloaded: clips/Talmo_BLBLBLBLBLBLBL.mp4
+2025-03-19 13:45:35 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-19 13:45:35 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 13:45:35 - INFO -  * Restarting with stat
+2025-03-19 13:45:38 - WARNING -  * Debugger is active!
+2025-03-19 13:45:38 - INFO -  * Debugger PIN: 426-512-210
+2025-03-19 13:45:41 - INFO - 127.0.0.1 - - [19/Mar/2025 13:45:41] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:45:41 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:45:42 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:45:42 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:45:42 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:45:42 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:45:42 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:45:42 - INFO - 
+
+Removing file : clips\Talmo_BLBLBLBLBLBLBL.mp4
+
+2025-03-19 13:45:42 - INFO - 
+
+Removing file : clips\Talmo_Ton GP l'IA.mp4
+
+2025-03-19 13:45:42 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:45:43 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=1 HTTP/1.1" 200 759
+2025-03-19 13:45:43 - INFO - 127.0.0.1 - - [19/Mar/2025 13:45:43] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:45:43 - INFO - 127.0.0.1 - - [19/Mar/2025 13:45:43] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:46:03 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:03] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:46:03 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:46:04 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:46:04 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:46:04 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:46:04 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:46:04 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:46:04 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:46:05 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 601
+2025-03-19 13:46:07 - INFO - Clip successfully downloaded: clips/Talmo_Ton GP l'IA.mp4
+2025-03-19 13:46:07 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:07] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:46:07 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:07] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:46:07 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:07] "GET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1" 200 -
+2025-03-19 13:46:07 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:07] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:07 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:07] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:07 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:07] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:07 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:07] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:07 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:07] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:17 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:17] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-19 13:46:17 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:17] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:17 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:17] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:17 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:17] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:19 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:19] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:19 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:19] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:19 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:19] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:19 - INFO - Crop to wanted format
+2025-03-19 13:46:42 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:42] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:42 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:42] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:42 - INFO - 127.0.0.1 - - [19/Mar/2025 13:46:42] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:46:43 - INFO - Writing new clip composite from webcam and content..
+2025-03-19 13:47:04 - WARNING - C:\Users\hugo2\AppData\Local\Programs\Python\Python311\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/ebf6dd21-0777-43c9-bfa9-8ec13ef91903_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-19 13:47:07 - INFO - 127.0.0.1 - - [19/Mar/2025 13:47:06] "POST /process_clip HTTP/1.1" 200 -
+2025-03-19 13:47:16 - INFO - 127.0.0.1 - - [19/Mar/2025 13:47:16] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:47:16 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:47:18 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:47:18 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:47:18 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:47:18 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:47:18 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:47:18 - INFO - 
+
+Removing file : clips\Talmo_Ton GP l'IA.mp4
+
+2025-03-19 13:47:18 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:47:19 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=1 HTTP/1.1" 200 759
+2025-03-19 13:47:19 - INFO - 127.0.0.1 - - [19/Mar/2025 13:47:19] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:47:19 - INFO - 127.0.0.1 - - [19/Mar/2025 13:47:19] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:47:24 - INFO - 127.0.0.1 - - [19/Mar/2025 13:47:24] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:47:24 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:47:25 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:47:25 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:47:25 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:47:25 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:47:25 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:47:25 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:47:25 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 601
+2025-03-19 13:47:28 - INFO - Clip successfully downloaded: clips/Talmo_Ton GP l'IA.mp4
+2025-03-19 13:47:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:47:28] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:47:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:47:28] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:47:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:47:28] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:47:28 - INFO - 127.0.0.1 - - [19/Mar/2025 13:47:28] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:02 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:02] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:48:02 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:48:03 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:48:03 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:48:03 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:48:04 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:48:04 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:48:04 - INFO - 
+
+Removing file : clips\Talmo_Ton GP l'IA.mp4
+
+2025-03-19 13:48:04 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:48:04 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z HTTP/1.1" 200 None
+2025-03-19 13:48:07 - INFO - Clip successfully downloaded: clips/Talmo_Ton GP l'IA.mp4
+2025-03-19 13:48:10 - INFO - Clip successfully downloaded: clips/Talmo_BLBLBLBLBLBLBL.mp4
+2025-03-19 13:48:30 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-19 13:48:30 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-19 13:48:30 - INFO -  * Restarting with stat
+2025-03-19 13:48:33 - WARNING -  * Debugger is active!
+2025-03-19 13:48:33 - INFO -  * Debugger PIN: 426-512-210
+2025-03-19 13:48:40 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:40] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:48:40 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:48:41 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:48:41 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:48:41 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:48:41 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-03-19 13:48:41 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:48:41 - INFO - 
+
+Removing file : clips\Talmo_BLBLBLBLBLBLBL.mp4
+
+2025-03-19 13:48:41 - INFO - 
+
+Removing file : clips\Talmo_Ton GP l'IA.mp4
+
+2025-03-19 13:48:41 - INFO - 
+
+Removing file : clips\Talmo_wshhhhhhhhhhh.mp4
+
+2025-03-19 13:48:41 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:48:42 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 601
+2025-03-19 13:48:44 - INFO - Clip successfully downloaded: clips/Talmo_Ton GP l'IA.mp4
+2025-03-19 13:48:44 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:44] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:48:44 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:44] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:48:44 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:44] "GET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1" 200 -
+2025-03-19 13:48:44 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:44] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:44 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:44] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:44 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:44] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:45 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:45] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:45 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:45] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:47 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:47] "OPTIONS /process_clip HTTP/1.1" 200 -
+2025-03-19 13:48:48 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:48 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:48 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:48 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:48 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:48 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:48] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:49 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:49] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:49 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:49] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:49 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:49] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:49 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:49] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:49 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:49] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:49 - INFO - 127.0.0.1 - - [19/Mar/2025 13:48:49] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:48:50 - INFO - Crop to wanted format
+2025-03-19 13:49:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:49:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:49:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:49:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:49:18 - INFO - 127.0.0.1 - - [19/Mar/2025 13:49:18] "[35m[1mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:49:19 - INFO - Writing new clip composite from webcam and content..
+2025-03-19 13:49:43 - WARNING - C:\Users\hugo2\AppData\Local\Programs\Python\Python311\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file GROOT/Edit/in_process_clips/ef5ba36e-6bf0-47f8-9d11-036cc7dae349_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-03-19 13:49:46 - INFO - 127.0.0.1 - - [19/Mar/2025 13:49:46] "POST /process_clip HTTP/1.1" 200 -
+2025-03-19 13:51:14 - INFO - 127.0.0.1 - - [19/Mar/2025 13:51:14] "OPTIONS /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:51:14 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-03-19 13:51:15 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-03-19 13:51:15 - INFO - Successfully authenticated with Twitch API.
+2025-03-19 13:51:15 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:51:15 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=Lebouseuh HTTP/1.1" 200 475
+2025-03-19 13:51:15 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-03-19 13:51:15 - INFO - 
+
+Removing file : clips\Talmo_Ton GP l'IA.mp4
+
+2025-03-19 13:51:15 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-03-19 13:51:16 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=96562014&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 575
+2025-03-19 13:51:18 - INFO - Clip successfully downloaded: clips/LeBouseuh_apl.mp4
+2025-03-19 13:51:21 - INFO - Clip successfully downloaded: clips/LeBouseuh_caisse.mp4
+2025-03-19 13:51:21 - INFO - 127.0.0.1 - - [19/Mar/2025 13:51:21] "POST /recup_infos_clips HTTP/1.1" 200 -
+2025-03-19 13:51:21 - INFO - 127.0.0.1 - - [19/Mar/2025 13:51:21] "GET /send_clipsUrls HTTP/1.1" 200 -
+2025-03-19 13:51:21 - INFO - 127.0.0.1 - - [19/Mar/2025 13:51:21] "[35m[1mGET /clips/LeBouseuh_caisse.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:51:21 - INFO - 127.0.0.1 - - [19/Mar/2025 13:51:21] "GET /clips/LeBouseuh_apl.mp4 HTTP/1.1" 200 -
+2025-03-19 13:51:21 - INFO - 127.0.0.1 - - [19/Mar/2025 13:51:21] "[35m[1mGET /clips/LeBouseuh_caisse.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:51:21 - INFO - 127.0.0.1 - - [19/Mar/2025 13:51:21] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:51:21 - INFO - 127.0.0.1 - - [19/Mar/2025 13:51:21] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:51:21 - INFO - 127.0.0.1 - - [19/Mar/2025 13:51:21] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:51:21 - INFO - 127.0.0.1 - - [19/Mar/2025 13:51:21] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -
+2025-03-19 13:51:21 - INFO - 127.0.0.1 - - [19/Mar/2025 13:51:21] "[35m[1mGET /clips/LeBouseuh_apl.mp4 HTTP/1.1[0m" 206 -

@@ -181,7 +181,10 @@ def recup_infos_clips() :
             max_duration = int(data_received.get('max_duration'))
             min_date_release = data_received.get('min_date_release') + "T00:00:00Z"
             max_date_release = data_received.get('max_date_release') + "T00:00:00Z"
-            number_of_clips = data_received.get('number_of_clips') + 1
+            number_of_clips = data_received.get('number_of_clips')
+            print ('\n Nombre e vidéos demandées : ', number_of_clips)
+            if (number_of_clips == 0) :
+                number_of_clips = 1
 
             twitch_instance  =  TwitchApi(CLIENT_ID,CLIENT_SECRET)  
             TwitchApi.getHeaders(twitch_instance)
