@@ -14,6 +14,8 @@ export const useTwitokStore = defineStore('useTwitokStore', () => {
         actualUser: sessionStorage.getItem('actualUser'),
         clipsUrls_Returned: JSON.parse(sessionStorage.getItem('clipsUrls_Returned')) || [],
         editedClipsUrl: JSON.parse(sessionStorage.getItem('editedClipsUrl')) || [],
+
+        already_upload: sessionStorage.getItem('already_upload') || 0,
     });
 
     // GETTER permet de récupérer des valeurs du state, et éventuellement faire des calculs à partir de ces infos
@@ -21,6 +23,7 @@ export const useTwitokStore = defineStore('useTwitokStore', () => {
     const actualUser = computed(() => state.value.actualUser);
     const clipsUrls_Returned = computed(()=> state.value.clipsUrls_Returned);
     const editedClipsUrl = computed(() => state.value.editedClipsUrl);
+    const already_upload = computed(()=> state.value.already_upload); 
 
     // ACTION permet d'éxecuter des fonctions asynchrones ou logiques complexes qui modifient le state cette fois
     const autorized = () => {
@@ -46,21 +49,25 @@ export const useTwitokStore = defineStore('useTwitokStore', () => {
         state.value.editedClipsUrl.push(clips)
         sessionStorage.setItem('editedClipsUrl', JSON.stringify(state.value.editedClipsUrl))
     }
+    const setAlreadyUpload = () => {
+        state.value.already_upload = 1
+        sessionStorage.setItem('already_upload', '1') // ici pas besoin de Jsonifier parce que '1' est deja une str, on utilise ca que quand on on manipule des objets ou des tableaux etc pour garantir que ce sont des chaines JSON pour etre stocké comme telles
+    }
 
     // const setActualUser = (user) => {
     //     state.value.actualUser = 
     // }
-
-    // Exposer les props et méthodes
     return {
         authorizedConnection,
         actualUser,
         clipsUrls_Returned,
         editedClipsUrl,
+        already_upload, 
         autorized,
         unauthorized,
         logout,
         setclipsUrls_Returned,
-        setEditedClipUrl
+        setEditedClipUrl, 
+        setAlreadyUpload,
     }
 })

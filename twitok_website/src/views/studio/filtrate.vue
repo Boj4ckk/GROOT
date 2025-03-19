@@ -93,6 +93,8 @@ const handleform = async () => {
         if(clips.value.length == 0){
             router.push('/tiktokPost') // if all the avalaible clips have been submtied, redirect to 'Studio' (faut changer par la page post sur tiktok quand on l'aura)
         }
+        console.log("Changement de twitokStore.already_upload, tentative pour avoir les bons nombre de clips...")
+        TwitokStore.setAlreadyUpload()
         console.log("twitokStore.editedClipsUrl : ",TwitokStore.editedClipsUrl)
     }
     catch(error) {

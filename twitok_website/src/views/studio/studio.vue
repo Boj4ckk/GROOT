@@ -21,11 +21,21 @@ const max_date_release = ref("2025-01-01") // formater
 const number_of_clips = ref(1) 
 const chargement = ref(false)
 
+const final_number_of_clips = ref()
+
 const getClips = async() => {
     chargement.value = true
     try {
-        number_of_clips.value +=1
-        const dataToSend = {streamer_name:streamer_name.value, game: game.value, min_views:min_views.value, max_views:max_views.value, min_views:min_views.value, max_duration:max_duration.value, min_date_release:min_date_release.value, max_date_release:max_date_release.value, number_of_clips:number_of_clips.value}
+        if (twitokStore.already_upload == 0) {
+            console.log("\naucun clip upload jusqu'ici. => On ajoute 1 au chiffre rentré par l'utilisateur\n")
+            final_number_of_clips.value = number_of_clips.value
+            console.log("final_number_of_clips : ", final_number_of_clips.value)
+        }
+        else {
+            console.log("\nDes clips ont deja été uploadé. => On ajoute 1 au nombre de clip rentré par l'utilisateur.\n")
+            final_number_of_clips.value = number_of_clips.value +1 
+        }
+        const dataToSend = {streamer_name:streamer_name.value, game: game.value, min_views:min_views.value, max_views:max_views.value, min_views:min_views.value, max_duration:max_duration.value, min_date_release:min_date_release.value, max_date_release:max_date_release.value, number_of_clips:final_number_of_clips.value}
         console.log('Tentative de récupératon des clips [avant requete]')
         
 
