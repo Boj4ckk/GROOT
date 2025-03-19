@@ -19,8 +19,10 @@ const max_duration = ref(30)
 const min_date_release = ref("2024-01-01") // formater 
 const max_date_release = ref("2025-01-01") // formater
 const number_of_clips = ref(1) 
+const chargement = ref(false)
 
 const getClips = async() => {
+    chargement.value = true
     try {
         const dataToSend = {streamer_name:streamer_name.value, game: game.value, min_views:min_views.value, max_views:max_views.value, min_views:min_views.value, max_duration:max_duration.value, min_date_release:min_date_release.value, max_date_release:max_date_release.value, number_of_clips:number_of_clips.value}
         console.log('Tentative de récupératon des clips [avant requete]')
@@ -31,22 +33,34 @@ const getClips = async() => {
         try {
             const clipsUrls_returned = await axios.get("http://127.0.0.1:5000/send_clipsUrls")
             console.log("voici ce que nous a retourné l'api : ", clipsUrls_returned.data)
+            if (Array.isArray(clipsUrls_returned.data.clipsUrls) && clipsUrls_returned.data.clipsUrls.length === 0){
+                console.log("aucune vidéo trouvé pour le STREAMER", dataToSend.streamer_name)
+                alert(`Aucun vidéo trouvé pour le streamer ${dataToSend.streamer_name} avec les informations que vous avez saisi. `)
+                chargement.value = false
+                router.push('/studio')
+                return
+            }
             twitokStore.setclipsUrls_Returned(clipsUrls_returned.data)
             console.log("clipsReterned du STORE : ", twitokStore.clipsUrls_Returned)
         }
         catch(err){
             console.error('Impossible de récupérer les clips de neuilles', err)
+            chargement.value = false
             router.push('studio')
         }
+        chargement.value = false
         router.push('/studio/filtrate')
     }
     catch (error) {
         console.error('erreur lors de la récupération des clips...', error)
         alert("impossible de récuperer les clips")
+        chargement.value = false
+
         // return jsonify({"error": "Clips not retrieved"})
     }
     // return jsonify({"message": "Clips retrieved successfully", "clips": data})
 }
+
 
 </script>
 
@@ -84,7 +98,10 @@ const getClips = async() => {
                 
                 <input type="submit" value="Find" @click.prevent="getClips()">
             </form>
-
+            <div v-if="chargement">
+                <br><br>
+                <p v-if="chargement"> Vos videos sont en cours de téléchargement... </p>
+            </div>
         </div>
     </div>
 </template>
