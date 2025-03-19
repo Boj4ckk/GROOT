@@ -28,7 +28,7 @@ const getClips = async() => {
     try {
         if (twitokStore.already_upload == 0) {
             console.log("\naucun clip upload jusqu'ici. => On ajoute 1 au chiffre rentré par l'utilisateur\n")
-            final_number_of_clips.value = number_of_clips.value
+            final_number_of_clips.value = number_of_clips.value +1
             console.log("final_number_of_clips : ", final_number_of_clips.value)
         }
         else {
