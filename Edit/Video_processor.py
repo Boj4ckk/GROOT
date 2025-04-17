@@ -2,13 +2,10 @@
 
 
 from moviepy.editor import VideoFileClip, CompositeVideoClip, ColorClip
-# from Web_cam_processor import WebCamProcessor
-from GROOT.Edit.Web_cam_processor import WebCamProcessor
+from Edit.Web_cam_processor import WebCamProcessor
 from PIL import Image, ImageFilter
 import logging
 import uuid
-import numpy as np
-import cv2
 import os 
 import re
 
