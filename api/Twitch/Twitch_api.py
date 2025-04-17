@@ -11,7 +11,7 @@ class TwitchApi:
     """
 
     BASE_URL = "https://api.twitch.tv/helix"
-    logging.basicConfig(filename="GROOT\logs\editing.log",  level=logging.DEBUG,format="%(asctime)s - %(levelname)s - %(message)s",  datefmt="%Y-%m-%d %H:%M:%S")
+    logging.basicConfig(filename="logs\editing.log",  level=logging.DEBUG,format="%(asctime)s - %(levelname)s - %(message)s",  datefmt="%Y-%m-%d %H:%M:%S")
 
     def __init__(self, clientId, clientSecret):
         """
@@ -115,8 +115,8 @@ class TwitchApi:
         :return: List of clips metadata dictionaries.
         """
         logging.info("\n\nCleaning in_process_clips...\n\n")
-        for file in os.listdir("clips"):
-            file_path = os.path.join("clips", file)
+        for file in os.listdir("data/fetch_clips"):
+            file_path = os.path.join("data/fetch_clips", file)
             logging.info(f"\n\nRemoving file : {file_path}\n")
             os.remove(file_path)
 
@@ -142,7 +142,7 @@ class TwitchApi:
             return clips_data
         logging.error(f"Failed to fetch clips for user {userId}: {response.text}")
         return []
-    def downloadClipWithAudio(self, clips , savePath="clips"):
+    def downloadClipWithAudio(self, clips , savePath="data/fetch_clips"):
             """
             Download a Twitch clip with audio using Streamlink.
 
