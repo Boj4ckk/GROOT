@@ -1,6 +1,6 @@
 
 import os, sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 
 
 import mysql.connector 
@@ -10,7 +10,7 @@ from flask_cors import CORS
 from flask_cors import cross_origin
 from flask_bcrypt import Bcrypt
 from mysql.connector import pooling# pour récupérer les anciennes connexions et pas se reco a chaque requete
-from GROOT.Edit.Video_processor import VideoProcessor 
+from Edit.Video_processor import VideoProcessor 
 
 # partie requetes db 
 
@@ -24,7 +24,7 @@ db_config = {
     "password": "azureadmin@25", 
     "host": 'twitok-serveur.mysql.database.azure.com', 
     "database": "twitok-database",
-    "ssl_ca": "GROOT\\CA\\BaltimoreCyberTrustRoot.crt.pem", # certificat pour azure 
+    "ssl_ca": "CA\BaltimoreCyberTrustRoot.crt.pem", # certificat pour azure 
 }
 
 connection_pool = pooling.MySQLConnectionPool(pool_name="mypool", pool_size=5, **db_config)
@@ -182,14 +182,16 @@ def recup_infos_clips() :
             min_date_release = data_received.get('min_date_release') + "T00:00:00Z"
             max_date_release = data_received.get('max_date_release') + "T00:00:00Z"
             number_of_clips = data_received.get('number_of_clips')
-            print ('\n Nombre e vidéos demandées : ', number_of_clips)
+            print ('\n Nombre de vidéos demandées : ', number_of_clips)
             if (number_of_clips == 0) :
                 number_of_clips = 1
 
             twitch_instance  =  TwitchApi(CLIENT_ID,CLIENT_SECRET)  
             TwitchApi.getHeaders(twitch_instance)
+            
 
             id_twitch_streamer = TwitchApi.getUserId(twitch_instance, streamer_name)
+           
             data = TwitchApi.getClips(
                 twitch_instance,
                 id_twitch_streamer,
@@ -198,6 +200,8 @@ def recup_infos_clips() :
                 max_duration=max_duration,
                 min_views=min_views,
             )
+           
+           
             TwitchApi.downloadClipWithAudio(twitch_instance,data)
             return jsonify({"message": "Clips récupérés avec succès", "data": data}), 200
         except Exception as e :
