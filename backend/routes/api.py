@@ -60,7 +60,7 @@ def recup_infos_clips() :
             return jsonify({"error": "Erreur interne du serveur", "details": str(e)}), 500        
 
 # OBJECTIF : envoyer les videos sur une route du serveur flask et le récupérer directement via l'url de flask. 
-@api_bp.route("/send_clipsUrls", methods=["OPTIONS","GET"])
+@api_bp.route("/api/send_clipsUrls", methods=["OPTIONS","GET"])
 def send_clipsUrls () : 
     
     if request.method == 'OPTIONS' : #requete options au back end avant POST quand on fait une requete post 

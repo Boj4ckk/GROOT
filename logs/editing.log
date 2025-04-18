@@ -6706,3 +6706,174 @@ Cleaning in_process_clips...
 2025-03-19 20:33:30 - INFO - 127.0.0.1 - - [19/Mar/2025 20:33:30] "[33mGET /clips/Talmo_Casier%20skins%20Talmo%20-%20Janvier%202024%20.mp4 HTTP/1.1[0m" 404 -
 2025-03-19 20:33:30 - INFO - 127.0.0.1 - - [19/Mar/2025 20:33:30] "[33mGET /clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 404 -
 2025-03-19 20:33:30 - INFO - 127.0.0.1 - - [19/Mar/2025 20:33:30] "[33mGET /clips/Talmo_Casier%20skins%20Talmo%20-%20Janvier%202024%20.mp4 HTTP/1.1[0m" 404 -
+2025-04-18 10:32:34 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.238.16.45:5000
+2025-04-18 10:32:34 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-18 10:32:34 - INFO -  * Restarting with stat
+2025-04-18 10:32:37 - WARNING -  * Debugger is active!
+2025-04-18 10:32:37 - INFO -  * Debugger PIN: 426-512-210
+2025-04-18 10:32:47 - INFO - 127.0.0.1 - - [18/Apr/2025 10:32:47] "OPTIONS /login HTTP/1.1" 200 -
+2025-04-18 10:32:48 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-04-18 10:32:48 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
+2025-04-18 10:32:48 - INFO - 127.0.0.1 - - [18/Apr/2025 10:32:48] "POST /login HTTP/1.1" 200 -
+2025-04-18 10:32:52 - INFO - 127.0.0.1 - - [18/Apr/2025 10:32:52] "[33mOPTIONS /recup_infos_clips HTTP/1.1[0m" 404 -
+2025-04-18 10:34:27 - INFO -  * Detected change in 'C:\\Users\\hugo2\\OneDrive - Institut Catholique de Lille\\Documents\\cours\\fges\\sdn\\s6\\vuejs\\PROJET\\GROOT\\backend\\__init__.py', reloading
+2025-04-18 10:34:29 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.238.16.45:5000
+2025-04-18 10:34:29 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-18 10:34:29 - INFO -  * Restarting with stat
+2025-04-18 10:34:32 - WARNING -  * Debugger is active!
+2025-04-18 10:34:32 - INFO -  * Debugger PIN: 426-512-210
+2025-04-18 10:34:35 - INFO -  * Detected change in 'C:\\Users\\hugo2\\OneDrive - Institut Catholique de Lille\\Documents\\cours\\fges\\sdn\\s6\\vuejs\\PROJET\\GROOT\\backend\\__init__.py', reloading
+2025-04-18 10:34:37 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.238.16.45:5000
+2025-04-18 10:34:37 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-18 10:34:37 - INFO -  * Restarting with stat
+2025-04-18 10:34:40 - WARNING -  * Debugger is active!
+2025-04-18 10:34:40 - INFO -  * Debugger PIN: 426-512-210
+2025-04-18 10:34:44 - INFO - 127.0.0.1 - - [18/Apr/2025 10:34:44] "OPTIONS /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-18 10:34:44 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-04-18 10:34:45 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-04-18 10:34:45 - INFO - Successfully authenticated with Twitch API.
+2025-04-18 10:34:45 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-18 10:34:45 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-04-18 10:34:45 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-04-18 10:34:45 - INFO - 
+
+Removing file : data/fetch_clips\Talmo_Ton GP l'IA.mp4
+
+2025-04-18 10:34:45 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-18 10:34:46 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 613
+2025-04-18 10:34:48 - INFO - Clip successfully downloaded: data/fetch_clips/Talmo_Ton GP l'IA.mp4
+2025-04-18 10:34:48 - INFO - 127.0.0.1 - - [18/Apr/2025 10:34:48] "POST /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-18 10:34:48 - INFO - 127.0.0.1 - - [18/Apr/2025 10:34:48] "GET /api/send_clipsUrls HTTP/1.1" 200 -
+2025-04-18 10:35:20 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.238.16.45:5000
+2025-04-18 10:35:20 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-18 10:35:20 - INFO -  * Restarting with stat
+2025-04-18 10:35:22 - WARNING -  * Debugger is active!
+2025-04-18 10:35:22 - INFO -  * Debugger PIN: 426-512-210
+2025-04-18 10:35:28 - INFO -  * Detected change in 'C:\\Users\\hugo2\\OneDrive - Institut Catholique de Lille\\Documents\\cours\\fges\\sdn\\s6\\vuejs\\PROJET\\GROOT\\backend\\routes\\api.py', reloading
+2025-04-18 10:35:28 - INFO -  * Detected change in 'C:\\Users\\hugo2\\OneDrive - Institut Catholique de Lille\\Documents\\cours\\fges\\sdn\\s6\\vuejs\\PROJET\\GROOT\\backend\\routes\\api.py', reloading
+2025-04-18 10:35:30 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.238.16.45:5000
+2025-04-18 10:35:30 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-18 10:35:30 - INFO -  * Restarting with stat
+2025-04-18 10:35:32 - WARNING -  * Debugger is active!
+2025-04-18 10:35:32 - INFO -  * Debugger PIN: 426-512-210
+2025-04-18 10:35:41 - INFO -  * Detected change in 'C:\\Users\\hugo2\\OneDrive - Institut Catholique de Lille\\Documents\\cours\\fges\\sdn\\s6\\vuejs\\PROJET\\GROOT\\backend\\routes\\api.py', reloading
+2025-04-18 10:35:43 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.238.16.45:5000
+2025-04-18 10:35:43 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-18 10:35:43 - INFO -  * Restarting with stat
+2025-04-18 10:35:45 - WARNING -  * Debugger is active!
+2025-04-18 10:35:45 - INFO -  * Debugger PIN: 426-512-210
+2025-04-18 10:35:45 - INFO - 127.0.0.1 - - [18/Apr/2025 10:35:45] "OPTIONS /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-18 10:35:45 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-04-18 10:35:47 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-04-18 10:35:47 - INFO - Successfully authenticated with Twitch API.
+2025-04-18 10:35:47 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-18 10:35:47 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-04-18 10:35:47 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-04-18 10:35:47 - INFO - 
+
+Removing file : data/fetch_clips\Talmo_Ton GP l'IA.mp4
+
+2025-04-18 10:35:47 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-18 10:35:47 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 613
+2025-04-18 10:35:50 - INFO - Clip successfully downloaded: data/fetch_clips/Talmo_Ton GP l'IA.mp4
+2025-04-18 10:35:50 - INFO - 127.0.0.1 - - [18/Apr/2025 10:35:50] "POST /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-18 10:35:50 - INFO - 127.0.0.1 - - [18/Apr/2025 10:35:50] "[33mGET /api/send_clipsUrls HTTP/1.1[0m" 404 -
+2025-04-18 10:35:50 - INFO - 127.0.0.1 - - [18/Apr/2025 10:35:50] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-18 10:35:50 - INFO - 127.0.0.1 - - [18/Apr/2025 10:35:50] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-18 10:35:50 - INFO - 127.0.0.1 - - [18/Apr/2025 10:35:50] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-18 10:35:50 - INFO - 127.0.0.1 - - [18/Apr/2025 10:35:50] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-18 10:35:50 - INFO - 127.0.0.1 - - [18/Apr/2025 10:35:50] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-18 10:35:51 - INFO - 127.0.0.1 - - [18/Apr/2025 10:35:51] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-18 10:35:51 - INFO - 127.0.0.1 - - [18/Apr/2025 10:35:51] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-18 10:36:22 - INFO - 127.0.0.1 - - [18/Apr/2025 10:36:22] "OPTIONS /login HTTP/1.1" 200 -
+2025-04-18 10:36:26 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.238.16.45:5000
+2025-04-18 10:36:26 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-18 10:36:26 - INFO -  * Restarting with stat
+2025-04-18 10:36:28 - WARNING -  * Debugger is active!
+2025-04-18 10:36:28 - INFO -  * Debugger PIN: 426-512-210
+2025-04-18 10:36:29 - INFO - 127.0.0.1 - - [18/Apr/2025 10:36:29] "OPTIONS /login HTTP/1.1" 200 -
+2025-04-18 10:36:56 - INFO -  * Detected change in 'C:\\Users\\hugo2\\OneDrive - Institut Catholique de Lille\\Documents\\cours\\fges\\sdn\\s6\\vuejs\\PROJET\\GROOT\\backend\\__init__.py', reloading
+2025-04-18 10:36:56 - INFO -  * Detected change in 'C:\\Users\\hugo2\\OneDrive - Institut Catholique de Lille\\Documents\\cours\\fges\\sdn\\s6\\vuejs\\PROJET\\GROOT\\backend\\__init__.py', reloading
+2025-04-18 10:36:58 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.238.16.45:5000
+2025-04-18 10:36:58 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-18 10:36:58 - INFO -  * Restarting with stat
+2025-04-18 10:37:00 - WARNING -  * Debugger is active!
+2025-04-18 10:37:00 - INFO -  * Debugger PIN: 426-512-210
+2025-04-18 10:37:00 - INFO - 127.0.0.1 - - [18/Apr/2025 10:37:00] "OPTIONS /login HTTP/1.1" 200 -
+2025-04-18 10:37:00 - INFO - 127.0.0.1 - - [18/Apr/2025 10:37:00] "OPTIONS /login HTTP/1.1" 200 -
+2025-04-18 10:37:00 - INFO - user trouvé : None
+2025-04-18 10:37:00 - ERROR - user  doesn't exist
+2025-04-18 10:37:00 - INFO - 127.0.0.1 - - [18/Apr/2025 10:37:00] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2025-04-18 10:37:00 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-04-18 10:37:00 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
+2025-04-18 10:37:00 - INFO - 127.0.0.1 - - [18/Apr/2025 10:37:00] "POST /login HTTP/1.1" 200 -
+2025-04-18 10:37:10 - INFO - 127.0.0.1 - - [18/Apr/2025 10:37:10] "OPTIONS /login HTTP/1.1" 200 -
+2025-04-18 10:37:10 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-04-18 10:37:10 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
+2025-04-18 10:37:10 - INFO - 127.0.0.1 - - [18/Apr/2025 10:37:10] "POST /login HTTP/1.1" 200 -
+2025-04-18 10:37:19 - INFO - 127.0.0.1 - - [18/Apr/2025 10:37:19] "OPTIONS /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-18 10:37:19 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-04-18 10:37:20 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-04-18 10:37:20 - INFO - Successfully authenticated with Twitch API.
+2025-04-18 10:37:20 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-18 10:37:20 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-04-18 10:37:20 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-04-18 10:37:20 - INFO - 
+
+Removing file : data/fetch_clips\Talmo_Ton GP l'IA.mp4
+
+2025-04-18 10:37:20 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-18 10:37:20 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 613
+2025-04-18 10:37:22 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.238.16.45:5000
+2025-04-18 10:37:22 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-18 10:37:22 - INFO -  * Restarting with stat
+2025-04-18 10:37:23 - INFO - Clip successfully downloaded: data/fetch_clips/Talmo_Ton GP l'IA.mp4
+2025-04-18 10:37:23 - INFO - 127.0.0.1 - - [18/Apr/2025 10:37:23] "POST /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-18 10:37:23 - INFO - 127.0.0.1 - - [18/Apr/2025 10:37:23] "[33mGET /api/send_clipsUrls HTTP/1.1[0m" 404 -
+2025-04-18 10:37:23 - INFO - 127.0.0.1 - - [18/Apr/2025 10:37:23] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-18 10:37:23 - INFO - 127.0.0.1 - - [18/Apr/2025 10:37:23] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-18 10:37:23 - INFO - 127.0.0.1 - - [18/Apr/2025 10:37:23] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-18 10:37:23 - INFO - 127.0.0.1 - - [18/Apr/2025 10:37:23] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-18 10:37:23 - INFO - 127.0.0.1 - - [18/Apr/2025 10:37:23] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-18 10:37:23 - INFO - 127.0.0.1 - - [18/Apr/2025 10:37:23] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-18 10:37:24 - WARNING -  * Debugger is active!
+2025-04-18 10:37:24 - INFO -  * Debugger PIN: 426-512-210

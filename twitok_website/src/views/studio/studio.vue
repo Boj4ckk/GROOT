@@ -39,11 +39,11 @@ const getClips = async() => {
         console.log('Tentative de récupératon des clips [avant requete]')
         
 
-        const response = await axios.post("http://127.0.0.1:5000/recup_infos_clips", dataToSend)
+        const response = await axios.post("http://127.0.0.1:5000/api/recup_infos_clips", dataToSend)
         console.log("Tentative d'envoie des informations sur les clips a récupérer...")
         console.log("voici le streamer qu'on tente de recup les clips", dataToSend.streamer_name)
         try {
-            const clipsUrls_returned = await axios.get("http://127.0.0.1:5000/send_clipsUrls")
+            const clipsUrls_returned = await axios.get("http://127.0.0.1:5000/api/send_clipsUrls")
             console.log("voici ce que nous a retourné l'api : ", clipsUrls_returned.data)
             if (Array.isArray(clipsUrls_returned.data.clipsUrls) && clipsUrls_returned.data.clipsUrls.length === 0){
                 console.log("aucune vidéo trouvé pour le STREAMER", dataToSend.streamer_name)
