@@ -5,10 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "bdd",
+            "name": "run",
             "type": "debugpy",
             "request": "launch",
-            "program": "bdd/bdd.py",
+            "program": "run.py",
             "console": "integratedTerminal"
         }
     ]

@@ -38,12 +38,14 @@ const getClips = async() => {
         const dataToSend = {streamer_name:streamer_name.value, game: game.value, min_views:min_views.value, max_views:max_views.value, min_views:min_views.value, max_duration:max_duration.value, min_date_release:min_date_release.value, max_date_release:max_date_release.value, number_of_clips:final_number_of_clips.value}
         console.log('Tentative de récupératon des clips [avant requete]')
         
-
-        const response = await axios.post("http://127.0.0.1:5000/recup_infos_clips", dataToSend)
+        print("salut")
+        const response = await axios.post("http://127.0.0.1:5000/api/recup_infos_clips", dataToSend)
+        
+      
         console.log("Tentative d'envoie des informations sur les clips a récupérer...")
         console.log("voici le streamer qu'on tente de recup les clips", dataToSend.streamer_name)
         try {
-            const clipsUrls_returned = await axios.get("http://127.0.0.1:5000/send_clipsUrls")
+            const clipsUrls_returned = await axios.get("http://127.0.0.1:5000/api/send_clipsUrls")
             console.log("voici ce que nous a retourné l'api : ", clipsUrls_returned.data)
             if (Array.isArray(clipsUrls_returned.data.clipsUrls) && clipsUrls_returned.data.clipsUrls.length === 0){
                 console.log("aucune vidéo trouvé pour le STREAMER", dataToSend.streamer_name)
@@ -52,7 +54,9 @@ const getClips = async() => {
                 router.push('/studio')
                 return
             }
+            
             twitokStore.setclipsUrls_Returned(clipsUrls_returned.data)
+            
             console.log("clipsReterned du STORE : ", twitokStore.clipsUrls_Returned)
         }
         catch(err){
