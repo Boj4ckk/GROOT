@@ -115,8 +115,8 @@ class TwitchApi:
         :return: List of clips metadata dictionaries.
         """
         logging.info("\n\nCleaning in_process_clips...\n\n")
-        for file in os.listdir("data/fetch_clips"):
-            file_path = os.path.join("data/fetch_clips", file)
+        for file in os.listdir("backend\\data\\fetch_clips"):
+            file_path = os.path.join("backend\\data\\fetch_clips", file)
             logging.info(f"\n\nRemoving file : {file_path}\n")
             os.remove(file_path)
 
