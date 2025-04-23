@@ -11168,3 +11168,584 @@ Removing file : data/fetch_clips\Talmo_Ton GP l'IA.mp4
   warnings.warn("Warning: in file %s, "%(self.filename)+
 
 2025-04-23 21:21:24 - INFO - 127.0.0.1 - - [23/Apr/2025 21:21:24] "POST /api/process_clip HTTP/1.1" 200 -
+2025-04-23 22:15:48 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.126:5000
+2025-04-23 22:15:48 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 22:15:48 - INFO -  * Restarting with stat
+2025-04-23 22:15:49 - WARNING -  * Debugger is active!
+2025-04-23 22:15:49 - INFO -  * Debugger PIN: 931-877-733
+2025-04-23 22:16:39 - INFO - 127.0.0.1 - - [23/Apr/2025 22:16:39] "OPTIONS /login HTTP/1.1" 200 -
+2025-04-23 22:16:39 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-04-23 22:16:39 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
+2025-04-23 22:16:39 - INFO - 127.0.0.1 - - [23/Apr/2025 22:16:39] "POST /login HTTP/1.1" 200 -
+2025-04-23 22:16:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:16:43] "OPTIONS /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-23 22:16:43 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-04-23 22:16:43 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-04-23 22:16:43 - INFO - Successfully authenticated with Twitch API.
+2025-04-23 22:16:43 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 22:16:44 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-04-23 22:16:44 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-04-23 22:16:44 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 22:16:44 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=3 HTTP/1.1" 200 735
+2025-04-23 22:17:23 - INFO - Clip successfully downloaded: data/fetch_clips/Talmo_Ton GP l'IA.mp4
+2025-04-23 22:17:26 - INFO - Clip successfully downloaded: data/fetch_clips/Talmo_BLBLBLBLBLBLBL.mp4
+2025-04-23 22:17:26 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:26] "POST /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-23 22:17:26 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:26] "GET /api/send_clipsUrls HTTP/1.1" 200 -
+2025-04-23 22:17:32 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:32] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:32 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:32] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:32 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:32] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:33 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:33] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:33 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:33] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:33 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:33] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:35 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:35] "OPTIONS /api/process_clip HTTP/1.1" 200 -
+2025-04-23 22:17:35 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:35] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:35 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:35] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:36 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:36] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:36 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:36] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:36 - INFO - Extracting webcam from clip..
+
+2025-04-23 22:17:36 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:36] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:37 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:37] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:37 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:37] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:37 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:37] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:38 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:38] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:38 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:38] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:38 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:38] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:39 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:39] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:39 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:39] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:39 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:39] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:40 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:40] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:40 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:40] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:40 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:40] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:40 - INFO - Extracting webcam from clip..
+
+2025-04-23 22:17:40 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:40] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:40 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:40] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:40 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:40] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:48 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:48] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:48 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:48] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:48 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:48] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:48 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:48] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:48 - INFO - Crop to wanted format
+2025-04-23 22:17:48 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:48] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:49 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:49] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:49 - INFO - Crop to wanted format
+2025-04-23 22:17:49 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:49] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:49 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:49] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:49 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:49] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:50 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:50] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:50 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:50] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:17:50 - INFO - 127.0.0.1 - - [23/Apr/2025 22:17:50] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:18:21 - INFO - 127.0.0.1 - - [23/Apr/2025 22:18:21] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:18:21 - INFO - 127.0.0.1 - - [23/Apr/2025 22:18:21] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:18:21 - INFO - 127.0.0.1 - - [23/Apr/2025 22:18:21] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:18:23 - INFO - Writing new clip composite from webcam and content..
+2025-04-23 22:18:24 - INFO - 127.0.0.1 - - [23/Apr/2025 22:18:24] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:18:25 - INFO - Writing new clip composite from webcam and content..
+2025-04-23 22:18:50 - WARNING - c:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file backend\Edit\in_process_clips\1d8f94f3-82a4-48ec-a98a-30b7fc81e0ca_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-04-23 22:18:50 - WARNING - c:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file backend\Edit\in_process_clips\1d8f94f3-82a4-48ec-a98a-30b7fc81e0ca_cam.mp4, 314712 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-04-23 22:18:52 - INFO - 127.0.0.1 - - [23/Apr/2025 22:18:52] "POST /api/process_clip HTTP/1.1" 200 -
+2025-04-23 22:19:10 - WARNING - c:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file backend\Edit\in_process_clips\865cb8df-2551-45b5-ad7b-cd6c45e547a5_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 492/493, at time 16.40/16.41 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-04-23 22:19:10 - WARNING - c:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file backend\Edit\in_process_clips\865cb8df-2551-45b5-ad7b-cd6c45e547a5_cam.mp4, 323736 bytes wanted but 0 bytes read,at frame 492/493, at time 16.40/16.41 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-04-23 22:19:11 - INFO - 127.0.0.1 - - [23/Apr/2025 22:19:11] "POST /api/process_clip HTTP/1.1" 200 -
+2025-04-23 22:23:50 - INFO - 127.0.0.1 - - [23/Apr/2025 22:23:50] "OPTIONS /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-23 22:23:50 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-04-23 22:23:51 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-04-23 22:23:51 - INFO - Successfully authenticated with Twitch API.
+2025-04-23 22:23:51 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 22:23:51 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-04-23 22:23:51 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-04-23 22:23:51 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 22:23:52 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=3 HTTP/1.1" 200 735
+2025-04-23 22:24:09 - ERROR - Failed to download clip TriangularMildAniseDAESuppy-bRPelh3cLJqc1Ffj (Command '['streamlink', 'https://www.twitch.tv/talmo/clip/TriangularMildAniseDAESuppy-bRPelh3cLJqc1Ffj', 'best', '-o', "data/fetch_clips/Talmo_Ton GP l'IA.mp4"]' returned non-zero exit status 1.)
+2025-04-23 22:24:13 - INFO - Clip successfully downloaded: data/fetch_clips/Talmo_BLBLBLBLBLBLBL.mp4
+2025-04-23 22:24:13 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:13] "POST /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-23 22:24:13 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:13] "GET /api/send_clipsUrls HTTP/1.1" 200 -
+2025-04-23 22:24:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:43] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:43] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:43] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:43] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:43] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:43] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:43] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:48 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:48] "OPTIONS /api/process_clip HTTP/1.1" 200 -
+2025-04-23 22:24:48 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:48] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:48 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:48] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:48 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:48] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:48 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:48] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:48 - INFO - Extracting webcam from clip..
+
+2025-04-23 22:24:48 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:48] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:50 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:50] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:50 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:50] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:50 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:50] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:52 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:52] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:52 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:52] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:52 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:52] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:54 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:54] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:54 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:54] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:54 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:54] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:54 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:54] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:54 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:54] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:54 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:54] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:55 - INFO - Extracting webcam from clip..
+
+2025-04-23 22:24:55 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:55] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:55 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:55] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:55 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:55] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:55 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:55] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:56 - INFO - Crop to wanted format
+2025-04-23 22:24:56 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:56] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:24:56 - INFO - 127.0.0.1 - - [23/Apr/2025 22:24:56] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:25:00 - INFO - 127.0.0.1 - - [23/Apr/2025 22:25:00] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:25:01 - INFO - 127.0.0.1 - - [23/Apr/2025 22:25:01] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:25:01 - INFO - 127.0.0.1 - - [23/Apr/2025 22:25:01] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:25:05 - INFO - Crop to wanted format
+2025-04-23 22:25:05 - INFO - 127.0.0.1 - - [23/Apr/2025 22:25:05] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:25:05 - INFO - 127.0.0.1 - - [23/Apr/2025 22:25:05] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:25:05 - INFO - 127.0.0.1 - - [23/Apr/2025 22:25:05] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:25:07 - INFO - 127.0.0.1 - - [23/Apr/2025 22:25:07] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:25:07 - INFO - 127.0.0.1 - - [23/Apr/2025 22:25:07] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:25:07 - INFO - 127.0.0.1 - - [23/Apr/2025 22:25:07] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:25:30 - INFO - 127.0.0.1 - - [23/Apr/2025 22:25:30] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:25:30 - INFO - 127.0.0.1 - - [23/Apr/2025 22:25:30] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:25:30 - INFO - 127.0.0.1 - - [23/Apr/2025 22:25:30] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:25:30 - INFO - 127.0.0.1 - - [23/Apr/2025 22:25:30] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:25:31 - INFO - Writing new clip composite from webcam and content..
+2025-04-23 22:25:31 - INFO - Writing new clip composite from webcam and content..
+2025-04-23 22:25:53 - WARNING - c:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file backend\Edit\in_process_clips\88128bdd-52f3-4efa-aba2-dd06193314bf_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-04-23 22:25:53 - WARNING - c:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file backend\Edit\in_process_clips\88128bdd-52f3-4efa-aba2-dd06193314bf_cam.mp4, 314712 bytes wanted but 0 bytes read,at frame 230/231, at time 7.67/7.67 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-04-23 22:25:55 - INFO - 127.0.0.1 - - [23/Apr/2025 22:25:55] "POST /api/process_clip HTTP/1.1" 200 -
+2025-04-23 22:26:13 - WARNING - c:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file backend\Edit\in_process_clips\a8b085ff-2904-41e0-8ddd-6721e92952d2_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 492/493, at time 16.40/16.41 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-04-23 22:26:13 - WARNING - c:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file backend\Edit\in_process_clips\a8b085ff-2904-41e0-8ddd-6721e92952d2_cam.mp4, 323736 bytes wanted but 0 bytes read,at frame 492/493, at time 16.40/16.41 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-04-23 22:26:13 - INFO - 127.0.0.1 - - [23/Apr/2025 22:26:13] "POST /api/process_clip HTTP/1.1" 200 -
+2025-04-23 22:37:41 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.126:5000
+2025-04-23 22:37:41 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 22:37:41 - INFO -  * Restarting with stat
+2025-04-23 22:37:44 - WARNING -  * Debugger is active!
+2025-04-23 22:37:44 - INFO -  * Debugger PIN: 931-877-733
+2025-04-23 22:37:54 - INFO - 127.0.0.1 - - [23/Apr/2025 22:37:54] "OPTIONS /login HTTP/1.1" 200 -
+2025-04-23 22:37:54 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-04-23 22:37:54 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
+2025-04-23 22:37:54 - INFO - 127.0.0.1 - - [23/Apr/2025 22:37:54] "POST /login HTTP/1.1" 200 -
+2025-04-23 22:37:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:37:58] "OPTIONS /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-23 22:37:58 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-04-23 22:37:59 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-04-23 22:37:59 - INFO - Successfully authenticated with Twitch API.
+2025-04-23 22:37:59 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 22:37:59 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-04-23 22:37:59 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-04-23 22:37:59 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 22:37:59 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 613
+2025-04-23 22:38:04 - INFO - Clip successfully downloaded: data/fetch_clips/Talmo_Ton GP l'IA.mp4
+2025-04-23 22:38:04 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:04] "POST /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-23 22:38:04 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:04] "GET /api/send_clipsUrls HTTP/1.1" 200 -
+2025-04-23 22:38:10 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:10] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:38:10 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:10] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:38:10 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:10] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:38:10 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:10] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:38:10 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:10] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:38:10 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:10] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:38:10 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:10] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:38:13 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:13] "OPTIONS /api/process_clip HTTP/1.1" 200 -
+2025-04-23 22:38:13 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:13] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:38:13 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:13] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:38:13 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:13] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:38:13 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:13] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:38:30 - INFO - Extracting webcam from clip..
+
+2025-04-23 22:38:30 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:30] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:38:41 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.126:5000
+2025-04-23 22:38:41 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 22:38:41 - INFO -  * Restarting with stat
+2025-04-23 22:38:44 - WARNING -  * Debugger is active!
+2025-04-23 22:38:44 - INFO -  * Debugger PIN: 931-877-733
+2025-04-23 22:38:44 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:44] "OPTIONS /api/process_clip HTTP/1.1" 200 -
+2025-04-23 22:38:45 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:45] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:38:45 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:45] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:38:45 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:45] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:38:45 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:45] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:38:49 - INFO - 127.0.0.1 - - [23/Apr/2025 22:38:49] "[35m[1mPOST /api/process_clip HTTP/1.1[0m" 500 -
+2025-04-23 22:38:57 - INFO -  * Detected change in 'C:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\backend\\Edit\\Video_processor.py', reloading
+2025-04-23 22:50:35 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.126:5000
+2025-04-23 22:50:35 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 22:50:35 - INFO -  * Restarting with stat
+2025-04-23 22:50:42 - WARNING -  * Debugger is active!
+2025-04-23 22:50:42 - INFO -  * Debugger PIN: 931-877-733
+2025-04-23 22:50:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:43] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:43] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:43] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:43] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:43] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:43] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:43] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:55 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.126:5000
+2025-04-23 22:50:55 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 22:50:55 - INFO -  * Restarting with stat
+2025-04-23 22:50:58 - WARNING -  * Debugger is active!
+2025-04-23 22:50:58 - INFO -  * Debugger PIN: 931-877-733
+2025-04-23 22:50:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:58] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:58] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:58] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:58] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:58] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:58] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:58] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:58] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:58] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:58] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:58] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:58] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:58] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:58] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:58] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:50:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:50:58] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:51:00 - INFO - 127.0.0.1 - - [23/Apr/2025 22:51:00] "OPTIONS /api/process_clip HTTP/1.1" 200 -
+2025-04-23 22:51:00 - INFO - 127.0.0.1 - - [23/Apr/2025 22:51:00] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:51:00 - INFO - 127.0.0.1 - - [23/Apr/2025 22:51:00] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:51:01 - INFO - 127.0.0.1 - - [23/Apr/2025 22:51:01] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:51:01 - INFO - 127.0.0.1 - - [23/Apr/2025 22:51:01] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:51:07 - INFO - Removing file : .\008be0fa-d578-46fb-82f1-626197b86641_camTEMP_MPY_wvf_snd.mp3
+
+2025-04-23 22:51:07 - INFO - Cleaning in_process_clips...
+
+2025-04-23 22:51:07 - INFO - Removing file : backend\Edit\in_process_clips\008be0fa-d578-46fb-82f1-626197b86641_cam.mp4
+
+2025-04-23 22:51:07 - INFO - Removing file : backend\Edit\in_process_clips\88128bdd-52f3-4efa-aba2-dd06193314bfaudio_cam.mp3
+
+2025-04-23 22:51:07 - INFO - Removing file : backend\Edit\in_process_clips\88128bdd-52f3-4efa-aba2-dd06193314bf_cam.mp4
+
+2025-04-23 22:51:07 - INFO - Removing file : backend\Edit\in_process_clips\88128bdd-52f3-4efa-aba2-dd06193314bf_content.mp4
+
+2025-04-23 22:51:07 - INFO - Removing file : backend\Edit\in_process_clips\88128bdd-52f3-4efa-aba2-dd06193314bf_content_audio.mp3
+
+2025-04-23 22:51:07 - INFO - Removing file : backend\Edit\in_process_clips\a8b085ff-2904-41e0-8ddd-6721e92952d2audio_cam.mp3
+
+2025-04-23 22:51:07 - INFO - Removing file : backend\Edit\in_process_clips\a8b085ff-2904-41e0-8ddd-6721e92952d2_cam.mp4
+
+2025-04-23 22:51:07 - INFO - Removing file : backend\Edit\in_process_clips\a8b085ff-2904-41e0-8ddd-6721e92952d2_content.mp4
+
+2025-04-23 22:51:07 - INFO - Removing file : backend\Edit\in_process_clips\a8b085ff-2904-41e0-8ddd-6721e92952d2_content_audio.mp3
+
+2025-04-23 22:51:07 - INFO - Extracting webcam from clip..
+
+2025-04-23 22:51:08 - INFO - 127.0.0.1 - - [23/Apr/2025 22:51:08] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:51:12 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.126:5000
+2025-04-23 22:51:12 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 22:51:12 - INFO -  * Restarting with stat
+2025-04-23 22:51:14 - WARNING -  * Debugger is active!
+2025-04-23 22:51:14 - INFO -  * Debugger PIN: 931-877-733
+2025-04-23 22:51:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:51:43] "OPTIONS /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-23 22:51:43 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-04-23 22:51:44 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-04-23 22:51:44 - INFO - Successfully authenticated with Twitch API.
+2025-04-23 22:51:44 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 22:51:44 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-04-23 22:51:44 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-04-23 22:51:44 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 22:51:45 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=3 HTTP/1.1" 200 735
+2025-04-23 22:51:57 - INFO - Clip successfully downloaded: data/fetch_clips/Talmo_Ton GP l'IA.mp4
+2025-04-23 22:51:59 - INFO - Clip successfully downloaded: data/fetch_clips/Talmo_BLBLBLBLBLBLBL.mp4
+2025-04-23 22:51:59 - INFO - 127.0.0.1 - - [23/Apr/2025 22:51:59] "POST /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-23 22:51:59 - INFO - 127.0.0.1 - - [23/Apr/2025 22:51:59] "GET /api/send_clipsUrls HTTP/1.1" 200 -
+2025-04-23 22:52:00 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:00] "GET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1" 200 -
+2025-04-23 22:52:00 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:00] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:00 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:00] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:01 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:01] "GET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1" 200 -
+2025-04-23 22:52:01 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:01] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:03 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:03] "OPTIONS /api/process_clip HTTP/1.1" 200 -
+2025-04-23 22:52:03 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:03] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:03 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:03] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:03 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:03] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:03 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:03] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:03 - INFO - Cleaning in_process_clips...
+
+2025-04-23 22:52:03 - INFO - Extracting webcam from clip..
+
+2025-04-23 22:52:03 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:03] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:04 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:04] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:04 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:04] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:04 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:04] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:05 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:05] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:05 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:05] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:05 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:05] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:06 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:06] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:06 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:06] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:06 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:06] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:06 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:06] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:06 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:06] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:06 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:06] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:07 - INFO - Removing file : .\13cde1a4-3f3d-4714-bdc5-b62e521baf21_camTEMP_MPY_wvf_snd.mp3
+
+2025-04-23 22:52:07 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:07] "[35m[1mPOST /api/process_clip HTTP/1.1[0m" 500 -
+2025-04-23 22:52:12 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:12] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:13 - INFO - Crop to wanted format
+2025-04-23 22:52:13 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:13] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:13 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:13] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:29 - INFO - 127.0.0.1 - - [23/Apr/2025 22:52:29] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:52:30 - INFO - Writing new clip composite from webcam and content..
+2025-04-23 22:53:04 - WARNING - c:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file backend\Edit\in_process_clips\13cde1a4-3f3d-4714-bdc5-b62e521baf21_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 492/493, at time 16.40/16.41 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-04-23 22:53:04 - WARNING - c:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file backend\Edit\in_process_clips\13cde1a4-3f3d-4714-bdc5-b62e521baf21_cam.mp4, 323736 bytes wanted but 0 bytes read,at frame 492/493, at time 16.40/16.41 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-04-23 22:53:05 - INFO - 127.0.0.1 - - [23/Apr/2025 22:53:05] "POST /api/process_clip HTTP/1.1" 200 -
+2025-04-23 22:53:18 - INFO - 127.0.0.1 - - [23/Apr/2025 22:53:18] "OPTIONS /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-23 22:53:18 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-04-23 22:53:19 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-04-23 22:53:19 - INFO - Successfully authenticated with Twitch API.
+2025-04-23 22:53:19 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 22:53:19 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-04-23 22:53:19 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-04-23 22:53:19 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 22:53:19 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=3 HTTP/1.1" 200 735
+2025-04-23 22:53:21 - INFO - Clip successfully downloaded: data/fetch_clips/Talmo_Ton GP l'IA.mp4
+2025-04-23 22:53:25 - INFO - Clip successfully downloaded: data/fetch_clips/Talmo_BLBLBLBLBLBLBL.mp4
+2025-04-23 22:53:25 - INFO - 127.0.0.1 - - [23/Apr/2025 22:53:25] "POST /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-23 22:53:25 - INFO - 127.0.0.1 - - [23/Apr/2025 22:53:25] "GET /api/send_clipsUrls HTTP/1.1" 200 -
+2025-04-23 22:54:05 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:05] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:54:05 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:05] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:54:05 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:05] "GET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1" 200 -
+2025-04-23 22:54:05 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:05] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:54:05 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:05] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:54:05 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:05] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:54:05 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:05] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:54:08 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:08] "OPTIONS /api/process_clip HTTP/1.1" 200 -
+2025-04-23 22:54:08 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:08] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:54:08 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:08] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:54:08 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:08] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:54:08 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:08] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:54:08 - INFO - Cleaning in_process_clips...
+
+2025-04-23 22:54:08 - INFO - Removing file : backend\Edit\in_process_clips\13cde1a4-3f3d-4714-bdc5-b62e521baf21audio_cam.mp3
+
+2025-04-23 22:54:08 - INFO - Removing file : backend\Edit\in_process_clips\13cde1a4-3f3d-4714-bdc5-b62e521baf21_cam.mp4
+
+2025-04-23 22:54:08 - INFO - Removing file : backend\Edit\in_process_clips\13cde1a4-3f3d-4714-bdc5-b62e521baf21_content.mp4
+
+2025-04-23 22:54:08 - INFO - Removing file : backend\Edit\in_process_clips\13cde1a4-3f3d-4714-bdc5-b62e521baf21_content_audio.mp3
+
+2025-04-23 22:54:08 - INFO - Extracting webcam from clip..
+
+2025-04-23 22:54:08 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:08] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:54:15 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:15] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:54:16 - INFO - Crop to wanted format
+2025-04-23 22:54:16 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:16] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:54:16 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:16] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:54:33 - INFO - 127.0.0.1 - - [23/Apr/2025 22:54:33] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 22:54:34 - INFO - Writing new clip composite from webcam and content..
+2025-04-23 22:55:07 - WARNING - c:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file backend\Edit\in_process_clips\142b8d72-631f-44b9-901f-1e242d03416f_content.mp4, 6220800 bytes wanted but 0 bytes read,at frame 492/493, at time 16.40/16.41 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-04-23 22:55:07 - WARNING - c:\Users\yazki\OneDrive\Bureau\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file backend\Edit\in_process_clips\142b8d72-631f-44b9-901f-1e242d03416f_cam.mp4, 323736 bytes wanted but 0 bytes read,at frame 492/493, at time 16.40/16.41 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-04-23 22:55:07 - INFO - 127.0.0.1 - - [23/Apr/2025 22:55:07] "POST /api/process_clip HTTP/1.1" 200 -
+2025-04-23 22:55:19 - INFO - 127.0.0.1 - - [23/Apr/2025 22:55:19] "OPTIONS /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-23 22:55:19 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-04-23 22:55:19 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-04-23 22:55:19 - INFO - Successfully authenticated with Twitch API.
+2025-04-23 22:55:19 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 22:55:20 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-04-23 22:55:20 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-04-23 22:55:20 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 22:55:20 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=3 HTTP/1.1" 200 735
+2025-04-23 22:57:02 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.126:5000
+2025-04-23 22:57:02 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 22:57:02 - INFO -  * Restarting with stat
+2025-04-23 22:57:05 - WARNING -  * Debugger is active!
+2025-04-23 22:57:05 - INFO -  * Debugger PIN: 931-877-733
+2025-04-23 22:57:05 - INFO - 127.0.0.1 - - [23/Apr/2025 22:57:05] "OPTIONS /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-23 22:57:05 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-04-23 22:57:06 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-04-23 22:57:06 - INFO - Successfully authenticated with Twitch API.
+2025-04-23 22:57:06 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 22:57:06 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-04-23 22:57:06 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-04-23 22:57:45 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 22:57:45 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=3 HTTP/1.1" 200 735
+2025-04-23 22:57:50 - INFO -  * Detected change in 'C:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\backend\\api\\Twitch\\Twitch_api.py', reloading
+2025-04-23 22:57:51 - INFO -  * Restarting with stat
+2025-04-23 22:57:54 - WARNING -  * Debugger is active!
+2025-04-23 22:57:54 - INFO -  * Debugger PIN: 931-877-733
+2025-04-23 22:58:42 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.126:5000
+2025-04-23 22:58:42 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 22:58:42 - INFO -  * Restarting with stat
+2025-04-23 22:58:44 - WARNING -  * Debugger is active!
+2025-04-23 22:58:44 - INFO -  * Debugger PIN: 931-877-733
+2025-04-23 22:58:48 - INFO - 127.0.0.1 - - [23/Apr/2025 22:58:48] "OPTIONS /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-23 22:58:48 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-04-23 22:58:49 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-04-23 22:58:49 - INFO - Successfully authenticated with Twitch API.
+2025-04-23 22:58:49 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 22:58:49 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-04-23 22:58:49 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-04-23 22:58:49 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 22:58:49 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=3 HTTP/1.1" 200 735
+2025-04-23 22:58:52 - INFO - Clip successfully downloaded: backend\data\fetch_clips/Talmo_Ton GP l'IA.mp4
+2025-04-23 22:58:54 - INFO - Clip successfully downloaded: backend\data\fetch_clips/Talmo_BLBLBLBLBLBLBL.mp4
+2025-04-23 22:58:54 - INFO - 127.0.0.1 - - [23/Apr/2025 22:58:54] "POST /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-23 22:58:54 - INFO - 127.0.0.1 - - [23/Apr/2025 22:58:54] "GET /api/send_clipsUrls HTTP/1.1" 200 -
+2025-04-23 23:01:32 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:32] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:32 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:32] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:32 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:32] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:32 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:32] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:32 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:32] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:32 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:32] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:34 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:34] "OPTIONS /api/process_clip HTTP/1.1" 200 -
+2025-04-23 23:01:34 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:34] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:34 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:34] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:35 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:35] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:35 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:35] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:35 - INFO - Cleaning in_process_clips...
+
+2025-04-23 23:01:35 - INFO - Removing file : backend\Edit\in_process_clips\142b8d72-631f-44b9-901f-1e242d03416faudio_cam.mp3
+
+2025-04-23 23:01:35 - INFO - Removing file : backend\Edit\in_process_clips\142b8d72-631f-44b9-901f-1e242d03416f_cam.mp4
+
+2025-04-23 23:01:35 - INFO - Removing file : backend\Edit\in_process_clips\142b8d72-631f-44b9-901f-1e242d03416f_content.mp4
+
+2025-04-23 23:01:35 - INFO - Removing file : backend\Edit\in_process_clips\142b8d72-631f-44b9-901f-1e242d03416f_content_audio.mp3
+
+2025-04-23 23:01:35 - INFO - Extracting webcam from clip..
+
+2025-04-23 23:01:35 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:35] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:37 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:37] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:37 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:37] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:37 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:37] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:38 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:38] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:38 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:38] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:38 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:38] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:40 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:40] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:40 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:40] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:40 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:40] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:40 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:40] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:40 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:40] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:40 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:40] "[35m[1mGET /api/clips/Talmo_Ton%20GP%20l'IA.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:40 - INFO - Removing file : .\38918b2a-227d-4379-9a1c-efad355dbcb4_camTEMP_MPY_wvf_snd.mp3
+
+2025-04-23 23:01:41 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:41] "[35m[1mPOST /api/process_clip HTTP/1.1[0m" 500 -
+2025-04-23 23:01:43 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:43] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:44 - INFO - Crop to wanted format
+2025-04-23 23:01:44 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:44] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:01:44 - INFO - 127.0.0.1 - - [23/Apr/2025 23:01:44] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:02:07 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.126:5000
+2025-04-23 23:02:07 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 23:02:07 - INFO -  * Restarting with stat
+2025-04-23 23:02:09 - WARNING -  * Debugger is active!
+2025-04-23 23:02:09 - INFO -  * Debugger PIN: 931-877-733
+2025-04-23 23:02:09 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:09] "OPTIONS /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-23 23:02:09 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-04-23 23:02:10 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-04-23 23:02:10 - INFO - Successfully authenticated with Twitch API.
+2025-04-23 23:02:10 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 23:02:10 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=talmo HTTP/1.1" 200 493
+2025-04-23 23:02:10 - INFO - 
+
+Cleaning in_process_clips...
+
+
+2025-04-23 23:02:10 - INFO - 
+
+Removing file : backend\data\fetch_clips\Talmo_BLBLBLBLBLBLBL.mp4
+
+2025-04-23 23:02:10 - INFO - 
+
+Removing file : backend\data\fetch_clips\Talmo_Ton GP l'IA.mp4
+
+2025-04-23 23:02:10 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-04-23 23:02:10 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=2 HTTP/1.1" 200 613
+2025-04-23 23:02:13 - INFO - Clip successfully downloaded: backend\data\fetch_clips/Talmo_Ton GP l'IA.mp4
+2025-04-23 23:02:13 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:13] "POST /api/recup_infos_clips HTTP/1.1" 200 -
+2025-04-23 23:02:13 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:13] "GET /api/send_clipsUrls HTTP/1.1" 200 -
+2025-04-23 23:02:17 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:17] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:02:17 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:17] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:02:17 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:17] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:02:17 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:17] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:02:17 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:17] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:02:17 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:17] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:02:17 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:17] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:02:17 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:17] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:02:17 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:17] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:02:17 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:17] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:02:17 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:17] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:02:17 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:17] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+2025-04-23 23:05:05 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\backend\\api\\Twitch\\Twitch_api.py', reloading
+2025-04-23 23:05:05 - INFO -  * Restarting with stat
+2025-04-23 23:05:07 - WARNING -  * Debugger is active!
+2025-04-23 23:05:07 - INFO -  * Debugger PIN: 931-877-733
