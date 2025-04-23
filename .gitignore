@@ -43,8 +43,12 @@ coverage
 *.sw?
 
 *.tsbuildinfo
-
-
+# === Other === 
+*.mp4
+*.mp3
 .venv/
 
+# == Raw files == 
 logs/editing.log
+backend/Edit/sample/deploy.prototxt
+backend/Edit/sample/res10_300x300_ssd_iter_140000.caffemodel
