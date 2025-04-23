@@ -1,19 +1,10 @@
 from flask import Flask
 from flask_cors import CORS
 
-
 from backend.config.config import Config
-
 
 from backend.routes.api import api_bp
 from backend.routes.views import views_bp
-
-
-
-
-
-
-
 
 db_pool = None
 def create_app():

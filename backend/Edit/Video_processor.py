@@ -110,8 +110,8 @@ class VideoProcessor:
         web_cam_clip = self.clipVideo.crop(x1=web_cam_coordinate[2], y1=web_cam_coordinate[0], 
                                            x2=web_cam_coordinate[3], y2=web_cam_coordinate[1])
 
-        web_cam_clip_path = f'GROOT/Edit/in_process_clips/{self.clipId}_cam.mp4'  # Path for saving the webcam clip
-        web_cam_audio_clip_path = f'GROOT/Edit/in_process_clips/{self.clipId}audio_cam.mp3'  # Path for saving the webcam audio
+        web_cam_clip_path = f'backend\\Edit\\in_process_clips\\{self.clipId}_cam.mp4'  # Path for saving the webcam clip
+        web_cam_audio_clip_path = f'backend\\Edit\\in_process_clips\\{self.clipId}audio_cam.mp3'  # Path for saving the webcam audio
 
         # Write the cropped webcam video and audio to file
         web_cam_clip.write_videofile(web_cam_clip_path, codec="libx264", fps=30)
@@ -134,8 +134,8 @@ class VideoProcessor:
         - Si self.clip_format == "landscape" → garde la vidéo en format paysage
         """
 
-        content_clip_path = f"GROOT/Edit/in_process_clips/{self.clipId}_content.mp4"
-        content_audio_clip_path = f"GROOT/Edit/in_process_clips/{self.clipId}_content_audio.mp3"
+        content_clip_path = f"backend\\Edit\\in_process_clips\\{self.clipId}_content.mp4"
+        content_audio_clip_path = f"backend\\Edit\\in_process_clips\\{self.clipId}_content_audio.mp3"
 
         if self.clip_format == "portrait":
             # Recadrer en format portrait (9:16)
@@ -186,8 +186,8 @@ class VideoProcessor:
     def cleaning_in_process_folder():
          # Cleaning up temporary files
         logging.info("Cleaning in_process_clips...\n")
-        for file in os.listdir("GROOT\\Edit\\in_process_clips"):
-            file_path = os.path.join("GROOT\\Edit\\in_process_clips", file)
+        for file in os.listdir("backend\\Edit\\in_process_clips"):
+            file_path = os.path.join("backend\\Edit\\in_process_clips", file)
             logging.info(f"Removing file : {file_path}\n")
             os.remove(file_path)
     
@@ -210,8 +210,8 @@ class VideoProcessor:
         self.cleaning_in_process_folder
         # Path for saving the processed video
         
-        processed_video_path = f'GROOT/twitok_website/public/media/processed_clips/{self.clipId}_processed.mp4'
-        processed_video_path_to_send = f'/media/processed_clips/{self.clipId}_processed.mp4'
+        processed_video_path = f'twitok_website\\public\\media\\processed_clips\\{self.clipId}_processed.mp4'
+        processed_video_path_to_send = f'media\\processed_clips\\{self.clipId}_processed.mp4'
         
 
         webcam = None

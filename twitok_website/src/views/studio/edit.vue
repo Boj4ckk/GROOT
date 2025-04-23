@@ -19,7 +19,7 @@ const getClips = async () => {
         for (let url of clipsUrls) {
             // const url = objet_url[0]
             console.log("envoi de la requete pour aller chercher la vidéo, nom vidéo : ", url)
-            clips.value.push(`http://127.0.0.1:5000/clips/${url}`)
+            clips.value.push(`http://127.0.0.1:5000/api/clips/${url}`)
             console.log("etat du dossier de vidéos : ", clips)
         }
     }

@@ -13,12 +13,9 @@ import os
 
 api_bp = Blueprint("api", __name__)
 
-CORS(api_bp, origins=["http://localhost:5173"], methods=["POST", "OPTIONS"])
-
-
 @api_bp.route('/recup_infos_clips', methods=["OPTIONS","POST"])
 def recup_infos_clips() : 
-    print("req")
+  
     if request.method == "OPTIONS":
         # Répondre aux requêtes OPTIONS (CORS preflight)
         return jsonify({"message": "CORS preflight request received"}), 200  # Réponse OK pour OPTIONS
@@ -67,7 +64,7 @@ def send_clipsUrls () :
         return '', 200
     try :
         liste_urls = [] 
-        for file in os.listdir('clips') :   
+        for file in os.listdir('data\\fetch_clips') :   
             liste_urls.append(file)
         return jsonify ({"clipsUrls": liste_urls})
     except Exception as e : 
@@ -79,17 +76,17 @@ def send_clipsUrls () :
 
 @api_bp.route("/clips/<file>")
 def send_clip (file):
-    dossier = "../../clips/"
-    # dossier = "clips"
-    # file = urllib.parse.unquote(file)
+    dossier = os.path.abspath("C:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\data\\fetch_clips")
     return send_from_directory(dossier, file)
 
 
 
 
-
-@api_bp.route("/process_clip", methods=["POST"])
+@api_bp.route('/process_clip', methods=["OPTIONS","POST"])
 def process_data():
+
+    if request.method == "OPTIONS":
+        return jsonify({}), 200  # Just to be safe
 
     data = request.json
     web_cam_state = data.get("webcam_detection")
