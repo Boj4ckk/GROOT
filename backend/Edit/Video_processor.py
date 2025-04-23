@@ -174,25 +174,22 @@ class VideoProcessor:
 
 
 
-    def removing_audio_files():
-         print("re")
-         for file in os.listdir("."):
+    def removing_audio_files(self):
+        for file in os.listdir("."):
             audio_file_regex = re.compile(r"TEMP_MPY_wvf_snd\.mp3")
             if re.search(audio_file_regex, file) is not None:
                 file_path = os.path.join(".\\", file)
                 logging.info(f"Removing file : {file_path}\n")
                 os.remove(file_path)
 
-    def cleaning_in_process_folder():
-         # Cleaning up temporary files
+    def cleaning_in_process_folder(self):
+        # Cleaning up temporary files
         logging.info("Cleaning in_process_clips...\n")
         for file in os.listdir("backend\\Edit\\in_process_clips"):
             file_path = os.path.join("backend\\Edit\\in_process_clips", file)
             logging.info(f"Removing file : {file_path}\n")
             os.remove(file_path)
     
-
-
 
     """
     Process the video by extracting the webcam, cropping the content to a short format, and combining them.
@@ -206,8 +203,9 @@ class VideoProcessor:
         Main method to process the video: extract webcam, crop to short format, and combine clips.
         """
         # Removing unnecessary audio files from temporary files
-        self.removing_audio_files
-        self.cleaning_in_process_folder
+        
+        self.removing_audio_files()
+        self.cleaning_in_process_folder()
         # Path for saving the processed video
         
         processed_video_path = f'twitok_website\\public\\media\\processed_clips\\{self.clipId}_processed.mp4'
