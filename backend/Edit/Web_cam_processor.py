@@ -114,8 +114,8 @@ class WebCamProcessor:
         logging.info: If face detection fails, logs a message and calls the manual method.
         """
         # Correct paths to the face detection model
-        prototxt_path = "GROOT\\Edit\\sample\\deploy.prototxt"
-        model_path = "GROOT\\Edit\\sample\\res10_300x300_ssd_iter_140000.caffemodel"
+        prototxt_path = "backend\\Edit\\sample\\deploy.prototxt"
+        model_path = "backend\\Edit\\sample\\res10_300x300_ssd_iter_140000.caffemodel"
 
         # Load the DNN model
         net = cv2.dnn.readNetFromCaffe(prototxt_path, model_path)
