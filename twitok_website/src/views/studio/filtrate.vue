@@ -33,6 +33,7 @@ const clip_format = ref("portrait")//Dynamcly store the clip_format for editing.
 
 // function to retrieve clips for their stored urls.
 const getClips = async () => {
+   
     try {
         for (let url of clipsUrls) {
         
@@ -48,7 +49,7 @@ const getClips = async () => {
 }
 getClips() 
 
-console.log("clips : ", clips.value)
+
 const preview_video = ref(clips.value[0]);
 
 // Getter/ Setter - for current video to edit(displayed in the left side of the web page)
@@ -68,6 +69,7 @@ const handleVideoClip = (video,index) => {
 };
 // Handle submit clip after chosing preferences for editing.
 const handleClipSubmit = () => {
+    
     clips.value.splice(selectedClipIndex.value,1)//remove the sumbited clip from the non-editing clips liste (right side of the page carousel)
     set_preview_video(clips.value[0])//automaticaly set a new clips for the selected clips.    
 }
@@ -75,19 +77,20 @@ const handleClipSubmit = () => {
 // handle sumbit form
 const handleform = async () => {
     // prepare payload (clip to edit and preferences to pass to videoProcessor to edit)
+    
     const payload = {
         webcam_detection : webcam_detection.value,
         clip_format : clip_format.value,
         clip_path : get_preview_video()
     }; 
+    console.log(payload)
     try{
+      
         handleClipSubmit() // call the handlesubmit to update the dynamic state of refs.
-        const response = await fetch("http://127.0.0.1:5000/process_clip",{
-            method: "POST",
-            headers :{"Content-Type": "application/json"},
-            body: JSON.stringify(payload)
-        });
+        console.log("after handleSubmit")
+        const response = await axios.post("http://127.0.0.1:5000/api/process_clip", payload)
         //retrive edited clips urls.
+        console.log("after response")
         const data = await response.json();
         TwitokStore.setEditedClipUrl(data)
         if(clips.value.length == 0){
