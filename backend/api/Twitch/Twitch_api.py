@@ -142,7 +142,7 @@ class TwitchApi:
             return clips_data
         logging.error(f"Failed to fetch clips for user {userId}: {response.text}")
         return []
-    def downloadClipWithAudio(self, clips , savePath="data/fetch_clips"):
+    def downloadClipWithAudio(self, clips , savePath="backend\\data\\fetch_clips"):
             """
             Download a Twitch clip with audio using Streamlink.
 

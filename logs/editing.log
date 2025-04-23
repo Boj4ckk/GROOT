@@ -11745,7 +11745,10 @@ Removing file : backend\data\fetch_clips\Talmo_Ton GP l'IA.mp4
 2025-04-23 23:02:17 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:17] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
 2025-04-23 23:02:17 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:17] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
 2025-04-23 23:02:17 - INFO - 127.0.0.1 - - [23/Apr/2025 23:02:17] "[35m[1mGET /api/clips/Talmo_BLBLBLBLBLBLBL.mp4 HTTP/1.1[0m" 206 -
+<<<<<<< Updated upstream
 2025-04-23 23:05:05 - INFO -  * Detected change in 'c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\backend\\api\\Twitch\\Twitch_api.py', reloading
 2025-04-23 23:05:05 - INFO -  * Restarting with stat
 2025-04-23 23:05:07 - WARNING -  * Debugger is active!
 2025-04-23 23:05:07 - INFO -  * Debugger PIN: 931-877-733
+=======
+>>>>>>> Stashed changes
