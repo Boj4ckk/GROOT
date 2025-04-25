@@ -11177,7 +11177,7 @@ Removing file : data/fetch_clips\Talmo_Ton GP l'IA.mp4
 2025-04-23 22:15:49 - WARNING -  * Debugger is active!
 2025-04-23 22:15:49 - INFO -  * Debugger PIN: 931-877-733
 2025-04-23 22:16:39 - INFO - 127.0.0.1 - - [23/Apr/2025 22:16:39] "OPTIONS /login HTTP/1.1" 200 -
-2025-04-23 22:16:39 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-04-23 22:16:39 - INFO - user trouvï¿½ : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
 2025-04-23 22:16:39 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
 2025-04-23 22:16:39 - INFO - 127.0.0.1 - - [23/Apr/2025 22:16:39] "POST /login HTTP/1.1" 200 -
 2025-04-23 22:16:43 - INFO - 127.0.0.1 - - [23/Apr/2025 22:16:43] "OPTIONS /api/recup_infos_clips HTTP/1.1" 200 -
@@ -11354,7 +11354,7 @@ Cleaning in_process_clips...
 2025-04-23 22:37:44 - WARNING -  * Debugger is active!
 2025-04-23 22:37:44 - INFO -  * Debugger PIN: 931-877-733
 2025-04-23 22:37:54 - INFO - 127.0.0.1 - - [23/Apr/2025 22:37:54] "OPTIONS /login HTTP/1.1" 200 -
-2025-04-23 22:37:54 - INFO - user trouvé : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
+2025-04-23 22:37:54 - INFO - user trouvï¿½ : ('hugo', '$2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.')
 2025-04-23 22:37:54 - INFO - hashed password : $2b$12$aQSanGF7zrA6JZkXNrJRvegNHZoVetKrKs/8oiwt/vgqoDgiWVAR.
 2025-04-23 22:37:54 - INFO - 127.0.0.1 - - [23/Apr/2025 22:37:54] "POST /login HTTP/1.1" 200 -
 2025-04-23 22:37:58 - INFO - 127.0.0.1 - - [23/Apr/2025 22:37:58] "OPTIONS /api/recup_infos_clips HTTP/1.1" 200 -
