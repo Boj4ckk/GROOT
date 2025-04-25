@@ -183,12 +183,21 @@ class VideoProcessor:
                 os.remove(file_path)
 
     def cleaning_in_process_folder(self):
-        # Cleaning up temporary files
+       
         logging.info("Cleaning in_process_clips...\n")
         for file in os.listdir("backend\\Edit\\in_process_clips"):
             file_path = os.path.join("backend\\Edit\\in_process_clips", file)
-            logging.info(f"Removing file : {file_path}\n")
-            os.remove(file_path)
+            logging.info(f"Removing f   ile : {file_path}\n")
+            os.remove(file_path) 
+
+
+    def cleaning_processed_clips(self):
+        logging.info("Cleaning Process_clips...\n")
+        for file in os.listdir("twitok_website\\public\\media\\processed_clips"):
+            file_path = os.path.join("twitok_website\\public\\media\\processed_clips", file)
+            logging.info(f"Removing f   ile : {file_path}\n")
+            os.remove(file_path) 
+
     
 
     """
@@ -206,6 +215,7 @@ class VideoProcessor:
         
         self.removing_audio_files()
         self.cleaning_in_process_folder()
+        self.cleaning_processed_clips()
         # Path for saving the processed video
         
         processed_video_path = f'twitok_website\\public\\media\\processed_clips\\{self.clipId}_processed.mp4'
