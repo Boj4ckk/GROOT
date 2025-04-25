@@ -64,7 +64,7 @@ def send_clipsUrls () :
         return '', 200
     try :
         liste_urls = [] 
-        for file in os.listdir('data\\fetch_clips') :   
+        for file in os.listdir('backend\\data\\fetch_clips') :   
             liste_urls.append(file)
         return jsonify ({"clipsUrls": liste_urls})
     except Exception as e : 
@@ -76,7 +76,7 @@ def send_clipsUrls () :
 
 @api_bp.route("/clips/<file>")
 def send_clip (file):
-    dossier = os.path.abspath("C:\\Users\\yazki\\OneDrive\\Bureau\\GROOT\\data\\fetch_clips")
+    dossier = os.path.abspath("backend\\data\\fetch_clips")
     return send_from_directory(dossier, file)
 
 
