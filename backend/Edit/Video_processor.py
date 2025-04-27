@@ -110,8 +110,8 @@ class VideoProcessor:
         web_cam_clip = self.clipVideo.crop(x1=web_cam_coordinate[2], y1=web_cam_coordinate[0], 
                                            x2=web_cam_coordinate[3], y2=web_cam_coordinate[1])
 
-        web_cam_clip_path = f'backend\\Edit\\in_process_clips\\{self.clipId}_cam.mp4'  # Path for saving the webcam clip
-        web_cam_audio_clip_path = f'backend\\Edit\\in_process_clips\\{self.clipId}audio_cam.mp3'  # Path for saving the webcam audio
+        web_cam_clip_path = os.path.join("backend","Edit","in_process_clips",f"{self.clipId}_cam.mp4")
+        web_cam_audio_clip_path = os.path.join("backend","Edit","in_process_clips",f"{self.clipId}audio_cam.mp3")
 
         # Write the cropped webcam video and audio to file
         web_cam_clip.write_videofile(web_cam_clip_path, codec="libx264", fps=30)
@@ -133,9 +133,9 @@ class VideoProcessor:
         - Si self.clip_format == "portrait" → recadrage en 9:16 pour TikTok
         - Si self.clip_format == "landscape" → garde la vidéo en format paysage
         """
+        content_clip_path = os.path.join("backend","Edit","in_process_clips",f"{self.clipId}_content.mp4")
 
-        content_clip_path = f"backend\\Edit\\in_process_clips\\{self.clipId}_content.mp4"
-        content_audio_clip_path = f"backend\\Edit\\in_process_clips\\{self.clipId}_content_audio.mp3"
+        content_audio_clip_path = os.path.join("backend","Edit","in_process_clips",f"{self.clipId}_content_audio.mp3")
 
         if self.clip_format == "portrait":
             # Recadrer en format portrait (9:16)
@@ -185,16 +185,18 @@ class VideoProcessor:
     def cleaning_in_process_folder(self):
        
         logging.info("Cleaning in_process_clips...\n")
-        for file in os.listdir("backend\\Edit\\in_process_clips"):
-            file_path = os.path.join("backend\\Edit\\in_process_clips", file)
+        path  = os.path.join("backend","Edit","in_process_clips")
+        for file in os.listdir(path):
+            file_path = os.path.join(path, file)
             logging.info(f"Removing f   ile : {file_path}\n")
             os.remove(file_path) 
 
 
     def cleaning_processed_clips(self):
         logging.info("Cleaning Process_clips...\n")
-        for file in os.listdir("twitok_website\\public\\media\\processed_clips"):
-            file_path = os.path.join("twitok_website\\public\\media\\processed_clips", file)
+        path = os.path.join("twitok_website","public","media","processed_clips")
+        for file in os.listdir(path):
+            file_path = os.path.join(path, file)
             logging.info(f"Removing f   ile : {file_path}\n")
             os.remove(file_path) 
 
@@ -212,14 +214,15 @@ class VideoProcessor:
         Main method to process the video: extract webcam, crop to short format, and combine clips.
         """
         # Removing unnecessary audio files from temporary files
-        
+        """
         self.removing_audio_files()
         self.cleaning_in_process_folder()
         self.cleaning_processed_clips()
         # Path for saving the processed video
+        """
         
-        processed_video_path = f'twitok_website\\public\\media\\processed_clips\\{self.clipId}_processed.mp4'
-        processed_video_path_to_send = f'media\\processed_clips\\{self.clipId}_processed.mp4'
+        processed_video_path = os.path.join("backend","data","processed_clips",f"{self.clipId}_processed.mp4")
+        processed_video_path_to_send = os.path.join("app","twitok_website","public","media","processed_clips",f"{self.clipId}_processed.mp4")
         
 
         webcam = None

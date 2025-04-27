@@ -64,7 +64,8 @@ def send_clipsUrls () :
         return '', 200
     try :
         liste_urls = [] 
-        for file in os.listdir('backend\\data\\fetch_clips') :   
+        path = os.path.join("backend","data","fetch_clips")
+        for file in os.listdir(path) :   
             liste_urls.append(file)
         return jsonify ({"clipsUrls": liste_urls})
     except Exception as e : 
@@ -76,7 +77,8 @@ def send_clipsUrls () :
 
 @api_bp.route("/clips/<file>")
 def send_clip (file):
-    dossier = os.path.abspath("backend\\data\\fetch_clips")
+    path = os.path.join("backend","data","fetch_clips")
+    dossier = os.path.abspath(path)
     return send_from_directory(dossier, file)
 
 
@@ -95,8 +97,7 @@ def process_data():
 
     video_processor_instance = VideoProcessor(clip_path, web_cam_state, clip_format)
     video_processor_instance.process_video()
-
-    return jsonify({"processed_clip_url" : video_processor_instance.edited_clip_path_to_vue })
+    return jsonify({"processed_clip_url" : video_processor_instance.edited_clip_path })
 
 
 
