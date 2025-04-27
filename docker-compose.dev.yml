@@ -1,0 +1,32 @@
+version: '3'
+services:
+  backend:
+    build: 
+      context: .
+      dockerfile: backend/Dockerfile
+    volumes:
+      - .:/app
+      - shared_processed:/app/backend/data/processed_clips
+    ports:
+      - "5000:5000"
+      - "5678:5678"
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+  
+  frontend:
+    build: 
+      context: .
+      dockerfile: twitok_website/Dockerfile
+    volumes:
+      - .:/app
+      - /app/twitok_website/node_modules  # Volume anonyme pour les node_modules
+      - shared_processed:/app/twitok_website/public/media/processed_clips
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+    # La commande est maintenant dans le Dockerfile
+
+volumes:
+  shared_processed:
