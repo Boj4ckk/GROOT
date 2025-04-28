@@ -11,7 +11,7 @@
         },
         "pathMappings": [
           {
-            "localRoot": "c:\\Users\\yazki\\OneDrive\\Bureau\\GROOT",
+            "localRoot": "${workspaceFolder}",
             "remoteRoot": "/app"
           }
         ]
@@ -21,7 +21,7 @@
           "name": "run",
           "type": "debugpy",
           "request": "launch",
-          "program": "run.py",
+          "program": "${workspaceFolder}/run.py",
           "console": "integratedTerminal"
       }
     ]

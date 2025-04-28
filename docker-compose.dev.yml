@@ -1,4 +1,3 @@
-version: '3'
 services:
   backend:
     build: 
@@ -17,11 +16,11 @@ services:
   frontend:
     build: 
       context: .
-      dockerfile: twitok_website/Dockerfile
+      dockerfile: frontend/Dockerfile
     volumes:
       - .:/app
-      - /app/twitok_website/node_modules  # Volume anonyme pour les node_modules
-      - shared_processed:/app/twitok_website/public/media/processed_clips
+      - /app/frontend/node_modules  # Volume anonyme pour les node_modules
+      - shared_processed:/app/frontend/public/media/processed_clips
     ports:
       - "5173:5173"
     environment:
