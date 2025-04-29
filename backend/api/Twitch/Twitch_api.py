@@ -114,12 +114,14 @@ class TwitchApi:
         :param filters: Dictionary of filters (e.g., started_at, game_id).
         :return: List of clips metadata dictionaries.
         """
+        """
         logging.info("\n\nCleaning in_process_clips...\n\n")
-        for file in os.listdir("backend\\data\\fetch_clips"):
-            file_path = os.path.join("backend\\data\\fetch_clips", file)
+        path = os.path.join("backend","data","fetch_clips")
+        for file in os.listdir(path):
+            file_path = os.path.join(path, file)
             logging.info(f"\n\nRemoving file : {file_path}\n")
             os.remove(file_path)
-
+       """
         url = f"{self.BASE_URL}/clips"
         params = {"broadcaster_id": userId}
     
@@ -142,7 +144,7 @@ class TwitchApi:
             return clips_data
         logging.error(f"Failed to fetch clips for user {userId}: {response.text}")
         return []
-    def downloadClipWithAudio(self, clips , savePath="backend\\data\\fetch_clips"):
+    def downloadClipWithAudio(self, clips , savePath=os.path.join("backend","data","fetch_clips")):
             """
             Download a Twitch clip with audio using Streamlink.
 
