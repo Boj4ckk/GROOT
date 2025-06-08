@@ -1,0 +1,30 @@
+services:
+  backend:
+    build:
+      context: ./backend        # ← Context pointe vers le dossier backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/app          # ← Volume ajusté
+      - shared_processed:/app/data/processed_clips
+    ports:
+      - "5000:5000"
+      - "5678:5678"
+    environment:
+      - FLASK_ENV=development
+      - FLASK_DEBUG=1
+      
+  frontend:
+    build:
+      context: ./frontend       # ← Si vous voulez faire pareil pour frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - shared_processed:/app/public/media/processed_clips
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+
+volumes:
+  shared_processed: {}
