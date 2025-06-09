@@ -7,9 +7,11 @@ from backend.api.Tiktok.tiktok_api import TiktokApi
 from backend.Edit.Video_processor import VideoProcessor
 from backend.config.config import Config
 
+from dotenv import load_dotenv
 import logging
 import os
 
+load_dotenv(dotenv_path="backend/.env")
 
 api_bp = Blueprint("api", __name__)
 
@@ -34,7 +36,7 @@ def recup_infos_clips() :
             if (number_of_clips == 0) :
                 number_of_clips = 1
 
-            twitch_instance  =  TwitchApi(Config.CLIENT_ID,Config.CLIENT_SECRET)  
+            twitch_instance  =  TwitchApi(os.getenv("CLIENT_ID"),os.getenv("CLIENT_SECRET"))  
             TwitchApi.getHeaders(twitch_instance)
             
 
@@ -119,8 +121,8 @@ def publication () :
 
     tiktok_instance = TiktokApi()
     tiktok_instance.startDriver()
-    tiktok_account_for_example = Config.TIKTOK_USERNAME
-    tiktok_password_for_example = Config.TIKTOK_PASSWORD
+    tiktok_account_for_example = os.getenv("twitok_bot_2")
+    tiktok_password_for_example = os.getenv("twitok_bot_2.0")
     tiktok_instance.login(tiktok_account_for_example, tiktok_password_for_example)
     tiktok_instance.uploadVideo(full_absolute_video_path, description)
     tiktok_instance.closeDriver() 
