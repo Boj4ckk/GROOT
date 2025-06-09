@@ -1,8 +1,7 @@
-flask==3.1.0
-flask_cors==5.0.1
+Flask>=2.0.0
+flask-cors
 flask_bcrypt==1.0.1
 requests==2.32.3
-flask== 3.1.0
 requests==2.32.3
 moviepy==1.0.3
 selenium== 4.29.0
@@ -16,3 +15,4 @@ mysql-connector-python==9.2.0
 python-dotenv==1.1.0
 sqlalchemy==2.0.41
 greenlet==3.2.3
+pyodbc==5.2.0
