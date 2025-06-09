@@ -5,7 +5,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-load_dotenv(dotenv_path="backend/.env")
+
 # Configuration pour Azure SQL Database
 class AzureConfig:
     
