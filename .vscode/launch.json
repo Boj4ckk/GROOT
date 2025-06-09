@@ -11,7 +11,7 @@
         },
         "pathMappings": [
           {
-            "localRoot": "${workspaceFolder}",
+            "localRoot": "${workspaceFolder",
             "remoteRoot": "/app"
           }
         ]
@@ -21,7 +21,7 @@
           "name": "run",
           "type": "debugpy",
           "request": "launch",
-          "program": "${workspaceFolder}/run.py",
+          "module": "backend.run",
           "console": "integratedTerminal"
       }
     ]
