@@ -9,4 +9,4 @@ class User(Base):
     
     id_user= Column(Integer, primary_key=True, autoincrement=True)
     user_email = Column(String, unique=True, nullable=False)
-    user_password = Column(String, nullable=False)
+    user_password = Column(String(256), nullable=False)
