@@ -16,8 +16,8 @@ const tiktok_password = ref("")
 
 const insert_user = async () => {
     try {
-        const dataToSend = {username: username.value, password: password.value, tiktok_username: tiktok_username.value, tiktok_password: tiktok_password.value}
-        const response = await axios.post('http://127.0.0.1:5000/newUser', dataToSend)
+        const dataToSend = {user_email: username.value, user_password: password.value}
+        const response = await axios.post('http://127.0.0.1:5000/register', dataToSend)
         console.log("envoie nouvel user : ", response.data)
         twitokStore.autorized()
         router.push('studio')
