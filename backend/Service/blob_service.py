@@ -1,6 +1,7 @@
 
 from datetime import datetime, timedelta
 import os
+import subprocess
 from azure.storage.blob import BlobServiceClient, generate_container_sas, ContainerSasPermissions
 class BlobStorageService:
 
@@ -19,8 +20,14 @@ class BlobStorageService:
             container=self.container_name,
             blob=blob_path
         )
+        # Obligatoire pour telecharger le clip issue de la page (twitch donne le lien vers la page twitch du clip pas l'objet clip en lui meme)
+        process = subprocess.Popen(
+            ["streamlink","--stdout",file_content["url"],"best"],
+            stdout=subprocess.PIPE
+        )
 
-        blob_client.upload_blob(file_content,overwrite=True)
+        #enregistre dans le blob la sortie du process de streamlink (le clip video)
+        blob_client.upload_blob(process.stdout,overwrite=True)
         return blob_path
     
     def get_user_sas(self,user_id):

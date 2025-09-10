@@ -13,15 +13,12 @@ class ClipServices:
     
     def download_and_store_clip(self,clip_data):
 
-        response  = requests.get(clip_data["url"])
-        #affiche une erreur au lieu d'echouer sans alerte
-        response.raise_for_status()
 
         clip_filename = f"clip_{clip_data['url'].split('/')[-1]}.mp4"
 
         clip_blob_path = self.blob_service.upload_clip(
             user_id=1,
-            file_content=response.content,
+            file_content=clip_data,
             filename=clip_filename
         )
         user_sas = self.blob_service.get_user_sas(1)
