@@ -1,7 +1,6 @@
 
 # services/user_service.py
 from Model.user_model import User
-from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 from werkzeug.security import generate_password_hash, check_password_hash
 
