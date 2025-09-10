@@ -16,3 +16,8 @@ python-dotenv==1.1.0
 sqlalchemy==2.0.41
 greenlet==3.2.3
 pyodbc==5.2.0
+debugpy==1.8.16
+azure-core==1.35.0
+azure-storage-blob==12.26.0
+cryptography==45.0.7
+six==1.17.0
