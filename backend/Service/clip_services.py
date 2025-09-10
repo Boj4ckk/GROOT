@@ -27,7 +27,13 @@ class ClipServices:
         user_sas = self.blob_service.get_user_sas(1)
         container_client = ContainerClient.from_container_url(user_sas["sas_url"])
         for blob in container_client.list_blobs(name_starts_with=user_sas["prefix"]):
-            print(blob)
+                print("Nom du blob :", blob.name)
+    
+                # Télécharger chaque blob
+                blob_client = container_client.get_blob_client(blob)
+                with open(blob.name.split('/')[-1], "wb") as f:  # sauvegarde local avec le nom du fichier
+                    f.write(blob_client.download_blob().readall())
+
 
 
         
