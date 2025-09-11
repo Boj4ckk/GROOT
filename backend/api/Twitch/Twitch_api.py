@@ -129,7 +129,6 @@ class TwitchApi:
             # If ended date not specified, set it to current date and time.
             if(filters['started_at'] != None  and 'ended_at' not in filters):
                 filters['ended_at'] = datetime.now(timezone.utc).isoformat()
-                print(filters)
             params.update(filters)
 
         response = requests.get(url, headers=self.getHeaders(), params=params)
