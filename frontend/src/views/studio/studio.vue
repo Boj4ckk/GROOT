@@ -21,19 +21,20 @@ const max_date_release = ref("2025-01-01") // formater
 const number_of_clips = ref(1) 
 const chargement = ref(false)
 
-const final_number_of_clips = ref()
+
 
 const getClips = async() => {
     chargement.value = true
     try {
         if (twitokStore.already_upload == 0) {
+            console.log(number_of_clips.value)
             console.log("\naucun clip upload jusqu'ici. => On ajoute 1 au chiffre rentré par l'utilisateur\n")
-            final_number_of_clips.value = number_of_clips.value +1
-            console.log("final_number_of_clips : ", final_number_of_clips.value)
+            
+           
         }
         else {
             console.log("\nDes clips ont deja été uploadé. => On ajoute 1 au nombre de clip rentré par l'utilisateur.\n")
-            final_number_of_clips.value = number_of_clips.value +1 
+         
         }
         const dataToSend = {
             
@@ -44,7 +45,7 @@ const getClips = async() => {
              max_duration:max_duration.value,
              min_date_release:min_date_release.value,
              max_date_release:max_date_release.value,
-             number_of_clips:final_number_of_clips.value
+             number_of_clips:number_of_clips.value,
         }
         console.log('Tentative de récupératon des clips [avant requete]')
         
@@ -53,7 +54,7 @@ const getClips = async() => {
         console.log("Tentative d'envoie des informations sur les clips a récupérer...")
         console.log("voici le streamer qu'on tente de recup les clips", dataToSend.streamer_name)
         try {
-            const clipsUrls_returned = await axios.get("http://127.0.0.1:5000/api/send_clipsUrls")
+            const clipsUrls_returned = await axios.get("http://127.0.0.1:5000/send_clips_urls")
             console.log("voici ce que nous a retourné l'api : ", clipsUrls_returned.data)
             if (Array.isArray(clipsUrls_returned.data.clipsUrls) && clipsUrls_returned.data.clipsUrls.length === 0){
                 console.log("aucune vidéo trouvé pour le STREAMER", dataToSend.streamer_name)
