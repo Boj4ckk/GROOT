@@ -4,6 +4,7 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 from Routes.auth_routes import AuthRoutes
 from Routes.clip_routes import ClipRoutes
+from Routes.twitch_routes import TwitchRoutes
 import os
 import sys
 
@@ -32,7 +33,9 @@ def create_app():
             return response
 
     app.register_blueprint(AuthRoutes.auth_bp)
+    app.register_blueprint(TwitchRoutes.twitch_bp)
     app.register_blueprint(ClipRoutes.clip_bp)
+
     
     return app
 
