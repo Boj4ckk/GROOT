@@ -36,9 +36,9 @@ const getClips = async () => {
    
     try {
         for (let clip of objet_clipsUrls) {
-            console.log(clip)
-            clips.value.push(`/api/clips/${clip.url}`)
-            console.log("etat du dossier de vidéos : ", clips)
+           
+            clips.value.push(clip.url)
+           
         }
     }
     catch (error) {
