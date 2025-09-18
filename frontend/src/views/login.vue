@@ -12,7 +12,7 @@ const twitokStore = useTwitokStore() // vient du store
 const connect = async () => {
     try {
         const dataToSend = {user_email: user_email.value, user_password: user_password.value}
-        const response = await axios.post('http://127.0.0.1:5000/login', dataToSend)
+        const response = await axios.post('/login', dataToSend)
         console.log("tentative de connexion de l'user : ", response.data)
         twitokStore.autorized()
         router.push('studio')

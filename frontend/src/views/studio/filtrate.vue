@@ -12,9 +12,9 @@ const router = useRouter() // import router to redirect into tiktok page after e
 
 
 // retrieve clips url fetched in studio page
-const objet_clipsUrls = TwitokStore.clipsUrls_Returned  
-const clipsUrls = objet_clipsUrls["clipsUrls"] 
-console.log("clipsUrls : ", clipsUrls)
+const objet_clipsUrls = TwitokStore.clipsUrls_Returned
+console.log("obj :" ,objet_clipsUrls)
+
 
 //clips var which will dynamicly store clips to edit.
 const clips = ref([])
@@ -35,10 +35,9 @@ const clip_format = ref("portrait")//Dynamcly store the clip_format for editing.
 const getClips = async () => {
    
     try {
-        for (let url of clipsUrls) {
-        
-            console.log("envoi de la requete pour aller chercher la vidéo, nom vidéo : ", url)
-            clips.value.push(`http://127.0.0.1:5000/api/clips/${url}`)
+        for (let clip of objet_clipsUrls) {
+            console.log(clip)
+            clips.value.push(`/api/clips/${clip.url}`)
             console.log("etat du dossier de vidéos : ", clips)
         }
     }
@@ -88,7 +87,7 @@ const handleform = async () => {
       
         handleClipSubmit() // call the handlesubmit to update the dynamic state of refs.
         console.log("after handleSubmit")
-        const response = await axios.post("http://127.0.0.1:5000/api/process_clip", payload)
+        const response = await axios.post("/api/process_clip", payload)
         //retrive edited clips urls.
         console.log("after response")
         const data = await response.json;
