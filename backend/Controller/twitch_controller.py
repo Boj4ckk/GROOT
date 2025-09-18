@@ -2,12 +2,14 @@
 from flask import jsonify, request
 from Service.twitch_service import TwitchService
 from Service.clip_services import ClipServices
+from middlewares.auth_middleware import jwt_required
 from config.azure_config import SessionLocal
 
 
 class TwitchController():
 
     @staticmethod
+    @jwt_required
     def fetch_clip(data=None):
         twitch_service = TwitchService()
         if data is None:
