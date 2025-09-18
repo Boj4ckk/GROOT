@@ -1,4 +1,4 @@
-import requests
+from flask import request
 from Model.clip_model import Clip
 from sqlalchemy.exc import IntegrityError
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -17,23 +17,10 @@ class ClipServices:
         clip_filename = f"clip_{clip_data['url'].split('/')[-1]}.mp4"
 
         clip_blob_path = self.blob_service.upload_clip(
-            user_id=1,
+            user_id=request.user_id,
             file_content=clip_data,
             filename=clip_filename
         )
-        user_sas = self.blob_service.get_user_sas(1)
-        container_client = ContainerClient.from_container_url(user_sas["sas_url"])
-        for blob in container_client.list_blobs(name_starts_with=user_sas["prefix"]):
-                print("Nom du blob :", blob.name)
-    
-                # Télécharger chaque blob
-                blob_client = container_client.get_blob_client(blob)
-                with open(blob.name.split('/')[-1], "wb") as f:  # sauvegarde local avec le nom du fichier
-                    f.write(blob_client.download_blob().readall())
-
-
-
-        
         new_clip = Clip(
             clip_url = clip_data["url"],
             broadcaster_id = clip_data["broadcaster_id"],
