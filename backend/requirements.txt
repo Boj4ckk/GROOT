@@ -21,3 +21,4 @@ azure-core==1.35.0
 azure-storage-blob==12.26.0
 cryptography==45.0.7
 six==1.17.0
+pyjwt==2.10.1
