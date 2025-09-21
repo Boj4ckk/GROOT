@@ -1,56 +1,32 @@
 <script setup>
+import customButton from '../components/customButton.vue';
 </script>
 
 <template>
     <br> 
-    <div> <!-- page -->    
+    <div class="  flex flex-col justify-center items-center"> <!-- page -->    
 
-        <div> <!-- INTRO -->
-            <h2>
+        <div class="w-full flex flex-col justify-center items-center space-y-2 md:space-y-6">
+            <h2 class="text-xl md:text-5xl font-inter font-bold text-center">
                 First AI-powered highlight-based content generator
             </h2>
-            <h4>
-                Tool that transforms your stream highlights into engaging, shareable clips
-                optimized for any platform.
-            </h4>
-        </div> <!-- /> -->
+            <p class="text-base md:text-3xl font-inter font-medium text-center max-w-4xl">
+                Tool that transforms your stream highlights into engaging, shareable clips optimized for any platform.
+            </p>
+        </div>
 
-        <div> <!-- BOUTON -->
+        <div class=" flex flex-col justify-center items-center pt-10"> <!-- BOUTON -->
+            <customButton to="/help"
+             backgroundColor="bg-black" 
+             textColor="text-white"
+             buttonSize="md"
+             >Try for free</customButton >
             <div>
-                <router-link to="studio" tag="button"> Try it for free </router-link> <!-- askip tag="button" c pour pas etre simplement un "<a>" mais un bouton mais je vois pas trop la dif la-->
-            </div>
-            <div>
-                <p> No credit card needed </p>
+                <p class="pt-2"> No credit card needed </p>
             </div>
         </div> <!-- /> -->
 
-        <div> <!-- DEMO (text + videos) -->
-            <div> <!-- description -->
-                <h3> AI-powered auto editing for perfect short videos </h3>
-            </div>
-            <div> <!-- videos -->
-                <div> <!-- original highlight -->
-                    <video src="../media\twitch_format.mp4" controls></video> <!-- controls c pour pouvoir mettre pause et tt -->
-                    <p> Original highlight</p>
-                </div>
-                <div> <!-- Final video -->
-                    <video src="../media\tiktok_format.mp4" controls></video>
-                    <p> Final video </p>
-                </div>
-            </div>
-        </div> <!-- /> -->
-
-        <div> <!-- plateformes -->
-            <div> <!-- ecritures -->
-                <h4> Automated posting to the platform of your choice </h4>
-                <p> Automatically post your edited clips to following shorts platforms with no manual effort </p>
-            </div>
-            <div> <!-- logos -->
-                <img src="" alt="tiktok">
-                <img src="" alt="instagram"> 
-                <img src="" alt="youtube">
-            </div>
-        </div> <!-- /> -->
+     
 
     </div> <!-- page/> -->
 
