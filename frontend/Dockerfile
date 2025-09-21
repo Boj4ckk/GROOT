@@ -1,7 +1,17 @@
+# Utiliser Node 18
 FROM node:18
 
 WORKDIR /app
 
-# Supprimer le node_modules existant qui est monté depuis l'hôte
-# et réinstaller les dépendances dans l'environnement Docker
-CMD [ "sh", "-c", "npm install && npm run dev -- --host 0.0.0.0" ]
+# Copier uniquement package.json pour installer les deps
+COPY package*.json ./
+
+# Installer toutes les dépendances (y compris autoprefixer/postcss/tailwind)
+RUN npm install
+
+# Copier le reste du projet
+COPY . .
+
+EXPOSE 5173
+
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
