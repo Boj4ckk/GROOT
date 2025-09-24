@@ -34,7 +34,7 @@ console.log("etat actuel de la variable connected : ", connected)
 </script>
 
 <template>
-    <header class=" shadow-sm fixed top-0 left-0 right-0 z-50 px-16 md:px-56">
+    <header class=" shadow-sm fixed top-0 left-0 right-0 z-50 ">
         <div class="">  
 
             <div class="flex justify-between items-center h-12 md:h-16">
