@@ -41,8 +41,8 @@
 
     const sizeClasses = computed(() =>{
         const sizes = {
-             sm: 'w-[64px] h-[22px] md:w-[96px] md:h-[31px] text-sm md:text-base',      // PETITE
-             md: 'w-[120px] h-[35px] md:w-[260px] md:h-[60px] text-base md:text-lg ', // TON DESIGN (défaut)
+             sm: 'w-[60px] h-[22px] md:w-[96px] md:h-[31px] text-sm md:text-base',      // PETITE
+             md: 'w-[180px] h-[40px] md:w-[260px] md:h-[60px] text-base md:text-lg ', // TON DESIGN (défaut)
              lg: 'w-72 h-20 md:w-96 md:h-24 text-lg md:text-xl',        // GRANDE  
              xl: 'w-80 h-24 md:w-[450px] md:h-28 text-xl md:text-2xl'   // TRÈS GRANDE
         };
