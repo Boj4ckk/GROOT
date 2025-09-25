@@ -4,7 +4,7 @@ import customButton from '../components/customButton.vue';
 
 <template>
     <br> 
-    <div class="  flex flex-col justify-center items-center"> <!-- page -->    
+    <div class="  flex flex-col justify-center items-center pt-40 md:pt-70"> <!-- page -->    
 
         <div class="w-full flex flex-col justify-center items-center space-y-2 md:space-y-6">
             <h2 class="text-xl md:text-5xl font-inter font-bold  animate-fade-in-up">
@@ -33,20 +33,7 @@ import customButton from '../components/customButton.vue';
 </template>
 
 <style>
-@keyframes fade-in-up {
-    0%{
-        opacity:  0;
-        transform: translateY(20px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
 
-.animate-fade-in-up{
-    animation: fade-in-up 0.9s ease-out forwards;
-}
 
 video {
   width: 100%;
