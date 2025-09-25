@@ -7,7 +7,7 @@ import login from '@/views/login.vue';
 import { computed, ref } from 'vue';
 import redirectionLink from './redirectionLink.vue';
 import customButton from './customButton.vue';
-import {Bars2Icon, Bars3Icon, BeakerIcon} from '@heroicons/vue/24/solid'
+import {Bars2Icon, Bars3Icon, BeakerIcon, AtSymbolIcon} from '@heroicons/vue/24/solid'
 import BorderButton from './customButton.vue';
 
 const router = useRouter() 
@@ -34,12 +34,12 @@ console.log("etat actuel de la variable connected : ", connected)
 </script>
 
 <template>
-    <header class=" shadow-sm fixed top-0 left-0 right-0 z-50 ">
+    <header class=" shadow-lg fixed top-0 left-0 right-0 z-50 ">
         <div class="">  
 
             <div class="flex justify-between items-center h-12 md:h-16">
                 <div class=" flex-shrink-0 flex items-center">
-                    <redirection-link to="/" class=" transform transition-transform duration-300 hover:scale-105">Home</redirection-link>
+                    <redirection-link to="/" class="text-[12px] md:text-[20px] transform transition-transform duration-300 hover:scale-105">Home</redirection-link>
                 </div>
 
                 <nav id="mainNav" class="hidden lg:flex w-1/2 max-w-7xl justify-center">
