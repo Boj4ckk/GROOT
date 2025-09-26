@@ -13,9 +13,11 @@ import BorderButton from './customButton.vue';
 const router = useRouter() 
 
 const twitokstore = useTwitokStore()
+
 const logout = () => {
-    router.push("/login")
+    twitokstore.unauthorized()
 }
+const connected = computed(() => twitokstore.authorizedConnection)
 const isMobileMenuOpen = ref(false)
 
 function toggleMobileMenu (){
@@ -27,7 +29,6 @@ function toggleMobileMenu (){
 function closeMobileMenu (){
     isMobileMenuOpen.value = false
 }
-const connected = computed(() => twitokstore.authorizedConnection)
 
 console.log("etat actuel de la variable connected : ", connected)
 
@@ -50,11 +51,14 @@ console.log("etat actuel de la variable connected : ", connected)
                     </div>
                 </nav>
 
-                <div class=" flex justify-center ">
-                    <customButton to="/register" >Sign up</customButton>
+                <div class="flex justify-center">
+                    <customButton v-if='!connected' to="/register" >Sign up</customButton>
+                    <customButton v-if='connected' to="/login"  @click="logout" >Log out</customButton>
                     <button class=" md:hidden ml-2 p-2 text-white" @click='toggleMobileMenu'>
                       <Bars3Icon class=" h-6 w-6 text-gray-700" />
                     </button>
+                    
+                    
                 </div>
 
                     
