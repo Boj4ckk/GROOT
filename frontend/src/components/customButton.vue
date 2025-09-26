@@ -5,13 +5,11 @@
     import { computed, ref } from 'vue';
     import { defineProps } from 'vue';
 
-    const router = useRouter() 
+  
     const twitokstore = useTwitokStore()
 
-    const logout = () => {
-    router.push("/login")
-    }
-    const connected = computed(() => twitokstore.authorizedConnection)
+    
+ 
     
 
     const props = defineProps({
@@ -66,7 +64,7 @@
     "
     :class="[backgroundColor, borderColor, textColor, sizeClasses]">
         <slot></slot>
-        <input v-if="connected" type="submit" @click="logout" value="Logout">
+        
     </div>
     </router-link>
     
