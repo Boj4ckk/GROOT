@@ -46,18 +46,18 @@ const connect = async () => {
              <form class="flex flex-col justify-between  md:px-64 animate-fade-in-up" action="">
                  <div class=" flex flex-col px-4 py-1 items-center ">
                     <div class=" w-64 md:w-96 font-inter font-light text-[15px] md:text-[20px]">Email</div>
-                    <input class='rounded-lg py-1 w-64 md:w-96 input-field border-1 border-black px-2' type="text" v-model="username"  required  >
+                    <input class='rounded-lg py-1 w-64 md:w-96 input-field border-1 border-black px-2' type="text" v-model="user_email"  required  >
                 </div>
                 <div class="flex flex-col px-4 py-1 items-center pb-5  ">
                     <div class=" w-64 md:w-96 font-inter font-light text-[15px] md:text-[20px]">Password</div>
-                    <input class='rounded-lg py-1 w-64 md:w-96 input-field border-1 border-black px-2'  type="password" v-model="password"  required >
+                    <input class='rounded-lg py-1 w-64 md:w-96 input-field border-1 border-black px-2'  type="password" v-model="user_password"  required >
                 </div>
               
                
                 
                 
             </form>
-            <input type="submit" @click.prevent="insert_user()" class="border-1 border-black w-48 md:w-64 py-1 md:text-[20px] animate-fade-in-up" value='Register'> <!-- prevent c pour éviter que la page se recharge a chauqe fois qu'on soumet le form -->
+            <input type="submit" @click.prevent="connect()" class="border-1 border-black w-48 md:w-64 py-1 md:text-[20px] animate-fade-in-up" value='Login'> <!-- prevent c pour éviter que la page se recharge a chauqe fois qu'on soumet le form -->
 
          <router-link class="no-underline pt-2 text-black font-inter font-extralight text-[12px] md:text-[18px] animate-fade-in-up" to="register">Not registered ? Sign up</router-link>
         </div>
