@@ -16,7 +16,7 @@ const connect = async () => {
         const response = await axios.post('/login', dataToSend)
         console.log("tentative de connexion de l'user : ", response.data)
         twitokStore.autorized()
-        router.push('studio')
+        router.push('studio/filtrate')
     }
     catch (error) {
         console.error("erreur lors de la requete... ", error)
