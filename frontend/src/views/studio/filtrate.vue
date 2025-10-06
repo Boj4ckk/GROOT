@@ -1,220 +1,281 @@
 <script setup>
-
-
-import { useTwitokStore } from '@/store/twitokStore';
-
 import axios from 'axios';
 import { ref } from 'vue';
+import apiClient from '@/api';
 import { useRouter } from 'vue-router';
-
-const TwitokStore = useTwitokStore() // import store
-const router = useRouter() // import router to redirect into tiktok page after editing
-
-
-// retrieve clips url fetched in studio page
-const objet_clipsUrls = TwitokStore.clipsUrls_Returned
-console.log("obj :" ,objet_clipsUrls)
+import { computed } from 'vue';
+import router from '@/router';
+import { useTwitokStore } from '@/store/twitokStore';
+import State_bar from '@/components/state_bar.vue';
+import StudioHeader from '@/components/studioHeader.vue';
+import { watch } from 'vue';
 
 
-//clips var which will dynamicly store clips to edit.
-const clips = ref([])
+const twitokStore = useTwitokStore()
 
-//Dynamicly store the clicked index of the clip (current clip to edit)
-const selectedClipIndex = ref(null);
+const streamer_name = ref("talmo")
+const game = ref([""])
+const min_views = ref(0)
+const max_views = ref(100)
+// const min_duration = ref(0)
+const duration = ref(60)
+const startDate = ref("2024-01-01") // formater 
+const endDate = ref("2025-01-01") // formater
+const number_of_clips = ref(1) 
+const chargement = ref(false)
 
-//Dynamicly store edited clips.
-const edited_clip = ref([])
+const gameInput = ref(""); // Pour la saisie
+const gameSuggestions = ref([]);
 
-//Dynamcly store the current video (video displayed in the leftside of the webpage)
 
-//Editing choices
-const webcam_detection = ref(false);//Dynamicly store the editing choice for the webcam detection.
-const clip_format = ref("portrait")//Dynamcly store the clip_format for editing.
 
-// function to retrieve clips for their stored urls.
-const getClips = async () => {
-   
+const getClips = async() => {
+    chargement.value = true
     try {
-        for (let clip of objet_clipsUrls) {
-           
-            clips.value.push(clip.url)
+        if (twitokStore.already_upload == 0) {
+            console.log(number_of_clips.value)
+            console.log("\naucun clip upload jusqu'ici. => On ajoute 1 au chiffre rentré par l'utilisateur\n")
+            
            
         }
+        else {
+            console.log("\nDes clips ont deja été uploadé. => On ajoute 1 au nombre de clip rentré par l'utilisateur.\n")
+         
+        }
+        const dataToSend = {
+            
+             streamer_name:streamer_name.value,
+             game: game.value, min_views:min_views.value, 
+             max_views:max_views.value,
+             min_views:min_views.value,
+             max_duration:duration.value,
+             min_date_release:startDate.value,
+             max_date_release:endDate.value,
+             number_of_clips:number_of_clips.value,
+        }
+        console.log('Tentative de récupératon des clips [avant requete]')
+        
+
+        const response = await axios.post("/recup_infos_clips", dataToSend, {withCredentials: true})
+        console.log("Tentative d'envoie des informations sur les clips a récupérer...")
+        console.log("voici le streamer qu'on tente de recup les clips", dataToSend.streamer_name)
+        try {
+            const clipsUrls_returned = await axios.get("/send_clips_urls",{withCredentials: true})
+            console.log("voici ce que nous a retourné l'api : ", clipsUrls_returned.data)
+            if (Array.isArray(clipsUrls_returned.data.clipsUrls) && clipsUrls_returned.data.clipsUrls.length === 0){
+                console.log("aucune vidéo trouvé pour le STREAMER", dataToSend.streamer_name)
+                alert(`Aucun vidéo trouvé pour le streamer ${dataToSend.streamer_name} avec les informations que vous avez saisi. `)
+                chargement.value = false
+                router.replace('studio/filtrate')
+                return
+            }
+            
+            twitokStore.setclipsUrls_Returned(clipsUrls_returned.data)
+            
+            console.log("clipsReterned du STORE : ", twitokStore.clipsUrls_Returned)
+        }
+        catch(err){
+            console.error('Impossible de récupérer les clips de neuilles', err)
+            chargement.value = false
+            router.push('/studio')
+        }
+        chargement.value = false
+        router.push('/studio/clip_selection')
     }
     catch (error) {
-        console.error("erreur lorsqu'on a été cherché la vidéo finale", error)
+        console.error('erreur lors de la récupération des clips...', error)
+        alert("impossible de récuperer les clips")
+        chargement.value = false
+
+        // return jsonify({"error": "Clips not retrieved"})
     }
-    return clips
-}
-getClips() 
-
-
-const preview_video = ref(clips.value[0]);
-
-// Getter/ Setter - for current video to edit(displayed in the left side of the web page)
-function set_preview_video(video) { //SETTER
-    preview_video.value = video;
+    // return jsonify({"message": "Clips retrieved successfully", "clips": data})
 }
 
-function get_preview_video(){ //GETTER
-    return preview_video.value;
-}
-
-//Handle the click on one displayed clip the select it and his index.
-const handleVideoClip = (video,index) => {
-    set_preview_video(video);
-    selectedClipIndex.value = index
-   
+const fetchGames = async (query) => {
+  if (!query) {
+    gameSuggestions.value = [];
+    return;
+  }
+  try {
+    const resp = await axios.get(`/search_games?q=${query}`);
+    console.log(resp.data.games);
+    gameSuggestions.value = resp.data.games;
+  } catch (e) {
+    gameSuggestions.value = [];
+  }
 };
-// Handle submit clip after chosing preferences for editing.
-const handleClipSubmit = () => {
-    
-    clips.value.splice(selectedClipIndex.value,1)//remove the sumbited clip from the non-editing clips liste (right side of the page carousel)
-    set_preview_video(clips.value[0])//automaticaly set a new clips for the selected clips.    
+
+watch(gameInput, (newVal) => {
+  fetchGames(newVal);
+});
+
+
+
+
+
+const formatDate = (date) => {
+  return new Date(date).toLocaleDateString('fr-FR', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  })
 }
 
-// handle sumbit form
-const handleform = async () => {
-    // prepare payload (clip to edit and preferences to pass to videoProcessor to edit)
-    
-    const payload = {
-        webcam_detection : webcam_detection.value,
-        clip_format : clip_format.value,
-        clip_path : get_preview_video()
-    }; 
-    console.log(payload)
-    try{
-      
-        handleClipSubmit() // call the handlesubmit to update the dynamic state of refs.
-        console.log("after handleSubmit")
-        const response = await axios.post("/api/process_clip", payload)
-        //retrive edited clips urls.
-        console.log("after response")
-        const data = await response.json;
-        TwitokStore.setEditedClipUrl(data)
-        if(clips.value.length == 0){
-            router.push('/tiktokPost') // if all the avalaible clips have been submtied, redirect to 'Studio' (faut changer par la page post sur tiktok quand on l'aura)
-        }
-        console.log("Changement de twitokStore.already_upload, tentative pour avoir les bons nombre de clips...")
-        TwitokStore.setAlreadyUpload()
-        console.log("twitokStore.editedClipsUrl : ",TwitokStore.editedClipsUrl)
-    }
-    catch(error) {
-        console.log("erreur",  error)
-    }    
-}
-
+const daysDifference = computed(() => {
+  if (!startDate.value || !endDate.value) return 0
+  const start = new Date(startDate.value)
+  const end = new Date(endDate.value)
+  return Math.ceil((end - start) / (1000 * 60 * 60 * 24))
+})
 </script>
 
-<template>
+<template>, 
+    <studioHeader/> 
+    
+    <div class=" px-2 pt-20 md:pt-5 "> <!-- body -->
+        <div class=""> <!-- formulaire -->
+            <form action="">
 
-    <div class="filtrate-container">
-
-        <div class="video-container">
-            <video v-for="(clip, index) in clips" :key="index" :src="clip"  class="video"  @click="handleVideoClip(clip,index)"></video>
-        </div>
-
-        <div class="preview-container">
-            <video :src="preview_video"  controls class="preview_video"></video>
-
-            <div class="edit_params_container">
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" v-model="webcam_detection">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Web cam détection</label>
+                <div class=" flex flex-col justify-center items-center px-2">
+                    <div  class="  w-80 md:w-[700px] font-inter font-light text-[15px] md:text-[20px] md:font-medium ">Streamer's name</div>
+                    <input class="rounded-lg py-1 h-[30px] w-80 md:w-[700px]  input-field border-1 border-black px-3 ml-3 font-inter text-[20px]" type="text" id="streamer_name" name="streamer_name" v-model="streamer_name">
                 </div>
-
-                <div class="video_format_container">
-                    <div class="video_format_container_title">
-                        <h6>Video format</h6>
-                    </div>
-                    
-                    <div class="video_format_check_container">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" v-model="clip_format" value="portrait" checked>
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                portrait
-                            </label>
-
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" v-model="clip_format" value="landscape" checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                landscape
-                            </label>
-                        </div>
-                    </div>
-
-                <button type="submit" class="sumbitbutton" @click="handleform()">soumettre</button>
                 
-                
+                <div class=" flex flex-col justify-center items-center px-2 py-2">
+                    <div  class="  w-80 md md:w-[700px] font-inter font-light text-[15px] md:text-[20px] md:font-medium ">Game</div>
+                    <input class="rounded-lg py-1 h-[30px] w-80 md:w-[700px] input-field border-1 border-black px-3 ml-3 font-inter text-[20px]" type="text" id="game" name="game" list="game-list" v-model="gameInput">
+                    <datalist id="game-list">
+                        <option v-for="g in gameSuggestions" :key="g" :value="g">{{ g }}</option>
+                    </datalist>
                 </div>
                
+                <div class=" flex flex-col px-2 md:pt-3  md:justify-center md:items-center ">
+                    <div class=" flex items-end px-1 md:w-[700px] md:font-medium md:text-[20px] font-inter">
+                        <div class='font-inter'>Duration</div>
+                        <div class='font-inter text-[12px] px-1'>in sec</div>
+                    </div>
+                    <div class="w-80 md:w-1/2 ml-2 relative ">
+                        <!-- Valeur flottante -->
+                        <div 
+                        class="absolute -top-8 bg-black text-white px-2 py-1 rounded text-sm transform -translate-x-1/2 transition-all duration-200"
+                        :style="{ left: `${(duration / 90) * 100}%` }"
+                        >
+                        {{ duration }}s
+                        </div>
+                        
+                        <!-- Container du slider -->
+                        <div class="relative w-full h-[20px] bg-white border-2 border-gray-300 rounded-full overflow-hidden">
+                        <!-- Partie remplie en noir -->
+                        <div 
+                            class="absolute left-0 top-0 h-full bg-black transition-all duration-200"
+                            :style="{ width: `${(duration / 90) * 100}%` }"
+                        ></div>
+                        
+                        <!-- Input invisible par-dessus -->
+                        <input 
+                            type="range" 
+                            v-model="duration"
+                            min="0" 
+                            max="90"
+                            step="1"
+                            class="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                        >
+                        </div>
+                        
+                        <!-- Marqueurs de temps en bas -->
+                        <div class="flex justify-between text-xs text-gray-600 mt-2 md:text-[15px] font-inter">
+                        <span>0s</span>
+                        <span>45s</span>
+                        <span>90s</span>
+                        </div>
+                    </div>
+                    
+                </div>
                 
-            </div>
+                <div class=" flex flex-col px-3 md:w-full ">
+                    <div class=" md:w-[730px] md:flex md:justify-center md:font-medium text-[20px] font-inter">View's</div>
+                    <div class="px-3 flex  justify-between  w-4/5 items-center  md:justify-center md:items-center md:space-x-10">
+                        <div class="flex flex-row justify-center items-center">
+                             <div class=" font-inter font-light text-[15px] md:text-[15px] ">Min</div>
+                             <input class="rounded-lg py-1 h-[27px] w-2/4 md:w-[93px] md:h-[35px] input-field border-1 border-black px-2 ml-1" type="number" id="views_min" name="views_min" min="0" v-model="min_views">
+                        </div>
+                       
+                        <div class="flex flex-row justify-center items-center ">
+                            <div class=" font-inter font-light text-[15px] md:text-[15px] ">Max</div>
+                            <input class="rounded-lg py-1 h-[27px] w-2/4  md:w-[93px] md:h-[35px] input-field border-1 border-black px-2 ml-1" type="number" id="views_min" name="views_min" min="0" v-model="max_views">
+                        </div>
+                        
+                    </div>
+                        
+                </div>
+                
+
+        <div class="px-3  md:flex flex-col md:items-center md:pt-5">
+            <label class="font-inter   w-[700px] md:font-medium md:text-[20px] md:mb-1 md:justify-start md:flex">
+                Release Date
             
+            </label>
+            
+            <!-- Container unifié -->
+            <div class="flex items-center border border-gray-300  md:w-1/2 md:px-2 ">
+            <!-- Date de début -->
+                    <div class="flex-1  py-2">
+                        <label class="block text-xs text-gray-500 mb-1 md:text-[15px]">Start date</label>
+                        <input 
+                        type="date"
+                        v-model="startDate"
+                        class="w-5/6 border-1  outline-none text-sm"
+                        >
+                    </div>
+                    
+                    <!-- Séparateur -->
+                    <div class="px-2 text-gray-400">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Date de fin -->
+                    <div class="flex-1 px-3 py-2">
+                        <label class="block text-xs text-gray-500 mb-1 md:text-[15px]">End date</label>
+                        <input 
+                        type="date"
+                        v-model="endDate"
+                        :min="startDate"
+                        class="w-full border-none outline-none text-sm"
+                        >
+                    </div>
+            </div>
+                    
         </div>
-
-
+        <div class=" flex flex-col items-center pt-2 w-full ">
+            <div class='pt-2 mr-10 flex justify-around md:justify-start md:px-5 md:w-1/2 '>
+                <div class="flex items-center  md:text-[20px] md:font-medium ">
+                    <div class="font-inter">Number of clips</div>
+                    <div class="text-sm md:text-lg px-2 font-thin md:font-light">(max 10)</div>
+                </div>
+                <input class='border-1 border-black rounded-lg px-1 md:w-[80px] md:h-[30px]' type="number" min="1" max="10" id="number_of_clips" name="number_of_clips" v-model="number_of_clips" value="1">
+            </div>
+        </div>
+               
+                    
+                    
+                   
+               
+               <div class=" flex justify-center pt-5">
+                
+                    <input class="border-1 border-black px-4 rounded-sm md:w-[131px] md:h-[40px] md:text-[18px] md:font-medium" type="submit" value="Find" @click.prevent="getClips()">
+                 
+                    
+                </div>
+                
+                
+            </form>
+            <div v-if="chargement">
+                <br><br>
+                <p v-if="chargement"> Vos videos sont en cours de téléchargement... </p>
+            </div>
+        </div>
     </div>
-
 </template>
-<style scoped>
-    .filtrate-container{
-        padding: 20px;
-       
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-    }
-    .video-container {
-    
-        display: flex;
-        flex-direction: column; /* pour une disposition verticale */
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
-        width: 25%;
-    }
-    .video{
-
-        padding-top: 2px;
-        width: 90%;
-        height: 90%;
-        display: flex;
-       
-    }
-    .preview-container{
-        
-        display: flex;
-        width: 70%;
-        padding: 10px;
-       
-        justify-content: space-evenly;
-     
-        
-    }
-    .preview_video{
-        
-        width: 50%;
-        height: 50%;
-
-    }
-    .edit_params_container{
-        margin-top: 70px;
-        
-        width: 40%;
-        height: 40%;
-    
-
-    }
-  
-    .video_format_check_container{
-        display: flex;
-        justify-content: row;
-        justify-content: space-evenly;
-       
-    }
-    
- 
-</style>
