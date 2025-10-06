@@ -45,7 +45,7 @@ console.log("etat actuel de la variable connected : ", connected)
 
                 <nav id="mainNav" class="hidden lg:flex w-1/2 max-w-7xl justify-center">
                     <div class="flex space-x-6">
-                        <redirection-link to="/studio" class=" transform transition-transform duration-300 hover:scale-105">Studio</redirection-link>
+                        <redirection-link to="/studio/filtrate" class=" transform transition-transform duration-300 hover:scale-105">Studio</redirection-link>
                         <redirection-link to="/help" class=" transform transition-transform duration-300 hover:scale-105">Help</redirection-link>
                         <redirection-link to="/pricing" class=" transform transition-transform duration-300 hover:scale-105">Pricing</redirection-link>
                     </div>
