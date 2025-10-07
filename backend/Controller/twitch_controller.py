@@ -49,3 +49,16 @@ class TwitchController():
                 "message" :"clip added !",
 
             }), 201
+
+    def search_games():
+        query = request.args.get('q', '')
+        twitch_service = TwitchService()
+        games = twitch_service.twitch_api.getGames(query)
+        return jsonify({"games": games})
+    
+    
+    def search_streamers():
+        query = request.args.get('q', '')
+        twitch_service = TwitchService()
+        streamers = twitch_service.twitch_api.getStreamers(query)
+        return jsonify({"streamers": streamers})
