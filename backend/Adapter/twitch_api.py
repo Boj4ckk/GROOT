@@ -129,3 +129,24 @@ class TwitchApi:
             return response.json().get("data", [])
         logging.error(f"Failed to fetch clips for user {userId}: {response.text}")
         return []
+    
+    def getGames(self, query):
+
+        url = f"{self.BASE_URL}/search/categories"
+        params = {"query": query}
+        response = requests.get(url, headers=self.getHeaders(), params=params)
+        if response.status_code == 200:
+            data = response.json()
+            return [g['name'] for g in data.get('data', [])]
+        logging.error(f"Failed to fetch games for query {query}: {response.text}")
+        return []
+    
+    def getStreamers(self, query):
+        url = f"{self.BASE_URL}/search/channels"
+        params = {"query": query}
+        response = requests.get(url, headers=self.getHeaders(), params=params)
+        if response.status_code == 200:
+            data = response.json()
+            return [s['display_name'] for s in data.get('data', [])]
+        logging.error(f"Failed to fetch streamers for query {query}: {response.text}")
+        return []
