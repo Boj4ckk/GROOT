@@ -14,7 +14,7 @@ import { watch } from 'vue';
 const twitokStore = useTwitokStore()
 
 const streamer_name = ref("talmo")
-const game = ref([""])
+const game = ref([])
 const min_views = ref(0)
 const max_views = ref(100)
 // const min_duration = ref(0)
@@ -24,8 +24,20 @@ const endDate = ref("2025-01-01") // formater
 const number_of_clips = ref(1) 
 const chargement = ref(false)
 
+
+const streamerInput = ref(""); // Pour la saisie
+const streamerSuggestions = ref([]);
+const streamerError = ref("");
+const limitedStreamerSuggestions = computed(() => streamerSuggestions.value.slice(0, 10));
+
+
+
 const gameInput = ref(""); // Pour la saisie
+const gameError = ref(""); // Pour les messages d'erreur
 const gameSuggestions = ref([]);
+const limitedGameSuggestions = computed(() => gameSuggestions.value.slice(0, 10));
+
+
 
 
 
@@ -92,6 +104,52 @@ const getClips = async() => {
     // return jsonify({"message": "Clips retrieved successfully", "clips": data})
 }
 
+const onGameInputKeydown = (e) => {
+  if (e.key === 'Enter' && gameInput.value.trim() !== '') {
+    e.preventDefault();
+    const val = gameInput.value.trim();
+    if (
+      gameSuggestions.value.includes(val) &&
+      !game.value.includes(val)
+    ) {
+      if (game.value.length < 5) {
+        game.value.push(val);
+        gameError.value = "";
+      } else {
+        gameError.value = "Maximum 5 games allowed.";
+      }
+    } else if (!gameSuggestions.value.includes(val)) {
+      gameError.value = "This game is not in the list.";
+    }
+    gameInput.value = '';
+    gameSuggestions.value = [];
+  }
+};
+const fetchStreamers = async (query) => {
+
+  if (!query) {
+    console.log("no")
+    streamerSuggestions.value = [];
+    return;
+  }
+  try {
+    console.log("yes")
+    const resp = await axios.get(`/search_streamers?q=${query}`);
+    console.log(resp);
+    streamerSuggestions.value = resp.data.streamers;
+  } catch (e) {
+    console.log("re")
+    streamerSuggestions.value = [];
+  }
+};
+
+watch(streamerInput, (newVal) => {
+  fetchStreamers(newVal);
+});
+
+
+
+
 const fetchGames = async (query) => {
   if (!query) {
     gameSuggestions.value = [];
@@ -106,6 +164,7 @@ const fetchGames = async (query) => {
   }
 };
 
+// Surveille les changements dans gameInput et fetch les suggestions de jeux
 watch(gameInput, (newVal) => {
   fetchGames(newVal);
 });
@@ -114,20 +173,8 @@ watch(gameInput, (newVal) => {
 
 
 
-const formatDate = (date) => {
-  return new Date(date).toLocaleDateString('fr-FR', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric'
-  })
-}
 
-const daysDifference = computed(() => {
-  if (!startDate.value || !endDate.value) return 0
-  const start = new Date(startDate.value)
-  const end = new Date(endDate.value)
-  return Math.ceil((end - start) / (1000 * 60 * 60 * 24))
-})
+
 </script>
 
 <template>, 
@@ -137,17 +184,52 @@ const daysDifference = computed(() => {
         <div class=""> <!-- formulaire -->
             <form action="">
 
-                <div class=" flex flex-col justify-center items-center px-2">
-                    <div  class="  w-80 md:w-[700px] font-inter font-light text-[15px] md:text-[20px] md:font-medium ">Streamer's name</div>
-                    <input class="rounded-lg py-1 h-[30px] w-80 md:w-[700px]  input-field border-1 border-black px-3 ml-3 font-inter text-[20px]" type="text" id="streamer_name" name="streamer_name" v-model="streamer_name">
+                <div class="flex flex-col justify-center items-center px-2">
+                    <div class="w-80 md:w-[700px] font-inter font-light text-[15px] md:text-[20px] md:font-medium">Streamer's name</div>
+                    <input
+                        class="rounded-lg py-1 h-[30px] w-80 md:w-[700px] input-field border-1 border-black px-3 ml-3 font-inter text-[20px]"
+                        type="text"
+                        id="streamer_name"
+                        name="streamer_name"
+                        v-model="streamerInput"
+                        @keydown="onStreamerInputKeydown"
+                        list="streamer-list"
+                        placeholder="talmo"
+                        autocomplete="off"
+                    >
+                    <div v-if="streamerError" class="text-red-500 text-sm mt-1">{{ streamerError }}</div>
+                    <datalist id="streamer-list">
+                        <option v-for="s in limitedStreamerSuggestions" :key="s" :value="s">{{ s }}</option>
+                    </datalist>
                 </div>
                 
                 <div class=" flex flex-col justify-center items-center px-2 py-2">
                     <div  class="  w-80 md md:w-[700px] font-inter font-light text-[15px] md:text-[20px] md:font-medium ">Game</div>
-                    <input class="rounded-lg py-1 h-[30px] w-80 md:w-[700px] input-field border-1 border-black px-3 ml-3 font-inter text-[20px]" type="text" id="game" name="game" list="game-list" v-model="gameInput">
+                    <input class="rounded-lg py-1 h-[30px] w-80 md:w-[700px] input-field border-1 border-black px-3 ml-3 font-inter text-[20px]" type="text" id="game" name="game" list="game-list" v-model="gameInput" @keydown="onGameInputKeydown" placeholder="Fortnite">
+                    <div v-if="gameError" class="text-red-500 text-sm mt-1">{{ gameError }}</div>
                     <datalist id="game-list">
-                        <option v-for="g in gameSuggestions" :key="g" :value="g">{{ g }}</option>
+                        <option v-for="g in limitedGameSuggestions" :key="g" :value="g">{{ g }}</option>
+                   
                     </datalist>
+                </div>
+
+                <div v-if="game.length && !(game.length === 1 && game[0] === '')" class=" flex  px-2 pt-3  md:justify-center md:items-center ">
+                    <div v-for="g in game" :key="g"
+                    class="relative border-1 rounded-lg border-black md:w-[110px] h-[45px] font-inter font-medium flex justify-center items-center ml-4 bg-gray-200"
+                    >
+                    <span
+                        class="truncate max-w-[90px] w-full flex justify-center items-center text-center"
+                        style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display:block;"
+                    >{{ g }}</span>
+                    <button
+                        @click.prevent="game.splice(game.indexOf(g), 1)"
+                        class="absolute -top-2 -right-2 bg-black text-white rounded-full w-6 h-6 flex items-center justify-center shadow hover:bg-red-700 transition-transform duration-150 hover:scale-105"
+                        aria-label="Supprimer"
+                        style="z-index:2;"
+                    >×</button>
+                    </div>
+
+                  
                 </div>
                
                 <div class=" flex flex-col px-2 md:pt-3  md:justify-center md:items-center ">
