@@ -9,11 +9,12 @@ import { useTwitokStore } from '@/store/twitokStore';
 import State_bar from '@/components/state_bar.vue';
 import StudioHeader from '@/components/studioHeader.vue';
 import { watch } from 'vue';
+import { onMounted, onUnmounted } from 'vue';
 
 
 const twitokStore = useTwitokStore()
 
-const streamer_name = ref("talmo")
+const streamer_name = ref("")
 const game = ref([])
 const min_views = ref(0)
 const max_views = ref(100)
@@ -104,6 +105,21 @@ const getClips = async() => {
     // return jsonify({"message": "Clips retrieved successfully", "clips": data})
 }
 
+const onStreamerInputKeydown = (e) => {
+  if (e.key === 'Enter' || e.key=='click' && streamerInput.value.trim() !== '') {
+    e.preventDefault();
+    const val = streamerInput.value.trim();
+    if (streamerSuggestions.value.includes(val)) {
+      streamer_name.value = val;
+      streamerError.value = "";
+    } else if (!streamerSuggestions.value.includes(val)) {
+      streamerError.value = "This streamer is not in the list.";
+    }
+    streamerInput.value = val;
+    streamerSuggestions.value = [];
+  }
+};
+
 const onGameInputKeydown = (e) => {
   if (e.key === 'Enter' && gameInput.value.trim() !== '') {
     e.preventDefault();
@@ -124,6 +140,19 @@ const onGameInputKeydown = (e) => {
     gameInput.value = '';
     gameSuggestions.value = [];
   }
+};
+
+const addGameFromSuggestion = (gameValue) => {
+  if (!game.value.includes(gameValue)) {
+    if (game.value.length < 5) {
+      game.value.push(gameValue);
+      gameError.value = "";
+    } else {
+      gameError.value = "Maximum 5 games allowed.";
+    }
+  }
+  gameInput.value = '';
+  gameSuggestions.value = [];
 };
 const fetchStreamers = async (query) => {
 
@@ -177,17 +206,17 @@ watch(gameInput, (newVal) => {
 
 </script>
 
-<template>, 
-    <studioHeader/> 
-    
-    <div class=" px-2 pt-20 md:pt-5 "> <!-- body -->
-        <div class=""> <!-- formulaire -->
-            <form action="">
+<template>
+  
+    <studio-header />
+    <div  class="content-under-header px-4 sm:px-6 lg:px-8 pt-[10vh] sm:pt-[18vh] md:pt-[6vh] lg:pt-[6vh] xl:pt-[5vh] 2xl:pt-[4vh] animate-fade-in-up max-w-7xl mx-auto  min-h-screen "> <!-- body -->
+        <div  class=" w-full h-full"> <!-- formulaire -->
+            <form v-if="!chargement" action="" class="space-y-4 sm:space-y-5">
 
-                <div class="flex flex-col justify-center items-center px-2">
-                    <div class="w-80 md:w-[700px] font-inter font-light text-[15px] md:text-[20px] md:font-medium">Streamer's name</div>
+                <div class="flex flex-col justify-center items-center w-full">
+                    <div class="w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl font-inter font-medium text-sm sm:text-base md:text-lg lg:text-xl">Streamer's name</div>
                     <input
-                        class="rounded-lg py-1 h-[30px] w-80 md:w-[700px] input-field border-1 border-black px-3 ml-3 font-inter text-[20px]"
+                        class="rounded-lg py-2 sm:py-3 h-6 sm:h-8 md:h-10 w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl input-field border border-black focus:border-black focus:ring-0 px-3 mt-2 ml-3 font-inter text-sm sm:text-base md:text-lg transition-all duration-200"
                         type="text"
                         id="streamer_name"
                         name="streamer_name"
@@ -197,57 +226,55 @@ watch(gameInput, (newVal) => {
                         placeholder="talmo"
                         autocomplete="off"
                     >
-                    <div v-if="streamerError" class="text-red-500 text-sm mt-1">{{ streamerError }}</div>
+                    <div v-if="streamerError" class="text-red-500 text-xs sm:text-sm mt-1 w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl">{{ streamerError }}</div>
                     <datalist id="streamer-list">
                         <option v-for="s in limitedStreamerSuggestions" :key="s" :value="s">{{ s }}</option>
                     </datalist>
                 </div>
                 
-                <div class=" flex flex-col justify-center items-center px-2 py-2">
-                    <div  class="  w-80 md md:w-[700px] font-inter font-light text-[15px] md:text-[20px] md:font-medium ">Game</div>
-                    <input class="rounded-lg py-1 h-[30px] w-80 md:w-[700px] input-field border-1 border-black px-3 ml-3 font-inter text-[20px]" type="text" id="game" name="game" list="game-list" v-model="gameInput" @keydown="onGameInputKeydown" placeholder="Fortnite">
-                    <div v-if="gameError" class="text-red-500 text-sm mt-1">{{ gameError }}</div>
+                <div class="flex flex-col justify-center items-center w-full">
+                    <div class="w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl font-inter font-medium text-sm sm:text-base md:text-lg lg:text-xl">Games</div>
+                    <input class="rounded-lg py-2 sm:py-3 h-6 sm:h-8 md:h-10 w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl input-field border border-black focus:border-black focus:ring-0 px-3 mt-2 ml-3 font-inter text-sm sm:text-base md:text-lg transition-all duration-200" type="text" id="game" name="game" list="game-list" v-model="gameInput" @keydown="onGameInputKeydown" placeholder="Fortnite">
+                    <div v-if="gameError" class="text-red-500 text-xs sm:text-sm mt-1 w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl">{{ gameError }}</div>
                     <datalist id="game-list">
-                        <option v-for="g in limitedGameSuggestions" :key="g" :value="g">{{ g }}</option>
+                        <option v-for="g in limitedGameSuggestions" :key="g" :value="g" @click=''>{{ g }}</option>
                    
                     </datalist>
                 </div>
 
-                <div v-if="game.length && !(game.length === 1 && game[0] === '')" class=" flex  px-2 pt-3  md:justify-center md:items-center ">
+                <div v-if="game.length && !(game.length === 1 && game[0] === '')" class="flex flex-wrap justify-center items-center gap-2 sm:gap-3 w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl mx-auto px-2">
                     <div v-for="g in game" :key="g"
-                    class="relative border-1 rounded-lg border-black md:w-[110px] h-[45px] font-inter font-medium flex justify-center items-center ml-4 bg-gray-200"
+                    class="relative border-1 border-black rounded-lg min-w-[80px] sm:min-w-[90px] md:min-w-[100px] lg:min-w-[110px] h-10 sm:h-11 md:h-12 font-inter font-medium flex justify-center items-center bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
                     >
                     <span
-                        class="truncate max-w-[90px] w-full flex justify-center items-center text-center"
+                        class="truncate max-w-[70px] sm:max-w-[80px] md:max-w-[90px] lg:max-w-[100px] w-full flex justify-center items-center text-center text-xs sm:text-sm md:text-base"
                         style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap; display:block;"
                     >{{ g }}</span>
                     <button
                         @click.prevent="game.splice(game.indexOf(g), 1)"
-                        class="absolute -top-2 -right-2 bg-black text-white rounded-full w-6 h-6 flex items-center justify-center shadow hover:bg-red-700 transition-transform duration-150 hover:scale-105"
+                        class="absolute -top-1 sm:-top-2 -right-1 sm:-right-2 bg-black hover:bg-red-600 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center text-xs shadow-md hover:shadow-lg transition-all duration-150 hover:scale-105"
                         aria-label="Supprimer"
                         style="z-index:2;"
                     >×</button>
                     </div>
-
-                  
                 </div>
                
-                <div class=" flex flex-col px-2 md:pt-3  md:justify-center md:items-center ">
-                    <div class=" flex items-end px-1 md:w-[700px] md:font-medium md:text-[20px] font-inter">
+                <div class="flex flex-col justify-center items-center w-full">
+                    <div class="w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl font-inter font-medium text-sm sm:text-base md:text-lg lg:text-xl flex items-center">
                         <div class='font-inter'>Duration</div>
-                        <div class='font-inter text-[12px] px-1'>in sec</div>
+                        <div class='font-inter text-xs sm:text-sm md:text-base px-1 pt-1 text-gray-600'>(in sec)</div>
                     </div>
-                    <div class="w-80 md:w-1/2 ml-2 relative ">
+                    <div class="w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl relative mt-4 ml-3">
                         <!-- Valeur flottante -->
                         <div 
-                        class="absolute -top-8 bg-black text-white px-2 py-1 rounded text-sm transform -translate-x-1/2 transition-all duration-200"
+                        class="absolute -top-8 sm:-top-10 bg-black text-white px-2 py-1 rounded text-xs sm:text-sm transform -translate-x-1/2 transition-all duration-200"
                         :style="{ left: `${(duration / 90) * 100}%` }"
                         >
                         {{ duration }}s
                         </div>
                         
                         <!-- Container du slider -->
-                        <div class="relative w-full h-[20px] bg-white border-2 border-gray-300 rounded-full overflow-hidden">
+                        <div class="relative w-full h-4 sm:h-5 md:h-6 bg-white border-2 border-gray-300 rounded-full overflow-hidden">
                         <!-- Partie remplie en noir -->
                         <div 
                             class="absolute left-0 top-0 h-full bg-black transition-all duration-200"
@@ -266,78 +293,71 @@ watch(gameInput, (newVal) => {
                         </div>
                         
                         <!-- Marqueurs de temps en bas -->
-                        <div class="flex justify-between text-xs text-gray-600 mt-2 md:text-[15px] font-inter">
+                        <div class="flex justify-between text-xs sm:text-sm md:text-base text-gray-600 mt-2 font-inter">
                         <span>0s</span>
                         <span>45s</span>
                         <span>90s</span>
                         </div>
                     </div>
-                    
                 </div>
                 
-                <div class=" flex flex-col px-3 md:w-full ">
-                    <div class=" md:w-[730px] md:flex md:justify-center md:font-medium text-[20px] font-inter">View's</div>
-                    <div class="px-3 flex  justify-between  w-4/5 items-center  md:justify-center md:items-center md:space-x-10">
-                        <div class="flex flex-row justify-center items-center">
-                             <div class=" font-inter font-light text-[15px] md:text-[15px] ">Min</div>
-                             <input class="rounded-lg py-1 h-[27px] w-2/4 md:w-[93px] md:h-[35px] input-field border-1 border-black px-2 ml-1" type="number" id="views_min" name="views_min" min="0" v-model="min_views">
+                <div class="flex flex-col justify-center items-center w-full">
+                    <div class="w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl font-medium text-sm sm:text-base md:text-lg lg:text-xl font-inter">View's</div>
+                        <div class="flex flex-row justify-start items-center w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl mt-3 ml-3 px-2">
+                            <div class="flex flex-row justify-center items-center gap-2">
+                                <div class="font-inter font-light text-sm sm:text-base md:text-lg">Min</div>
+                                <input class="rounded-lg py-1.5 sm:py-2 md:py-2.5 h-6 sm:h-8 md:h-10 w-16 sm:w-16 md:w-18 lg:w-20 input-field border border-black focus:border-black focus:ring-0 px-2 text-sm sm:text-base md:text-lg transition-all duration-200" type="number" id="views_min" name="views_min" min="0" v-model="min_views">
+                            </div>
+
+                            <div class="flex flex-row justify-center items-center gap-2 ml-2">
+                                <div class="font-inter font-light text-sm sm:text-base md:text-lg">Max</div>
+                                <input class="rounded-lg py-1.5 sm:py-2 md:py-2.5 h-8 sm:h-8 md:h-10 w-16 sm:w-16 md:w-18 lg:w-20 input-field border border-black focus:border-black focus:ring-0 px-2 text-sm sm:text-base md:text-lg transition-all duration-200" type="number" id="views_max" name="views_max" min="0" v-model="max_views">
+                            </div>
                         </div>
-                       
-                        <div class="flex flex-row justify-center items-center ">
-                            <div class=" font-inter font-light text-[15px] md:text-[15px] ">Max</div>
-                            <input class="rounded-lg py-1 h-[27px] w-2/4  md:w-[93px] md:h-[35px] input-field border-1 border-black px-2 ml-1" type="number" id="views_min" name="views_min" min="0" v-model="max_views">
-                        </div>
-                        
-                    </div>
-                        
                 </div>
                 
 
-        <div class="px-3  md:flex flex-col md:items-center md:pt-5">
-            <label class="font-inter   w-[700px] md:font-medium md:text-[20px] md:mb-1 md:justify-start md:flex">
+        <div class="flex flex-col justify-center items-center w-full">
+            <label class="font-inter w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl font-medium text-sm sm:text-base md:text-lg lg:text-xl mb-3">
                 Release Date
-            
             </label>
             
             <!-- Container unifié -->
-            <div class="flex items-center border border-gray-300  md:w-1/2 md:px-2 ">
+            <div class="flex flex-col sm:flex-row items-center border border-gray-300 rounded-lg w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl p-2 sm:p-3 md:p-4 gap-3 sm:gap-0 ml-3">
             <!-- Date de début -->
-                    <div class="flex-1  py-2">
-                        <label class="block text-xs text-gray-500 mb-1 md:text-[15px]">Start date</label>
+                    <div class="flex-1 w-full sm:w-auto ">
+                        <label class="block text-xs sm:text-sm md:text-base text-gray-500 mb-1 sm:mb-2">Start date</label>
                         <input 
                         type="date"
                         v-model="startDate"
-                        class="w-5/6 border-1  outline-none text-sm"
+                        class="w-full border-none outline-none text-sm sm:text-base focus:ring-0 rounded"
                         >
                     </div>
                     
                     <!-- Séparateur -->
-                    <div class="px-2 text-gray-400">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="px-2 text-gray-400 hidden sm:block">
+                        <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
                     </div>
                     
                     <!-- Date de fin -->
-                    <div class="flex-1 px-3 py-2">
-                        <label class="block text-xs text-gray-500 mb-1 md:text-[15px]">End date</label>
+                    <div class="flex-1 w-full sm:w-auto">
+                        <label class="block text-xs sm:text-sm md:text-base text-gray-500 mb-1 sm:mb-2">End date</label>
                         <input 
                         type="date"
                         v-model="endDate"
                         :min="startDate"
-                        class="w-full border-none outline-none text-sm"
+                        class="w-full border-none outline-none text-sm sm:text-base focus:ring-0 rounded"
                         >
                     </div>
             </div>
-                    
         </div>
-        <div class=" flex flex-col items-center pt-2 w-full ">
-            <div class='pt-2 mr-10 flex justify-around md:justify-start md:px-5 md:w-1/2 '>
-                <div class="flex items-center  md:text-[20px] md:font-medium ">
-                    <div class="font-inter">Number of clips</div>
-                    <div class="text-sm md:text-lg px-2 font-thin md:font-light">(max 10)</div>
-                </div>
-                <input class='border-1 border-black rounded-lg px-1 md:w-[80px] md:h-[30px]' type="number" min="1" max="10" id="number_of_clips" name="number_of_clips" v-model="number_of_clips" value="1">
+        <div class="flex flex-col justify-center items-center w-full">
+            <div class='flex flex-row items-center gap-2 w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl ml-3'>
+                <div class="font-inter font-medium text-sm sm:text-base md:text-lg lg:text-xl">Number of clips</div>
+                <div class="text-xs sm:text-sm md:text-base font-thin md:font-light text-gray-600">(max 10)</div>
+                <input class='border border-black focus:border-black focus:ring-0 rounded-lg px-3 py-2 w-16 sm:w-18 md:w-20 h-8 sm:h-8 md:h-10 text-sm sm:text-base md:text-lg text-center transition-all duration-200' type="number" min="1" max="10" id="number_of_clips" name="number_of_clips" v-model="number_of_clips" value="1">
             </div>
         </div>
                
@@ -345,19 +365,20 @@ watch(gameInput, (newVal) => {
                     
                    
                
-               <div class=" flex justify-center pt-5">
-                
-                    <input class="border-1 border-black px-4 rounded-sm md:w-[131px] md:h-[40px] md:text-[18px] md:font-medium" type="submit" value="Find" @click.prevent="getClips()">
-                 
-                    
+               <div class="flex justify-center w-full">
+                    <input class="border-1 border-gray-900 hover:border-gray-700 bg-white hover:bg-gray-50 active:bg-gray-100 px-6 sm:px-8 md:px-10 lg:px-12 py-2 sm:py-3 md:py-3.5 rounded-lg w-21 sm:w-30 md:w-34 lg:w-38 h-8 sm:h-10 md:h-12 text-sm sm:text-base md:text-lg lg:text-xl font-medium  hover:shadow-md focus:outline-none focus:ring-0 focus:border-black cursor-pointer pt-2 transition-all duration-150 hover:scale-105" type="submit" value="Find" @click.prevent="getClips()">
                 </div>
                 
                 
             </form>
-            <div v-if="chargement">
-                <br><br>
-                <p v-if="chargement"> Vos videos sont en cours de téléchargement... </p>
+            <div v-if="chargement" class="flex justify-center items-center w-full mt-6 sm:mt-8">
+                <div class="text-center">
+                    <div class="animate-spin rounded-full h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 border-b-2 border-gray-900 mx-auto mb-4"></div>
+                    <p class="text-sm sm:text-base md:text-lg font-inter text-gray-700">Vos vidéos sont en cours de téléchargement...</p>
+                </div>
             </div>
         </div>
     </div>
 </template>
+
+
