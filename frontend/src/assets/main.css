@@ -25,3 +25,153 @@
 .animate-fade-in-up{
     animation: fade-in-up 0.9s ease-out forwards;
 }
+
+
+
+ 
+/* Améliorations pour les petits écrans */
+@media (max-width: 640px) {
+  .input-field:focus {
+    transform: scale(1.02);
+  }
+}
+
+/* Améliorations pour les tablettes */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .input-field {
+    font-size: 16px;
+  }
+}
+
+/* Améliorations pour les grands écrans */
+@media (min-width: 1025px) {
+  .input-field:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Animation pour le loading spinner */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Amélioration du focus pour l'accessibilité */
+input:focus, button:focus {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+/* Responsive pour le slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+  border: none;
+}
+
+@media (max-width: 640px) {
+  input[type="range"]::-webkit-slider-thumb {
+    height: 16px;
+    width: 16px;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+  }
+}
+
+/* Cache les éléments qui passent sous le header */
+.header-overlay {
+  position: relative;
+  z-index: 40;
+}
+
+.content-under-header {
+  position: relative;
+  z-index: 10;
+}
+
+/* Style pour le header fixe */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: white;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Style pour la navbar fixe */
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  background: white;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Content sous la navbar */
+.content-under-navbar {
+  position: relative;
+  z-index: 5;
+}
+
+/* Cache la scrollbar pour tous les navigateurs */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Safari et Chrome */
+}
+
+/* Cache la scrollbar du body et html */
+html, body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Safari et Chrome */
+}
+
+/* Classe utilitaire pour cacher la scrollbar sur des éléments spécifiques */
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari et Chrome */
+}
