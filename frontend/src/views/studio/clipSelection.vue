@@ -6,121 +6,166 @@ import { useTwitokStore } from '@/store/twitokStore';
 import axios from 'axios';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-
+import { watch } from 'vue'
 import '../../components/studioHeader.vue'
 import StudioHeader from '../../components/studioHeader.vue';
 
 const TwitokStore = useTwitokStore() // import store
 const router = useRouter() // import router to redirect into tiktok page after editing
 
-
-// retrieve clips url fetched in studio page
-const objet_clipsUrls = TwitokStore.clipsUrls_Returned
-console.log("obj :" ,objet_clipsUrls)
-
-
-//clips var which will dynamicly store clips to edit.
+// Create a reactive local copy of clips from store
 const clips = ref([])
-
-//Dynamicly store the clicked index of the clip (current clip to edit)
-const selectedClipIndex = ref(null);
-
-//Dynamicly store edited clips.
+const selectedClipIndex = ref(0);
 const edited_clip = ref([])
-
-//Dynamcly store the current video (video displayed in the leftside of the webpage)
+const preview_video = ref('');
 
 //Editing choices
-const webcam_detection = ref(false);//Dynamicly store the editing choice for the webcam detection.
-const clip_format = ref("portrait")//Dynamcly store the clip_format for editing.
+const webcam_detection = ref(false);
+const clip_format = ref("portrait")
 
-// function to retrieve clips for their stored urls.
-const getClips = async () => {
-   
-    try {
-        for (let clip of objet_clipsUrls) {
-           
-            clips.value.push(clip.url)
-           
-        }
+// Initialize clips from store and set up initial preview
+const initializeClips = () => {
+    const storeClips = TwitokStore.clipsUrls_Returned
+    console.log("Store clips:", storeClips)
+    
+    if (storeClips && storeClips.length > 0) {
+        // Create local copy with just URLs for easier manipulation
+        clips.value = storeClips.map(clip => clip.url)
+        selectedClipIndex.value = 0
+        preview_video.value = clips.value[0]
+    } else {
+        clips.value = []
+        preview_video.value = ''
+        selectedClipIndex.value = null
     }
-    catch (error) {
-        console.error("erreur lorsqu'on a été cherché la vidéo finale", error)
-    }
-    return clips
 }
-getClips() 
 
+// Initialize on component mount
+initializeClips()
 
-const preview_video = ref(clips.value[0]);
+// Watch for store changes and reinitialize
+watch(
+    () => TwitokStore.clipsUrls_Returned,
+    (newClips) => {
+        console.log("Store clips changed:", newClips)
+        if (!newClips || newClips.length === 0) {
+            router.push("/studio/filtrate")
+        } else {
+            initializeClips()
+        }
+    },
+    { deep: true }
+)
 
-// Getter/ Setter - for current video to edit(displayed in the left side of the web page)
-function set_preview_video(video) { //SETTER
+// Handle clip selection
+const handleVideoClip = (video, index) => {
     preview_video.value = video;
-}
-
-function get_preview_video(){ //GETTER
-    return preview_video.value;
-}
-
-//Handle the click on one displayed clip the select it and his index.
-const handleVideoClip = (video,index) => {
-    set_preview_video(video);
-    selectedClipIndex.value = index
-   
+    selectedClipIndex.value = index;
 };
-// Handle submit clip after chosing preferences for editing.
-const handleClipSubmit = () => {
+
+// Remove clip from local state and update store
+const removeClipFromState = (clipPath) => {
+    // Remove from local clips array
+    clips.value = clips.value.filter(clip => clip !== clipPath)
     
-    clips.value.splice(selectedClipIndex.value,1)//remove the sumbited clip from the non-editing clips liste (right side of the page carousel)
-    set_preview_video(clips.value[0])//automaticaly set a new clips for the selected clips.    
+    // Update store with remaining clips
+    const remainingClipsObjects = clips.value.map(url => ({ url }))
+    TwitokStore.setclipsUrls_Returned(remainingClipsObjects)
+    
+    // Reassign preview video
+    if (clips.value.length > 0) {
+        // If current selected clip was removed, adjust index
+        if (selectedClipIndex.value >= clips.value.length) {
+            selectedClipIndex.value = clips.value.length - 1
+        }
+        preview_video.value = clips.value[selectedClipIndex.value]
+    } else {
+        preview_video.value = ''
+        selectedClipIndex.value = null
+    }
 }
 
-// handle sumbit form
-const handleform = async () => {
-    // prepare payload (clip to edit and preferences to pass to videoProcessor to edit)
-    
-    const payload = {
-        webcam_detection : webcam_detection.value,
-        clip_format : clip_format.value,
-        clip_path : get_preview_video()
-    }; 
-    console.log(payload)
-    try{
-      
-        handleClipSubmit() // call the handlesubmit to update the dynamic state of refs.
-        console.log("after handleSubmit")
-        const response = await axios.post("/api/process_clip", payload)
-        //retrive edited clips urls.
-        console.log("after response")
-        const data = await response.json;
-        TwitokStore.setEditedClipUrl(data)
-        if(clips.value.length == 0){
-            router.push('/tiktokPost') // if all the avalaible clips have been submtied, redirect to 'Studio' (faut changer par la page post sur tiktok quand on l'aura)
-        }
-        console.log("Changement de twitokStore.already_upload, tentative pour avoir les bons nombre de clips...")
-        TwitokStore.setAlreadyUpload()
-        console.log("twitokStore.editedClipsUrl : ",TwitokStore.editedClipsUrl)
+// Remove clip from blob storage
+const remove_clip_from_blob_storage = async (clip_path) => {
+    try {
+        const response = await axios.post("/delete_file_from_blob", { url: clip_path })
+        return response
+    } catch (error) {
+        console.error("Error deleting clip from blob storage:", error)
+        throw error
     }
-    catch(error) {
-        console.log("erreur",  error)
-    }    
+}
+
+// Handle form submission
+const handleform = async () => {
+    if (!preview_video.value) {
+        console.error("No clip selected for processing")
+        return
+    }
+
+    const payload = {
+        webcam_detection: webcam_detection.value,
+        clip_format: clip_format.value,
+        clip_path: preview_video.value
+    };
+    
+    console.log("Processing payload:", payload)
+    
+    try {
+        // Remove clip from state first
+        removeClipFromState(payload.clip_path)
+        
+        // Remove from blob storage
+        await remove_clip_from_blob_storage(payload.clip_path)
+        
+        // Process the clip
+        const response = await axios.post("/api/process_clip", payload)
+        const data = response.data // Fix: use response.data instead of response.json
+        
+        // Store edited clip URL
+        TwitokStore.setEditedClipUrl(data)
+        TwitokStore.setAlreadyUpload()
+        
+        console.log("Processed clip successfully")
+        console.log("Edited clips URL:", TwitokStore.editedClipsUrl)
+        
+        // Redirect if no more clips
+        if (clips.value.length === 0) {
+            router.push('/tiktokPost')
+        }
+        
+    } catch (error) {
+        console.error("Error processing clip:", error)
+    }
 }
 
 </script>
 
 <template>
     <StudioHeader/>
-
     
     <div class="filtrate-container">
-
         <div class="video-container">
-            <video v-for="(clip, index) in clips" :key="index" :src="clip"  class="video"  @click="handleVideoClip(clip,index)"></video>
+            <video 
+                v-for="(clip, index) in clips" 
+                :key="index" 
+                :src="clip" 
+                class="video" 
+                :class="{ 'selected': selectedClipIndex === index }"
+                @click="handleVideoClip(clip, index)"
+            ></video>
         </div>
 
         <div class="preview-container">
-            <video :src="preview_video"  controls class="preview_video"></video>
+            <video 
+                v-if="preview_video" 
+                :src="preview_video" 
+                controls 
+                class="preview_video"
+            ></video>
+            <div v-else class="no-video-message">
+                <p>Aucun clip disponible</p>
+            </div>
 
             <div class="edit_params_container">
                 <div class="form-check form-switch">
@@ -149,7 +194,14 @@ const handleform = async () => {
                         </div>
                     </div>
 
-                <button type="submit" class="sumbitbutton" @click="handleform()">soumettre</button>
+                <button 
+                    type="submit" 
+                    class="sumbitbutton" 
+                    :disabled="!preview_video"
+                    @click="handleform()"
+                >
+                    soumettre
+                </button>
                 
                 
                 </div>
@@ -158,11 +210,9 @@ const handleform = async () => {
             </div>
             
         </div>
-
-
     </div>
-
 </template>
+
 <style scoped>
     .filtrate-container{
         padding: 20px;
@@ -219,6 +269,26 @@ const handleform = async () => {
         justify-content: row;
         justify-content: space-evenly;
        
+    }
+    .video.selected {
+        border: 3px solid #007bff;
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    }
+    
+    .no-video-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 300px;
+        background-color: #f8f9fa;
+        border: 2px dashed #dee2e6;
+        border-radius: 8px;
+    }
+    
+    .sumbitbutton:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
     }
     
  
