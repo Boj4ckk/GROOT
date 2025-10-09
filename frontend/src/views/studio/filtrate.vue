@@ -15,7 +15,7 @@ import { onMounted, onUnmounted } from 'vue';
 const twitokStore = useTwitokStore()
 
 const streamer_name = ref("")
-const game = ref([])
+const game = ref(["Fortnite", "VALORANT"]) // Jeux par défaut
 const min_views = ref(0)
 const max_views = ref(100)
 // const min_duration = ref(0)
@@ -29,7 +29,8 @@ const chargement = ref(false)
 const streamerInput = ref(""); // Pour la saisie
 const streamerSuggestions = ref([]);
 const streamerError = ref("");
-const limitedStreamerSuggestions = computed(() => streamerSuggestions.value.slice(0, 10));
+const limitedStreamerSuggestions = computed(() => streamerSuggestions.value); // Pas de limite
+const showSuggestions = ref(false);
 
 
 
@@ -37,13 +38,14 @@ const gameInput = ref(""); // Pour la saisie
 const gameError = ref(""); // Pour les messages d'erreur
 const gameSuggestions = ref([]);
 const limitedGameSuggestions = computed(() => gameSuggestions.value.slice(0, 10));
-
-
+const showGameSuggestions = ref(false);
 
 
 
 const getClips = async() => {
     chargement.value = true
+
+
     try {
         if (twitokStore.already_upload == 0) {
             console.log(number_of_clips.value)
@@ -106,18 +108,39 @@ const getClips = async() => {
 }
 
 const onStreamerInputKeydown = (e) => {
-  if (e.key === 'Enter' || e.key=='click' && streamerInput.value.trim() !== '') {
+  if (e.key === 'Enter' && streamerInput.value.trim() !== '') {
     e.preventDefault();
     const val = streamerInput.value.trim();
     if (streamerSuggestions.value.includes(val)) {
-      streamer_name.value = val;
-      streamerError.value = "";
+      selectStreamer(val);
     } else if (!streamerSuggestions.value.includes(val)) {
       streamerError.value = "This streamer is not in the list.";
     }
-    streamerInput.value = val;
-    streamerSuggestions.value = [];
   }
+  if (e.key === 'Escape') {
+    showSuggestions.value = false;
+  }
+};
+
+const selectStreamer = (streamerName) => {
+  streamer_name.value = streamerName;
+  streamerInput.value = streamerName;
+  streamerError.value = "";
+  showSuggestions.value = false;
+  streamerSuggestions.value = [];
+};
+
+const onStreamerInputFocus = () => {
+  if (streamerSuggestions.value.length > 0) {
+    showSuggestions.value = true;
+  }
+};
+
+const onStreamerInputBlur = () => {
+  // Petit délai pour permettre le clic sur les suggestions
+  setTimeout(() => {
+    showSuggestions.value = false;
+  }, 150);
 };
 
 const onGameInputKeydown = (e) => {
@@ -128,17 +151,13 @@ const onGameInputKeydown = (e) => {
       gameSuggestions.value.includes(val) &&
       !game.value.includes(val)
     ) {
-      if (game.value.length < 5) {
-        game.value.push(val);
-        gameError.value = "";
-      } else {
-        gameError.value = "Maximum 5 games allowed.";
-      }
+      addGameFromSuggestion(val);
     } else if (!gameSuggestions.value.includes(val)) {
       gameError.value = "This game is not in the list.";
     }
-    gameInput.value = '';
-    gameSuggestions.value = [];
+  }
+  if (e.key === 'Escape') {
+    showGameSuggestions.value = false;
   }
 };
 
@@ -152,28 +171,48 @@ const addGameFromSuggestion = (gameValue) => {
     }
   }
   gameInput.value = '';
+  showGameSuggestions.value = false;
   gameSuggestions.value = [];
 };
+
+const onGameInputFocus = () => {
+  if (gameSuggestions.value.length > 0) {
+    showGameSuggestions.value = true;
+  }
+};
+
+const onGameInputBlur = () => {
+  // Petit délai pour permettre le clic sur les suggestions
+  setTimeout(() => {
+    showGameSuggestions.value = false;
+  }, 150);
+};
+
 const fetchStreamers = async (query) => {
 
   if (!query) {
-    console.log("no")
+ 
     streamerSuggestions.value = [];
     return;
   }
   try {
-    console.log("yes")
+ 
     const resp = await axios.get(`/search_streamers?q=${query}`);
-    console.log(resp);
+ 
     streamerSuggestions.value = resp.data.streamers;
   } catch (e) {
-    console.log("re")
+
     streamerSuggestions.value = [];
   }
 };
 
 watch(streamerInput, (newVal) => {
   fetchStreamers(newVal);
+  if (newVal && streamerSuggestions.value.length > 0) {
+    showSuggestions.value = true;
+  } else {
+    showSuggestions.value = false;
+  }
 });
 
 
@@ -196,6 +235,11 @@ const fetchGames = async (query) => {
 // Surveille les changements dans gameInput et fetch les suggestions de jeux
 watch(gameInput, (newVal) => {
   fetchGames(newVal);
+  if (newVal && gameSuggestions.value.length > 0) {
+    showGameSuggestions.value = true;
+  } else {
+    showGameSuggestions.value = false;
+  }
 });
 
 
@@ -207,39 +251,69 @@ watch(gameInput, (newVal) => {
 </script>
 
 <template>
-  
     <studio-header />
     <div  class="content-under-header px-4 sm:px-6 lg:px-8 pt-[10vh] sm:pt-[18vh] md:pt-[6vh] lg:pt-[6vh] xl:pt-[5vh] 2xl:pt-[4vh] animate-fade-in-up max-w-7xl mx-auto  min-h-screen "> <!-- body -->
         <div  class=" w-full h-full"> <!-- formulaire -->
-            <form v-if="!chargement" action="" class="space-y-4 sm:space-y-5">
+            <form v-if="!chargement" action="" class="space-y-2 sm:space-y-3">
 
                 <div class="flex flex-col justify-center items-center w-full">
                     <div class="w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl font-inter font-medium text-sm sm:text-base md:text-lg lg:text-xl">Streamer's name</div>
-                    <input
-                        class="rounded-lg py-2 sm:py-3 h-6 sm:h-8 md:h-10 w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl input-field border border-black focus:border-black focus:ring-0 px-3 mt-2 ml-3 font-inter text-sm sm:text-base md:text-lg transition-all duration-200"
-                        type="text"
-                        id="streamer_name"
-                        name="streamer_name"
-                        v-model="streamerInput"
-                        @keydown="onStreamerInputKeydown"
-                        list="streamer-list"
-                        placeholder="talmo"
-                        autocomplete="off"
-                    >
-                    <div v-if="streamerError" class="text-red-500 text-xs sm:text-sm mt-1 w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl">{{ streamerError }}</div>
-                    <datalist id="streamer-list">
-                        <option v-for="s in limitedStreamerSuggestions" :key="s" :value="s">{{ s }}</option>
-                    </datalist>
+                    <div class="relative w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl mt-2 ml-3">
+                        <input
+                            class="rounded-lg py-2 sm:py-3 h-6 sm:h-8 md:h-10 w-full input-field border border-black focus:border-black focus:ring-0 px-3 font-inter text-sm sm:text-base md:text-lg transition-all duration-200"
+                            type="text"
+                            id="streamer_name"
+                            name="streamer_name"
+                            v-model="streamerInput"
+                            @keydown="onStreamerInputKeydown"
+                            @focus="onStreamerInputFocus"
+                            @blur="onStreamerInputBlur"
+                            placeholder="talmo"
+                            autocomplete="off"
+                        >
+                        
+                        <!-- Liste de suggestions personnalisée -->
+                        <div v-if="showSuggestions && limitedStreamerSuggestions.length > 0" 
+                             class="absolute top-full left-0 right-0 bg-white border border-gray-300 rounded-lg mt-1 max-h-48 overflow-y-auto z-50 shadow-lg">
+                            <div v-for="suggestion in limitedStreamerSuggestions" 
+                                 :key="suggestion"
+                                 @click="selectStreamer(suggestion)"
+                                 class="px-3 py-2 hover:bg-gray-100 cursor-pointer text-sm sm:text-base border-b border-gray-100 last:border-b-0">
+                                {{ suggestion }}
+                            </div>
+                        </div>
+                    </div>
+                    <div v-if="streamerError" class="text-red-500 text-xs sm:text-sm mt-1 w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl ml-3">{{ streamerError }}</div>
                 </div>
                 
                 <div class="flex flex-col justify-center items-center w-full">
                     <div class="w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl font-inter font-medium text-sm sm:text-base md:text-lg lg:text-xl">Games</div>
-                    <input class="rounded-lg py-2 sm:py-3 h-6 sm:h-8 md:h-10 w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl input-field border border-black focus:border-black focus:ring-0 px-3 mt-2 ml-3 font-inter text-sm sm:text-base md:text-lg transition-all duration-200" type="text" id="game" name="game" list="game-list" v-model="gameInput" @keydown="onGameInputKeydown" placeholder="Fortnite">
-                    <div v-if="gameError" class="text-red-500 text-xs sm:text-sm mt-1 w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl">{{ gameError }}</div>
-                    <datalist id="game-list">
-                        <option v-for="g in limitedGameSuggestions" :key="g" :value="g" @click=''>{{ g }}</option>
-                   
-                    </datalist>
+                    <div class="relative w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl mt-2 ml-3">
+                        <input 
+                            class="rounded-lg py-2 sm:py-3 h-6 sm:h-8 md:h-10 w-full input-field border border-black focus:border-black focus:ring-0 px-3 font-inter text-sm sm:text-base md:text-lg transition-all duration-200" 
+                            type="text" 
+                            id="game" 
+                            name="game" 
+                            v-model="gameInput" 
+                            @keydown="onGameInputKeydown" 
+                            @focus="onGameInputFocus"
+                            @blur="onGameInputBlur"
+                            placeholder="Fortnite"
+                            autocomplete="off"
+                        >
+                        
+                        <!-- Liste de suggestions personnalisée -->
+                        <div v-if="showGameSuggestions && gameSuggestions.length > 0" 
+                             class="absolute top-full left-0 right-0 bg-white border border-gray-300 rounded-lg mt-1 max-h-48 overflow-y-auto z-50 shadow-lg">
+                            <div v-for="suggestion in gameSuggestions" 
+                                 :key="suggestion"
+                                 @click="addGameFromSuggestion(suggestion)"
+                                 class="px-3 py-2 hover:bg-gray-100 cursor-pointer text-sm sm:text-base border-b border-gray-100 last:border-b-0">
+                                {{ suggestion }}
+                            </div>
+                        </div>
+                    </div>
+                    <div v-if="gameError" class="text-red-500 text-xs sm:text-sm mt-1 w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl ml-3">{{ gameError }}</div>
                 </div>
 
                 <div v-if="game.length && !(game.length === 1 && game[0] === '')" class="flex flex-wrap justify-center items-center gap-2 sm:gap-3 w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl mx-auto px-2">
@@ -365,8 +439,14 @@ watch(gameInput, (newVal) => {
                     
                    
                
-               <div class="flex justify-center w-full">
-                    <input class="border-1 border-gray-900 hover:border-gray-700 bg-white hover:bg-gray-50 active:bg-gray-100 px-6 sm:px-8 md:px-10 lg:px-12 py-2 sm:py-3 md:py-3.5 rounded-lg w-21 sm:w-30 md:w-34 lg:w-38 h-8 sm:h-10 md:h-12 text-sm sm:text-base md:text-lg lg:text-xl font-medium  hover:shadow-md focus:outline-none focus:ring-0 focus:border-black cursor-pointer pt-2 transition-all duration-150 hover:scale-105" type="submit" value="Find" @click.prevent="getClips()">
+               <div class="flex justify-center w-full pt-6">
+                    <button 
+                        type="button"
+                        @click="getClips()"
+                        class="!bg-black hover:!bg-gray-600 !transition-colors !duration-200 w-40 md:w-56 py-2 md:py-3 md:text-[20px] !text-white font-medium rounded-lg"
+                    >
+                        Find
+                    </button>
                 </div>
                 
                 
