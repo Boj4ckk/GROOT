@@ -67,7 +67,7 @@ console.log("etat actuel de la variable connected : ", connected)
         <transition name="slide-down">
            <div v-if="isMobileMenuOpen" class="md:hidden">
                 <div class=" py-16 flex flex-col items-center bg-white min-h-screen w-full md:hidden absolute top-full left-0 right-0 z-40">
-                        <redirection-link @click='closeMobileMenu' to="/studio" class="py-2 font-medium text-2xl">Studio</redirection-link>
+                        <redirection-link @click='closeMobileMenu' to="/studio/filtrate" class="py-2 font-medium text-2xl">Studio</redirection-link>
                         <redirection-link @click='closeMobileMenu' to="/help" class="py-2 font-medium text-2xl">Help</redirection-link>
                         <redirection-link @click='closeMobileMenu' to="/pricing" class="py-2 font-medium text-2xl">Pricing</redirection-link>
                 </div>     
