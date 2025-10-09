@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from Routes.auth_routes import AuthRoutes
 from Routes.clip_routes import ClipRoutes
 from Routes.twitch_routes import TwitchRoutes
+from Routes.blob_routes import BlobRoutes
 
 load_dotenv(dotenv_path="backend/.env")
 
@@ -25,6 +26,7 @@ def create_app():
     app.register_blueprint(AuthRoutes.auth_bp)
     app.register_blueprint(TwitchRoutes.twitch_bp)
     app.register_blueprint(ClipRoutes.clip_bp)
+    app.register_blueprint(BlobRoutes.blob_bp)
     
     return app
 
