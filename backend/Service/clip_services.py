@@ -4,6 +4,7 @@ from sqlalchemy.exc import IntegrityError
 from werkzeug.security import generate_password_hash, check_password_hash
 from Service.blob_service import BlobStorageService
 from azure.storage.blob import ContainerClient
+import os
 
 class ClipServices:
     def __init__(self,db_session):
@@ -15,11 +16,10 @@ class ClipServices:
 
 
         clip_filename = f"clip_{clip_data['url'].split('/')[-1]}.mp4"
-
-        clip_blob_path = self.blob_service.upload_clip(
-            user_id=request.user_id,
+        fetched_clip_prefix = os.getenv("FETCHED_CLIP_BLOB_PREFIX")
+        clip_blob_path = self.blob_service.upload_in_blob(
             file_content=clip_data,
-            filename=clip_filename
+            blob_path=f"user_{request.user_id}/{fetched_clip_prefix}/{clip_filename}"
         )
         new_clip = Clip(
             clip_url = clip_data["url"],
