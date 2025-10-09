@@ -13,22 +13,38 @@ class BlobStorageService:
         self.account_name = os.getenv("AZURE_STORAGE_ACCOUNT_NAME")
         self.key = os.getenv("AZURE_STORAGE_KEY")
 
-    def upload_clip(self,user_id,file_content,filename):
+    def upload_in_blob(self,file_content,blob_path):
 
-        blob_path = f"user_{user_id}/fetched_clips/{filename}"
         blob_client = self.blob_service_client.get_blob_client(
             container=self.container_name,
             blob=blob_path
         )
-        # Obligatoire pour telecharger le clip issue de la page (twitch donne le lien vers la page twitch du clip pas l'objet clip en lui meme)
-        process = subprocess.Popen(
-            ["streamlink","--stdout",file_content["url"],"best"],
-            stdout=subprocess.PIPE
-        )
 
-        #enregistre dans le blob la sortie du process de streamlink (le clip video)
-        blob_client.upload_blob(process.stdout,overwrite=True)
-        return blob_path
+        try:
+            # Obligatoire pour telecharger le clip issue de la page (twitch donne le lien vers la page twitch du clip pas l'objet clip en lui meme)
+            process = subprocess.Popen(
+                ["streamlink","--stdout",file_content["url"],"best"],
+                stdout=subprocess.PIPE
+            )
+
+            #enregistre dans le blob la sortie du process de streamlink (le clip video)
+            blob_client.upload_blob(process.stdout,overwrite=True)
+            return {"success": True, "blob_path" : blob_path}
+        except Exception as e:
+            return {"succes": False, "error": str(e)}
+     
+    
+    def delete_file_in_blob(self,blob_path):
+        blob_client = self.blob_service_client.get_blob_client(
+            container=self.container_name,
+            blob=blob_path
+        )
+        try:
+            blob_client.delete_blob(delete_snapshots="include")
+            return {"success":True, "message": f"Blob {blob_path} Deleted !"}
+        except Exception as e:
+            return {"success": False, "message": f"Error {str(e)}"}
+
     
     def get_user_sas(self,user_id):
 
