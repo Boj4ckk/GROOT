@@ -39,6 +39,27 @@ class TwitchService:
             ]
 
         return clips_data
+    
+
+    def sort_streamers_list_by_followers(self,streamers_list):
+        streamers_followers_count = []
+
+        for streamer in streamers_list:
+            streamer_followers = self.twitch_api.getFollowerCount(streamer["id"])
+            if streamer_followers == None:
+                streamer_followers = 0
+            streamers_followers_count.append((streamer["display_name"],streamer_followers))
+
+        streamers_followers_count.sort(key=lambda x: x[1], reverse=True)
+        return [streamers_tuple[0] for streamers_tuple in streamers_followers_count]
+       
+
+
+
+        
+
+         
+         
         
         
     
