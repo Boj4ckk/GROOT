@@ -1,4 +1,3 @@
-
 from flask import jsonify, request
 from Service.twitch_service import TwitchService
 from Service.clip_services import ClipServices
@@ -50,6 +49,7 @@ class TwitchController():
 
             }), 201
 
+    @staticmethod
     def search_games():
         query = request.args.get('q', '')
         twitch_service = TwitchService()
@@ -57,8 +57,24 @@ class TwitchController():
         return jsonify({"games": games})
     
     
+    @staticmethod
     def search_streamers():
         query = request.args.get('q', '')
         twitch_service = TwitchService()
-        streamers = twitch_service.twitch_api.getStreamers(query)
-        return jsonify({"streamers": streamers})
+        un_sorted_streamers_list = twitch_service.twitch_api.getStreamers(query)
+   
+        return jsonify({"streamers": un_sorted_streamers_list})
+    
+    @staticmethod
+    def verify_streamer():
+        query = request.args.get('username', '')
+        if not query:
+            return jsonify({"exists": False, "error": "Username required"}), 400
+        
+        twitch_service = TwitchService()
+        streamers_list = twitch_service.twitch_api.getStreamers(query)
+        
+        # Vérifier si le nom exact existe dans la liste (insensible à la casse)
+        exists = any(streamer.lower() == query.lower() for streamer in streamers_list)
+        
+        return jsonify({"exists": exists})
