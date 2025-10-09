@@ -141,6 +141,18 @@ class TwitchApi:
         logging.error(f"Failed to fetch games for query {query}: {response.text}")
         return []
     
+    def getFollowerCount(self, userId):
+        url = f"{self.BASE_URL}/channels/followers"
+        params = {"broadcaster_id": userId}
+        response = requests.get(url, headers=self.getHeaders(), params=params)
+
+        if response.status_code == 200:
+            data = response.json()
+            total_followers = data.get("total",0)
+            return total_followers
+        logging.error(f"Failed to fetch followers count for user {userId}: {response.text}")
+        return None
+
     def getStreamers(self, query):
         url = f"{self.BASE_URL}/search/channels"
         params = {"query": query}
