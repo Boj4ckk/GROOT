@@ -8,5 +8,6 @@ class TwitchRoutes:
     twitch_bp.route("/recup_infos_clips",methods=["POST"])(TwitchController.fetch_clip)
     twitch_bp.route("/search_games",methods=["GET"])(TwitchController.search_games)
     twitch_bp.route("/search_streamers",methods=["GET"])(TwitchController.search_streamers)
+    twitch_bp.route("/verify_streamer",methods=["GET"])(TwitchController.verify_streamer)
 
 
