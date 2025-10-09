@@ -35,7 +35,7 @@ class TwitchService:
         if (len(games_id_list) > 0 ):
             clips_data = [
                  clip for clip in clips_data
-                 if clip["game_id"] in games
+                 if clip["game_id"] in games_id_list
             ]
 
         return clips_data
