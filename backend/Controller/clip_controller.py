@@ -1,10 +1,9 @@
 import logging
 import os
 from flask import request
-from Service.clip_services import ClipServices
+
 from Service.blob_service import BlobStorageService
-from flask import request, jsonify
-from config.azure_config import SessionLocal
+
 from middlewares.auth_middleware import jwt_required
 
 
