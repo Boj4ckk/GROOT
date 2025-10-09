@@ -50,10 +50,10 @@ const insert_user = async () => {
         </div>
 
         <div class=' flex flex-col justify-center items-center '>
-             <form class="flex flex-col justify-between  md:px-64 animate-fade-in-up" action="">
+             <form class="flex flex-col justify-between  md:px-64 animate-fade-in-up" @submit.prevent="insert_user()">
                  <div class=" flex flex-col px-4 py-1 items-center ">
                     <div class=" w-64 md:w-96 font-inter font-light text-[15px] md:text-[20px]">Email</div>
-                    <input class='rounded-lg py-1 w-64 md:w-96 input-field border-1 border-black px-2' type="text" v-model="username"  required  >
+                    <input class='rounded-lg py-1 w-64 md:w-96 input-field border-1 border-black px-2' type="text" v-model="username" placeholder="exemple@gmail.com" required  >
                 </div>
                 <div class=" flex flex-col px-4 py-1 items-center ">
                     <div class=" w-64 md:w-96 font-inter font-light text-[15px] md:text-[20px]">Password</div>
@@ -63,12 +63,13 @@ const insert_user = async () => {
                     <div class=" w-64 md:w-96 font-inter font-light text-[15px] md:text-[20px]">Re-enter Password</div>
                     <input class='rounded-lg py-1  w-64 md:w-96 input-field border-1 border-black px-2'  type="password" v-model="password"  required >
                 </div>
-              
-               
-                
-                
+                <div class="flex justify-center">
+                    <button type="submit" 
+                           class="!bg-black hover:!bg-gray-600 !transition-colors !duration-200 w-48 md:w-64 py-1 md:text-[20px] !text-white animate-fade-in-up">
+                        Register
+                    </button>
+                </div>
             </form>
-            <input type="submit" @click.prevent="insert_user()" class="submit-btn border-1 border-black w-48 md:w-64 py-1 md:text-[20px] animate-fade-in-up" value='Register'> <!-- prevent c pour éviter que la page se recharge a chauqe fois qu'on soumet le form -->
 
          <router-link class="no-underline pt-2 text-black font-inter font-extralight text-[12px] md:text-[18px] animate-fade-in-up" to="login">Already an account ?</router-link>
         </div>
