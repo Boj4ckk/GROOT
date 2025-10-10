@@ -16,7 +16,7 @@ import customButton from '../components/customButton.vue';
         </div>
 
         <div class=" flex flex-col justify-center items-center pt-10  animate-fade-in-up"> <!-- BOUTON -->
-            <customButton to="/help"
+            <customButton to="/studio/filtrate"
              backgroundColor="bg-black" 
              textColor="text-white"
              buttonSize="md"
