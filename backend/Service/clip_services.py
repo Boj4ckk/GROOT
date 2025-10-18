@@ -12,17 +12,17 @@ class ClipServices:
         self.blob_service =  BlobStorageService()
 
     
-    def download_and_store_clip(self,clip_data):
+    def download_and_store_clip(self,clip_data,user_id):
 
 
         clip_filename = f"clip_{clip_data['url'].split('/')[-1]}.mp4"
         fetched_clip_prefix = os.getenv("FETCHED_CLIP_BLOB_PREFIX")
         clip_blob_path = self.blob_service.upload_in_blob(
             file_content=clip_data,
-            blob_path=f"user_{request.user_id}/{fetched_clip_prefix}/{clip_filename}"
+            blob_path=f"user_{user_id}/{fetched_clip_prefix}/{clip_filename}"
         )
         new_clip = Clip(
-            clip_url = clip_data["url"],
+            blob_name = clip_blob_path["blob_path"],
             broadcaster_id = clip_data["broadcaster_id"],
             broadcaster_name = clip_data["broadcaster_name"],
             creator_id  = clip_data["creator_id"],
@@ -33,6 +33,7 @@ class ClipServices:
             date_creation = clip_data["created_at"],
             thumbnail_url = clip_data["thumbnail_url"],
             duration = clip_data["duration"],
+            user_id = user_id,
         )
         self.db.add(new_clip)
         try:
