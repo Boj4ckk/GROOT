@@ -41,7 +41,7 @@ class TwitchController():
             for clip in fetched_clips:
                 
                 clip_service = ClipServices(db)
-                clip = clip_service.download_and_store_clip(clip)
+                clip = clip_service.download_and_store_clip(clip,request.user_id)
                 
 
             return jsonify({
