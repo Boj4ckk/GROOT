@@ -1,15 +1,27 @@
 from flask import Flask
 from flask_cors import CORS
 from dotenv import load_dotenv
+
+
+
 from Routes.auth_routes import AuthRoutes
 from Routes.clip_routes import ClipRoutes
 from Routes.twitch_routes import TwitchRoutes
 from Routes.blob_routes import BlobRoutes
 
-load_dotenv(dotenv_path="backend/.env")
+from database  import Base
+from config.azure_config import engine
+
+from Model import user_model, clip_model
+
+
+
+
 
 def create_app():
     app = Flask(__name__)
+    
+    Base.metadata.create_all(bind=engine)
     
     # Configuration CORS améliorée
     CORS(app, 
