@@ -61,32 +61,26 @@ class BlobStorageService:
             "sas_url" : sas_url,
             "prefix" : f"user_{user_id}/"
         }
-    def get_user_fetched_clips(self,user_id):
-        sas_url = self.get_user_sas(user_id)["sas_url"]
-        url_prefix = self.get_user_sas(user_id)["prefix"]
 
-        container_client = ContainerClient.from_container_url(sas_url)
-        blobs = container_client.list_blobs(name_starts_with=f"user_{user_id}/fetched_clips/")
-        fetched_clips = []
-        for blob in blobs:
+    def generate_blob_sas_url(self, blob_name):
+        if not all([self.account_name, self.key, self.container_name, blob_name]):
+            print("Erreur: Informations manquantes")
+            return None
+        
+        try:
             sas_token = generate_blob_sas(
-                account_name="clipsstorage091283",  # Votre nom de compte
-                container_name="clips",
-                blob_name=blob.name,
-                account_key=self.key,  # Votre clé de compte
+                account_name=self.account_name,
+                container_name=self.container_name,
+                blob_name=blob_name,
+                account_key=self.key,
                 permission=BlobSasPermissions(read=True),
-                expiry=datetime.utcnow() + timedelta(minutes=15)  # Token valable 15 min
+                expiry=datetime.utcnow() + timedelta(hours=1)
             )
-            secure_url = f"https://clipsstorage091283.blob.core.windows.net/clips/{blob.name}?{sas_token}"
-            fetched_clips.append({
-                "name" : blob.name.replace(url_prefix,''),
-                "url": secure_url,
-                "size": blob.size,
-                "created_date": blob.creation_time
-
-            })
-          
-        return fetched_clips
-    
+            secure_url = f"https://{self.account_name}.blob.core.windows.net/{self.container_name}/{blob_name}?{sas_token}"
+            return secure_url
+        except Exception as e:
+            print(f"Erreur lors de la génération de l'url sas pour {blob_name}: {e}")
+            return None
+        
 
    
