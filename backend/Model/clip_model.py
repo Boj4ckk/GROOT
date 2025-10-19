@@ -14,9 +14,11 @@ class Clip(Base):
     creator_name = Column(String) 
     video_id = Column(String) 
     game_id = Column(String) 
+    title = Column(String)
     clip_language = Column(String) 
     date_creation = Column(String) 
     thumbnail_url = Column(String) 
     duration = Column(Float)
+    view_count = Column(Integer)
     user_id  = Column(Integer, ForeignKey("users.id_user"))
    
