@@ -12,16 +12,21 @@ console.log("twitokStore : ", twitokStore)
 
 const username = ref("")
 const password = ref("")
+const re_password = ref("")
 const tiktok_username = ref("")
 const tiktok_password = ref("")
 
 const insert_user = async () => {
     try {
+        if(password.value != re_password.value){
+            alert("Les deux mots de passe correspondent pas! ")
+            return
+        }
         const dataToSend = {user_email: username.value, user_password: password.value}
         const response = await axios.post('http://127.0.0.1:5000/register', dataToSend)
         console.log("envoie nouvel user : ", response.data)
         twitokStore.autorized()
-        router.push('studio')
+        router.push('/login')
     }
     catch (error) {
         console.error("erreur lors de la requete... ", error)
@@ -61,7 +66,7 @@ const insert_user = async () => {
                 </div>
                 <div class=" flex flex-col px-4 py-1 pb-5 items-center ">
                     <div class=" w-64 md:w-96 font-inter font-light text-[15px] md:text-[20px]">Re-enter Password</div>
-                    <input class='rounded-lg py-1  w-64 md:w-96 input-field border-1 border-black px-2'  type="password" v-model="password"  required >
+                    <input class='rounded-lg py-1  w-64 md:w-96 input-field border-1 border-black px-2'  type="password" v-model="re_password"  required >
                 </div>
                 <div class="flex justify-center">
                     <button type="submit" 
