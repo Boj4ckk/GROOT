@@ -9,6 +9,8 @@ import { useRouter } from 'vue-router';
 import { watch } from 'vue'
 import '../../components/studioHeader.vue'
 import StudioHeader from '../../components/studioHeader.vue';
+import previewVideo from '@/components/previewVideo.vue';
+import PreviewVideo from '@/components/previewVideo.vue';
 
 const TwitokStore = useTwitokStore() // import store
 const router = useRouter() // import router to redirect into tiktok page after editing
@@ -17,7 +19,13 @@ const router = useRouter() // import router to redirect into tiktok page after e
 const clips = ref([])
 const selectedClipIndex = ref(0);
 const edited_clip = ref([])
+
+
 const preview_video = ref('');
+const preview_duration = ref('');
+const preview_view_count = ref('');
+const preview_date = ref('');
+
 
 //Editing choices
 const webcam_detection = ref(false);
@@ -30,9 +38,18 @@ const initializeClips = () => {
     
     if (storeClips && storeClips.length > 0) {
         // Create local copy with just URLs for easier manipulation
-        clips.value = storeClips.map(clip => clip.url)
+        storeClips.forEach(clip =>{
+            preview_video.value = storeClips[0].url
+            preview_duration.value = storeClips[0].duration
+            preview_view_count.value = storeClips[0].view_count
+            preview_date.value = storeClips[0].date_creation
+
+        })
+
+ 
         selectedClipIndex.value = 0
-        preview_video.value = clips.value[0]
+        
+   
     } else {
         clips.value = []
         preview_video.value = ''
@@ -143,153 +160,8 @@ const handleform = async () => {
 
 <template>
     <StudioHeader/>
-    
-    <div class="filtrate-container">
-        <div class="video-container">
-            <video 
-                v-for="(clip, index) in clips" 
-                :key="index" 
-                :src="clip" 
-                class="video" 
-                :class="{ 'selected': selectedClipIndex === index }"
-                @click="handleVideoClip(clip, index)"
-            ></video>
-        </div>
-
-        <div class="preview-container">
-            <video 
-                v-if="preview_video" 
-                :src="preview_video" 
-                controls 
-                class="preview_video"
-            ></video>
-            <div v-else class="no-video-message">
-                <p>Aucun clip disponible</p>
-            </div>
-
-            <div class="edit_params_container">
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" v-model="webcam_detection">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Web cam détection</label>
-                </div>
-
-                <div class="video_format_container">
-                    <div class="video_format_container_title">
-                        <h6>Video format</h6>
-                    </div>
-                    
-                    <div class="video_format_check_container">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" v-model="clip_format" value="portrait" checked>
-                            <label class="form-check-label" for="flexRadioDefault1">
-                                portrait
-                            </label>
-
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" v-model="clip_format" value="landscape" checked>
-                            <label class="form-check-label" for="flexRadioDefault2">
-                                landscape
-                            </label>
-                        </div>
-                    </div>
-
-                <button 
-                    type="submit" 
-                    class="sumbitbutton" 
-                    :disabled="!preview_video"
-                    @click="handleform()"
-                >
-                    soumettre
-                </button>
-                
-                
-                </div>
-               
-                
-            </div>
-            
-        </div>
+    <div class="bg-blue-700 w-full mt-20 md:mt-1">
+         <PreviewVideo :videoUrl="preview_video" :videoDuration="preview_duration" ></PreviewVideo>
     </div>
 </template>
 
-<style scoped>
-    .filtrate-container{
-        padding: 20px;
-       
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-    }
-    .video-container {
-    
-        display: flex;
-        flex-direction: column; /* pour une disposition verticale */
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
-        width: 25%;
-    }
-    .video{
-
-        padding-top: 2px;
-        width: 90%;
-        height: 90%;
-        display: flex;
-       
-    }
-    .preview-container{
-        
-        display: flex;
-        width: 70%;
-        padding: 10px;
-       
-        justify-content: space-evenly;
-     
-        
-    }
-    .preview_video{
-        
-        width: 50%;
-        height: 50%;
-
-    }
-    .edit_params_container{
-        margin-top: 70px;
-        
-        width: 40%;
-        height: 40%;
-    
-
-    }
-  
-    .video_format_check_container{
-        display: flex;
-        justify-content: row;
-        justify-content: space-evenly;
-       
-    }
-    .video.selected {
-        border: 3px solid #007bff;
-        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-    }
-    
-    .no-video-message {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50%;
-        height: 300px;
-        background-color: #f8f9fa;
-        border: 2px dashed #dee2e6;
-        border-radius: 8px;
-    }
-    
-    .sumbitbutton:disabled {
-        opacity: 0.6;
-        cursor: not-allowed;
-    }
-    
- 
-</style>
