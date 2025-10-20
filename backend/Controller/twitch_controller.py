@@ -78,3 +78,15 @@ class TwitchController():
         exists = any(streamer.lower() == query.lower() for streamer in streamers_list)
         
         return jsonify({"exists": exists})
+    
+    @staticmethod
+    def get_game_box_art(game_id):
+        twitch_service = TwitchService()
+
+        game_box_art_url = twitch_service.get_game_box_art(game_id)
+
+        if game_box_art_url is None:
+            return jsonify({"error": f"Game with id '{game_id}' not found or has no box art"}), 404
+
+        return jsonify({"box_art_url" : game_box_art_url})
+
