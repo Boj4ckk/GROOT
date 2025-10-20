@@ -8,23 +8,52 @@ const props = defineProps({
         type: String,
         required:true
     },
+    boxArtUrl:{
+        type:String,
+        required:true
+    },
+    boxArtWidth:{
+        type:[String, Number],
+        default: '144'
+    },
+    boxArtHeight: {
+        type: [String, Number],
+        default: '192' // Valeur par défaut si non fournie
+    },
+    viewCount:{
+        type:Number,
+        required:true
+    },
+    creationDate:{
+        type:String,
+        required:true
+    },
+    title:{
+        type:String,
+        required:true
+    },
+    broadcasterName:{
+        type:String,
+        required:true
+    }
+    
+
+
     
   
 })
 
-const formattedDuration = computed(() => {
-  if (props.videoDuration == null) return '00:00';
-
-  const totalSeconds = Math.floor(props.videoDuration);
-  const minutes = Math.floor(totalSeconds / 60);
-  const seconds = totalSeconds % 60;
-
-  // Ajoute un '0' devant si le nombre est inférieur à 10
-  const paddedMinutes = String(minutes).padStart(2, '0');
-  const paddedSeconds = String(seconds).padStart(2, '0');
-
-  return `${paddedMinutes}:${paddedSeconds}`;
+const formattedBoxArtUrl = computed(() => {
+    if (!props.boxArtUrl) {
+        return '';
+    }
+    // ✅ 2. Utiliser les props au lieu des valeurs en dur
+    return props.boxArtUrl
+        .replace('{width}', props.boxArtWidth)
+        .replace('{height}', props.boxArtHeight);
 });
+console.log(formattedBoxArtUrl,props)
+
 
 </script>
 
