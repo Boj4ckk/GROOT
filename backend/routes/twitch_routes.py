@@ -9,5 +9,6 @@ class TwitchRoutes:
     twitch_bp.route("/search_games",methods=["GET"])(TwitchController.search_games)
     twitch_bp.route("/search_streamers",methods=["GET"])(TwitchController.search_streamers)
     twitch_bp.route("/verify_streamer",methods=["GET"])(TwitchController.verify_streamer)
+    twitch_bp.route("/games/<game_id>/box_art",methods=["GET"])(TwitchController.get_game_box_art)
 
 
