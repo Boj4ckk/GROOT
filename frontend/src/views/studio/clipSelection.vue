@@ -22,32 +22,58 @@ const edited_clip = ref([])
 
 
 const preview_video = ref('');
-const preview_duration = ref('');
 const preview_view_count = ref('');
 const preview_date = ref('');
+const preview_title = ref('');
+const preview_broadcaster_name = ref('');
+const preview_game_id = ref('');
+const preview_box_art_url = ref('');
+
 
 
 //Editing choices
 const webcam_detection = ref(false);
 const clip_format = ref("portrait")
 
+
+const fetchGameBoxArt = async (gameId)  => {
+    if(!gameId){
+        preview_box_art_url.value = '';
+        return;
+    }
+    try{
+
+        const response = await axios.get(`/games/${gameId}/box_art`);
+        preview_box_art_url.value = response.data.box_art_url;
+
+    }catch(error){
+        console.error("Error fetching game box art", error)
+        preview_box_art_url.value = '';
+    }
+}
+
+const handleVideoClip = (clip, index) => {
+    preview_video.value = clip.url;
+    preview_view_count.value = clip.view_count;
+    preview_date.value = clip.date_creation;
+    preview_title.value = clip.title;
+    preview_game_id.value = clip.game_id;
+    preview_broadcaster_name.value = clip.broadcaster_name;
+
+    selectedClipIndex.value = index;
+
+    fetchGameBoxArt(clip.game_id)
+
+
+}
 // Initialize clips from store and set up initial preview
 const initializeClips = () => {
     const storeClips = TwitokStore.clipsUrls_Returned
     console.log("Store clips:", storeClips)
     
     if (storeClips && storeClips.length > 0) {
-        // Create local copy with just URLs for easier manipulation
-        storeClips.forEach(clip =>{
-            preview_video.value = storeClips[0].url
-            preview_duration.value = storeClips[0].duration
-            preview_view_count.value = storeClips[0].view_count
-            preview_date.value = storeClips[0].date_creation
-
-        })
-
- 
-        selectedClipIndex.value = 0
+        const firstClip = storeClips[0];
+        handleVideoClip(firstClip, 0);
         
    
     } else {
@@ -74,11 +100,9 @@ watch(
     { deep: true }
 )
 
-// Handle clip selection
-const handleVideoClip = (video, index) => {
-    preview_video.value = video;
-    selectedClipIndex.value = index;
-};
+
+
+
 
 // Remove clip from local state and update store
 const removeClipFromState = (clipPath) => {
@@ -161,7 +185,7 @@ const handleform = async () => {
 <template>
     <StudioHeader/>
     <div class="bg-blue-700 w-full mt-20 md:mt-1">
-         <PreviewVideo :videoUrl="preview_video" :videoDuration="preview_duration" ></PreviewVideo>
+         <PreviewVideo :videoUrl="preview_video" :broadcasterName="preview_broadcaster_name" :boxArtUrl='preview_box_art_url' :viewCount="preview_view_count" :creationDate="preview_date" :title="preview_title" ></PreviewVideo>
     </div>
 </template>
 
