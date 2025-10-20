@@ -79,6 +79,17 @@ class TwitchApi:
                 return data[0]["id"]
         logging.error(f"Failed to fetch user ID for {game_name}: {response.text}")
         return None
+    
+    def getGameboxArtUrl(self, game_id):
+        url = f"{self.BASE_URL}/games"
+        params = {"id": game_id}
+        response = requests.get(url,headers=self.getHeaders(), params=params)
+        if response.status_code == 200:
+            data = response.json().get("data", [])
+            if data:
+                return data[0]["box_art_url"]
+        logging.error(f"Failed to fetch gamebox art url for the game id: {game_id} : {response.text}")
+        return None
 
     def getVideos(self, userId, filters=None):
         """
