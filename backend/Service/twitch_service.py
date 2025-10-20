@@ -52,6 +52,11 @@ class TwitchService:
 
         streamers_followers_count.sort(key=lambda x: x[1], reverse=True)
         return [streamers_tuple[0] for streamers_tuple in streamers_followers_count]
+    
+    def get_game_box_art(self, game_id):
+        box_art_url = self.twitch_api.getGameboxArtUrl(game_id)
+        return box_art_url
+
        
 
 
