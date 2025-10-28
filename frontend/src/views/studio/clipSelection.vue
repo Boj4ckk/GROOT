@@ -184,7 +184,7 @@ const handleform = async () => {
 
 <template>
     <StudioHeader/>
-    <div class="bg-blue-700 w-full mt-20 md:mt-1">
+    <div class="w-full mt-20 md:mt-1">
          <PreviewVideo :videoUrl="preview_video" :broadcasterName="preview_broadcaster_name" :boxArtUrl='preview_box_art_url' :viewCount="preview_view_count" :creationDate="preview_date" :title="preview_title" ></PreviewVideo>
     </div>
 </template>
