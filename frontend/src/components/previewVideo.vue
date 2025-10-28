@@ -1,7 +1,7 @@
-
-
 <script setup>
 import { computed } from 'vue';
+import deleteButton from '../components/deleteButton.vue'
+import DeleteButton from '../components/deleteButton.vue';
 
 const props = defineProps({
     videoUrl:{
@@ -14,11 +14,11 @@ const props = defineProps({
     },
     boxArtWidth:{
         type:[String, Number],
-        default: '144'
+        default: '68'
     },
     boxArtHeight: {
         type: [String, Number],
-        default: '192' // Valeur par défaut si non fournie
+        default: '78' // Valeur par défaut si non fournie
     },
     viewCount:{
         type:Number,
@@ -52,28 +52,84 @@ const formattedBoxArtUrl = computed(() => {
         .replace('{width}', props.boxArtWidth)
         .replace('{height}', props.boxArtHeight);
 });
-console.log(formattedBoxArtUrl,props)
+console.log(props)
 
+const formattedViewCount = computed(() => {
+    if (props.viewCount === null || props.viewCount === undefined) return '';
+    const num = props.viewCount;
+
+    if (num < 1000) {
+        return num.toString();
+    } else if (num < 1000000) {
+        // Format to '1k', '12.3k', '123k'
+        return (num / 1000).toFixed(num % 1000 < 100 ? 0 : 1).replace('.0', '') + 'k';
+    } else if (num < 1000000000) {
+        // Format to '1M', '12.3M', '123M'
+        return (num / 1000000).toFixed(num % 1000000 < 100000 ? 0 : 1).replace('.0', '') + 'M';
+    } else {
+        // Format to '1B', '12.3B', '123B'
+        return (num / 1000000000).toFixed(num % 1000000000 < 100000000 ? 0 : 1).replace('.0', '') + 'B';
+    }
+});
+
+const formattedCreationDate = computed(() => {
+    // Si la date n'est pas valide, on ne retourne rien
+    if (!props.creationDate) return '';
+
+    try {
+        const date = new Date(props.creationDate);
+        // Vérifier si la date est valide après la conversion
+        if (isNaN(date.getTime())) {
+            return 'Date invalide';
+        }
+
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0'); // Les mois sont de 0 à 11
+        const year = String(date.getFullYear()).slice(-2); // Récupère les 2 derniers chiffres
+
+        return `${day}/${month}/${year}`;
+    } catch (error) {
+        return 'Date invalide';
+    }
+});
 
 </script>
 
 
 
 
+// ...existing code...
 <template>
-    <div class="flex flex-col justify-center items-center">
-        <div class="bg-red-700 flex flex-col relative" >
-                <video :src="props.videoUrl" class="w-72 md:w-96" controls></video>
-        </div>
+    <!-- Le conteneur principal prend toute la largeur et centre son contenu -->
+    <div class="w-full flex flex-col items-center">
 
-        <div class="bg-blue-700 mt-10">
-            <div class="bg-green-700 w-full flex flex-row">
-                <div class="bg-red-700 w-1/4"></div>
-                <p>szoihrziorhizhrozhrz</p>
-               
+        <!-- Conteneur pour la vidéo et les détails -->
+        <!-- C'est LUI qui doit avoir la largeur variable -->
+        <div class="w-5/6 sm:w-4/5 md:w-96 flex flex-col items-center">
+
+            <!-- Vidéo -->
+            <video :src="props.videoUrl" class="w-full rounded-md" controls></video>
+
+            <!-- Détails -->
+            <div class="mt-2 w-full flex flex-row">
+                <div class="w-1/6 "> <!-- Ajusté pour la nouvelle structure -->
+                    <img :src="formattedBoxArtUrl" class="w-full h-full rounded-md">
+                </div>
+                <div class="w-5/6 min-w-0  "> <!-- Ajusté pour la nouvelle structure -->
+                    <div class="px-1 font-inter text-xs sm:text-sm font-medium truncate">{{ props.title }}</div>
+                    <div class="px-1 text-gray-500 font-inter text-xs sm:text-sm font-medium truncate ">{{ props.broadcasterName }}</div>
+                    <div class="w-full flex flex-row items-end ">
+                        <div class="flex-grow flex flex-row  px-1 items-center min-w-0 ">
+                             <div class=" font-inter text-[10px] font-medium w-auto flex justify-center items-baseline text-center">
+                                <div class="">{{ formattedViewCount }}</div>
+                                <div class="ml-1 flex-shrink-0">views</div>
+                            </div>
+                            <div class="ml-2  font-inter text-[10px] font-medium flex justify-center items-center h-5/6  pt-1">{{ formattedCreationDate }}</div>
+                        </div>
+                        <DeleteButton></DeleteButton>
+                    </div>
+                </div>
             </div>
         </div>
-
-   
     </div>
 </template>
