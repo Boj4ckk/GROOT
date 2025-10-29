@@ -1,7 +1,9 @@
 <script setup>
-import { computed } from 'vue';
+import { computed, ref} from 'vue';
 import deleteButton from '../components/deleteButton.vue'
 import DeleteButton from '../components/deleteButton.vue';
+import checkButton from './checkButton.vue';
+import CheckButton from './checkButton.vue';
 
 const props = defineProps({
     videoUrl:{
@@ -93,6 +95,9 @@ const formattedCreationDate = computed(() => {
     }
 });
 
+const web_cam_detection_bool = ref(true)
+
+
 </script>
 
 
@@ -101,35 +106,52 @@ const formattedCreationDate = computed(() => {
 // ...existing code...
 <template>
     <!-- Le conteneur principal prend toute la largeur et centre son contenu -->
-    <div class="w-full flex flex-col items-center">
+    <div class="w-full flex justify-center ">
 
         <!-- Conteneur pour la vidéo et les détails -->
         <!-- C'est LUI qui doit avoir la largeur variable -->
-        <div class="w-5/6 sm:w-4/5 md:w-96 flex flex-col items-center">
+       
+    <div class="w-5/6 sm:w-4/5 md:w-full lg:w-5/6 xl:w-4/6  flex flex-col items-center  ">
 
             <!-- Vidéo -->
             <video :src="props.videoUrl" class="w-full rounded-md" controls></video>
 
             <!-- Détails -->
-            <div class="mt-2 w-full flex flex-row">
+            <div class="mt-2 w-full flex flex-row  shadow-lg shadow-black">
                 <div class="w-1/6 "> <!-- Ajusté pour la nouvelle structure -->
                     <img :src="formattedBoxArtUrl" class="w-full h-full rounded-md">
                 </div>
-                <div class="w-5/6 min-w-0  "> <!-- Ajusté pour la nouvelle structure -->
-                    <div class="px-1 font-inter text-xs sm:text-sm font-medium truncate">{{ props.title }}</div>
-                    <div class="px-1 text-gray-500 font-inter text-xs sm:text-sm font-medium truncate ">{{ props.broadcasterName }}</div>
-                    <div class="w-full flex flex-row items-end ">
+                <div class="w-5/6 min-w-0 px-2"> <!-- Ajusté pour la nouvelle structure -->
+                    <div class="px-1 font-inter text-xs sm:text-sm md:text-[22px] lg:text-[25px] font-medium truncate ">{{ props.title }}</div>
+                    <div class="px-1 text-gray-500 font-inter text-xs sm:text-sm md:text-[20px] lg:text-[22px] font-normal truncate py-2 ">{{ props.broadcasterName }}</div>
+                    <div class="w-full flex flex-row items-end md:pt-7 xl:pt-10">
                         <div class="flex-grow flex flex-row  px-1 items-center min-w-0 ">
-                             <div class=" font-inter text-[10px] font-medium w-auto flex justify-center items-baseline text-center">
-                                <div class="">{{ formattedViewCount }}</div>
+                             <div class=" font-inter text-[10px] md:text-[15px] font-normal w-auto flex justify-center items-baseline text-center">
+                                <div class="font-semibold">{{ formattedViewCount }}</div>
                                 <div class="ml-1 flex-shrink-0">views</div>
                             </div>
-                            <div class="ml-2  font-inter text-[10px] font-medium flex justify-center items-center h-5/6  pt-1">{{ formattedCreationDate }}</div>
+                            <div class="ml-10  font-inter text-[10px] md:text-[15px] font-normal flex justify-center items-center h-5/6  ">created : </div>
+                            <div class="ml-2 font-inter text-[10px] md:text-[15px] font-semibold flex justify-center items-center h-5/6  ">{{ formattedCreationDate }}</div>
                         </div>
-                        <DeleteButton></DeleteButton>
+                        <DeleteButton class=" w-7 h-7"></DeleteButton>
                     </div>
                 </div>
             </div>
+            <div class=" w-full h-full ">
+                <div class="flex items-center  px-2 py-4 md:py-12">
+                    <label for="web_cam_detection" class="font-inter text-[13px] sm:text-sm md:text-2xl font-normal ">Web cam detection</label>
+                    <CheckButton width="22px" height="22px" v-model:checked="web_cam_detection_bool" class="ml-6"></CheckButton>
+                </div>
+            </div>
+            <div class="flex justify-center item-center md:py-3 ">
+                <button type="submit" 
+                                class=" font-inter !bg-black hover:!bg-gray-600 !transition-colors !duration-200 w-48 md:w-64 py-1  md:text-[20px] !text-white animate-fade-in-up">
+                                Confirm
+                </button>
+            </div>
         </div>
+      
+       
+         
     </div>
 </template>
