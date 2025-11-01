@@ -1,9 +1,12 @@
 <script setup>
 import { computed, ref} from 'vue';
-import deleteButton from '../components/deleteButton.vue'
-import DeleteButton from '../components/deleteButton.vue';
-import checkButton from './checkButton.vue';
-import CheckButton from './checkButton.vue';
+import deleteButton from './Buttons/deleteButton.vue'
+import DeleteButton from './Buttons/deleteButton.vue';
+import checkButton from './Buttons/checkButton.vue';
+import CheckButton from './Buttons/checkButton.vue';
+import axios from 'axios';
+
+import { useTwitokStore } from '@/store/twitokStore';
 
 const props = defineProps({
     videoUrl:{
@@ -38,23 +41,22 @@ const props = defineProps({
         type:String,
         required:true
     }
-    
 
-
-    
-  
 })
+
+const TwitokStore = useTwitokStore();
+
+const clipsInQueue = computed(() => TwitokStore.clipsUrls_Returned || []);
 
 const formattedBoxArtUrl = computed(() => {
     if (!props.boxArtUrl) {
         return '';
     }
-    // ✅ 2. Utiliser les props au lieu des valeurs en dur
+
     return props.boxArtUrl
         .replace('{width}', props.boxArtWidth)
         .replace('{height}', props.boxArtHeight);
 });
-console.log(props)
 
 const formattedViewCount = computed(() => {
     if (props.viewCount === null || props.viewCount === undefined) return '';
@@ -98,6 +100,27 @@ const formattedCreationDate = computed(() => {
 const web_cam_detection_bool = ref(true)
 
 
+const removeClipFromState = (clipUrl) => {
+    const updatedClips = clipsInQueue.value.filter(clip => clip.url !== clipUrl);
+    TwitokStore.setclipsUrls_Returned(updatedClips);
+    
+};
+
+const removeClipFromBlobStorage = async (clip_path) => {
+    try {
+        await axios.post("/delete_file_from_blob", { url: clip_path });
+    } catch (error) {
+        console.error("Error deleting clip from blob storage:", error);
+    }
+};
+
+
+const handleDelete = () =>{
+    removeClipFromState(props.videoUrl)
+    removeClipFromBlobStorage(props.videoUrl)
+ 
+}
+
 </script>
 
 
@@ -117,11 +140,11 @@ const web_cam_detection_bool = ref(true)
             <video :src="props.videoUrl" class="w-full rounded-md" controls></video>
 
             <!-- Détails -->
-            <div class="mt-2 w-full flex flex-row  shadow-lg shadow-black">
+            <div class="mt-2 w-full flex flex-row rounded-md shadow-lg shadow-black">
                 <div class="w-1/6 "> <!-- Ajusté pour la nouvelle structure -->
-                    <img :src="formattedBoxArtUrl" class="w-full h-full rounded-md">
+                    <img :src="formattedBoxArtUrl" class="w-full h-full rounded-s-md">
                 </div>
-                <div class="w-5/6 min-w-0 px-2"> <!-- Ajusté pour la nouvelle structure -->
+                <div class="w-5/6 min-w-0 px-2 pt-1"> <!-- Ajusté pour la nouvelle structure -->
                     <div class="px-1 font-inter text-xs sm:text-sm md:text-[22px] lg:text-[25px] font-medium truncate ">{{ props.title }}</div>
                     <div class="px-1 text-gray-500 font-inter text-xs sm:text-sm md:text-[20px] lg:text-[22px] font-normal truncate py-2 ">{{ props.broadcasterName }}</div>
                     <div class="w-full flex flex-row items-end md:pt-7 xl:pt-10">
@@ -133,7 +156,7 @@ const web_cam_detection_bool = ref(true)
                             <div class="ml-10  font-inter text-[10px] md:text-[15px] font-normal flex justify-center items-center h-5/6  ">created : </div>
                             <div class="ml-2 font-inter text-[10px] md:text-[15px] font-semibold flex justify-center items-center h-5/6  ">{{ formattedCreationDate }}</div>
                         </div>
-                        <DeleteButton class=" w-7 h-7"></DeleteButton>
+                        <DeleteButton  class=" w-7 h-7" @click="handleDelete"></DeleteButton>
                     </div>
                 </div>
             </div>

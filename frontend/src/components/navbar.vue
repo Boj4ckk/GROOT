@@ -6,9 +6,9 @@ import { useRouter } from 'vue-router';
 import login from '@/views/login.vue';
 import { computed, ref } from 'vue';
 import redirectionLink from './redirectionLink.vue';
-import customButton from './customButton.vue';
+import customButton from './Buttons/customButton.vue';
 import {Bars2Icon, Bars3Icon, BeakerIcon, AtSymbolIcon} from '@heroicons/vue/24/solid'
-import BorderButton from './customButton.vue';
+import BorderButton from './Buttons/customButton.vue';
 
 const router = useRouter() 
 
