@@ -44,28 +44,32 @@ const insert_user = async () => {
             Create an account
         </div>
         <div class=' flex justify-center py-4 animate-fade-in-up'>
-            <div class=' border-1 border-black flex  py-1 px-1'>
-                    <at-symbol-icon class=" h-4 w-5 md:h-8 md:w-9 text-gray-900" />
-                    <h7 class='px-2 md:px-3 md:pt-1 font-inter font-medium text-[12px] md:font-semibold md:text-[17px]'>
+            <div class='justify-around  rounded-lg flex py-1 md:py-2 px-1 cursor-pointer w-48 md:w-80  border border-gray-500 hover:bg-gray-100'>
+                <img
+                    src="https://developers.google.com/identity/images/g-logo.png"
+                    alt="Google Logo"
+                    class="w-6 h-6"
+                />
+                <div class="flex-1 text-center">
+                    <span class='font-inter font-normal text-[12px] md:font-normal md:text-[17px]'>
                         Sign up with google
-                    </h7>
-                    
-                
+                    </span>
+                </div>
             </div>
         </div>
 
         <div class=' flex flex-col justify-center items-center '>
              <form class="flex flex-col justify-between  md:px-64 animate-fade-in-up" @submit.prevent="insert_user()">
                  <div class=" flex flex-col px-4 py-1 items-center ">
-                    <div class=" w-64 md:w-96 font-inter font-light text-[15px] md:text-[20px]">Email</div>
+                    <div class=" w-64 md:w-96 font-inter font-light text-[12px] md:text-[17px]">Email</div>
                     <input class='rounded-lg py-1 w-64 md:w-96 input-field border-1 border-black px-2' type="text" v-model="username" placeholder="exemple@gmail.com" required  >
                 </div>
                 <div class=" flex flex-col px-4 py-1 items-center ">
-                    <div class=" w-64 md:w-96 font-inter font-light text-[15px] md:text-[20px]">Password</div>
+                    <div class=" w-64 md:w-96 font-inter font-light text-[12px] md:text-[17px]">Password</div>
                     <input class='rounded-lg py-1 w-64 md:w-96 input-field border-1 border-black px-2'  type="password" v-model="password"  required >
                 </div>
                 <div class=" flex flex-col px-4 py-1 pb-5 items-center ">
-                    <div class=" w-64 md:w-96 font-inter font-light text-[15px] md:text-[20px]">Re-enter Password</div>
+                    <div class=" w-64 md:w-96 font-inter font-light text-[12px] md:text-[17px]">Re-enter Password</div>
                     <input class='rounded-lg py-1  w-64 md:w-96 input-field border-1 border-black px-2'  type="password" v-model="re_password"  required >
                 </div>
                 <div class="flex justify-center">
