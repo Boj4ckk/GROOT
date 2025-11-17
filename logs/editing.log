@@ -12258,3 +12258,1034 @@ Cleaning in_process_clips...
 2025-04-26 21:32:36 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=74097186&started_at=2024-01-01T00%3A00%3A00Z&ended_at=2025-01-01T00%3A00%3A00Z&first=3 HTTP/1.1" 200 735
 2025-04-26 21:33:26 - ERROR - Erreur lors de la récupération des clips: [WinError 2] Le fichier spécifié est introuvable
 2025-04-26 21:33:26 - INFO - 127.0.0.1 - - [26/Apr/2025 21:33:26] "[35m[1mPOST /api/recup_infos_clips HTTP/1.1[0m" 500 -
+2025-11-17 15:48:33 - INFO - ==================================================
+2025-11-17 15:48:33 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 15:48:33 - INFO - ==================================================
+2025-11-17 15:48:33 - INFO - Initialisation de l'API Twitch...
+2025-11-17 15:48:33 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 15:48:34 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 15:48:34 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 15:48:34 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 15:48:34 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 15:48:34 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 15:48:34 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 15:48:34 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 15:48:34 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 15:48:35 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T15%3A48%3A34.991129Z&ended_at=2025-11-17T15%3A48%3A34.991129Z&first=1 HTTP/1.1" 200 786
+2025-11-17 15:48:35 - INFO - Clips récupérés en 0.19 secondes
+2025-11-17 15:48:35 - INFO - Nombre de clips trouvés: 1
+2025-11-17 15:48:35 - INFO - Clips après filtrage: 1
+2025-11-17 15:48:35 - INFO - Clips trouvés:
+2025-11-17 15:48:35 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 15:48:35 - INFO - Début du traitement des clips...
+2025-11-17 15:48:35 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 15:48:35 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 15:48:43 - INFO - Clip téléchargé avec succès: data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 15:48:43 - INFO - Début du montage pour le clip 1
+2025-11-17 15:48:44 - INFO - Extracting webcam from clip..
+
+2025-11-17 15:48:44 - ERROR - Erreur lors du traitement du clip 1: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\dnn\src\caffe\caffe_io.cpp:1126: error: (-2:Unspecified error) FAILED: fs.is_open(). Can't open "Edit\sample\deploy.prototxt" in function 'cv::dnn::ReadProtoFromTextFile'
+
+2025-11-17 15:48:44 - WARNING - Impossible de supprimer data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'data\\fetch_clips\\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4'
+2025-11-17 15:48:44 - INFO - ==================================================
+2025-11-17 15:48:44 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 15:48:44 - INFO - ==================================================
+2025-11-17 15:48:44 - INFO - Clips récupérés: 1
+2025-11-17 15:48:44 - INFO - Clips traités avec succès: 0
+2025-11-17 15:48:44 - INFO - Temps total: 9.00 secondes
+2025-11-17 15:48:44 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 15:48:52 - INFO - ==================================================
+2025-11-17 15:48:52 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 15:48:52 - INFO - ==================================================
+2025-11-17 15:48:52 - INFO - Initialisation de l'API Twitch...
+2025-11-17 15:48:52 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 15:48:53 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 15:48:53 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 15:48:53 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 15:48:53 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 15:48:53 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 15:48:53 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 15:48:53 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 15:48:53 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 15:48:54 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T15%3A48%3A53.975749Z&ended_at=2025-11-17T15%3A48%3A53.975749Z&first=1 HTTP/1.1" 200 786
+2025-11-17 15:48:54 - INFO - Clips récupérés en 0.19 secondes
+2025-11-17 15:48:54 - INFO - Nombre de clips trouvés: 1
+2025-11-17 15:48:54 - INFO - Clips après filtrage: 1
+2025-11-17 15:48:54 - INFO - Clips trouvés:
+2025-11-17 15:48:54 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 15:48:54 - INFO - Début du traitement des clips...
+2025-11-17 15:48:54 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 15:48:54 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 15:49:19 - INFO - Fichier temporaire supprimé: data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 15:49:19 - INFO - Script interrompu par l'utilisateur
+2025-11-17 15:49:29 - INFO - ==================================================
+2025-11-17 15:49:29 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 15:49:29 - INFO - ==================================================
+2025-11-17 15:49:29 - INFO - Initialisation de l'API Twitch...
+2025-11-17 15:49:29 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 15:49:30 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 15:49:30 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 15:49:30 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 15:49:30 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 15:49:30 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 15:49:30 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 15:49:30 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 15:49:30 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 15:49:30 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T15%3A49%3A30.411316Z&ended_at=2025-11-17T15%3A49%3A30.411316Z&first=1 HTTP/1.1" 200 786
+2025-11-17 15:49:30 - INFO - Clips récupérés en 0.21 secondes
+2025-11-17 15:49:30 - INFO - Nombre de clips trouvés: 1
+2025-11-17 15:49:30 - INFO - Clips après filtrage: 1
+2025-11-17 15:49:30 - INFO - Clips trouvés:
+2025-11-17 15:49:30 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 15:49:30 - INFO - Début du traitement des clips...
+2025-11-17 15:49:30 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 15:49:30 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 15:49:39 - INFO - Clip téléchargé avec succès: data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 15:49:39 - INFO - Début du montage pour le clip 1
+2025-11-17 15:49:39 - INFO - Extracting webcam from clip..
+
+2025-11-17 15:49:39 - ERROR - Erreur lors du traitement du clip 1: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\dnn\src\caffe\caffe_io.cpp:1126: error: (-2:Unspecified error) FAILED: fs.is_open(). Can't open "Edit\sample\deploy.prototxt" in function 'cv::dnn::ReadProtoFromTextFile'
+
+2025-11-17 15:49:39 - WARNING - Impossible de supprimer data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'data\\fetch_clips\\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4'
+2025-11-17 15:49:39 - INFO - ==================================================
+2025-11-17 15:49:39 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 15:49:39 - INFO - ==================================================
+2025-11-17 15:49:39 - INFO - Clips récupérés: 1
+2025-11-17 15:49:39 - INFO - Clips traités avec succès: 0
+2025-11-17 15:49:39 - INFO - Temps total: 9.04 secondes
+2025-11-17 15:49:39 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 15:50:30 - INFO - ==================================================
+2025-11-17 15:50:30 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 15:50:30 - INFO - ==================================================
+2025-11-17 15:50:30 - INFO - Initialisation de l'API Twitch...
+2025-11-17 15:50:30 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 15:50:38 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 15:50:38 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 15:50:38 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 15:50:38 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 15:50:38 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 15:50:39 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 15:50:39 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 15:50:39 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 15:50:39 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T15%3A50%3A39.181303Z&ended_at=2025-11-17T15%3A50%3A39.181303Z&first=1 HTTP/1.1" 200 786
+2025-11-17 15:50:39 - INFO - Clips récupérés en 0.20 secondes
+2025-11-17 15:50:39 - INFO - Nombre de clips trouvés: 1
+2025-11-17 15:50:39 - INFO - Clips après filtrage: 1
+2025-11-17 15:50:39 - INFO - Clips trouvés:
+2025-11-17 15:50:39 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 15:50:39 - INFO - Début du traitement des clips...
+2025-11-17 15:50:39 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 15:50:39 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 15:52:39 - ERROR - Timeout lors du téléchargement: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 15:52:39 - WARNING - Échec du téléchargement pour le clip 1, passage au suivant
+2025-11-17 15:52:39 - INFO - Fichier temporaire supprimé: data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 15:52:39 - INFO - ==================================================
+2025-11-17 15:52:39 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 15:52:39 - INFO - ==================================================
+2025-11-17 15:52:39 - INFO - Clips récupérés: 1
+2025-11-17 15:52:39 - INFO - Clips traités avec succès: 0
+2025-11-17 15:52:39 - INFO - Temps total: 120.04 secondes
+2025-11-17 15:52:39 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 15:54:46 - INFO - ==================================================
+2025-11-17 15:54:46 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 15:54:46 - INFO - ==================================================
+2025-11-17 15:54:46 - INFO - Initialisation de l'API Twitch...
+2025-11-17 15:54:46 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 15:54:47 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 15:54:47 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 15:54:47 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 15:54:47 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 15:54:47 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 15:54:47 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 15:54:47 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 15:54:47 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 15:54:47 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T15%3A54%3A47.749542Z&ended_at=2025-11-17T15%3A54%3A47.749542Z&first=1 HTTP/1.1" 200 786
+2025-11-17 15:54:47 - INFO - Clips récupérés en 0.21 secondes
+2025-11-17 15:54:47 - INFO - Nombre de clips trouvés: 1
+2025-11-17 15:54:47 - INFO - Clips après filtrage: 1
+2025-11-17 15:54:47 - INFO - Clips trouvés:
+2025-11-17 15:54:47 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 15:54:47 - INFO - Début du traitement des clips...
+2025-11-17 15:54:47 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 15:54:47 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 15:54:56 - INFO - Clip téléchargé avec succès: data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 15:54:56 - INFO - Début du montage pour le clip 1
+2025-11-17 15:54:56 - INFO - Extracting webcam from clip..
+
+2025-11-17 15:54:57 - ERROR - Erreur lors du traitement du clip 1: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\dnn\src\caffe\caffe_io.cpp:1126: error: (-2:Unspecified error) FAILED: fs.is_open(). Can't open "Edit\sample\deploy.prototxt" in function 'cv::dnn::ReadProtoFromTextFile'
+
+2025-11-17 15:54:57 - WARNING - Impossible de supprimer data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'data\\fetch_clips\\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4'
+2025-11-17 15:54:57 - INFO - ==================================================
+2025-11-17 15:54:57 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 15:54:57 - INFO - ==================================================
+2025-11-17 15:54:57 - INFO - Clips récupérés: 1
+2025-11-17 15:54:57 - INFO - Clips traités avec succès: 0
+2025-11-17 15:54:57 - INFO - Temps total: 9.04 secondes
+2025-11-17 15:54:57 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 15:57:15 - INFO - ==================================================
+2025-11-17 15:57:15 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 15:57:15 - INFO - ==================================================
+2025-11-17 15:57:15 - INFO - Initialisation de l'API Twitch...
+2025-11-17 15:57:15 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 15:57:16 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 15:57:16 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 15:57:16 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 15:57:16 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 15:57:16 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 15:57:16 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 15:57:16 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 15:57:16 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 15:57:17 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T15%3A57%3A16.817890Z&ended_at=2025-11-17T15%3A57%3A16.817890Z&first=1 HTTP/1.1" 200 786
+2025-11-17 15:57:17 - INFO - Clips récupérés en 0.21 secondes
+2025-11-17 15:57:17 - INFO - Nombre de clips trouvés: 1
+2025-11-17 15:57:17 - INFO - Clips après filtrage: 1
+2025-11-17 15:57:17 - INFO - Clips trouvés:
+2025-11-17 15:57:17 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 15:57:17 - INFO - Début du traitement des clips...
+2025-11-17 15:57:17 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 15:57:17 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 15:59:17 - ERROR - Timeout lors du téléchargement: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 15:59:17 - WARNING - Échec du téléchargement pour le clip 1, passage au suivant
+2025-11-17 15:59:17 - INFO - Fichier temporaire supprimé: data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 15:59:17 - INFO - ==================================================
+2025-11-17 15:59:17 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 15:59:17 - INFO - ==================================================
+2025-11-17 15:59:17 - INFO - Clips récupérés: 1
+2025-11-17 15:59:17 - INFO - Clips traités avec succès: 0
+2025-11-17 15:59:17 - INFO - Temps total: 120.87 secondes
+2025-11-17 15:59:17 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 16:14:44 - INFO - ==================================================
+2025-11-17 16:14:44 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 16:14:44 - INFO - ==================================================
+2025-11-17 16:14:44 - INFO - Initialisation de l'API Twitch...
+2025-11-17 16:14:44 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 16:14:45 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 16:14:45 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 16:14:45 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 16:14:45 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 16:14:45 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:14:45 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 16:14:45 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 16:14:45 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:14:45 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T16%3A14%3A45.233028Z&ended_at=2025-11-17T16%3A14%3A45.233028Z&first=1 HTTP/1.1" 200 786
+2025-11-17 16:14:45 - INFO - Clips récupérés en 0.21 secondes
+2025-11-17 16:14:45 - INFO - Nombre de clips trouvés: 1
+2025-11-17 16:14:45 - INFO - Clips après filtrage: 1
+2025-11-17 16:14:45 - INFO - Clips trouvés:
+2025-11-17 16:14:45 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 16:14:45 - INFO - Début du traitement des clips...
+2025-11-17 16:14:45 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 16:14:45 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 16:15:02 - INFO - Clip téléchargé avec succès: data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 16:15:02 - INFO - Début du montage pour le clip 1
+2025-11-17 16:15:03 - INFO - Extracting webcam from clip..
+
+2025-11-17 16:15:03 - ERROR - Erreur lors du traitement du clip 1: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\dnn\src\caffe\caffe_io.cpp:1126: error: (-2:Unspecified error) FAILED: fs.is_open(). Can't open "Edit\sample\deploy.prototxt" in function 'cv::dnn::ReadProtoFromTextFile'
+
+2025-11-17 16:15:03 - WARNING - Impossible de supprimer data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'data\\fetch_clips\\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4'
+2025-11-17 16:15:03 - INFO - ==================================================
+2025-11-17 16:15:03 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 16:15:03 - INFO - ==================================================
+2025-11-17 16:15:03 - INFO - Clips récupérés: 1
+2025-11-17 16:15:03 - INFO - Clips traités avec succès: 0
+2025-11-17 16:15:03 - INFO - Temps total: 18.47 secondes
+2025-11-17 16:15:03 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 16:30:51 - INFO - ==================================================
+2025-11-17 16:30:51 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 16:30:51 - INFO - ==================================================
+2025-11-17 16:30:51 - INFO - Initialisation de l'API Twitch...
+2025-11-17 16:30:51 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 16:30:52 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 16:30:52 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 16:30:52 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 16:30:52 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 16:30:52 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:30:53 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 16:30:53 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 16:30:53 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:30:53 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T16%3A30%3A53.195440Z&ended_at=2025-11-17T16%3A30%3A53.195440Z&first=1 HTTP/1.1" 200 786
+2025-11-17 16:30:53 - INFO - Clips récupérés en 0.21 secondes
+2025-11-17 16:30:53 - INFO - Nombre de clips trouvés: 1
+2025-11-17 16:30:53 - INFO - Clips après filtrage: 1
+2025-11-17 16:30:53 - INFO - Clips trouvés:
+2025-11-17 16:30:53 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 16:30:53 - INFO - Début du traitement des clips...
+2025-11-17 16:30:53 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 16:30:53 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 16:32:54 - ERROR - Timeout lors du téléchargement: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 16:32:54 - WARNING - Échec du téléchargement pour le clip 1, passage au suivant
+2025-11-17 16:32:54 - INFO - Fichier temporaire supprimé: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 16:32:54 - INFO - ==================================================
+2025-11-17 16:32:54 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 16:32:54 - INFO - ==================================================
+2025-11-17 16:32:54 - INFO - Clips récupérés: 1
+2025-11-17 16:32:54 - INFO - Clips traités avec succès: 0
+2025-11-17 16:32:54 - INFO - Temps total: 121.02 secondes
+2025-11-17 16:32:54 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 16:35:06 - INFO - ==================================================
+2025-11-17 16:35:06 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 16:35:06 - INFO - ==================================================
+2025-11-17 16:35:06 - INFO - Initialisation de l'API Twitch...
+2025-11-17 16:35:06 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 16:35:08 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 16:35:08 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 16:35:08 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 16:35:08 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 16:35:08 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:35:08 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 16:35:08 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 16:35:08 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:35:08 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T16%3A35%3A08.350279Z&ended_at=2025-11-17T16%3A35%3A08.350279Z&first=1 HTTP/1.1" 200 786
+2025-11-17 16:35:08 - INFO - Clips récupérés en 0.21 secondes
+2025-11-17 16:35:08 - INFO - Nombre de clips trouvés: 1
+2025-11-17 16:35:08 - INFO - Clips après filtrage: 1
+2025-11-17 16:35:08 - INFO - Clips trouvés:
+2025-11-17 16:35:08 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 16:35:08 - INFO - Début du traitement des clips...
+2025-11-17 16:35:08 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 16:35:08 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 16:35:17 - INFO - Clip téléchargé avec succès: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 16:35:17 - INFO - Début du montage pour le clip 1
+2025-11-17 16:35:18 - INFO - Extracting webcam from clip..
+
+2025-11-17 16:35:18 - ERROR - Erreur lors du traitement du clip 1: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\dnn\src\caffe\caffe_io.cpp:1126: error: (-2:Unspecified error) FAILED: fs.is_open(). Can't open "Edit\sample\deploy.prototxt" in function 'cv::dnn::ReadProtoFromTextFile'
+
+2025-11-17 16:35:18 - WARNING - Impossible de supprimer C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\backend\\data\\fetch_clips\\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4'
+2025-11-17 16:35:18 - INFO - ==================================================
+2025-11-17 16:35:18 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 16:35:18 - INFO - ==================================================
+2025-11-17 16:35:18 - INFO - Clips récupérés: 1
+2025-11-17 16:35:18 - INFO - Clips traités avec succès: 0
+2025-11-17 16:35:18 - INFO - Temps total: 9.88 secondes
+2025-11-17 16:35:18 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 16:39:39 - INFO - ==================================================
+2025-11-17 16:39:39 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 16:39:39 - INFO - ==================================================
+2025-11-17 16:39:39 - INFO - Initialisation de l'API Twitch...
+2025-11-17 16:39:39 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 16:39:40 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 16:39:40 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 16:39:40 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 16:39:40 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 16:39:40 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:39:40 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 16:39:40 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 16:39:40 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:39:40 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T16%3A39%3A40.392116Z&ended_at=2025-11-17T16%3A39%3A40.392116Z&first=1 HTTP/1.1" 200 786
+2025-11-17 16:39:40 - INFO - Clips récupérés en 0.20 secondes
+2025-11-17 16:39:40 - INFO - Nombre de clips trouvés: 1
+2025-11-17 16:39:40 - INFO - Clips après filtrage: 1
+2025-11-17 16:39:40 - INFO - Clips trouvés:
+2025-11-17 16:39:40 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 16:39:40 - INFO - Début du traitement des clips...
+2025-11-17 16:39:40 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 16:39:40 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 16:41:40 - ERROR - Timeout lors du téléchargement: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 16:41:40 - WARNING - Échec du téléchargement pour le clip 1, passage au suivant
+2025-11-17 16:41:40 - INFO - Fichier temporaire supprimé: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 16:41:40 - INFO - ==================================================
+2025-11-17 16:41:40 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 16:41:40 - INFO - ==================================================
+2025-11-17 16:41:40 - INFO - Clips récupérés: 1
+2025-11-17 16:41:40 - INFO - Clips traités avec succès: 0
+2025-11-17 16:41:40 - INFO - Temps total: 120.04 secondes
+2025-11-17 16:41:40 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 16:44:30 - INFO - ==================================================
+2025-11-17 16:44:30 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 16:44:30 - INFO - ==================================================
+2025-11-17 16:44:30 - INFO - Initialisation de l'API Twitch...
+2025-11-17 16:44:30 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 16:44:31 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 16:44:31 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 16:44:31 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 16:44:31 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 16:44:31 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:44:31 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 16:44:31 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 16:44:31 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:44:32 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T16%3A44%3A31.832060Z&ended_at=2025-11-17T16%3A44%3A31.832060Z&first=1 HTTP/1.1" 200 786
+2025-11-17 16:44:32 - INFO - Clips récupérés en 0.21 secondes
+2025-11-17 16:44:32 - INFO - Nombre de clips trouvés: 1
+2025-11-17 16:44:32 - INFO - Clips après filtrage: 1
+2025-11-17 16:44:32 - INFO - Clips trouvés:
+2025-11-17 16:44:32 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 16:44:32 - INFO - Début du traitement des clips...
+2025-11-17 16:44:32 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 16:44:32 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 16:44:41 - INFO - Clip téléchargé avec succès: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 16:44:41 - INFO - Début du montage pour le clip 1
+2025-11-17 16:44:41 - INFO - Extracting webcam from clip..
+
+2025-11-17 16:44:42 - ERROR - Erreur lors du traitement du clip 1: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\dnn\src\caffe\caffe_io.cpp:1126: error: (-2:Unspecified error) FAILED: fs.is_open(). Can't open "Edit\sample\deploy.prototxt" in function 'cv::dnn::ReadProtoFromTextFile'
+
+2025-11-17 16:44:42 - WARNING - Impossible de supprimer C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\backend\\data\\fetch_clips\\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4'
+2025-11-17 16:44:42 - INFO - ==================================================
+2025-11-17 16:44:42 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 16:44:42 - INFO - ==================================================
+2025-11-17 16:44:42 - INFO - Clips récupérés: 1
+2025-11-17 16:44:42 - INFO - Clips traités avec succès: 0
+2025-11-17 16:44:42 - INFO - Temps total: 10.00 secondes
+2025-11-17 16:44:42 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 16:46:39 - INFO - ==================================================
+2025-11-17 16:46:39 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 16:46:39 - INFO - ==================================================
+2025-11-17 16:46:39 - INFO - Initialisation de l'API Twitch...
+2025-11-17 16:46:39 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 16:46:40 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 16:46:40 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 16:46:40 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 16:46:40 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 16:46:40 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:46:40 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 16:46:40 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 16:46:40 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:46:41 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T16%3A46%3A40.843794Z&ended_at=2025-11-17T16%3A46%3A40.843794Z&first=1 HTTP/1.1" 200 786
+2025-11-17 16:46:41 - INFO - Clips récupérés en 0.22 secondes
+2025-11-17 16:46:41 - INFO - Nombre de clips trouvés: 1
+2025-11-17 16:46:41 - INFO - Clips après filtrage: 1
+2025-11-17 16:46:41 - INFO - Clips trouvés:
+2025-11-17 16:46:41 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 16:46:41 - INFO - Début du traitement des clips...
+2025-11-17 16:46:41 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 16:46:41 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 16:48:41 - ERROR - Timeout lors du téléchargement: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 16:48:41 - WARNING - Échec du téléchargement pour le clip 1, passage au suivant
+2025-11-17 16:48:41 - INFO - Fichier temporaire supprimé: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 16:48:41 - INFO - ==================================================
+2025-11-17 16:48:41 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 16:48:41 - INFO - ==================================================
+2025-11-17 16:48:41 - INFO - Clips récupérés: 1
+2025-11-17 16:48:41 - INFO - Clips traités avec succès: 0
+2025-11-17 16:48:41 - INFO - Temps total: 120.06 secondes
+2025-11-17 16:48:41 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 16:51:59 - INFO - ==================================================
+2025-11-17 16:51:59 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 16:51:59 - INFO - ==================================================
+2025-11-17 16:51:59 - INFO - Initialisation de l'API Twitch...
+2025-11-17 16:51:59 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 16:52:00 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 16:52:00 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 16:52:00 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 16:52:00 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 16:52:00 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:52:00 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 16:52:00 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 16:52:00 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:52:00 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T16%3A52%3A00.230801Z&ended_at=2025-11-17T16%3A52%3A00.230801Z&first=1 HTTP/1.1" 200 786
+2025-11-17 16:52:00 - INFO - Clips récupérés en 0.20 secondes
+2025-11-17 16:52:00 - INFO - Nombre de clips trouvés: 1
+2025-11-17 16:52:00 - INFO - Clips après filtrage: 1
+2025-11-17 16:52:00 - INFO - Clips trouvés:
+2025-11-17 16:52:00 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 16:52:00 - INFO - Début du traitement des clips...
+2025-11-17 16:52:00 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 16:52:00 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 16:52:09 - INFO - Clip téléchargé avec succès: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 16:52:09 - INFO - Début du montage pour le clip 1
+2025-11-17 16:52:10 - INFO - Chemin final vidéo: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\processed_clips\fd347f03-e8a0-4d6a-9df1-0215911955d7_processed.mp4
+2025-11-17 16:52:10 - INFO - Extracting webcam from clip..
+
+2025-11-17 16:52:10 - ERROR - Erreur lors du traitement du clip 1: OpenCV(4.11.0) D:\a\opencv-python\opencv-python\opencv\modules\dnn\src\caffe\caffe_io.cpp:1126: error: (-2:Unspecified error) FAILED: fs.is_open(). Can't open "Edit\sample\deploy.prototxt" in function 'cv::dnn::ReadProtoFromTextFile'
+
+2025-11-17 16:52:10 - WARNING - Impossible de supprimer C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\backend\\data\\fetch_clips\\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4'
+2025-11-17 16:52:10 - INFO - ==================================================
+2025-11-17 16:52:10 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 16:52:10 - INFO - ==================================================
+2025-11-17 16:52:10 - INFO - Clips récupérés: 1
+2025-11-17 16:52:10 - INFO - Clips traités avec succès: 0
+2025-11-17 16:52:10 - INFO - Temps total: 10.10 secondes
+2025-11-17 16:52:10 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 16:53:52 - INFO - ==================================================
+2025-11-17 16:53:52 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 16:53:52 - INFO - ==================================================
+2025-11-17 16:53:52 - INFO - Initialisation de l'API Twitch...
+2025-11-17 16:53:52 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 16:53:53 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 16:53:53 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 16:53:53 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 16:53:53 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 16:53:53 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:53:53 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 16:53:53 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 16:53:53 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:53:54 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T16%3A53%3A53.904890Z&ended_at=2025-11-17T16%3A53%3A53.904890Z&first=1 HTTP/1.1" 200 786
+2025-11-17 16:53:54 - INFO - Clips récupérés en 0.21 secondes
+2025-11-17 16:53:54 - INFO - Nombre de clips trouvés: 1
+2025-11-17 16:53:54 - INFO - Clips après filtrage: 1
+2025-11-17 16:53:54 - INFO - Clips trouvés:
+2025-11-17 16:53:54 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 16:53:54 - INFO - Début du traitement des clips...
+2025-11-17 16:53:54 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 16:53:54 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 16:55:54 - ERROR - Timeout lors du téléchargement: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 16:55:54 - WARNING - Échec du téléchargement pour le clip 1, passage au suivant
+2025-11-17 16:55:54 - INFO - Fichier temporaire supprimé: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 16:55:54 - INFO - ==================================================
+2025-11-17 16:55:54 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 16:55:54 - INFO - ==================================================
+2025-11-17 16:55:54 - INFO - Clips récupérés: 1
+2025-11-17 16:55:54 - INFO - Clips traités avec succès: 0
+2025-11-17 16:55:54 - INFO - Temps total: 120.06 secondes
+2025-11-17 16:55:54 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 16:56:43 - INFO - ==================================================
+2025-11-17 16:56:43 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 16:56:43 - INFO - ==================================================
+2025-11-17 16:56:43 - INFO - Initialisation de l'API Twitch...
+2025-11-17 16:56:43 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 16:56:44 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 16:56:44 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 16:56:44 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 16:56:44 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 16:56:45 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:56:45 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 16:56:45 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 16:56:45 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 16:56:45 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T16%3A56%3A45.184523Z&ended_at=2025-11-17T16%3A56%3A45.184523Z&first=1 HTTP/1.1" 200 786
+2025-11-17 16:56:45 - INFO - Clips récupérés en 0.32 secondes
+2025-11-17 16:56:45 - INFO - Nombre de clips trouvés: 1
+2025-11-17 16:56:45 - INFO - Clips après filtrage: 1
+2025-11-17 16:56:45 - INFO - Clips trouvés:
+2025-11-17 16:56:45 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 16:56:45 - INFO - Début du traitement des clips...
+2025-11-17 16:56:45 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 16:56:45 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 16:56:55 - INFO - Clip téléchargé avec succès: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 16:56:55 - INFO - Début du montage pour le clip 1
+2025-11-17 16:56:56 - INFO - Chemin final vidéo: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\processed_clips\04462ab9-172d-4c32-b6ef-99c99cf3c664_processed.mp4
+2025-11-17 16:56:56 - INFO - Extracting webcam from clip..
+
+2025-11-17 16:56:57 - INFO - Auto face recognition failed. Manually web cam extraction performed.
+2025-11-17 17:07:11 - INFO - ==================================================
+2025-11-17 17:07:11 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 17:07:11 - INFO - ==================================================
+2025-11-17 17:07:11 - INFO - Initialisation de l'API Twitch...
+2025-11-17 17:07:11 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 17:07:13 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 17:07:13 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 17:07:13 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 17:07:13 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 17:07:13 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:07:13 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 17:07:13 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 17:07:13 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:07:13 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T17%3A07%3A13.583527Z&ended_at=2025-11-17T17%3A07%3A13.583527Z&first=1 HTTP/1.1" 200 786
+2025-11-17 17:07:13 - INFO - Clips récupérés en 0.25 secondes
+2025-11-17 17:07:13 - INFO - Nombre de clips trouvés: 1
+2025-11-17 17:07:13 - INFO - Clips après filtrage: 1
+2025-11-17 17:07:13 - INFO - Clips trouvés:
+2025-11-17 17:07:13 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 17:07:13 - INFO - Début du traitement des clips...
+2025-11-17 17:07:13 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 17:07:13 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 17:12:14 - ERROR - Timeout lors du téléchargement: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 17:12:14 - WARNING - Échec du téléchargement pour le clip 1, passage au suivant
+2025-11-17 17:12:14 - INFO - Fichier temporaire supprimé: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 17:12:14 - INFO - ==================================================
+2025-11-17 17:12:14 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 17:12:14 - INFO - ==================================================
+2025-11-17 17:12:14 - INFO - Clips récupérés: 1
+2025-11-17 17:12:14 - INFO - Clips traités avec succès: 0
+2025-11-17 17:12:14 - INFO - Temps total: 300.84 secondes
+2025-11-17 17:12:14 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 17:14:04 - INFO - ==================================================
+2025-11-17 17:14:04 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 17:14:04 - INFO - ==================================================
+2025-11-17 17:14:04 - INFO - Initialisation de l'API Twitch...
+2025-11-17 17:14:04 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 17:14:05 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 17:14:05 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 17:14:05 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 17:14:05 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 17:14:05 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:14:05 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 17:14:05 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 17:14:05 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:14:05 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T17%3A14%3A05.384636Z&ended_at=2025-11-17T17%3A14%3A05.384636Z&first=1 HTTP/1.1" 200 786
+2025-11-17 17:14:05 - INFO - Clips récupérés en 0.20 secondes
+2025-11-17 17:14:05 - INFO - Nombre de clips trouvés: 1
+2025-11-17 17:14:05 - INFO - Clips après filtrage: 1
+2025-11-17 17:14:05 - INFO - Clips trouvés:
+2025-11-17 17:14:05 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 17:14:05 - INFO - Début du traitement des clips...
+2025-11-17 17:14:05 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 17:14:05 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 17:14:07 - ERROR - Erreur lors du téléchargement: Command '['C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\.venv\\Scripts\\streamlink.exe', 'https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0', 'best', '-o', 'C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\backend\\data\\fetch_clips\\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4', '--retry-open', '5', '--retry-streams', '5', '--no-version-check', '--hls-segment-timeout', '60']' returned non-zero exit status 2.
+2025-11-17 17:14:07 - ERROR - Stderr: usage: streamlink [OPTIONS] <URL> [STREAM]
+streamlink: error: unrecognized arguments: --no-version-check --hls-segment-timeout 60
+
+2025-11-17 17:14:07 - WARNING - Échec du téléchargement pour le clip 1, passage au suivant
+2025-11-17 17:14:07 - INFO - ==================================================
+2025-11-17 17:14:07 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 17:14:07 - INFO - ==================================================
+2025-11-17 17:14:07 - INFO - Clips récupérés: 1
+2025-11-17 17:14:07 - INFO - Clips traités avec succès: 0
+2025-11-17 17:14:07 - INFO - Temps total: 1.94 secondes
+2025-11-17 17:14:07 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 17:15:10 - INFO - ==================================================
+2025-11-17 17:15:10 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 17:15:10 - INFO - ==================================================
+2025-11-17 17:15:10 - INFO - Initialisation de l'API Twitch...
+2025-11-17 17:15:10 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 17:15:12 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 17:15:12 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 17:15:12 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 17:15:12 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 17:15:12 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:15:12 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 17:15:12 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 17:15:12 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:15:12 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T17%3A15%3A12.616851Z&ended_at=2025-11-17T17%3A15%3A12.616851Z&first=1 HTTP/1.1" 200 786
+2025-11-17 17:15:12 - INFO - Clips récupérés en 0.20 secondes
+2025-11-17 17:15:12 - INFO - Nombre de clips trouvés: 1
+2025-11-17 17:15:12 - INFO - Clips après filtrage: 1
+2025-11-17 17:15:12 - INFO - Clips trouvés:
+2025-11-17 17:15:12 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 17:15:12 - INFO - Début du traitement des clips...
+2025-11-17 17:15:12 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 17:15:12 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0
+2025-11-17 17:15:21 - INFO - Clip téléchargé avec succès: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 17:15:21 - INFO - Début du montage pour le clip 1
+2025-11-17 17:15:21 - INFO - Chemin final vidéo: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\processed_clips\ab0f654d-2a8a-4db1-a7de-724627f90240_processed.mp4
+2025-11-17 17:15:21 - INFO - Extracting webcam from clip..
+
+2025-11-17 17:15:22 - INFO - Auto face recognition failed. Manually web cam extraction performed.
+2025-11-17 17:15:42 - INFO - Crop to wanted format
+2025-11-17 17:16:13 - INFO - Writing new clip composite from webcam and content..
+2025-11-17 17:16:54 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\ab0f654d-2a8a-4db1-a7de-724627f90240_content.mp4, 4600800 bytes wanted but 0 bytes read,at frame 691/692, at time 23.03/23.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:16:54 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\ab0f654d-2a8a-4db1-a7de-724627f90240_cam.mp4, 577788 bytes wanted but 0 bytes read,at frame 691/692, at time 23.03/23.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:16:55 - INFO - Cleaning in_process_clips...
+
+2025-11-17 17:16:55 - ERROR - Erreur lors du traitement du clip 1: [WinError 3] Le chemin d’accès spécifié est introuvable: 'Edit\\in_process_clips'
+2025-11-17 17:16:55 - WARNING - Impossible de supprimer C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\backend\\data\\fetch_clips\\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4'
+2025-11-17 17:16:55 - INFO - ==================================================
+2025-11-17 17:16:55 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 17:16:55 - INFO - ==================================================
+2025-11-17 17:16:55 - INFO - Clips récupérés: 1
+2025-11-17 17:16:55 - INFO - Clips traités avec succès: 0
+2025-11-17 17:16:55 - INFO - Temps total: 102.88 secondes
+2025-11-17 17:16:55 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 17:19:11 - INFO - ==================================================
+2025-11-17 17:19:11 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 17:19:11 - INFO - ==================================================
+2025-11-17 17:19:11 - INFO - Initialisation de l'API Twitch...
+2025-11-17 17:19:11 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 17:19:12 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 17:19:12 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 17:19:12 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 17:19:12 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 17:19:12 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:19:12 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 17:19:12 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 17:19:12 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:19:12 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T17%3A19%3A12.601344Z&ended_at=2025-11-17T17%3A19%3A12.601344Z&first=1 HTTP/1.1" 200 786
+2025-11-17 17:19:12 - INFO - Clips récupérés en 0.19 secondes
+2025-11-17 17:19:12 - INFO - Nombre de clips trouvés: 1
+2025-11-17 17:19:12 - INFO - Clips après filtrage: 1
+2025-11-17 17:19:12 - INFO - Clips trouvés:
+2025-11-17 17:19:12 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 17:19:12 - INFO - Début du traitement des clips...
+2025-11-17 17:19:12 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 17:19:12 - INFO - Clip déjà téléchargé, réutilisation: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 17:19:12 - INFO - Début du montage pour le clip 1
+2025-11-17 17:19:13 - INFO - Chemin final vidéo: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\processed_clips\1d9a2633-feb9-4551-9aaf-270b59c975c7_processed.mp4
+2025-11-17 17:19:13 - INFO - Extracting webcam from clip..
+
+2025-11-17 17:19:14 - INFO - Auto face recognition failed. Manually web cam extraction performed.
+2025-11-17 17:19:37 - INFO - Crop to wanted format
+2025-11-17 17:20:13 - INFO - Writing new clip composite from webcam and content..
+2025-11-17 17:21:08 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\1d9a2633-feb9-4551-9aaf-270b59c975c7_content.mp4, 4600800 bytes wanted but 0 bytes read,at frame 691/692, at time 23.03/23.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:21:08 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\1d9a2633-feb9-4551-9aaf-270b59c975c7_cam.mp4, 578376 bytes wanted but 0 bytes read,at frame 691/692, at time 23.03/23.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:21:09 - INFO - Cleaning in_process_clips...
+
+2025-11-17 17:21:09 - ERROR - Erreur lors du traitement du clip 1: [WinError 3] Le chemin d’accès spécifié est introuvable: 'Edit\\in_process_clips'
+2025-11-17 17:21:09 - WARNING - Impossible de supprimer C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\backend\\data\\fetch_clips\\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4'
+2025-11-17 17:21:09 - INFO - ==================================================
+2025-11-17 17:21:09 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 17:21:09 - INFO - ==================================================
+2025-11-17 17:21:09 - INFO - Clips récupérés: 1
+2025-11-17 17:21:09 - INFO - Clips traités avec succès: 0
+2025-11-17 17:21:09 - INFO - Temps total: 117.01 secondes
+2025-11-17 17:21:09 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 17:23:46 - INFO - ==================================================
+2025-11-17 17:23:46 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 17:23:46 - INFO - ==================================================
+2025-11-17 17:23:46 - INFO - Initialisation de l'API Twitch...
+2025-11-17 17:23:46 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 17:23:56 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 17:23:56 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 17:23:56 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 17:23:56 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 17:23:56 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:23:56 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 17:23:56 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 17:23:56 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:23:56 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T17%3A23%3A56.559806Z&ended_at=2025-11-17T17%3A23%3A56.559806Z&first=1 HTTP/1.1" 200 786
+2025-11-17 17:23:56 - INFO - Clips récupérés en 0.20 secondes
+2025-11-17 17:23:56 - INFO - Nombre de clips trouvés: 1
+2025-11-17 17:23:56 - INFO - Clips après filtrage: 1
+2025-11-17 17:23:56 - INFO - Clips trouvés:
+2025-11-17 17:23:56 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 17:23:56 - INFO - Début du traitement des clips...
+2025-11-17 17:23:56 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 17:23:56 - INFO - Clip déjà téléchargé, réutilisation: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 17:23:56 - INFO - Début du montage pour le clip 1
+2025-11-17 17:23:57 - INFO - Chemin final vidéo: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\processed_clips\ac0da82d-05a0-451e-825d-5e40f238fd0e_processed.mp4
+2025-11-17 17:23:57 - INFO - Extracting webcam from clip..
+
+2025-11-17 17:23:58 - INFO - Auto face recognition failed. Manually web cam extraction performed.
+2025-11-17 17:24:20 - INFO - Crop to wanted format
+2025-11-17 17:24:57 - INFO - Writing new clip composite from webcam and content..
+2025-11-17 17:25:48 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\ac0da82d-05a0-451e-825d-5e40f238fd0e_content.mp4, 4600800 bytes wanted but 0 bytes read,at frame 691/692, at time 23.03/23.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:25:48 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\ac0da82d-05a0-451e-825d-5e40f238fd0e_cam.mp4, 567624 bytes wanted but 0 bytes read,at frame 691/692, at time 23.03/23.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:25:50 - INFO - Cleaning in_process_clips...
+
+2025-11-17 17:25:50 - ERROR - Erreur lors du traitement du clip 1: [WinError 3] Le chemin d’accès spécifié est introuvable: 'Edit\\in_process_clips'
+2025-11-17 17:25:50 - WARNING - Impossible de supprimer C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\backend\\data\\fetch_clips\\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4'
+2025-11-17 17:25:50 - INFO - ==================================================
+2025-11-17 17:25:50 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 17:25:50 - INFO - ==================================================
+2025-11-17 17:25:50 - INFO - Clips récupérés: 1
+2025-11-17 17:25:50 - INFO - Clips traités avec succès: 0
+2025-11-17 17:25:50 - INFO - Temps total: 113.44 secondes
+2025-11-17 17:25:50 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 17:27:01 - INFO - ==================================================
+2025-11-17 17:27:01 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 17:27:01 - INFO - ==================================================
+2025-11-17 17:27:01 - INFO - Initialisation de l'API Twitch...
+2025-11-17 17:27:01 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 17:27:02 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 17:27:02 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 17:27:02 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 17:27:02 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 17:27:02 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:27:02 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 17:27:02 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 17:27:02 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:27:02 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T17%3A27%3A02.315817Z&ended_at=2025-11-17T17%3A27%3A02.315817Z&first=1 HTTP/1.1" 200 786
+2025-11-17 17:27:02 - INFO - Clips récupérés en 0.19 secondes
+2025-11-17 17:27:02 - INFO - Nombre de clips trouvés: 1
+2025-11-17 17:27:02 - INFO - Clips après filtrage: 1
+2025-11-17 17:27:02 - INFO - Clips trouvés:
+2025-11-17 17:27:02 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 17:27:02 - INFO - Début du traitement des clips...
+2025-11-17 17:27:02 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 17:27:02 - INFO - Clip déjà téléchargé, réutilisation: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 17:27:02 - INFO - Début du montage pour le clip 1
+2025-11-17 17:27:03 - INFO - Chemin final vidéo: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\processed_clips\a01e7bee-98be-439d-82c2-d362b5802174_processed.mp4
+2025-11-17 17:27:03 - INFO - Extracting webcam from clip..
+
+2025-11-17 17:27:04 - INFO - Auto face recognition failed. Manually web cam extraction performed.
+2025-11-17 17:27:24 - INFO - Crop to wanted format
+2025-11-17 17:27:58 - INFO - Writing new clip composite from webcam and content..
+2025-11-17 17:28:46 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\a01e7bee-98be-439d-82c2-d362b5802174_content.mp4, 4600800 bytes wanted but 0 bytes read,at frame 691/692, at time 23.03/23.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:28:46 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\a01e7bee-98be-439d-82c2-d362b5802174_cam.mp4, 583200 bytes wanted but 0 bytes read,at frame 691/692, at time 23.03/23.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:28:47 - INFO - Cleaning in_process_clips...
+
+2025-11-17 17:28:47 - ERROR - Erreur lors du traitement du clip 1: [WinError 3] Le chemin d’accès spécifié est introuvable: 'Edit\\in_process_clips'
+2025-11-17 17:28:47 - WARNING - Impossible de supprimer C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\backend\\data\\fetch_clips\\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4'
+2025-11-17 17:28:47 - INFO - ==================================================
+2025-11-17 17:28:47 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 17:28:47 - INFO - ==================================================
+2025-11-17 17:28:47 - INFO - Clips récupérés: 1
+2025-11-17 17:28:47 - INFO - Clips traités avec succès: 0
+2025-11-17 17:28:47 - INFO - Temps total: 105.23 secondes
+2025-11-17 17:28:47 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 17:30:38 - INFO - ==================================================
+2025-11-17 17:30:38 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 17:30:38 - INFO - ==================================================
+2025-11-17 17:30:38 - INFO - Initialisation de l'API Twitch...
+2025-11-17 17:30:38 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 17:30:39 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 17:30:39 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 17:30:39 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 17:30:39 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 17:30:39 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:30:39 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 17:30:39 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 17:30:39 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:30:39 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T17%3A30%3A39.327074Z&ended_at=2025-11-17T17%3A30%3A39.327074Z&first=1 HTTP/1.1" 200 786
+2025-11-17 17:30:39 - INFO - Clips récupérés en 0.28 secondes
+2025-11-17 17:30:39 - INFO - Nombre de clips trouvés: 1
+2025-11-17 17:30:39 - INFO - Clips après filtrage: 1
+2025-11-17 17:30:39 - INFO - Clips trouvés:
+2025-11-17 17:30:39 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 17:30:39 - INFO - Début du traitement des clips...
+2025-11-17 17:30:39 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 17:30:39 - INFO - Clip déjà téléchargé, réutilisation: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 17:30:39 - INFO - Début du montage pour le clip 1
+2025-11-17 17:30:40 - INFO - Chemin final vidéo: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\processed_clips\0c8f6a9c-5b17-4fd4-9986-688af4ad8e57_processed.mp4
+2025-11-17 17:30:40 - INFO - Extracting webcam from clip..
+
+2025-11-17 17:30:41 - INFO - Auto face recognition failed. Manually web cam extraction performed.
+2025-11-17 17:31:04 - INFO - Crop to wanted format
+2025-11-17 17:31:38 - INFO - Writing new clip composite from webcam and content..
+2025-11-17 17:32:27 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\0c8f6a9c-5b17-4fd4-9986-688af4ad8e57_content.mp4, 4600800 bytes wanted but 0 bytes read,at frame 691/692, at time 23.03/23.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:32:27 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\0c8f6a9c-5b17-4fd4-9986-688af4ad8e57_cam.mp4, 587520 bytes wanted but 0 bytes read,at frame 691/692, at time 23.03/23.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:32:28 - INFO - Cleaning in_process_clips...
+
+2025-11-17 17:32:28 - ERROR - Erreur lors du traitement du clip 1: [WinError 3] Le chemin d’accès spécifié est introuvable: 'Edit\\in_process_clips'
+2025-11-17 17:32:28 - WARNING - Impossible de supprimer C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\backend\\data\\fetch_clips\\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4'
+2025-11-17 17:32:28 - INFO - ==================================================
+2025-11-17 17:32:28 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 17:32:28 - INFO - ==================================================
+2025-11-17 17:32:28 - INFO - Clips récupérés: 1
+2025-11-17 17:32:28 - INFO - Clips traités avec succès: 0
+2025-11-17 17:32:28 - INFO - Temps total: 109.04 secondes
+2025-11-17 17:32:28 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 17:33:20 - INFO - ==================================================
+2025-11-17 17:33:20 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 17:33:20 - INFO - ==================================================
+2025-11-17 17:33:20 - INFO - Initialisation de l'API Twitch...
+2025-11-17 17:33:20 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 17:33:21 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 17:33:21 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 17:33:21 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 17:33:21 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 17:33:21 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:33:21 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 17:33:21 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 17:33:21 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:33:22 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T17%3A33%3A21.614602Z&ended_at=2025-11-17T17%3A33%3A21.614602Z&first=1 HTTP/1.1" 200 786
+2025-11-17 17:33:22 - INFO - Clips récupérés en 0.46 secondes
+2025-11-17 17:33:22 - INFO - Nombre de clips trouvés: 1
+2025-11-17 17:33:22 - INFO - Clips après filtrage: 1
+2025-11-17 17:33:22 - INFO - Clips trouvés:
+2025-11-17 17:33:22 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 17:33:22 - INFO - Début du traitement des clips...
+2025-11-17 17:33:22 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 17:33:22 - INFO - Clip déjà téléchargé, réutilisation: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 17:33:22 - INFO - Début du montage pour le clip 1
+2025-11-17 17:33:22 - INFO - Chemin final vidéo: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\processed_clips\52c9e69d-7555-409d-8f75-7622dca3634d_processed.mp4
+2025-11-17 17:33:22 - INFO - Extracting webcam from clip..
+
+2025-11-17 17:33:24 - INFO - Auto face recognition failed. Manually web cam extraction performed.
+2025-11-17 17:33:49 - INFO - Crop to wanted format
+2025-11-17 17:34:24 - INFO - Writing new clip composite from webcam and content..
+2025-11-17 17:35:15 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\52c9e69d-7555-409d-8f75-7622dca3634d_content.mp4, 4600800 bytes wanted but 0 bytes read,at frame 691/692, at time 23.03/23.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:35:15 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\52c9e69d-7555-409d-8f75-7622dca3634d_cam.mp4, 531684 bytes wanted but 0 bytes read,at frame 691/692, at time 23.03/23.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:35:17 - INFO - Cleaning in_process_clips...
+
+2025-11-17 17:35:17 - ERROR - Erreur lors du traitement du clip 1: [WinError 3] Le chemin d’accès spécifié est introuvable: 'Edit\\in_process_clips'
+2025-11-17 17:35:17 - WARNING - Impossible de supprimer C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\backend\\data\\fetch_clips\\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4'
+2025-11-17 17:35:17 - INFO - ==================================================
+2025-11-17 17:35:17 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 17:35:17 - INFO - ==================================================
+2025-11-17 17:35:17 - INFO - Clips récupérés: 1
+2025-11-17 17:35:17 - INFO - Clips traités avec succès: 0
+2025-11-17 17:35:17 - INFO - Temps total: 114.99 secondes
+2025-11-17 17:35:17 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 17:36:02 - INFO - ==================================================
+2025-11-17 17:36:02 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 17:36:02 - INFO - ==================================================
+2025-11-17 17:36:02 - INFO - Initialisation de l'API Twitch...
+2025-11-17 17:36:02 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 17:36:03 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 17:36:03 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 17:36:03 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 17:36:03 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 17:36:03 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:36:03 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 17:36:03 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 17:36:03 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:36:03 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-10T17%3A36%3A03.298102Z&ended_at=2025-11-17T17%3A36%3A03.298102Z&first=1 HTTP/1.1" 200 786
+2025-11-17 17:36:03 - INFO - Clips récupérés en 0.21 secondes
+2025-11-17 17:36:03 - INFO - Nombre de clips trouvés: 1
+2025-11-17 17:36:03 - INFO - Clips après filtrage: 1
+2025-11-17 17:36:03 - INFO - Clips trouvés:
+2025-11-17 17:36:03 - INFO -   1. 'ah oé' - 23s - 173 vues
+2025-11-17 17:36:03 - INFO - Début du traitement des clips...
+2025-11-17 17:36:03 - INFO - Traitement du clip 1/1: ah oé
+2025-11-17 17:36:03 - INFO - Clip déjà téléchargé, réutilisation: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4
+2025-11-17 17:36:03 - INFO - Début du montage pour le clip 1
+2025-11-17 17:36:04 - INFO - Chemin final vidéo: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\processed_clips\a380d903-a166-4ce8-8eab-4674ea2fea8a_processed.mp4
+2025-11-17 17:36:04 - INFO - Extracting webcam from clip..
+
+2025-11-17 17:36:05 - INFO - Auto face recognition failed. Manually web cam extraction performed.
+2025-11-17 17:36:29 - INFO - Crop to wanted format
+2025-11-17 17:37:04 - INFO - Writing new clip composite from webcam and content..
+2025-11-17 17:37:50 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\a380d903-a166-4ce8-8eab-4674ea2fea8a_content.mp4, 4600800 bytes wanted but 0 bytes read,at frame 691/692, at time 23.03/23.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:37:50 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\a380d903-a166-4ce8-8eab-4674ea2fea8a_cam.mp4, 548163 bytes wanted but 0 bytes read,at frame 691/692, at time 23.03/23.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:37:51 - INFO - Cleaning in_process_clips...
+
+2025-11-17 17:37:51 - ERROR - Erreur lors du traitement du clip 1: [WinError 3] Le chemin d’accès spécifié est introuvable: 'Edit\\in_process_clips'
+2025-11-17 17:37:51 - WARNING - Impossible de supprimer C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\backend\\data\\fetch_clips\\clip_1_VainGlamorousLeopardWOOP-BIlB9dczoYu2RBk0.mp4'
+2025-11-17 17:37:51 - INFO - ==================================================
+2025-11-17 17:37:51 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 17:37:51 - INFO - ==================================================
+2025-11-17 17:37:51 - INFO - Clips récupérés: 1
+2025-11-17 17:37:51 - INFO - Clips traités avec succès: 0
+2025-11-17 17:37:51 - INFO - Temps total: 107.73 secondes
+2025-11-17 17:37:51 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 17:40:16 - INFO - ==================================================
+2025-11-17 17:40:16 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 17:40:16 - INFO - ==================================================
+2025-11-17 17:40:16 - INFO - Initialisation de l'API Twitch...
+2025-11-17 17:40:16 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 17:40:17 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 17:40:17 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 17:40:17 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 17:40:17 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 17:40:17 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:40:17 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 17:40:17 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 17:40:17 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:40:17 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-14T17%3A40%3A17.273481Z&ended_at=2025-11-17T17%3A40%3A17.273481Z&first=1 HTTP/1.1" 200 830
+2025-11-17 17:40:17 - INFO - Clips récupérés en 0.21 secondes
+2025-11-17 17:40:17 - INFO - Nombre de clips trouvés: 1
+2025-11-17 17:40:17 - INFO - Clips après filtrage: 1
+2025-11-17 17:40:17 - INFO - Clips trouvés:
+2025-11-17 17:40:17 - INFO -   1. 'myagi qui parle francais' - 30s - 61 vues
+2025-11-17 17:40:17 - INFO - Début du traitement des clips...
+2025-11-17 17:40:17 - INFO - Traitement du clip 1/1: myagi qui parle francais
+2025-11-17 17:40:17 - INFO - Téléchargement du clip: https://www.twitch.tv/sniper_biscuit/clip/AbstruseStupidFriseeYouDontSay-V-AZ0l9mSJVx0uJV
+2025-11-17 17:40:29 - INFO - Clip téléchargé avec succès: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_AbstruseStupidFriseeYouDontSay-V-AZ0l9mSJVx0uJV.mp4
+2025-11-17 17:40:29 - INFO - Début du montage pour le clip 1
+2025-11-17 17:40:29 - INFO - Chemin final vidéo: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\processed_clips\5e210c43-8b26-49d9-a411-4e717304c266_processed.mp4
+2025-11-17 17:40:29 - INFO - Extracting webcam from clip..
+
+2025-11-17 17:40:47 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_AbstruseStupidFriseeYouDontSay-V-AZ0l9mSJVx0uJV.mp4, 6220800 bytes wanted but 0 bytes read,at frame 1800/1802, at time 30.00/30.02 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:40:48 - INFO - Crop to wanted format
+2025-11-17 17:41:28 - INFO - Writing new clip composite from webcam and content..
+2025-11-17 17:42:30 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\5e210c43-8b26-49d9-a411-4e717304c266_content.mp4, 4600800 bytes wanted but 0 bytes read,at frame 901/902, at time 30.03/30.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:42:30 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\5e210c43-8b26-49d9-a411-4e717304c266_cam.mp4, 363630 bytes wanted but 0 bytes read,at frame 901/902, at time 30.03/30.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:42:31 - INFO - Cleaning in_process_clips...
+
+2025-11-17 17:42:31 - ERROR - Erreur lors du traitement du clip 1: [WinError 3] Le chemin d’accès spécifié est introuvable: 'Edit\\in_process_clips'
+2025-11-17 17:42:31 - WARNING - Impossible de supprimer C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_AbstruseStupidFriseeYouDontSay-V-AZ0l9mSJVx0uJV.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\backend\\data\\fetch_clips\\clip_1_AbstruseStupidFriseeYouDontSay-V-AZ0l9mSJVx0uJV.mp4'
+2025-11-17 17:42:31 - INFO - ==================================================
+2025-11-17 17:42:31 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 17:42:31 - INFO - ==================================================
+2025-11-17 17:42:31 - INFO - Clips récupérés: 1
+2025-11-17 17:42:31 - INFO - Clips traités avec succès: 0
+2025-11-17 17:42:31 - INFO - Temps total: 134.34 secondes
+2025-11-17 17:42:31 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 17:43:51 - INFO - ==================================================
+2025-11-17 17:43:51 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 17:43:51 - INFO - ==================================================
+2025-11-17 17:43:51 - INFO - Initialisation de l'API Twitch...
+2025-11-17 17:43:51 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 17:43:52 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 17:43:52 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 17:43:52 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 17:43:52 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 17:43:52 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:43:52 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 17:43:52 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 17:43:52 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:43:52 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-14T17%3A43%3A52.453364Z&ended_at=2025-11-17T17%3A43%3A52.453364Z&first=1 HTTP/1.1" 200 830
+2025-11-17 17:43:52 - INFO - Clips récupérés en 0.21 secondes
+2025-11-17 17:43:52 - INFO - Nombre de clips trouvés: 1
+2025-11-17 17:43:52 - INFO - Clips après filtrage: 1
+2025-11-17 17:43:52 - INFO - Clips trouvés:
+2025-11-17 17:43:52 - INFO -   1. 'myagi qui parle francais' - 30s - 61 vues
+2025-11-17 17:43:52 - INFO - Début du traitement des clips...
+2025-11-17 17:43:52 - INFO - Traitement du clip 1/1: myagi qui parle francais
+2025-11-17 17:43:52 - INFO - Clip déjà téléchargé, réutilisation: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_AbstruseStupidFriseeYouDontSay-V-AZ0l9mSJVx0uJV.mp4
+2025-11-17 17:43:52 - INFO - Début du montage pour le clip 1
+2025-11-17 17:43:53 - INFO - Chemin final vidéo: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\processed_clips\5ff2d89f-7e5e-41a2-a90b-e7ef71839eb6_processed.mp4
+2025-11-17 17:43:53 - INFO - Extracting webcam from clip..
+
+2025-11-17 17:44:09 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_AbstruseStupidFriseeYouDontSay-V-AZ0l9mSJVx0uJV.mp4, 6220800 bytes wanted but 0 bytes read,at frame 1800/1802, at time 30.00/30.02 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:44:11 - INFO - Crop to wanted format
+2025-11-17 17:44:50 - INFO - Writing new clip composite from webcam and content..
+2025-11-17 17:45:48 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\5ff2d89f-7e5e-41a2-a90b-e7ef71839eb6_content.mp4, 4600800 bytes wanted but 0 bytes read,at frame 901/902, at time 30.03/30.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:45:48 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\5ff2d89f-7e5e-41a2-a90b-e7ef71839eb6_cam.mp4, 363630 bytes wanted but 0 bytes read,at frame 901/902, at time 30.03/30.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:45:49 - INFO - Cleaning in_process_clips...
+
+2025-11-17 17:45:49 - ERROR - Erreur lors du traitement du clip 1: [WinError 3] Le chemin d’accès spécifié est introuvable: 'Edit\\in_process_clips'
+2025-11-17 17:45:49 - WARNING - Impossible de supprimer C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_AbstruseStupidFriseeYouDontSay-V-AZ0l9mSJVx0uJV.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\backend\\data\\fetch_clips\\clip_1_AbstruseStupidFriseeYouDontSay-V-AZ0l9mSJVx0uJV.mp4'
+2025-11-17 17:45:49 - INFO - ==================================================
+2025-11-17 17:45:49 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 17:45:49 - INFO - ==================================================
+2025-11-17 17:45:49 - INFO - Clips récupérés: 1
+2025-11-17 17:45:49 - INFO - Clips traités avec succès: 0
+2025-11-17 17:45:49 - INFO - Temps total: 116.89 secondes
+2025-11-17 17:45:49 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS
+2025-11-17 17:48:18 - INFO - ==================================================
+2025-11-17 17:48:18 - INFO - DÉBUT DU SCRIPT DE RÉCUPÉRATION ET MONTAGE DE CLIPS
+2025-11-17 17:48:18 - INFO - ==================================================
+2025-11-17 17:48:18 - INFO - Initialisation de l'API Twitch...
+2025-11-17 17:48:18 - DEBUG - Starting new HTTPS connection (1): id.twitch.tv:443
+2025-11-17 17:48:19 - DEBUG - https://id.twitch.tv:443 "POST /oauth2/token HTTP/1.1" 200 93
+2025-11-17 17:48:19 - INFO - Successfully authenticated with Twitch API.
+2025-11-17 17:48:19 - INFO - Recherche des clips pour sniper_biscuit...
+2025-11-17 17:48:19 - INFO - Récupération des clips pour sniper_biscuit
+2025-11-17 17:48:19 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:48:19 - DEBUG - https://api.twitch.tv:443 "GET /helix/users?login=sniper_biscuit HTTP/1.1" 200 416
+2025-11-17 17:48:19 - INFO - ID utilisateur trouvé: 441936307
+2025-11-17 17:48:19 - DEBUG - Starting new HTTPS connection (1): api.twitch.tv:443
+2025-11-17 17:48:20 - DEBUG - https://api.twitch.tv:443 "GET /helix/clips?broadcaster_id=441936307&started_at=2025-11-14T17%3A48%3A19.845218Z&ended_at=2025-11-17T17%3A48%3A19.845218Z&first=1 HTTP/1.1" 200 830
+2025-11-17 17:48:20 - INFO - Clips récupérés en 0.24 secondes
+2025-11-17 17:48:20 - INFO - Nombre de clips trouvés: 1
+2025-11-17 17:48:20 - INFO - Clips après filtrage: 1
+2025-11-17 17:48:20 - INFO - Clips trouvés:
+2025-11-17 17:48:20 - INFO -   1. 'myagi qui parle francais' - 30s - 61 vues
+2025-11-17 17:48:20 - INFO - Début du traitement des clips...
+2025-11-17 17:48:20 - INFO - Traitement du clip 1/1: myagi qui parle francais
+2025-11-17 17:48:20 - INFO - Clip déjà téléchargé, réutilisation: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_AbstruseStupidFriseeYouDontSay-V-AZ0l9mSJVx0uJV.mp4
+2025-11-17 17:48:20 - INFO - Début du montage pour le clip 1
+2025-11-17 17:48:20 - INFO - Chemin final vidéo: C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\processed_clips\479b9fb1-2d3c-46b8-a564-e67cb0eb0bf0_processed.mp4
+2025-11-17 17:48:20 - INFO - Extracting webcam from clip..
+
+2025-11-17 17:48:37 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_AbstruseStupidFriseeYouDontSay-V-AZ0l9mSJVx0uJV.mp4, 6220800 bytes wanted but 0 bytes read,at frame 1800/1802, at time 30.00/30.02 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:48:38 - INFO - Crop to wanted format
+2025-11-17 17:49:17 - INFO - Writing new clip composite from webcam and content..
+2025-11-17 17:50:18 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\479b9fb1-2d3c-46b8-a564-e67cb0eb0bf0_content.mp4, 4600800 bytes wanted but 0 bytes read,at frame 901/902, at time 30.03/30.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:50:18 - WARNING - C:\Users\User\Desktop\Cours\Framework Web\GROOT\.venv\Lib\site-packages\moviepy\video\io\ffmpeg_reader.py:123: UserWarning: Warning: in file C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\Edit\in_process_clips\479b9fb1-2d3c-46b8-a564-e67cb0eb0bf0_cam.mp4, 363630 bytes wanted but 0 bytes read,at frame 901/902, at time 30.03/30.04 sec. Using the last valid frame instead.
+  warnings.warn("Warning: in file %s, "%(self.filename)+
+
+2025-11-17 17:50:19 - INFO - Cleaning in_process_clips...
+
+2025-11-17 17:50:19 - ERROR - Erreur lors du traitement du clip 1: [WinError 3] Le chemin d’accès spécifié est introuvable: 'Edit\\in_process_clips'
+2025-11-17 17:50:19 - WARNING - Impossible de supprimer C:\Users\User\Desktop\Cours\Framework Web\GROOT\backend\data\fetch_clips\clip_1_AbstruseStupidFriseeYouDontSay-V-AZ0l9mSJVx0uJV.mp4: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'C:\\Users\\User\\Desktop\\Cours\\Framework Web\\GROOT\\backend\\data\\fetch_clips\\clip_1_AbstruseStupidFriseeYouDontSay-V-AZ0l9mSJVx0uJV.mp4'
+2025-11-17 17:50:19 - INFO - ==================================================
+2025-11-17 17:50:19 - INFO - RÉSUMÉ DU TRAITEMENT
+2025-11-17 17:50:19 - INFO - ==================================================
+2025-11-17 17:50:19 - INFO - Clips récupérés: 1
+2025-11-17 17:50:19 - INFO - Clips traités avec succès: 0
+2025-11-17 17:50:19 - INFO - Temps total: 119.52 secondes
+2025-11-17 17:50:19 - INFO - SCRIPT TERMINÉ AVEC SUCCÈS

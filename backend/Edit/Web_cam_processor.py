@@ -115,9 +115,9 @@ class WebCamProcessor:
         logging.info: If face detection fails, logs a message and calls the manual method.
         """
         # Correct paths to the face detection model
-
-        prototxt_path = os.path.join("backend","Edit","sample","deploy.prototxt")
-        model_path = os.path.join("backend","Edit","sample","res10_300x300_ssd_iter_140000.caffemodel")
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        prototxt_path = os.path.join(base_dir, "sample", "deploy.prototxt")
+        model_path = os.path.join(base_dir, "sample", "res10_300x300_ssd_iter_140000.caffemodel")
      
 
         # Load the DNN model

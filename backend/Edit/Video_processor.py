@@ -2,7 +2,7 @@
 
 
 from moviepy.editor import VideoFileClip, CompositeVideoClip, ColorClip
-from backend.Edit.Web_cam_processor import WebCamProcessor
+from Edit.Web_cam_processor import WebCamProcessor
 
 from PIL import Image, ImageFilter
 import logging
@@ -110,8 +110,9 @@ class VideoProcessor:
         web_cam_clip = self.clipVideo.crop(x1=web_cam_coordinate[2], y1=web_cam_coordinate[0], 
                                            x2=web_cam_coordinate[3], y2=web_cam_coordinate[1])
 
-        web_cam_clip_path = os.path.join("backend","Edit","in_process_clips",f"{self.clipId}_cam.mp4")
-        web_cam_audio_clip_path = os.path.join("backend","Edit","in_process_clips",f"{self.clipId}audio_cam.mp3")
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        web_cam_clip_path = os.path.join(base_dir, "in_process_clips", f"{self.clipId}_cam.mp4")
+        web_cam_audio_clip_path = os.path.join(base_dir, "in_process_clips", f"{self.clipId}audio_cam.mp3")
 
         # Write the cropped webcam video and audio to file
         web_cam_clip.write_videofile(web_cam_clip_path, codec="libx264", fps=30)
@@ -133,9 +134,10 @@ class VideoProcessor:
         - Si self.clip_format == "portrait" → recadrage en 9:16 pour TikTok
         - Si self.clip_format == "landscape" → garde la vidéo en format paysage
         """
-        content_clip_path = os.path.join("backend","Edit","in_process_clips",f"{self.clipId}_content.mp4")
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        content_clip_path = os.path.join(base_dir, "in_process_clips", f"{self.clipId}_content.mp4")
 
-        content_audio_clip_path = os.path.join("backend","Edit","in_process_clips",f"{self.clipId}_content_audio.mp3")
+        content_audio_clip_path = os.path.join(base_dir, "in_process_clips", f"{self.clipId}_content_audio.mp3")
 
         if self.clip_format == "portrait":
             # Recadrer en format portrait (9:16)
@@ -143,29 +145,63 @@ class VideoProcessor:
             target_ratio = 9 / 16  # Format TikTok
 
             if original_ratio > target_ratio:
-                # Trop large → on coupe sur les côtés
+                # Trop large → on coupe sur les côtés SEULEMENT
                 new_width = int(self.clip_height * target_ratio)
                 x1 = (self.clip_width - new_width) // 2
                 x2 = x1 + new_width
                 y1, y2 = 0, self.clip_height
+                
+                # Crop sur les côtés uniquement (garde toute la hauteur)
+                cropped_video = self.clipVideo.crop(x1=x1, y1=y1, x2=x2, y2=y2)
+                
+                # NOUVEAU: Redimensionner pour remplir l'espace gameplay disponible
+                gameplay_height = 1420  # 1920 - 500 (webcam)
+                
+                # Calculer les nouvelles dimensions pour remplir l'espace gameplay
+                scale_factor = gameplay_height / self.clip_height
+                final_width = int(new_width * scale_factor) 
+                final_height = gameplay_height
+                
+                # Agrandir pour remplir l'espace gameplay (pas écraser)
+                final_video = cropped_video.resize((final_width, final_height))
+                
+                # Ajuster la largeur si nécessaire pour target_width
+                if final_width != target_width:
+                    final_video = final_video.resize((target_width, final_height))
+                
+                # Assigner le résultat final
+                self.clipVideo = final_video
             else:
-                # Trop haut → on coupe en haut et en bas
-                new_height = int(self.clip_width / target_ratio)
-                y1 = (self.clip_height - new_height) // 2
-                y2 = y1 + new_height
-                x1, x2 = 0, self.clip_width
-
-            cropped_video = self.clipVideo.crop(x1=x1, y1=y1, x2=x2, y2=y2)
-            final_video = cropped_video.resize((target_width, target_height))
+                # Vidéo trop haute → redimensionner pour garder tout le contenu vertical
+                # Calculer la taille pour que ça rentre dans l'espace gameplay (1420px)
+                gameplay_height = 1420  # 1920 - 500 (webcam)
+                
+                # Redimensionner en gardant les proportions
+                scale_factor = gameplay_height / self.clip_height
+                new_width = int(self.clip_width * scale_factor)
+                new_height = gameplay_height
+                
+                final_video = self.clipVideo.resize((new_width, new_height))
+                
+                # Si la largeur dépasse target_width, centrer
+                if new_width > target_width:
+                    x_center = (new_width - target_width) // 2
+                    final_video = final_video.crop(x1=x_center, x2=x_center + target_width)
+                elif new_width < target_width:
+                    # Si plus petite, redimensionner à la largeur cible
+                    final_video = final_video.resize((target_width, new_height))
+                
+                # Assigner le résultat final 
+                self.clipVideo = final_video
 
         if self.clip_format == 'landscape':  # "landscape" (on garde la vidéo telle quelle)
-            final_video = self.clipVideo.resize((self.clip_width, self.clip_height))
+            self.clipVideo = self.clipVideo.resize((self.clip_width, self.clip_height))
 
         # Sauvegarde de la vidéo et de l'audio
-        final_video.write_videofile(content_clip_path, codec="libx264", fps=30)
+        self.clipVideo.write_videofile(content_clip_path, codec="libx264", fps=30)
         
-        if final_video.audio:
-            final_video.audio.write_audiofile(content_audio_clip_path)
+        if self.clipVideo.audio:
+            self.clipVideo.audio.write_audiofile(content_audio_clip_path)
 
         # Stocke la vidéo transformée
         self.content_video = VideoFileClip(content_clip_path)
@@ -185,7 +221,7 @@ class VideoProcessor:
     def cleaning_in_process_folder(self):
        
         logging.info("Cleaning in_process_clips...\n")
-        path  = os.path.join("backend","Edit","in_process_clips")
+        path  = os.path.join("Edit","in_process_clips")
         for file in os.listdir(path):
             file_path = os.path.join(path, file)
             logging.info(f"Removing f   ile : {file_path}\n")
@@ -221,9 +257,11 @@ class VideoProcessor:
         # Path for saving the processed video
         """
         
-        processed_video_path = os.path.join("backend","data","processed_clips",f"{self.clipId}_processed.mp4")
+        # Sauvegarder les vidéos finales sous backend/data/processed_clips
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Remonte à backend/
+        processed_video_path = os.path.join(base_dir, "data", "processed_clips", f"{self.clipId}_processed.mp4")
         processed_video_path_to_send = os.path.join("app","twitok_website","public","media","processed_clips",f"{self.clipId}_processed.mp4")
-        
+        logging.info(f"Chemin final vidéo: {processed_video_path}")
 
         webcam = None
         if self.webcam_extraction ==True:
@@ -231,9 +269,10 @@ class VideoProcessor:
             self.extract_web_cam()  # Extract webcam section
              # Resize the webcam video
             webcam = self.web_cam_video.resize(width=1080)
-            if webcam.h > 640:
-                webcam = webcam.crop(y1=0, y2=640)  # Crop the webcam video if it's too tall
-            webcam = webcam.set_position(("center", 0))  # Position the webcam video in the center
+            if webcam.h > 500:
+                # Crop pour 500px de hauteur
+                webcam = webcam.crop(y1=0, y2=550)  # 500px de hauteur
+            webcam = webcam.set_position(("center", 0))  # Position webcam en haut
 
    
         logging.info("Crop to wanted format")
@@ -244,8 +283,9 @@ class VideoProcessor:
 
        
 
-        # Set the position for the content video
-        content = self.content_video.set_position(("center", 1920 - 1280))
+        # Position du gameplay: webcam 450px + espace noir 50px + gameplay 1420px = 1920px total
+        # Descend le gameplay et augmente sa hauteur pour remplir
+        content = self.content_video.set_position(("center", 500))  # Gameplay commence à y=500
         # Combine all clips into a final clip
         if webcam is  not None:
             final_clip = CompositeVideoClip([empty_clip, content, webcam])  # Combine all clips into a final clip
@@ -257,7 +297,7 @@ class VideoProcessor:
         final_clip.write_videofile(processed_video_path, codec="libx264", fps=30)
 
         self.edited_clip_path_to_vue = processed_video_path_to_send
-        self.cleaning_in_process_folder
+        self.cleaning_in_process_folder()
 
        
 
